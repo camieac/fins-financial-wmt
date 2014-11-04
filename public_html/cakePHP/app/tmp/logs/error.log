@@ -1,0 +1,107 @@
+2014-11-04 21:04:06 Error: [MissingActionException] Action AppController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'index',
+)
+Request URL: /~ml335/cakePHP/app/
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-04 21:04:51 Error: [MissingControllerException] Controller class HomeController could not be found.
+Exception Attributes: array (
+  'class' => 'HomeController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/home/
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-04 21:04:54 Error: [MissingControllerException] Controller class Home.ctpController could not be found.
+Exception Attributes: array (
+  'class' => 'Home.ctpController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/home.ctp
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-04 21:05:32 Error: [MissingActionException] Action PagesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'index',
+)
+Request URL: /~ml335/cakePHP/Pages
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#2 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-11-04 21:05:57 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/Users
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-04 21:10:38 Error: [MissingControllerException] Controller class PostsController could not be found.
+Exception Attributes: array (
+  'class' => 'PostsController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/posts
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-04 21:10:41 Error: [MissingControllerException] Controller class PostsController could not be found.
+Exception Attributes: array (
+  'class' => 'PostsController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/posts/index.ctp
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-04 21:10:50 Error: [MissingControllerException] Controller class PostsController could not be found.
+Exception Attributes: array (
+  'class' => 'PostsController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/posts/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-04 21:11:38 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'user\'@\'anubis\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /~ml335/cakePHP/posts/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3524): ConnectionManager::getDataSource('default')
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(1136): Model->setDataSource('default')
+#4 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3551): Model->setSource('posts')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(808): Model->getDataSource()
+#6 /home/cs3/ml335/public_html/cakePHP/app/Controller/PostsController.php(15): Model->__call('findById', Array)
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/PostsController.php(15): AppModel->findById('1')
+#8 [internal function]: PostsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-11-04 21:12:53 Error: [MissingControllerException] Controller class PostsController could not be found.
+Exception Attributes: array (
+  'class' => 'PostsController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/posts/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
