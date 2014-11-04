@@ -1,0 +1,148 @@
+//By Michael Laing & Michael Finlay Reynolds
+
+function alertCheck()
+{
+	if(document.getElementById("firstnumber").value == 0 && document.getElementById("secondnumber").value == 0 && document.getElementById("thirdnumber").value == 0)
+	{
+	alert("Not buying anything!");
+	}
+	else
+	{
+
+	var victory = document.getElementById("firstnumber").value;
+	var bad = document.getElementById("secondnumber").value;
+	var pointers = document.getElementById("thirdnumber").value;
+
+	if(victory < 0 | bad < 0 | pointers < 0)
+	{
+	alert("Negative number detected!");
+	return;
+	}
+	createCookie('victoryCookie', victory, 7);
+	createCookie('badCookie', bad, 7);
+	createCookie('warCookie', pointers, 7);
+
+	location.href="http://www2.macs.hw.ac.uk/~ml335/details.html"
+	}
+	
+}
+
+
+
+function displayPrice() 
+{
+var x = readCookie('victoryCookie');
+var y = readCookie('badCookie');
+var z = readCookie('warCookie');
+var price = (x * 15) + (y * 20) + (z * 25);
+
+
+document.getElementById('pricearea').innerHTML='You have bought: <br/>';
+
+if(x != null && x != undefined && x != 0)
+{
+document.getElementById('pricearea').innerHTML+= + x + 'x Victory Can Be Achieved Prints <br/>' 
+}
+
+if(y != null && y != undefined && y != 0)
+{
+document.getElementById('pricearea').innerHTML+= + y + 'x I Was Bad Once Prints <br/>' 
+}
+
+if(z != null && z != undefined && z != 0)
+{
+document.getElementById('pricearea').innerHTML+= + z + 'x Dont Be Spooked Prints <br/>' 
+}
+
+document.getElementById('pricearea').innerHTML+='£'+price; 
+
+}
+
+function printOrder()
+{
+var x = readCookie('victoryCookie');
+var y = readCookie('badCookie');
+var z = readCookie('warCookie');
+
+document.getElementById('details').innerHTML+= '<br/>Order: <br/>' 
+
+if (x != null && x != undefined && x != 0)
+{
+document.getElementById('details').innerHTML+= + x + 'x Victory Can Be Achieved Prints <br/>' 
+}
+
+if (y != null && y != undefined && y != 0)
+{
+document.getElementById('details').innerHTML+= + y + 'x I Was Bad Once Prints <br/>' 
+}
+
+if (z != null && z != undefined && z != 0)
+{
+document.getElementById('details').innerHTML+= + z + 'x Dont Be Spooked Prints <br/>' 
+}
+
+var price = (x * 15) + (y * 20) + (z * 25);
+
+document.getElementById('details').innerHTML+= 'Total Cost: ' + '£' + price + '<br/>' 
+
+}
+
+
+function detailCookies(name, address, email, dob, credit)
+{
+	createCookie('nameCookie', name, 7);
+	createCookie('addressCookie', address, 7);
+	createCookie('emailCookie', email, 7);
+	createCookie('dobCookie', dob, 7);
+	createCookie('creditCookie', credit, 7);
+}
+
+function checkValid()
+{
+	if (document.getElementById("email").value == "" || document.getElementById("email").value == null)
+	{
+		alert("Please enter an email address.");
+		return false;
+	}
+	if (document.getElementById("name").value == "" || document.getElementById("name").value == null)
+	{
+		alert("Please enter a name.");
+		return false;
+	}
+	if (document.getElementById("address").value == "" || document.getElementById("address").value == null)
+	{
+		alert("Please enter an address.");
+		return false;
+	}
+	if (document.getElementById("creditcard").value == "" || document.getElementById("creditcard").value == null) 
+	{
+		alert("Please enter an credit card number.");
+		return false;
+	}
+
+	return true;
+}
+
+
+function createCookie(name,value,days) 
+{
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        var expires = "; expires="+date.toGMTString();
+    }
+    else var expires = "";
+    document.cookie = name+"="+value+expires+"; path=/";
+}
+
+function readCookie(name) 
+{
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}

@@ -1,0 +1,21 @@
+
+-- this enables warnings to be displayed about invalid data
+warnings;
+
+-- drop the tables if they already exists
+
+DROP TABLE MyTwitter;
+
+-- create a table
+CREATE TABLE MyTwitter(
+iD INTEGER(10) PRIMARY KEY,
+username VARCHAR(15) PRIMARY KEY,
+displayName VARCHAR(20) ,
+liked INTEGER(5),
+location VARCHAR(50),
+description VARCHAR(50),
+numberOfFollowers INTEGER(5),
+numberOfFollowing INTEGER(5),
+numberOfTweets INTEGER(5)
+)ENGINE=INNODB;
+

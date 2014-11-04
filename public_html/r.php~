@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Twitter</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta name="author" content="Michael Laing & Finlay Reynolds">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" >
+	</script>
+	<script class="jsbin" src="http://datatables.net/download/build/jquery.dataTables.nightly.js"></script>
+
+	<link href="styletwitter.css" rel="stylesheet">
+</head>
+<body>
+
+<script>
+function clicked()
+{
+
+$('.faded').click(function()
+ {
+	if($("#" + this.id).hasClass("faded"))
+	{
+	$("#" + this.id).removeClass("faded");
+
+
+	}
+	else
+	{
+	$("#" + this.id).addClass("faded");
+
+
+
+	}
+
+
+
+});
+}
+
+$(document).ready(function() 
+{
+    $('#table').dataTable(
+	{
+	 "bLengthChange": false
+	} );
+} );
+</script>
+
+<?php
+error_reporting(E_ALL); 
+ini_set('display_errors', 1); 
+include ("dbfunctions.php");
+
+session_start();
+dbConnect();
+ 
+//select your own database 
+dbSelect(); 
+$query = "SELECT * FROM MyTwitter";
+?>
+
+<h1>Followers Table</h1>
+<p><a href = "input.php" >Input information about a follower.</a></p>
+
+         <table cellpadding="10" cellspacing="5" border="0" class="display" id="table">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>Username</th>
+	    <th>Display Name</th>
+	    <th>Liked</th>
+ 	    <th>Location</th>
+	    <th>Description</th>
+	    <th>Number of Followers</th>
+	    <th>Number of Following</th>
+	    <th>Number of Tweets</th>
+          </tr>
+        </thead>
+        <tbody>
+
+
+	<?php
+	$query = "SELECT * FROM MyTwitter";
+	$result = runQuery($query); 
+	while($row = mysql_fetch_array($result))
+	{
+	$id = $row['iD']; 
+	$username = $row['username'];
+	$displayName = $row['displayName'];
+	$liked = $row['liked'];
+	$location = $row['location'];
+	$description = $row['description'];
+	$noOfFollowers = $row['numberOfFollowers'];
+	$noOfFollowing = $row['numberOfFollowing'];
+	$noOfTweets = $row['numberOfTweets'];
+	
+	echo '<tr>';
+	echo '<td>' . $id . '</td>';
+	echo '<td>' . $username . '</td>';
+	echo '<td>' . $displayName . '</td>';
+	echo '<td>' . '<img class = "faded" src = "thumbsup.png" id = "thumbs" onclick="clicked()">
+' . '</td>';
+	echo '<td>' . $location . '</td>';
+	echo '<td>' . $description . '</td>';
+	echo '<td>' . $noOfFollowers . '</td>';
+	echo '<td>' . $noOfFollowing . '</td>';
+	echo '<td>' . $noOfTweets . '</td>';
+	echo '</tr>';
+	} ?>
+
+    </tbody>
+</table>
+
+<script>
+var inc=1;
+while(document.getElementById('thumbs')!=null)
+{
+var ele = document.getElementById('thumbs');
+ele.id="thumbs_" + inc;
+inc = inc + 1;
+}
+</script>
+
+
+</body>
+</html>
+
+
+
+

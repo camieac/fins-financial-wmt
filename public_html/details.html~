@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Fresh Prints Of Bel-Air</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta name="author" content="Michael Laing & Finlay Reynolds">
+	<meta name="keywords" content="fresh, prints, of, bel-air">
+	<link href="style.css" rel="stylesheet">
+	<link rel="icon"  type="image/jpg" href="images/ws.jpg">
+	<script type="text/javascript" src="script.js"> </script>
+</head>
+<body onload="displayPrice()">
+<h3>The Fresh Prints of Bel-Air</h3>
+<hr/>
+
+<audio autoplay="autoplay" loop>  
+  <source src="belair.mp3" type="audio/mp3">
+Your browser does not support the audio element.
+</audio>
+
+<p id = "pricearea">
+</p>
+
+
+<form action = "http://www2.macs.hw.ac.uk:8080/yr2/ml335/confirmation.jsp" method = post name="f">
+  <p> Name <input type="text" name="name" id="name" size="40" value = "">  </p>
+   <p>Address <input type="text" name="address" id="address" size="60" value = "">  </p>
+    <p>Email Address <input type="email" name="email" id="email" size="60" value = "">  </p>
+   <p>Date of Birth: <input type="date" name="dob" id="dob" value = ""> </p>
+    <p>Card Number: <input type="number" name="creditcard" id="creditcard" value = "">  </p>
+	<input type="submit" name="submit" value="Submit" onClick="checkValid()">
+</form>
+
+
+<small>
+Michael Laing, Finlay Reynolds.
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+<img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
+<a href="http://validator.w3.org/check/referer">
+<img style="border:0;width:88px;height:31px" src="http://www.fadi.me.uk/html5-validator-icon.png" alt="Valid HTML5!"/> </a>
+</small>
+
+
+</body>
+</html>
+
+
+
+
+

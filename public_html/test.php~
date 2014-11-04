@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>example</title>
+</head>
+<body>
+   <div style="padding: 20px;">
+        <input id="query" type="text" value="finmcoul_afro" />
+        <input id="THIS_ONE" type="button" value="Search" />
+      
+    </div>
+    <div id="tweets" style="padding: 20px;">
+        Tweets will go here.
+    </div>
+</body>
+<script>
+	function searchTwitter(query) 
+{
+    $.ajax({
+        url: 'http://search.twitter.com/search.json?' + jQuery.param(query),
+        dataType: 'json',
+        success: function(data)
+{
+            var tweets = $('#tweets');
+            tweets.html('');
+            for (res in data['results']) 
+{
+                tweets.append('<div>' + data['results'][res]['from_user'] + ' wrote: <p>' + data['results'][res]['text'] + '</p></div><br />');
+        }
+        }
+    });
+}
+</script>
+
+<script>
+
+$(document).ready(function() {
+    $('#THIS_ONE').click(function() {
+        var params = {
+            q: $('#query').val(),
+            rpp: 5
+        };
+        // alert(jQuery.param(params));
+        searchTwitter(params));
+    });
+});
+
+</script>
+
+</html>
