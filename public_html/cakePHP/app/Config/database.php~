@@ -70,7 +70,7 @@ class DATABASE_CONFIG {
 		'host' => 'mysql-server-1',
 		'login' => 'sam74',
 		'password' => 'abcsam74354',
-		'database' => 'sam74',
+		'database' => 'database_name',
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);
