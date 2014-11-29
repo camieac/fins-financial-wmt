@@ -9,13 +9,13 @@ public $validate = array(
 'dateOfBirth' => array(
 'rule' => 'notEmpty'
 ),
-'balance' => array(
-'phoneNo' => 'notEmpty'
-),
 'phoneNo' => array(
 'rule' => 'notEmpty'
 ),
 'address' => array(
+'rule' => 'notEmpty'
+),
+'fa' => array(
 'rule' => 'notEmpty'
 )
 );

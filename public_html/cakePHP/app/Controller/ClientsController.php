@@ -5,8 +5,34 @@
 class ClientsController extends AppController {
 public $helpers = array('Html', 'Form');
 
-
 public function index() {
+if ($this->Session->read('Auth.User')) 
+{
+$user = AuthComponent::user('username');
+
+$conditions = array(
+    "username" => $user,
+    "role" => 'admin'
+);
+
+$this->loadModel('User');
+if ($this->User->hasAny($conditions))
+{
+$this->set('clients', $this->Client->find('all'));
+}
+else
+{
+$this->set('clients', $this->Client->find('all', array('conditions' => array("'$user' = fa"))));
+}
+
+}
+else
+{
+$this->redirect(array('controller' => 'users', 'action' => 'login'));
+}
+}
+
+public function table() {
 if ($this->Session->read('Auth.User')) 
 $this->set('clients', $this->Client->find('all'));
 else
