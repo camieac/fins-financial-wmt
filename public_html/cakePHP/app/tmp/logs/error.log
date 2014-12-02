@@ -5314,3 +5314,351 @@ Stack Trace:
 #3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-11-29 03:40:11 Error: [MissingControllerException] Controller class TableController could not be found.
+Exception Attributes: array (
+  'class' => 'TableController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/table
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 21:51:13 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE, expecting T_FUNCTION in [/home/cs3/ml335/public_html/cakePHP/app/View/Helper/StocksHelper.php, line 40]
+2014-11-29 21:51:14 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE, expecting T_FUNCTION
+Request URL: /~ml335/cakePHP/clients/table?stock=msft
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 40, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 40, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 21:51:15 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE, expecting T_FUNCTION in [/home/cs3/ml335/public_html/cakePHP/app/View/Helper/StocksHelper.php, line 40]
+2014-11-29 21:51:15 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE, expecting T_FUNCTION
+Request URL: /~ml335/cakePHP/clients/table?stock=msft
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 40, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 40, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 21:51:26 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE, expecting T_FUNCTION in [/home/cs3/ml335/public_html/cakePHP/app/View/Helper/StocksHelper.php, line 40]
+2014-11-29 21:51:26 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE, expecting T_FUNCTION
+Request URL: /~ml335/cakePHP/clients/table?stock=msft
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 40, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 40, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 21:51:30 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE, expecting T_FUNCTION in [/home/cs3/ml335/public_html/cakePHP/app/View/Helper/StocksHelper.php, line 40]
+2014-11-29 21:51:30 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE, expecting T_FUNCTION
+Request URL: /~ml335/cakePHP/clients/table?stock=msft
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 40, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 40, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 21:57:34 Error: Fatal Error (4): syntax error, unexpected T_STRING in [/home/cs3/ml335/public_html/cakePHP/app/View/Helper/StocksHelper.php, line 55]
+2014-11-29 21:57:34 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /~ml335/cakePHP/clients/table?stock=msft
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 55)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 55, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 55, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 21:57:41 Error: Fatal Error (4): syntax error, unexpected T_STRING in [/home/cs3/ml335/public_html/cakePHP/app/View/Helper/StocksHelper.php, line 55]
+2014-11-29 21:57:41 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /~ml335/cakePHP/clients/table?stock=msft
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 55)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 55, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 55, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 21:57:43 Error: Fatal Error (4): syntax error, unexpected T_STRING in [/home/cs3/ml335/public_html/cakePHP/app/View/Helper/StocksHelper.php, line 55]
+2014-11-29 21:57:46 Error: [FatalErrorException] syntax error, unexpected T_STRING
+Request URL: /~ml335/cakePHP/clients/table?stock=msft
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 55)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 55, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 55, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 21:58:55 Error: Fatal Error (1): Call to undefined function SplFixedArray() in [/home/cs3/ml335/public_html/cakePHP/app/View/Helper/StocksHelper.php, line 44]
+2014-11-29 21:58:55 Error: [FatalErrorException] Call to undefined function SplFixedArray()
+Request URL: /~ml335/cakePHP/clients/table?stock=msft
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/home/cs3/ml335...', 44)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/home/cs3/ml335...', 44, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/home/cs3/ml335...', 44, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 21:58:57 Error: Fatal Error (1): Call to undefined function SplFixedArray() in [/home/cs3/ml335/public_html/cakePHP/app/View/Helper/StocksHelper.php, line 44]
+2014-11-29 21:58:57 Error: [FatalErrorException] Call to undefined function SplFixedArray()
+Request URL: /~ml335/cakePHP/clients/table?stock=msft
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/home/cs3/ml335...', 44)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/home/cs3/ml335...', 44, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/home/cs3/ml335...', 44, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 22:05:17 Error: Fatal Error (1): Call to undefined function SplFixedArray() in [/home/cs3/ml335/public_html/cakePHP/app/View/Helper/StocksHelper.php, line 44]
+2014-11-29 22:05:17 Error: [FatalErrorException] Call to undefined function SplFixedArray()
+Request URL: /~ml335/cakePHP/clients/table?stock=msft
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/home/cs3/ml335...', 44)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/home/cs3/ml335...', 44, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/home/cs3/ml335...', 44, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 22:05:56 Error: Fatal Error (1): Call to undefined function SplFixedArray() in [/home/cs3/ml335/public_html/cakePHP/app/View/Helper/StocksHelper.php, line 44]
+2014-11-29 22:05:57 Error: [FatalErrorException] Call to undefined function SplFixedArray()
+Request URL: /~ml335/cakePHP/clients/table?stock=msft
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/home/cs3/ml335...', 44)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/home/cs3/ml335...', 44, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/home/cs3/ml335...', 44, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 22:05:59 Error: Fatal Error (1): Call to undefined function SplFixedArray() in [/home/cs3/ml335/public_html/cakePHP/app/View/Helper/StocksHelper.php, line 44]
+2014-11-29 22:05:59 Error: [FatalErrorException] Call to undefined function SplFixedArray()
+Request URL: /~ml335/cakePHP/clients/table?stock=msft
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/home/cs3/ml335...', 44)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/home/cs3/ml335...', 44, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/home/cs3/ml335...', 44, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 22:06:08 Error: Fatal Error (1): Call to undefined function SplFixedArray() in [/home/cs3/ml335/public_html/cakePHP/app/View/Helper/StocksHelper.php, line 44]
+2014-11-29 22:06:08 Error: [FatalErrorException] Call to undefined function SplFixedArray()
+Request URL: /~ml335/cakePHP/clients/table?stock=msft
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/home/cs3/ml335...', 44)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/home/cs3/ml335...', 44, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/home/cs3/ml335...', 44, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 22:06:15 Error: Fatal Error (1): Call to undefined function SplFixedArray() in [/home/cs3/ml335/public_html/cakePHP/app/View/Helper/StocksHelper.php, line 44]
+2014-11-29 22:06:15 Error: [FatalErrorException] Call to undefined function SplFixedArray()
+Request URL: /~ml335/cakePHP/clients/table?stock=msft
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/home/cs3/ml335...', 44)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/home/cs3/ml335...', 44, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/home/cs3/ml335...', 44, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 22:06:25 Error: Fatal Error (1): Call to undefined function SplFixedArray() in [/home/cs3/ml335/public_html/cakePHP/app/View/Helper/StocksHelper.php, line 44]
+2014-11-29 22:06:25 Error: [FatalErrorException] Call to undefined function SplFixedArray()
+Request URL: /~ml335/cakePHP/clients/table?stock=msft
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/home/cs3/ml335...', 44)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/home/cs3/ml335...', 44, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/home/cs3/ml335...', 44, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 22:06:59 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE in [/home/cs3/ml335/public_html/cakePHP/app/View/Helper/StocksHelper.php, line 55]
+2014-11-29 22:06:59 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE
+Request URL: /~ml335/cakePHP/clients/table?stock=msft
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 55)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 55, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 55, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 22:07:00 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE in [/home/cs3/ml335/public_html/cakePHP/app/View/Helper/StocksHelper.php, line 55]
+2014-11-29 22:07:00 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE
+Request URL: /~ml335/cakePHP/clients/table?stock=msft
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 55)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 55, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 55, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 22:11:29 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE in [/home/cs3/ml335/public_html/cakePHP/app/View/Helper/StocksHelper.php, line 55]
+2014-11-29 22:11:29 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE
+Request URL: /~ml335/cakePHP/clients/table?stock=msft
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 55)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 55, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 55, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 22:31:53 Error: Fatal Error (4): syntax error, unexpected T_ECHO in [/home/cs3/ml335/public_html/cakePHP/app/View/Helper/StocksHelper.php, line 56]
+2014-11-29 22:31:53 Error: [FatalErrorException] syntax error, unexpected T_ECHO
+Request URL: /~ml335/cakePHP/clients/table?stock=msft
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 56)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 56, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 56, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 22:31:54 Error: Fatal Error (4): syntax error, unexpected T_ECHO in [/home/cs3/ml335/public_html/cakePHP/app/View/Helper/StocksHelper.php, line 56]
+2014-11-29 22:31:54 Error: [FatalErrorException] syntax error, unexpected T_ECHO
+Request URL: /~ml335/cakePHP/clients/table?stock=msft
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 56)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 56, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 56, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 22:44:07 Error: Fatal Error (4): syntax error, unexpected $end in [/home/cs3/ml335/public_html/cakePHP/app/View/Clients/table.ctp, line 63]
+2014-11-29 22:44:07 Error: [FatalErrorException] syntax error, unexpected $end
+Request URL: /~ml335/cakePHP/clients/table?stock=msft
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 63)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 63, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 63, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 22:45:01 Error: Fatal Error (4): syntax error, unexpected $end in [/home/cs3/ml335/public_html/cakePHP/app/View/Clients/table.ctp, line 63]
+2014-11-29 22:45:02 Error: [FatalErrorException] syntax error, unexpected $end
+Request URL: /~ml335/cakePHP/clients/table?stock=msft
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 63)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 63, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 63, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 22:45:04 Error: Fatal Error (4): syntax error, unexpected $end in [/home/cs3/ml335/public_html/cakePHP/app/View/Clients/table.ctp, line 63]
+2014-11-29 22:45:04 Error: [FatalErrorException] syntax error, unexpected $end
+Request URL: /~ml335/cakePHP/clients/table?stock=msft
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 63)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 63, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 63, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 22:45:57 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [/home/cs3/ml335/public_html/cakePHP/lib/Cake/Utility/Debugger.php, line 537]
+2014-11-29 22:45:57 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /~ml335/cakePHP/clients/table?stock=msft
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', '/home/cs3/ml335...', 537)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', '/home/cs3/ml335...', 537, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', '/home/cs3/ml335...', 537, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 22:46:48 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [/home/cs3/ml335/public_html/cakePHP/lib/Cake/Utility/Debugger.php, line 812]
+2014-11-29 22:46:48 Error: [FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /~ml335/cakePHP/clients/table?stock=msft
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Maximum executi...', '/home/cs3/ml335...', 812)
+#1 [internal function]: ErrorHandler::handleError(1, 'Maximum executi...', '/home/cs3/ml335...', 812, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Maximum executi...', '/home/cs3/ml335...', 812, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 23:38:46 Error: [MissingControllerException] Controller class StocksController could not be found.
+Exception Attributes: array (
+  'class' => 'StocksController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/stocks
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-11-29 23:39:00 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/cs3/ml335/public_html/cakePHP/app/Controller/StocksController.php, line 21]
+2014-11-29 23:39:00 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /~ml335/cakePHP/stocks
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/cs3/ml335...', 21)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/cs3/ml335...', 21, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/cs3/ml335...', 21, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 23:39:27 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/cs3/ml335/public_html/cakePHP/app/Controller/StocksController.php, line 12]
+2014-11-29 23:39:27 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /~ml335/cakePHP/stocks
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/cs3/ml335...', 12)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/cs3/ml335...', 12, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/cs3/ml335...', 12, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 23:39:46 Error: Fatal Error (1): Class 'StockModel' not found in [/home/cs3/ml335/public_html/cakePHP/app/Model/Stock.php, line 3]
+2014-11-29 23:39:46 Error: [FatalErrorException] Class 'StockModel' not found
+Request URL: /~ml335/cakePHP/stocks
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'StockMod...', '/home/cs3/ml335...', 3)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'StockMod...', '/home/cs3/ml335...', 3, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'StockMod...', '/home/cs3/ml335...', 3, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 23:40:10 Error: Fatal Error (64): Cannot redeclare class StockModel in [/home/cs3/ml335/public_html/cakePHP/app/Model/Stock.php, line 7]
+2014-11-29 23:40:10 Error: [FatalErrorException] Cannot redeclare class StockModel
+Request URL: /~ml335/cakePHP/stocks
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/home/cs3/ml335...', 7)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', '/home/cs3/ml335...', 7, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', '/home/cs3/ml335...', 7, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 23:41:33 Error: Fatal Error (64): Cannot redeclare class StockModel in [/home/cs3/ml335/public_html/cakePHP/app/Model/Stock.php, line 7]
+2014-11-29 23:41:33 Error: [FatalErrorException] Cannot redeclare class StockModel
+Request URL: /~ml335/cakePHP/stocks
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/home/cs3/ml335...', 7)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', '/home/cs3/ml335...', 7, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', '/home/cs3/ml335...', 7, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 23:41:34 Error: Fatal Error (64): Cannot redeclare class StockModel in [/home/cs3/ml335/public_html/cakePHP/app/Model/Stock.php, line 7]
+2014-11-29 23:41:34 Error: [FatalErrorException] Cannot redeclare class StockModel
+Request URL: /~ml335/cakePHP/stocks
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/home/cs3/ml335...', 7)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', '/home/cs3/ml335...', 7, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', '/home/cs3/ml335...', 7, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 23:41:57 Error: Fatal Error (1): Call to undefined function find() in [/home/cs3/ml335/public_html/cakePHP/app/Controller/StocksController.php, line 12]
+2014-11-29 23:41:57 Error: [FatalErrorException] Call to undefined function find()
+Request URL: /~ml335/cakePHP/stocks
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/home/cs3/ml335...', 12)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/home/cs3/ml335...', 12, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/home/cs3/ml335...', 12, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-11-29 23:42:11 Error: Fatal Error (1): Call to undefined function find() in [/home/cs3/ml335/public_html/cakePHP/app/Controller/StocksController.php, line 12]
+2014-11-29 23:42:11 Error: [FatalErrorException] Call to undefined function find()
+Request URL: /~ml335/cakePHP/stocks
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/home/cs3/ml335...', 12)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/home/cs3/ml335...', 12, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/home/cs3/ml335...', 12, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

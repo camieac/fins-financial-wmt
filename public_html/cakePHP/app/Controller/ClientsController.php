@@ -1,6 +1,6 @@
 <?php
 
-// File: /app/Controller/clientsController.php
+// File: /app/Controller/ClientsController.php
 
 class ClientsController extends AppController {
 public $helpers = array('Html', 'Form');
