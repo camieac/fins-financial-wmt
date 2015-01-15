@@ -65,6 +65,15 @@ array_shift($result); //Takes away the first array position that contains the na
 <?php endforeach; ?>
 </table>
 
+<script src="http://charts.wikinvest.com/wikinvest/wikichart/javascript/scripts.php" type="text/javascript"></script><div id="wikichartContainer_E7981FD0-8456-5460-A2F0-ECFD29ABE841">
+	<div id="wikichartContainer_E7981FD0-8456-5460-A2F0-ECFD29ABE841_noFlash" style="width:1000px; display:none;"><a href="http://get.adobe.com/flashplayer/">
+		<img src="http://cdn.wikinvest.com/wikinvest/images/adobe_flash_logo.gif" alt="Flash" style="border-width: 0px;"/><br/>Flash Player 9 or higher is required to view the chart<br/>
+		<strong>Click here to download Flash Player now</strong></a></div></div><script type="text/javascript">if (typeof(embedWikichart) != "undefined") 
+		{embedWikichart("http://charts.wikinvest.com/WikiChartMini.swf","wikichartContainer_E7981FD0-8456-5460-A2F0-ECFD29ABE841","1000","400",
+			{"ticker":"<?php echo $company ?>","embedCodeDate":"2015-1-15","liveQuote":"true","startDate":"26-12-2013","showAnnotations":"true","rollingDate":"","endDate":"28-07-2014"},{});}
+			</script><div style="font-size:9px;text-align:right;width:400px;font-family:Verdana">
+				
+
 <?php
 $url = 'http://chart.finance.yahoo.com/z?s=';
 $url .= $company;
