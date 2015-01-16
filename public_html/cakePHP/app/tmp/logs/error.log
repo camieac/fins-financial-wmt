@@ -5752,3 +5752,135 @@ Request URL: /~ml335/cakePHP/login
 Stack Trace:
 #0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2015-01-15 15:41:53 Error: [MissingControllerException] Controller class (copy)Controller could not be found.
+Exception Attributes: array (
+  'class' => '(copy)Controller',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/%20(copy)/
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-15 15:50:25 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sam74`.`clients`, CONSTRAINT `clients_ibfk_1` FOREIGN KEY (`fa`) REFERENCES `fa` (`username`))
+Request URL: /~ml335/cakePHP/clients/add
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('INSERT INTO `sa...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `sa...')
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(1854): DboSource->create(Object(Client), Array, Array)
+#4 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(66): Model->save(Array)
+#5 [internal function]: ClientsController->add()
+#6 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#7 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#9 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-01-15 15:50:57 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sam74`.`clients`, CONSTRAINT `clients_ibfk_1` FOREIGN KEY (`fa`) REFERENCES `fa` (`username`))
+Request URL: /~ml335/cakePHP/clients/add
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('INSERT INTO `sa...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `sa...')
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(1854): DboSource->create(Object(Client), Array, Array)
+#4 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(66): Model->save(Array)
+#5 [internal function]: ClientsController->add()
+#6 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#7 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#9 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-01-15 15:52:20 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`sam74`.`clients`, CONSTRAINT `clients_ibfk_1` FOREIGN KEY (`fa`) REFERENCES `fa` (`username`))
+Request URL: /~ml335/cakePHP/clients/add
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('INSERT INTO `sa...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `sa...')
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(1854): DboSource->create(Object(Client), Array, Array)
+#4 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(66): Model->save(Array)
+#5 [internal function]: ClientsController->add()
+#6 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#7 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#9 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-01-15 15:53:08 Error: [MissingControllerException] Controller class EmailsController could not be found.
+Exception Attributes: array (
+  'class' => 'EmailsController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/emails
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-15 15:54:47 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /~ml335/cakePHP/posts
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3551): Model->setSource('posts')
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(2947): Model->getDataSource()
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#3 /home/cs3/ml335/public_html/cakePHP/app/Controller/PostsController.php(10): Model->find('all')
+#4 [internal function]: PostsController->index()
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#6 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#8 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-01-15 16:08:12 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /~ml335/cakePHP/posts
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3551): Model->setSource('posts')
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(2947): Model->getDataSource()
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#3 /home/cs3/ml335/public_html/cakePHP/app/Controller/PostsController.php(10): Model->find('all')
+#4 [internal function]: PostsController->index()
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#6 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#8 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-01-15 16:08:42 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /~ml335/cakePHP/posts
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3551): Model->setSource('posts')
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(2947): Model->getDataSource()
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#3 /home/cs3/ml335/public_html/cakePHP/app/Controller/PostsController.php(10): Model->find('all')
+#4 [internal function]: PostsController->index()
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#6 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#8 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2015-01-15 16:08:51 Error: [MissingTableException] Table posts for model Post was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'posts',
+  'class' => 'Post',
+  'ds' => 'default',
+)
+Request URL: /~ml335/cakePHP/posts
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3551): Model->setSource('posts')
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(2947): Model->getDataSource()
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(2919): Model->_readDataSource('all', Array)
+#3 /home/cs3/ml335/public_html/cakePHP/app/Controller/PostsController.php(10): Model->find('all')
+#4 [internal function]: PostsController->index()
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#6 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#7 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#8 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}

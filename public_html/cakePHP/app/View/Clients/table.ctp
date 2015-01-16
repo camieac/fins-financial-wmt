@@ -80,6 +80,7 @@ $url .= $company;
 $url .= '&q=l&l=on&z=l&lang=en-GB&region=GB';
 $url .= '&t=';
 ?>
+
 <img id="chart" src= "<?php echo $url ?>6m" alt="Chart" ?></br>
 
 <button onclick="timescaleOneMonth()">One Month</button>
@@ -93,4 +94,3 @@ $url .= '&t=';
 <script type="text/javascript">
   var url = <?php echo json_encode($url); ?>;
 </script>
-
