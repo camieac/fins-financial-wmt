@@ -1,5 +1,5 @@
-<!-- File: /app/View/meetings/view.ctp -->
-<h1>Add Client</h1>
+<!-- File: /app/View/meetings/add.ctp -->
+<h1>Add Meeting</h1>
 <?php
 echo $this->Form->create('Meeting');
 echo $this->Form->input('name');

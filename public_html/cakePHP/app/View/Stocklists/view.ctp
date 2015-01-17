@@ -3,39 +3,7 @@ $company = $this->params['url']['stock'];
 $result = $this->Stocks->get(array($company));
 
 echo $this->Html->script('javascript');
-	
-print "<pre>";
-print_r($result);
-print "</pre>";
-
 ?>
-
-<table>
-<tr>
-<th>Name</th>
-<th>Symbol</th>
-<th>Change</th>
-<th>Current</th>
-<th>Open</th>
-<th>Close</th>
-<th>High</th>
-<th>Low</th>
-<th>Date</th>
-</tr>
-<?php foreach ($result as $stock): ?>
-<tr>
-<td><?php echo $stock['name'] ?></td>
-<td><?php echo $stock['symbol'] ?></td>
-<td><?php echo $stock['change'] ?></td>
-<td><?php echo $stock['current'] ?></td>
-<td><?php echo $stock['open'] ?></td>
-<td><?php echo $stock['close'] ?></td>
-<td><?php echo $stock['high'] ?></td>
-<td><?php echo $stock['low'] ?></td>
-<td><?php echo $stock['date'] ?></td>
-</tr>
-<?php endforeach; ?>
-</table>
 
 <?php
 $result = $this->Stocks->getHistory(array($company));
@@ -94,3 +62,4 @@ $url .= '&t=';
 <script type="text/javascript">
   var url = <?php echo json_encode($url); ?>;
 </script>
+

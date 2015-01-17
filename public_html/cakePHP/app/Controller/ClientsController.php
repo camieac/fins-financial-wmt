@@ -32,15 +32,6 @@ $this->redirect(array('controller' => 'users', 'action' => 'login'));
 }
 }
 
-public function table() {
-if ($this->Session->read('Auth.User')) 
-$this->set('clients', $this->Client->find('all'));
-else
-{
-$this->redirect(array('controller' => 'users', 'action' => 'login'));
-}
-}
-
 public function view($id = null) {
 if ($this->Session->read('Auth.User')) 
 {
