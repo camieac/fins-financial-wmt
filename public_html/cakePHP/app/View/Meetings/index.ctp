@@ -2,6 +2,8 @@
 
 <?php $User = ClassRegistry::init('User'); ?>
 
+<?php $i = 0;  ?>
+
 <h1><font size="6">Meetings</font></h1>
 <p><?php echo $this->Html->link('Add meeting', array('action' => 'add')); ?></p>
 <table>
@@ -9,19 +11,27 @@
 <th>Id</th>
 <th>Name</th>
 <th>Description</th>
+<th>Customer</th>
+<th>F.A</th>
 <th>Date</th>
 <th>Actions</th>
 <th>Created</th>
 </tr>
 <!-- Here's where we loop through our $meetings array, printing out meeting info -->
 <?php foreach ($meetings as $meeting): ?>
+
 <tr>
 <td><?php echo $meeting['Meeting']['id']; ?></td>
 <td>
-<?php
-echo $this->Html->link($meeting['Meeting']['name'], array('action' => 'view', $meeting['Meeting']['id']));?>
+<?php echo $meeting['Meeting']['name'];?>
 </td>
 <td><?php echo $meeting['Meeting']['description']; ?></td>
+<td><?php echo str_replace("\"", "", $query[$i]['clients']['name']); ?></td>
+<td><?php echo str_replace("\"", "", $query[$i]['fas']['name']); ?></td>
+
+<?php $i++; ?> <!-- increments array -->
+
+
 <td><?php echo $meeting['Meeting']['dateMeeting']; ?></td>
 <td>
 <?php

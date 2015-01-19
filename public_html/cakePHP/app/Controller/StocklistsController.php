@@ -58,6 +58,7 @@ $this->request->data = $stocklist;
 }
 }
 
+
 public function delete($id) {
 if ($this->request->is('get')) {
 throw new MethodNotAllowedException();
@@ -72,7 +73,9 @@ return $this->redirect(array('action' => 'index'));
 
 public function view() {
 if ($this->Session->read('Auth.User')) 
+{
 $this->set('stock', $this->Stocklist->find('all'));
+}
 else
 {
 $this->redirect(array('controller' => 'users', 'action' => 'login'));

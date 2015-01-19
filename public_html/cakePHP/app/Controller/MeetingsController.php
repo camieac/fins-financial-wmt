@@ -13,6 +13,9 @@ if ($this->Session->read('Auth.User'))
 $this->loadModel('User');
 
 $this->set('meetings', $this->Meeting->find('all'));
+
+$this->set('query', $this->Meeting->get());
+
 }
 
 else
@@ -21,27 +24,13 @@ $this->redirect(array('controller' => 'users', 'action' => 'login'));
 }
 }
 
-
-public function view($id = null) {
-if ($this->Session->read('Auth.User')) 
-{
-if (!$id) {
-throw new NotFoundException(__('Invalid meeting'));
-}
-$meeting = $this->Meeting->findById($id);
-if (!$meeting) {
-throw new NotFoundException(__('Invalid meeting'));
-}
-$this->set('meeting', $meeting);
-}
-else
-{
-$this->redirect(array('controller' => 'users', 'action' => 'login'));
-}
-}
 
 
 public function add() {
+	
+$this->set('Custquery', $this->Meeting->getCustomers());
+$this->set('FAquery', $this->Meeting->getFAs());
+	
 if ($this->request->is('post')) {
 $this->Meeting->create();
 if ($this->Meeting->save($this->request->data)) {
@@ -60,6 +49,11 @@ $meeting = $this->Meeting->findById($id);
 if (!$meeting) {
 throw new NotFoundException(__('Invalid Meeting'));
 }
+
+$this->set('Custquery', $this->Meeting->getCustomers());
+$this->set('FAquery', $this->Meeting->getFAs());
+
+
 if ($this->request->is(array('Meeting', 'put'))) {
 $this->Meeting->id = $id;
 if ($this->Meeting->save($this->request->data)) {

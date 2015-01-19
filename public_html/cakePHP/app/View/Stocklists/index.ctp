@@ -14,7 +14,6 @@
 <th>Close Value</th>
 <th>High Value</th>
 <th>Low Value</th>
-<th>Actions</th>
 <th>Created</th>
 </tr>
 <!-- Here's where we loop through our $stocklists array, printing out stocklist info -->
@@ -29,22 +28,12 @@ echo $this->Html->link($stocklist['Stocklist']['name'], array('action' => 'view?
 <?php $company = $stocklist['Stocklist']['symbol'];
 $result = $this->Stocks->get(array($company));?>
 <?php foreach ($result as $stock): ?>
-<td><?php echo $stock['change'] ?></td>
+<td><?php echo str_replace("\"", "", $stock['change']); ?></td>
 <td><?php echo $stock['open'] ?></td>
 <td><?php echo $stock['close'] ?></td>
 <td><?php echo $stock['high'] ?></td>
 <td><?php echo $stock['low'] ?></td>
 <?php endforeach; ?>
-</td>
-<td>
-<?php
-echo '    ';
-echo $this->Form->postLink(
-'Delete',
-array('action' => 'delete', $stocklist['Stocklist']['id']),
-array('confirm' => 'Are you sure?')
-);
-?>
 </td>
 <td>
 <?php echo $stocklist['Stocklist']['created']; ?>

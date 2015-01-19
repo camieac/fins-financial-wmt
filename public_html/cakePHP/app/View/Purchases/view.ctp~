@@ -164,7 +164,7 @@ array_shift($result); //Takes away the first array position that contains the na
 	<?php endforeach; ?>
 
       var options = {
-        width: 1890,
+        width: 1900,
         height: 700,
 	thickness: 0,
 	legendPosition: 'newRow',

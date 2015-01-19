@@ -21,6 +21,15 @@
 	padding:0;
 }
 
+.chart {
+    float:left;
+    margin:none;
+    padding:none;
+    width: 1500px;
+    height: 700px;
+}
+
+
 /** General Style Info **/
 body {
 	background: #000000;

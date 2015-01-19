@@ -52,6 +52,10 @@ $this->redirect(array('controller' => 'users', 'action' => 'login'));
 
 
 public function add() {
+	
+
+$this->set('FAquery', $this->Client->getFAs());
+
 if ($this->request->is('post')) {
 $this->Client->create();
 if ($this->Client->save($this->request->data)) {
@@ -63,6 +67,7 @@ $this->Session->setFlash(__('Unable to add your client.'));
 }
 
 public function edit($id = null) {
+	
 if (!$id) {
 throw new NotFoundException(__('Invalid Client'));
 }
@@ -70,6 +75,9 @@ $client = $this->Client->findById($id);
 if (!$client) {
 throw new NotFoundException(__('Invalid Client'));
 }
+
+$this->set('FAquery', $this->Client->getFAs());
+
 if ($this->request->is(array('Client', 'put'))) {
 $this->Client->id = $id;
 if ($this->Client->save($this->request->data)) {
