@@ -33,6 +33,9 @@ $this->redirect(array('controller' => 'users', 'action' => 'login'));
 }
 
 public function view($id = null) {
+	
+$this->set('listofstocks', $this->Client->getStockNames());
+
 if ($this->Session->read('Auth.User')) 
 {
 if (!$id) {
@@ -42,11 +45,20 @@ $client = $this->Client->findById($id);
 if (!$client) {
 throw new NotFoundException(__('Invalid client'));
 }
-$this->set('client', $client);
-}
-else
+	$this->loadModel('Purchase');
+	$this->set('client', $client);
+	$this->Client->id = $id;
+	$this->set('query', $this->Client->getStocks());
+
+if ($this->request->is('post'))
 {
-$this->redirect(array('controller' => 'users', 'action' => 'login'));
+	$this->Purchase->create();
+	if ($this->Purchase->save($this->request->data)) {
+	$this->Session->setFlash(__('Your stock has been saved.'));
+	return $this->redirect(array('action' => 'view', $id));
+	}
+	$this->Session->setFlash(__('Unable to add your stock.'));
+	}
 }
 }
 
@@ -100,6 +112,22 @@ $this->Session->setFlash(
 __('The Client with id: %s has been deleted.', h($id))
 );
 return $this->redirect(array('action' => 'index'));
+}
+}
+
+
+public function deleteStock($id, $custid) {
+	
+$this->loadModel('Purchase');
+		
+if ($this->request->is('get')) {
+throw new MethodNotAllowedException();
+}
+if ($this->Purchase->delete($id)) {
+$this->Session->setFlash(
+__('The Stock with id: %s has been deleted.', h($id))
+);
+	return $this->redirect(array('action' => 'view', $custid));
 }
 }
 

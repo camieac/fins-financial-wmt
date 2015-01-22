@@ -1,4 +1,12 @@
 <?php class Purchase extends AppModel {
+	public $validate = array(
+'stock' => array(
+'rule' => 'notEmpty'
+),
+'quantity' => array(
+'rule' => 'notEmpty'
+)
+);
 	
 	   public function get()
     {

@@ -1,4 +1,8 @@
-<?php class Client extends AppModel {
+<?php class Client extends AppModel 
+{
+var $id;
+	
+	
 public $validate = array(
 'name' => array(
 'rule' => 'notEmpty'
@@ -33,6 +37,16 @@ public $validate = array(
      public function getFAs()
     {
        return $this->query("SELECT fas.name, fas.username FROM fas");
+    }
+    
+     public function getStocks()
+    {
+       return $this->query("SELECT * FROM purchases, stocklists WHERE customer = ". $this->id . " AND purchases.stock = stocklists.id;");
+    }
+    
+    public function getStockNames()
+    {
+       return $this->query("SELECT stocklists.id, stocklists.symbol FROM stocklists ORDER BY stocklists.id;");
     }
 
 }
