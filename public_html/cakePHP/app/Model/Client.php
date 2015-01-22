@@ -9,6 +9,9 @@ public $validate = array(
 'dateOfBirth' => array(
 'rule' => 'notEmpty'
 ),
+'nis' => array(
+'rule' => 'notEmpty'
+),
 'phoneNo' => array(
     'Numeric' => array(
         'rule' => 'numeric',

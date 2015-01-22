@@ -14,20 +14,12 @@ $this->loadModel('User');
 
 $this->set('stocklists', $this->Stocklist->find('all'));
 
-//$this->Stocklist->read(null, $stocklist['Stocklist']['id']);
-//$this->Stocklist->set('price', $stock['open']);
-//$this->Stocklist->save();
-}
-
-else
+if ($this->request->is('post')) 
 {
-$this->redirect(array('controller' => 'users', 'action' => 'login'));
-}
-}
+$value = $this->request->data['Stocklist']['symbol'];
 
+$this->set('companySym', $value);
 
-public function add() {
-if ($this->request->is('post')) {
 $this->Stocklist->create();
 if ($this->Stocklist->save($this->request->data)) {
 $this->Session->setFlash(__('Your stock has been saved.'));
@@ -35,29 +27,15 @@ return $this->redirect(array('action' => 'index'));
 }
 $this->Session->setFlash(__('Unable to add your stock.'));
 }
+
+
 }
 
-public function edit($id = null) {
-if (!$id) {
-throw new NotFoundException(__('Invalid stock'));
-}
-$stocklist = $this->Stocklist->findById($id);
-if (!$stocklist) {
-throw new NotFoundException(__('Invalid stock'));
-}
-if ($this->request->is(array('stockList', 'put'))) {
-$this->Stocklist->id = $id;
-if ($this->Stocklist->save($this->request->data)) {
-$this->Session->setFlash(__('Your stock has been updated.'));
-return $this->redirect(array('action' => 'index'));
-}
-$this->Session->setFlash(__('Unable to update your stock.'));
-}
-if (!$this->request->data) {
-$this->request->data = $stocklist;
+else
+{
+$this->redirect(array('controller' => 'users', 'action' => 'login'));
 }
 }
-
 
 public function delete($id) {
 if ($this->request->is('get')) {

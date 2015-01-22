@@ -9,12 +9,26 @@ public function index() {
 if ($this->Session->read('Auth.User')) 
 {
 
+$user = AuthComponent::user('username');
+
+$conditions = array(
+    "username" => $user,
+    "role" => 'admin'
+);
 
 $this->loadModel('User');
+$this->Meeting->user = $user;
 
+if ($this->User->hasAny($conditions))
+{
 $this->set('meetings', $this->Meeting->find('all'));
-
+}
+else
+{
+$this->set('meetings', $this->Meeting->find('all', array('conditions' => array("'$user' = fa"))));
+}
 $this->set('query', $this->Meeting->get());
+
 
 }
 
@@ -28,8 +42,12 @@ $this->redirect(array('controller' => 'users', 'action' => 'login'));
 
 public function add() {
 	
+$user = AuthComponent::user('username');
+$this->Meeting->user = $user;
+
 $this->set('Custquery', $this->Meeting->getCustomers());
 $this->set('FAquery', $this->Meeting->getFAs());
+$this->set('user', $user);
 	
 if ($this->request->is('post')) {
 $this->Meeting->create();
@@ -50,8 +68,12 @@ if (!$meeting) {
 throw new NotFoundException(__('Invalid Meeting'));
 }
 
+$user = AuthComponent::user('username');
+$this->Meeting->user = $user;
+
 $this->set('Custquery', $this->Meeting->getCustomers());
 $this->set('FAquery', $this->Meeting->getFAs());
+$this->set('user', $user);
 
 
 if ($this->request->is(array('Meeting', 'put'))) {

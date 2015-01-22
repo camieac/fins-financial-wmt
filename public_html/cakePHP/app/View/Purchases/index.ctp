@@ -16,19 +16,23 @@
 
 <?php $result = $this->Stocks->get(array($query[$i]['stocklists']['symbol'])); ?>
 
-
 <?php foreach ($result as $stock): ?>
 
 <tr>
-<td><?php echo str_replace("\"", "", $query[$i]['stocklists']['name']); ?></td>
+<td><?php echo str_replace("\"", "", $stock['name']); ?></td>
 <td><?php echo str_replace("\"", "", $query[$i]['clients']['name']) ?></td>
 <td><?php echo $purchase['Purchase']['quantity']; ?></td>
 
 
 <?php $i++; ?> <!-- increments array -->
 
-
+<?php if(($stock['open']) === 'N/A')
+{ ?>
+<td><?php echo "£".number_format($stock['close'], 2); ?></td>
+<?php }
+else {?>
 <td><?php echo "£".number_format($stock['open'], 2); ?></td>
+<?php } ?>
 <?php $value = ($purchase['Purchase']['quantity'])*($stock['open']); ?>
 <td><?php echo "£".number_format($value, 2); ?></td>
 <?php endforeach; ?>

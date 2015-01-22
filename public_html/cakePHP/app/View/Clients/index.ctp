@@ -10,6 +10,7 @@
 <th>Name</th>
 <th>Gender</th>
 <th>Date Of Birth</th>
+<th>National Insurance Number</th>
 <th>Phone Number</th>
 <th>Address</th>
 <th>F.A</th>
@@ -30,6 +31,7 @@ array('action' => 'view', $client['Client']['id'])
 </td>
 <td><?php echo $client['Client']['gender']; ?></td>
 <td><?php echo $client['Client']['dateOfBirth']; ?></td>
+<td><?php echo $client['Client']['nis']; ?></td>
 <td><?php echo $client['Client']['phoneNo']; ?></td>
 <td><?php echo $client['Client']['address']; ?></td>
 <td><?php echo $client['Client']['fa']; ?></td>

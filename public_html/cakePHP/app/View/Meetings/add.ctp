@@ -16,13 +16,27 @@ $advisorarray = Set::flatten($FAquery);
 
 ?>
 
+<pre>
+<?php print_r($fa); ?>
+</pre>
+
 <?php
 echo $this->Form->create('Meeting');
 echo $this->Form->input('name');
 echo $this->Form->input('description');
 echo $this->Form->input('customer',array('type'=>'select','options'=>$customer)); 
+
+if($user==="admin")
+{
 echo $this->Form->input('fa',array('type'=>'select','options'=>$fa)); 
-echo $this->Form->input('dateMeeting', array('dateFormat'=>'DMY', 'minYear'=>date('Y'), 'maxYear'=>date('Y')+10, 'empty'=>array('- -')));
+}
+else
+{
+echo $this->Form->input('fa',array('type'=>'select','options'=>$fa, 'default'=>$user, 'type' => 'hidden')); 
+}
+
+echo $this->Form->input('meetingTime');
+echo $this->Form->input('dateMeeting', array('dateFormat'=>'DMY', 'minYear'=>date('Y'), 'maxYear'=>date('Y')+5, 'empty'=>array('- -')));
 echo $this->Form->end('Save Meeting');
 ?>
 

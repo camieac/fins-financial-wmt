@@ -7,5 +7,6 @@ public $validate = array(
 'rule' => 'notEmpty'
 )
 );
+
 }
 ?>

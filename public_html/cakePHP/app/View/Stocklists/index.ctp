@@ -3,7 +3,17 @@
 <?php $User = ClassRegistry::init('User'); ?>
 
 <h1><font size="6">Stocks</font></h1>
-<p><?php echo $this->Html->link('Add stock', array('action' => 'add')); ?></p>
+
+<?php
+echo $this->Form->create('Stocklist');
+echo $this->Form->input('symbol'); ?>
+<div class='submit'>
+<?php echo $this->Form->submit('Add Stock', array('div'=>false, 'name'=>'add')); 
+?>
+</div>
+<?php echo $this->Form->end()?>
+
+
 <table>
 <tr>
 <th>Id</th>
@@ -22,13 +32,13 @@
 <td><?php echo $stocklist['Stocklist']['id']; ?></td>
 <td><?php echo $stocklist['Stocklist']['symbol']; ?></td>
 <td>
-<?php
-echo $this->Html->link($stocklist['Stocklist']['name'], array('action' => 'view?stock=' . $stocklist['Stocklist']['symbol']));?>
-</td>
 <?php $company = $stocklist['Stocklist']['symbol'];
 $result = $this->Stocks->get(array($company));?>
 <?php foreach ($result as $stock): ?>
-<td><?php echo str_replace("\"", "", $stock['change']); ?></td>
+<?php
+echo $this->Html->link(str_replace("\"", "", $stock['name']), array('action' => 'view?stock=' . $stocklist['Stocklist']['symbol']));?>
+</td>
+<td><?php echo str_replace("\"", "", $stock['change']).'%'; ?></td>
 <td><?php echo $stock['open'] ?></td>
 <td><?php echo $stock['close'] ?></td>
 <td><?php echo $stock['high'] ?></td>

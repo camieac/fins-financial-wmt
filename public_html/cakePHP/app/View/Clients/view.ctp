@@ -6,6 +6,7 @@
 <small>Modified: <?php echo $client['Client']['modified']; ?></small></p>
 <p><?php echo 'Gender: ', h($client['Client']['gender']); ?></p> 
 <p><?php echo 'Date of Birth: ', h($client['Client']['dateOfBirth']); ?></p> 
+<p><?php echo 'National Insurance Number: ', h($client['Client']['nis']); ?></p> 
 <p><?php echo 'Phone Number: ', h($client['Client']['phoneNo']); ?></p>
 <p><?php echo 'Address: ', h($client['Client']['address']); ?></p> 
 <p><?php echo 'F.A: ', h($client['Client']['fa']); ?></p> 

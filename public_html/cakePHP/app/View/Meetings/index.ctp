@@ -13,6 +13,7 @@
 <th>Description</th>
 <th>Customer</th>
 <th>F.A</th>
+<th>Time</th>
 <th>Date</th>
 <th>Actions</th>
 <th>Created</th>
@@ -31,7 +32,7 @@
 
 <?php $i++; ?> <!-- increments array -->
 
-
+<td><?php echo date("H:i", strtotime($meeting['Meeting']['meetingTime'])); ?></td>
 <td><?php echo $meeting['Meeting']['dateMeeting']; ?></td>
 <td>
 <?php
