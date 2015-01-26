@@ -101,5 +101,10 @@ return $this->redirect(array('action' => 'index'));
 }
 }
 
+public function test() {
+
+	}
+
+
 
 } ?>

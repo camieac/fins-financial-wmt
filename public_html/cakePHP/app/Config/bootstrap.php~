@@ -92,9 +92,12 @@ Configure::write('Dispatcher.filters', array(
 	'CacheDispatcher'
 ));
 
+CakePlugin::loadAll();
+
 /**
  * Configures default file logging options
  */
+
 App::uses('CakeLog', 'Log');
 CakeLog::config('debug', array(
 	'engine' => 'File',
