@@ -23,6 +23,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php echo $this->Html->charset(); ?>
 	<title>
 		<?php echo "Fin's Financials" ?>:
+		<?php echo $title_for_layout; ?>
 	</title>
 	<?php
 		
@@ -41,6 +42,15 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		<div id="header">
 	<!-- Image Example: <?php echo $this->Html->image('favicon.ico', array('alt' => 'CakePHP')) ?> -->
 		</div>
+		
+						<section>
+							<h2>Welcome to Minimaxing!</h2>
+							<p>This is <strong>Minimaxing</strong>, this shouldnt take too long to get to work with the cakephp HTML5 site template designed by <a href="http://n33.co">n33</a> and released for free by <a href="http://html5up.net">HTML5 UP</a>. It features
+							a simple, lightweight design, solid HTML5 and CSS3 code, and full responsive support for desktop, tablet, and mobile displays.</p>
+							<footer class="controls">
+								<a href="http://html5up.net" class="button">link to designer page</a>
+							</footer>
+						</section>
 		<div id="content">
 
 			<?php echo $this->Session->flash(); ?>

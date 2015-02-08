@@ -1,9 +1,21 @@
 <!-- File: /app/View/Purchase/index.ctp -->
 
+	<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.css">
+		
+<script type="text/javascript"> $(document).ready(function() {
+	$('#purchases').DataTable({
+	"bLengthChange": false
+	}
+	);
+} ); </script>
+
 <?php $i = 0;  ?>
 
 <h1><font size="6">Purchases</font></h1>
-<table>
+<table id="purchases" class="display" cellspacing="0" width="100%">
+<thead>
 <tr>
 <th>Stock</th>
 <th>Customer</th>
@@ -12,6 +24,7 @@
 <th>Total Value</th>
 <th>Created</th>
 </tr>
+</thead>
 <?php foreach ($purchases as $purchase): ?>
 
 <?php $result = $this->Stocks->get(array($query[$i]['stocklists']['symbol'])); ?>

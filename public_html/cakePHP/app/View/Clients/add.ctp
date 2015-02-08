@@ -19,6 +19,7 @@ echo $this->Form->input('dateOfBirth', array('dateFormat'=>'DMY', 'minYear'=>dat
 echo $this->Form->input('nis', array('label' => array('text' => 'National Insurance Number')));
 echo $this->Form->input('phoneNo');
 echo $this->Form->input('address');
+echo $this->Form->input('balance');
 echo $this->Form->input('fa',array('type'=>'select','options'=>$fa)); 
 echo $this->Form->end('Save Client');
 ?>

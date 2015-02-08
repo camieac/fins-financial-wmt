@@ -2,6 +2,18 @@
 
 <?php $User = ClassRegistry::init('User'); ?>
 
+	<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.css">
+		
+<script type="text/javascript"> $(document).ready(function() {
+	$('#stocks').DataTable({
+	"bLengthChange": false
+	}
+	);
+} ); </script>
+
+
 <h1><font size="6">Stocks</font></h1>
 
 <?php
@@ -14,18 +26,21 @@ echo $this->Form->input('symbol'); ?>
 <?php echo $this->Form->end()?>
 
 
-<table>
+<table id="stocks" class="display" cellspacing="0" width="100%">
+<thead>
 <tr>
 <th>Id</th>
 <th>Symbol</th>
 <th>Name</th>
 <th>Change Percentage</th>
+<th>Current Value</th>
 <th>Open Value</th>
 <th>Close Value</th>
 <th>High Value</th>
 <th>Low Value</th>
 <th>Created</th>
 </tr>
+</thead>
 <!-- Here's where we loop through our $stocklists array, printing out stocklist info -->
 <?php foreach ($stocklists as $stocklist): ?>
 <tr>
@@ -39,6 +54,7 @@ $result = $this->Stocks->get(array($company));?>
 echo $this->Html->link(str_replace("\"", "", $stock['name']), array('action' => 'view?stock=' . $stocklist['Stocklist']['symbol']));?>
 </td>
 <td><?php echo str_replace("\"", "", $stock['change']).'%'; ?></td>
+<td><?php echo $stock['current'] ?></td>
 <td><?php echo $stock['open'] ?></td>
 <td><?php echo $stock['close'] ?></td>
 <td><?php echo $stock['high'] ?></td>

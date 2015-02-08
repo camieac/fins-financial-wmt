@@ -9,6 +9,7 @@
 <p><?php echo 'National Insurance Number: ', h($client['Client']['nis']); ?></p> 
 <p><?php echo 'Phone Number: ', h($client['Client']['phoneNo']); ?></p>
 <p><?php echo 'Address: ', h($client['Client']['address']); ?></p> 
+<p><?php echo 'Balance: ', "£".number_format($client['Client']['balance'], 2); ?></p> 
 <p><?php echo 'F.A: ', h($client['Client']['fa']); ?></p> 
 <br/><br/>
 <font size = "4"><p><b>Stocks:</b></p></font>
@@ -21,7 +22,7 @@
 <th>Name</th>
 <th>Change Percentage</th>
 <th>Quantity</th>
-<th>Single Value</th>
+<th>Current Value</th>
 <th>Total Value</th>
 <th>Actions</th>
 <th>Created</th>
@@ -43,7 +44,7 @@ $result = $this->Stocks->get(array($company));  ?>
 <td><?php echo str_replace("\"", "",($result[0]['change'])) . "%" ?></td>
 <td><?php echo $stock['purchases']['quantity']; ?></td>
 
-<?php if(($result[0]['open']) === 'N/A')
+<?php if(($result[0]['current']) === '0.00')
 { ?>
 
 
@@ -51,12 +52,13 @@ $result = $this->Stocks->get(array($company));  ?>
 <?php $value = ($stock['purchases']['quantity'])*($result[0]['close']); ?>
 <?php }
 else {?>
-<td><?php echo "£".number_format($result[0]['open'], 2); ?></td>
-<?php $value = ($stock['purchases']['quantity'])*($result[0]['open']); ?>
+
+<td><?php echo "£".number_format($result[0]['current'], 2); ?></td>
+<?php $value = ($stock['purchases']['quantity'])*($result[0]['current']); ?>
 <?php } ?>
 
 <td><?php echo "£".number_format($value, 2); ?></td>
-<td><?php echo $this->Form->postLink('Delete', array('action' => 'deleteStock'.'/'.$stock['purchases']['id']. '/'. $id[0]), array('confirm' => 'Are you sure?')); ?></td>
+<td><?php echo $this->Form->postLink('Delete', array('action' => 'deleteStock'.'/'. $stock['purchases']['id'] . '/'. $id[0]), array('confirm' => 'Are you sure?')); ?></td>
 <td><?php echo $stock['purchases']['created']; ?></td>
 </tr>
 

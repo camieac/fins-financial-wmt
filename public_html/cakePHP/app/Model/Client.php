@@ -26,6 +26,12 @@ public $validate = array(
         'message' => 'Please enter your phonenumber.'
     ),
 ),
+ 'balance' => array(
+    	'Numeric' => array(
+        	'rule' => 'numeric',
+        	'message' => 'Please use only numbers.'
+	),
+),
 'address' => array(
 'rule' => 'notEmpty'
 ),
@@ -48,6 +54,12 @@ public $validate = array(
     {
        return $this->query("SELECT stocklists.id, stocklists.symbol FROM stocklists ORDER BY stocklists.id;");
     }
+
+    public function getQuery($a)
+    {
+       return $this->query($a);
+    }
+    
 
 }
 ?>

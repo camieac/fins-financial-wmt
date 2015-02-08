@@ -2,7 +2,7 @@
 
 <?php $User = ClassRegistry::init('User'); ?>
 
-<?php $i = 0;  ?>
+<?php $i = 0; ?>
 
 <h1><font size="6">Meetings</font></h1>
 <p><?php echo $this->Html->link('Add meeting', array('action' => 'add')); ?></p>

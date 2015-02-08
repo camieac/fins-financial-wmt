@@ -42,6 +42,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		<div id="header">
 	<!-- Image Example: <?php echo $this->Html->image('favicon.ico', array('alt' => 'CakePHP')) ?> -->
 		</div>
+		
 		<div id="content">
 
 			<?php echo $this->Session->flash(); ?>

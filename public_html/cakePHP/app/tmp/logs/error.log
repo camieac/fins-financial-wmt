@@ -17795,3 +17795,1757 @@ Request URL: /~ml335/cakePHP/Fullcalendar
 Stack Trace:
 #0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2015-01-26 19:54:01 Error: [MissingControllerException] Controller class Moment.min.jsController could not be found.
+Exception Attributes: array (
+  'class' => 'Moment.min.jsController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/moment.min.js
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-26 19:54:31 Error: [MissingControllerException] Controller class Fullcalendar.cssController could not be found.
+Exception Attributes: array (
+  'class' => 'Fullcalendar.cssController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/fullcalendar.css
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-26 20:53:25 Error: [MissingControllerException] Controller class Fullcalendar.min.jsController could not be found.
+Exception Attributes: array (
+  'class' => 'Fullcalendar.min.jsController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/fullcalendar.min.js
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-26 20:53:25 Error: [MissingControllerException] Controller class Jquery.min.jsController could not be found.
+Exception Attributes: array (
+  'class' => 'Jquery.min.jsController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/jquery.min.js
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-26 20:53:25 Error: [MissingControllerException] Controller class Fullcalendar.cssController could not be found.
+Exception Attributes: array (
+  'class' => 'Fullcalendar.cssController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/fullcalendar.css
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-26 20:53:25 Error: [MissingControllerException] Controller class Moment.min.jsController could not be found.
+Exception Attributes: array (
+  'class' => 'Moment.min.jsController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/moment.min.js
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-26 20:53:25 Error: [MissingControllerException] Controller class Fullcalendar.print.cssController could not be found.
+Exception Attributes: array (
+  'class' => 'Fullcalendar.print.cssController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/fullcalendar.print.css
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-27 13:35:23 Error: [MissingControllerException] Controller class Style.cssController could not be found.
+Exception Attributes: array (
+  'class' => 'Style.cssController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/style.css
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-01-29 14:36:42 Error: [MissingControllerException] Controller class Style.cssController could not be found.
+Exception Attributes: array (
+  'class' => 'Style.cssController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/style.css
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-02 12:50:23 Error: [MissingControllerException] Controller class Style.cssController could not be found.
+Exception Attributes: array (
+  'class' => 'Style.cssController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/style.css
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-02 13:18:32 Error: Fatal Error (4): syntax error, unexpected T_INC, expecting T_VARIABLE or '$' in [/home/cs3/ml335/public_html/cakePHP/app/View/Meetings/index.ctp, line 29]
+2015-02-02 13:18:32 Error: [FatalErrorException] syntax error, unexpected T_INC, expecting T_VARIABLE or '$'
+Request URL: /~ml335/cakePHP/meetings
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-02 13:18:34 Error: Fatal Error (4): syntax error, unexpected T_INC, expecting T_VARIABLE or '$' in [/home/cs3/ml335/public_html/cakePHP/app/View/Meetings/index.ctp, line 29]
+2015-02-02 13:18:34 Error: [FatalErrorException] syntax error, unexpected T_INC, expecting T_VARIABLE or '$'
+Request URL: /~ml335/cakePHP/meetings
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-02 13:18:35 Error: Fatal Error (4): syntax error, unexpected T_INC, expecting T_VARIABLE or '$' in [/home/cs3/ml335/public_html/cakePHP/app/View/Meetings/index.ctp, line 29]
+2015-02-02 13:18:35 Error: [FatalErrorException] syntax error, unexpected T_INC, expecting T_VARIABLE or '$'
+Request URL: /~ml335/cakePHP/meetings
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-02 13:18:35 Error: Fatal Error (4): syntax error, unexpected T_INC, expecting T_VARIABLE or '$' in [/home/cs3/ml335/public_html/cakePHP/app/View/Meetings/index.ctp, line 29]
+2015-02-02 13:18:35 Error: [FatalErrorException] syntax error, unexpected T_INC, expecting T_VARIABLE or '$'
+Request URL: /~ml335/cakePHP/meetings
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-02 13:18:35 Error: Fatal Error (4): syntax error, unexpected T_INC, expecting T_VARIABLE or '$' in [/home/cs3/ml335/public_html/cakePHP/app/View/Meetings/index.ctp, line 29]
+2015-02-02 13:18:35 Error: [FatalErrorException] syntax error, unexpected T_INC, expecting T_VARIABLE or '$'
+Request URL: /~ml335/cakePHP/meetings
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-02 13:18:35 Error: Fatal Error (4): syntax error, unexpected T_INC, expecting T_VARIABLE or '$' in [/home/cs3/ml335/public_html/cakePHP/app/View/Meetings/index.ctp, line 29]
+2015-02-02 13:18:35 Error: [FatalErrorException] syntax error, unexpected T_INC, expecting T_VARIABLE or '$'
+Request URL: /~ml335/cakePHP/meetings
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-02 13:18:36 Error: Fatal Error (4): syntax error, unexpected T_INC, expecting T_VARIABLE or '$' in [/home/cs3/ml335/public_html/cakePHP/app/View/Meetings/index.ctp, line 29]
+2015-02-02 13:18:36 Error: [FatalErrorException] syntax error, unexpected T_INC, expecting T_VARIABLE or '$'
+Request URL: /~ml335/cakePHP/meetings
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-02 13:18:36 Error: Fatal Error (4): syntax error, unexpected T_INC, expecting T_VARIABLE or '$' in [/home/cs3/ml335/public_html/cakePHP/app/View/Meetings/index.ctp, line 29]
+2015-02-02 13:18:36 Error: [FatalErrorException] syntax error, unexpected T_INC, expecting T_VARIABLE or '$'
+Request URL: /~ml335/cakePHP/meetings
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-02 13:18:36 Error: Fatal Error (4): syntax error, unexpected T_INC, expecting T_VARIABLE or '$' in [/home/cs3/ml335/public_html/cakePHP/app/View/Meetings/index.ctp, line 29]
+2015-02-02 13:18:36 Error: [FatalErrorException] syntax error, unexpected T_INC, expecting T_VARIABLE or '$'
+Request URL: /~ml335/cakePHP/meetings
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-02 13:18:37 Error: Fatal Error (4): syntax error, unexpected T_INC, expecting T_VARIABLE or '$' in [/home/cs3/ml335/public_html/cakePHP/app/View/Meetings/index.ctp, line 29]
+2015-02-02 13:18:37 Error: [FatalErrorException] syntax error, unexpected T_INC, expecting T_VARIABLE or '$'
+Request URL: /~ml335/cakePHP/meetings
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-02 13:18:37 Error: Fatal Error (4): syntax error, unexpected T_INC, expecting T_VARIABLE or '$' in [/home/cs3/ml335/public_html/cakePHP/app/View/Meetings/index.ctp, line 29]
+2015-02-02 13:18:37 Error: [FatalErrorException] syntax error, unexpected T_INC, expecting T_VARIABLE or '$'
+Request URL: /~ml335/cakePHP/meetings
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-02 13:18:37 Error: Fatal Error (4): syntax error, unexpected T_INC, expecting T_VARIABLE or '$' in [/home/cs3/ml335/public_html/cakePHP/app/View/Meetings/index.ctp, line 29]
+2015-02-02 13:18:37 Error: [FatalErrorException] syntax error, unexpected T_INC, expecting T_VARIABLE or '$'
+Request URL: /~ml335/cakePHP/meetings
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-02 13:18:37 Error: Fatal Error (4): syntax error, unexpected T_INC, expecting T_VARIABLE or '$' in [/home/cs3/ml335/public_html/cakePHP/app/View/Meetings/index.ctp, line 29]
+2015-02-02 13:18:37 Error: [FatalErrorException] syntax error, unexpected T_INC, expecting T_VARIABLE or '$'
+Request URL: /~ml335/cakePHP/meetings
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-02 13:18:37 Error: Fatal Error (4): syntax error, unexpected T_INC, expecting T_VARIABLE or '$' in [/home/cs3/ml335/public_html/cakePHP/app/View/Meetings/index.ctp, line 29]
+2015-02-02 13:18:37 Error: [FatalErrorException] syntax error, unexpected T_INC, expecting T_VARIABLE or '$'
+Request URL: /~ml335/cakePHP/meetings
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-02 13:18:37 Error: Fatal Error (4): syntax error, unexpected T_INC, expecting T_VARIABLE or '$' in [/home/cs3/ml335/public_html/cakePHP/app/View/Meetings/index.ctp, line 29]
+2015-02-02 13:18:37 Error: [FatalErrorException] syntax error, unexpected T_INC, expecting T_VARIABLE or '$'
+Request URL: /~ml335/cakePHP/meetings
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-02 13:18:38 Error: Fatal Error (4): syntax error, unexpected T_INC, expecting T_VARIABLE or '$' in [/home/cs3/ml335/public_html/cakePHP/app/View/Meetings/index.ctp, line 29]
+2015-02-02 13:18:38 Error: [FatalErrorException] syntax error, unexpected T_INC, expecting T_VARIABLE or '$'
+Request URL: /~ml335/cakePHP/meetings
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-02 13:18:38 Error: Fatal Error (4): syntax error, unexpected T_INC, expecting T_VARIABLE or '$' in [/home/cs3/ml335/public_html/cakePHP/app/View/Meetings/index.ctp, line 29]
+2015-02-02 13:18:38 Error: [FatalErrorException] syntax error, unexpected T_INC, expecting T_VARIABLE or '$'
+Request URL: /~ml335/cakePHP/meetings
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 29, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-02 13:20:08 Error: Fatal Error (4): syntax error, unexpected '}' in [/home/cs3/ml335/public_html/cakePHP/app/View/Meetings/index.ctp, line 33]
+2015-02-02 13:20:08 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /~ml335/cakePHP/meetings
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 33)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 33, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 33, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-02 13:20:18 Error: Fatal Error (4): syntax error, unexpected '}' in [/home/cs3/ml335/public_html/cakePHP/app/View/Meetings/index.ctp, line 33]
+2015-02-02 13:20:18 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /~ml335/cakePHP/meetings
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 33)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 33, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 33, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-02 13:20:35 Error: Fatal Error (4): syntax error, unexpected '}' in [/home/cs3/ml335/public_html/cakePHP/app/View/Meetings/index.ctp, line 33]
+2015-02-02 13:20:35 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /~ml335/cakePHP/meetings
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 33)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 33, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 33, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-02 13:20:37 Error: Fatal Error (4): syntax error, unexpected '}' in [/home/cs3/ml335/public_html/cakePHP/app/View/Meetings/index.ctp, line 33]
+2015-02-02 13:20:37 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /~ml335/cakePHP/meetings
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 33)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 33, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 33, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-02 13:20:40 Error: Fatal Error (4): syntax error, unexpected '}' in [/home/cs3/ml335/public_html/cakePHP/app/View/Meetings/index.ctp, line 33]
+2015-02-02 13:20:40 Error: [FatalErrorException] syntax error, unexpected '}'
+Request URL: /~ml335/cakePHP/meetings
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 33)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 33, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 33, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-02 13:28:57 Error: [MissingControllerException] Controller class Style.cssController could not be found.
+Exception Attributes: array (
+  'class' => 'Style.cssController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/style.css
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-02 13:29:15 Error: [MissingControllerException] Controller class Style.cssController could not be found.
+Exception Attributes: array (
+  'class' => 'Style.cssController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/style.css
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-02 13:30:05 Error: [MissingControllerException] Controller class Style.cssController could not be found.
+Exception Attributes: array (
+  'class' => 'Style.cssController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/style.css
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-02 14:01:31 Error: Fatal Error (4): syntax error, unexpected '(', expecting T_VARIABLE or '$' in [/home/cs3/ml335/public_html/cakePHP/app/View/Clients/index.ctp, line 9]
+2015-02-02 14:01:31 Error: [FatalErrorException] syntax error, unexpected '(', expecting T_VARIABLE or '$'
+Request URL: /~ml335/cakePHP/clients
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 9, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 9, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-07 22:37:26 Error: Fatal Error (4): syntax error, unexpected T_DOUBLE_ARROW in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 58]
+2015-02-07 22:37:26 Error: [FatalErrorException] syntax error, unexpected T_DOUBLE_ARROW
+Request URL: /~ml335/cakePHP/clients/view/2
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 58)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 58, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 58, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-07 22:37:42 Error: Fatal Error (4): syntax error, unexpected T_DOUBLE_ARROW in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 58]
+2015-02-07 22:37:42 Error: [FatalErrorException] syntax error, unexpected T_DOUBLE_ARROW
+Request URL: /~ml335/cakePHP/clients/view/2
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 58)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 58, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 58, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-07 22:37:44 Error: Fatal Error (4): syntax error, unexpected T_DOUBLE_ARROW in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 58]
+2015-02-07 22:37:44 Error: [FatalErrorException] syntax error, unexpected T_DOUBLE_ARROW
+Request URL: /~ml335/cakePHP/clients/view/2
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 58)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 58, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 58, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-07 22:37:45 Error: Fatal Error (4): syntax error, unexpected T_DOUBLE_ARROW in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 58]
+2015-02-07 22:37:45 Error: [FatalErrorException] syntax error, unexpected T_DOUBLE_ARROW
+Request URL: /~ml335/cakePHP/clients/view/2
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 58)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 58, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 58, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-07 23:06:21 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 61]
+2015-02-07 23:06:21 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE
+Request URL: /~ml335/cakePHP/clients/view/2
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 61)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 61, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 61, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-07 23:06:22 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 61]
+2015-02-07 23:06:22 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE
+Request URL: /~ml335/cakePHP/clients/view/2
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 61)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 61, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 61, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-07 23:06:27 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 61]
+2015-02-07 23:06:27 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE
+Request URL: /~ml335/cakePHP/clients/view/2
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 61)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 61, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 61, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-07 23:06:29 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 61]
+2015-02-07 23:06:29 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE
+Request URL: /~ml335/cakePHP/clients/view/2
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 61)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 61, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 61, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-07 23:06:29 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 61]
+2015-02-07 23:06:29 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE
+Request URL: /~ml335/cakePHP/clients/view/2
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 61)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 61, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 61, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-07 23:06:40 Error: Fatal Error (1): Call to a member function get() on a non-object in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 59]
+2015-02-07 23:06:40 Error: [FatalErrorException] Call to a member function get() on a non-object
+Request URL: /~ml335/cakePHP/clients/view/2
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/cs3/ml335...', 59)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/cs3/ml335...', 59, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/cs3/ml335...', 59, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-07 23:07:39 Error: Fatal Error (1): Call to a member function get() on a non-object in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-07 23:07:39 Error: [FatalErrorException] Call to a member function get() on a non-object
+Request URL: /~ml335/cakePHP/clients/view/2
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-07 23:07:47 Error: Fatal Error (1): Call to a member function get() on a non-object in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-07 23:07:47 Error: [FatalErrorException] Call to a member function get() on a non-object
+Request URL: /~ml335/cakePHP/clients/view/2
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-07 23:08:57 Error: Fatal Error (1): Call to a member function get() on a non-object in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 59]
+2015-02-07 23:08:57 Error: [FatalErrorException] Call to a member function get() on a non-object
+Request URL: /~ml335/cakePHP/clients/view/2
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/cs3/ml335...', 59)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/cs3/ml335...', 59, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/cs3/ml335...', 59, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 00:38:25 Error: Fatal Error (1): Call to a member function get() on a non-object in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 00:38:25 Error: [FatalErrorException] Call to a member function get() on a non-object
+Request URL: /~ml335/cakePHP/clients/view/2
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 00:38:35 Error: Fatal Error (1): Call to a member function get() on a non-object in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 00:38:35 Error: [FatalErrorException] Call to a member function get() on a non-object
+Request URL: /~ml335/cakePHP/clients/view/2
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 00:38:44 Error: Fatal Error (1): Call to a member function get() on a non-object in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 00:38:44 Error: [FatalErrorException] Call to a member function get() on a non-object
+Request URL: /~ml335/cakePHP/clients/view/2
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 00:39:30 Error: Fatal Error (1): Call to a member function get() on a non-object in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 00:39:30 Error: [FatalErrorException] Call to a member function get() on a non-object
+Request URL: /~ml335/cakePHP/clients/view/2
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 00:54:31 Error: Fatal Error (1): Call to a member function get() on a non-object in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 00:54:31 Error: [FatalErrorException] Call to a member function get() on a non-object
+Request URL: /~ml335/cakePHP/clients/view/2
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 00:55:34 Error: Fatal Error (1): Call to a member function get() on a non-object in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 00:55:34 Error: [FatalErrorException] Call to a member function get() on a non-object
+Request URL: /~ml335/cakePHP/clients/view/2
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 00:57:33 Error: Fatal Error (1): Call to a member function get() on a non-object in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 00:57:33 Error: [FatalErrorException] Call to a member function get() on a non-object
+Request URL: /~ml335/cakePHP/clients/view/2
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 01:24:30 Error: Fatal Error (1): Call to a member function get() on a non-object in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 01:24:30 Error: [FatalErrorException] Call to a member function get() on a non-object
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 01:48:20 Error: Fatal Error (1): Call to a member function get() on a non-object in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 01:48:20 Error: [FatalErrorException] Call to a member function get() on a non-object
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 01:48:39 Error: Fatal Error (1): Call to a member function get() on a non-object in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 01:48:39 Error: [FatalErrorException] Call to a member function get() on a non-object
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 01:48:49 Error: Fatal Error (1): Call to a member function get() on a non-object in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 01:48:49 Error: [FatalErrorException] Call to a member function get() on a non-object
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 01:51:34 Error: Fatal Error (1): Call to a member function get() on a non-object in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 01:51:34 Error: [FatalErrorException] Call to a member function get() on a non-object
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 02:11:36 Error: Fatal Error (1): Call to a member function get() on a non-object in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 02:11:36 Error: [FatalErrorException] Call to a member function get() on a non-object
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 02:13:57 Error: Fatal Error (4): syntax error, unexpected T_CLASS in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 6]
+2015-02-08 02:13:57 Error: [FatalErrorException] syntax error, unexpected T_CLASS
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 6)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 6, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 6, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 02:14:05 Error: Fatal Error (4): syntax error, unexpected T_CLASS in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 6]
+2015-02-08 02:14:05 Error: [FatalErrorException] syntax error, unexpected T_CLASS
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 6)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 6, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 6, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 02:14:05 Error: Fatal Error (4): syntax error, unexpected T_CLASS in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 6]
+2015-02-08 02:14:05 Error: [FatalErrorException] syntax error, unexpected T_CLASS
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 6)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 6, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 6, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 02:14:34 Error: Fatal Error (1): Call to a member function get() on a non-object in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 02:14:34 Error: [FatalErrorException] Call to a member function get() on a non-object
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 02:33:05 Error: Fatal Error (1): Call to a member function get() on a non-object in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 02:33:05 Error: [FatalErrorException] Call to a member function get() on a non-object
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 15:50:30 Error: [MissingControllerException] Controller class Fullcalendar.cssController could not be found.
+Exception Attributes: array (
+  'class' => 'Fullcalendar.cssController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/fullcalendar.css
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-08 15:50:30 Error: [MissingControllerException] Controller class Moment.min.jsController could not be found.
+Exception Attributes: array (
+  'class' => 'Moment.min.jsController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/moment.min.js
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-08 15:50:30 Error: [MissingControllerException] Controller class Fullcalendar.print.cssController could not be found.
+Exception Attributes: array (
+  'class' => 'Fullcalendar.print.cssController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/fullcalendar.print.css
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-08 15:50:30 Error: [MissingControllerException] Controller class Jquery.min.jsController could not be found.
+Exception Attributes: array (
+  'class' => 'Jquery.min.jsController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/jquery.min.js
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-08 15:50:30 Error: [MissingControllerException] Controller class Fullcalendar.min.jsController could not be found.
+Exception Attributes: array (
+  'class' => 'Fullcalendar.min.jsController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/fullcalendar.min.js
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-08 15:51:45 Error: [MissingControllerException] Controller class Style.cssController could not be found.
+Exception Attributes: array (
+  'class' => 'Style.cssController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/style.css
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-08 15:52:12 Error: [MissingControllerException] Controller class Style.cssController could not be found.
+Exception Attributes: array (
+  'class' => 'Style.cssController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/style.css
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-08 15:53:49 Error: [MissingControllerException] Controller class Style.cssController could not be found.
+Exception Attributes: array (
+  'class' => 'Style.cssController',
+  'plugin' => NULL,
+)
+Request URL: /~ml335/cakePHP/style.css
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-02-08 16:09:49 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('UPDATE `sam74`....', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/Database/Mysql.php(414): DboSource->execute('UPDATE `sam74`....')
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(2585): Mysql->update(Object(Client), Array, NULL, true)
+#4 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(62): Model->updateAll(Array)
+#5 [internal function]: ClientsController->view('1')
+#6 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#7 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#9 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-02-08 16:11:18 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('UPDATE `sam74`....', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/Database/Mysql.php(414): DboSource->execute('UPDATE `sam74`....')
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(2585): Mysql->update(Object(Client), Array, NULL, true)
+#4 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(62): Model->updateAll(Array)
+#5 [internal function]: ClientsController->view('1')
+#6 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#7 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#9 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-02-08 16:11:50 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('UPDATE `sam74`....', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/Database/Mysql.php(414): DboSource->execute('UPDATE `sam74`....')
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(2585): Mysql->update(Object(Client), Array, NULL, true)
+#4 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(62): Model->updateAll(Array)
+#5 [internal function]: ClientsController->view('1')
+#6 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#7 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#9 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-02-08 16:12:01 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('UPDATE `sam74`....', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/Database/Mysql.php(414): DboSource->execute('UPDATE `sam74`....')
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(2585): Mysql->update(Object(Client), Array, NULL, true)
+#4 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(62): Model->updateAll(Array)
+#5 [internal function]: ClientsController->view('1')
+#6 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#7 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#9 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-02-08 16:12:12 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('UPDATE `sam74`....', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/Database/Mysql.php(414): DboSource->execute('UPDATE `sam74`....')
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(2585): Mysql->update(Object(Client), Array, NULL, true)
+#4 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(62): Model->updateAll(Array)
+#5 [internal function]: ClientsController->view('1')
+#6 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#7 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#9 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-02-08 16:14:00 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('UPDATE `sam74`....', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/Database/Mysql.php(414): DboSource->execute('UPDATE `sam74`....')
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(2585): Mysql->update(Object(Client), Array, NULL, true)
+#4 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(62): Model->updateAll(Array)
+#5 [internal function]: ClientsController->view('1')
+#6 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#7 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#9 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-02-08 16:32:29 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 66]
+2015-02-08 16:32:29 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 66)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 16:32:36 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 66]
+2015-02-08 16:32:36 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 66)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 16:32:38 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 66]
+2015-02-08 16:32:38 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 66)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 16:34:33 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column '$price' in 'field list'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('UPDATE `sam74`....', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/Database/Mysql.php(414): DboSource->execute('UPDATE `sam74`....')
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(2585): Mysql->update(Object(Client), Array, NULL, true)
+#4 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(66): Model->updateAll(Array)
+#5 [internal function]: ClientsController->view('1')
+#6 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#7 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#9 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-02-08 17:17:50 Error: [NotFoundException] Invalid client
+Request URL: /~ml335/cakePHP/clients/view/Client.id
+Stack Trace:
+#0 [internal function]: ClientsController->view('Client.id')
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#4 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-08 17:18:12 Error: Fatal Error (4): syntax error, unexpected '=', expecting ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 66]
+2015-02-08 17:18:12 Error: [FatalErrorException] syntax error, unexpected '=', expecting ')'
+Request URL: /~ml335/cakePHP/clients/deleteStock/4/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 66)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:18:15 Error: Fatal Error (4): syntax error, unexpected '=', expecting ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 66]
+2015-02-08 17:18:15 Error: [FatalErrorException] syntax error, unexpected '=', expecting ')'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 66)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:18:18 Error: Fatal Error (4): syntax error, unexpected '=', expecting ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 66]
+2015-02-08 17:18:18 Error: [FatalErrorException] syntax error, unexpected '=', expecting ')'
+Request URL: /~ml335/cakePHP/clients
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 66)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:18:19 Error: Fatal Error (4): syntax error, unexpected '=', expecting ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 66]
+2015-02-08 17:18:19 Error: [FatalErrorException] syntax error, unexpected '=', expecting ')'
+Request URL: /~ml335/cakePHP/clients
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 66)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:18:27 Error: Fatal Error (4): syntax error, unexpected '=', expecting ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 66]
+2015-02-08 17:18:27 Error: [FatalErrorException] syntax error, unexpected '=', expecting ')'
+Request URL: /~ml335/cakePHP/clients
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 66)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:18:28 Error: Fatal Error (4): syntax error, unexpected '=', expecting ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 66]
+2015-02-08 17:18:28 Error: [FatalErrorException] syntax error, unexpected '=', expecting ')'
+Request URL: /~ml335/cakePHP/clients
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 66)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:18:29 Error: Fatal Error (4): syntax error, unexpected '=', expecting ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 66]
+2015-02-08 17:18:29 Error: [FatalErrorException] syntax error, unexpected '=', expecting ')'
+Request URL: /~ml335/cakePHP/clients
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 66)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:18:58 Error: Fatal Error (4): syntax error, unexpected ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 66]
+2015-02-08 17:18:58 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /~ml335/cakePHP/clients/view/2
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 66)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:19:00 Error: Fatal Error (4): syntax error, unexpected ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 66]
+2015-02-08 17:19:00 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /~ml335/cakePHP/clients/view/2
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 66)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:19:03 Error: Fatal Error (4): syntax error, unexpected ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 66]
+2015-02-08 17:19:03 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /~ml335/cakePHP/clients/view/2
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 66)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:19:06 Error: Fatal Error (4): syntax error, unexpected ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 66]
+2015-02-08 17:19:06 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 66)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:19:07 Error: Fatal Error (4): syntax error, unexpected ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 66]
+2015-02-08 17:19:07 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 66)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:19:09 Error: Fatal Error (4): syntax error, unexpected ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 66]
+2015-02-08 17:19:09 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /~ml335/cakePHP/clients/view
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 66)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:19:10 Error: Fatal Error (4): syntax error, unexpected ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 66]
+2015-02-08 17:19:10 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /~ml335/cakePHP/clients/view
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 66)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 66, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:19:14 Error: [NotFoundException] Invalid client
+Request URL: /~ml335/cakePHP/clients/view
+Stack Trace:
+#0 [internal function]: ClientsController->view()
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#4 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-08 17:19:16 Error: [NotFoundException] Invalid client
+Request URL: /~ml335/cakePHP/clients/view
+Stack Trace:
+#0 [internal function]: ClientsController->view()
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#4 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-02-08 17:25:37 Error: Fatal Error (4): syntax error, unexpected T_STRING, expecting ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 71]
+2015-02-08 17:25:37 Error: [FatalErrorException] syntax error, unexpected T_STRING, expecting ')'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 71)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 71, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 71, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:25:47 Error: Fatal Error (4): syntax error, unexpected T_STRING, expecting ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 71]
+2015-02-08 17:25:47 Error: [FatalErrorException] syntax error, unexpected T_STRING, expecting ')'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 71)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 71, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 71, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:25:49 Error: Fatal Error (4): syntax error, unexpected T_STRING, expecting ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 71]
+2015-02-08 17:25:49 Error: [FatalErrorException] syntax error, unexpected T_STRING, expecting ')'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 71)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 71, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 71, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:25:49 Error: Fatal Error (4): syntax error, unexpected T_STRING, expecting ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 71]
+2015-02-08 17:25:49 Error: [FatalErrorException] syntax error, unexpected T_STRING, expecting ')'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 71)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 71, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 71, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:26:13 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column '$price' in 'field list'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('UPDATE `sam74`....', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/Database/Mysql.php(414): DboSource->execute('UPDATE `sam74`....')
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(2585): Mysql->update(Object(Client), Array, NULL, Array)
+#4 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(71): Model->updateAll(Array, Array)
+#5 [internal function]: ClientsController->view('1')
+#6 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#7 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#9 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-02-08 17:26:29 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column '$price' in 'field list'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('UPDATE `sam74`....', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/Database/Mysql.php(414): DboSource->execute('UPDATE `sam74`....')
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(2585): Mysql->update(Object(Client), Array, NULL, Array)
+#4 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(71): Model->updateAll(Array, Array)
+#5 [internal function]: ClientsController->view('1')
+#6 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#7 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#9 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2015-02-08 17:29:30 Error: Fatal Error (4): syntax error, unexpected '[', expecting ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 40]
+2015-02-08 17:29:30 Error: [FatalErrorException] syntax error, unexpected '[', expecting ')'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 40, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 40, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:29:31 Error: Fatal Error (4): syntax error, unexpected '[', expecting ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 40]
+2015-02-08 17:29:31 Error: [FatalErrorException] syntax error, unexpected '[', expecting ')'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 40, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 40, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:31:42 Error: Fatal Error (4): syntax error, unexpected '[', expecting ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 40]
+2015-02-08 17:31:42 Error: [FatalErrorException] syntax error, unexpected '[', expecting ')'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 40, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 40, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:31:43 Error: Fatal Error (4): syntax error, unexpected '[', expecting ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 40]
+2015-02-08 17:31:43 Error: [FatalErrorException] syntax error, unexpected '[', expecting ')'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 40, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 40, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:41:20 Error: Fatal Error (1): Call to undefined method ClientsController::query() in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 17:41:20 Error: [FatalErrorException] Call to undefined method ClientsController::query()
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:41:26 Error: Fatal Error (1): Call to undefined method ClientsController::query() in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 17:41:26 Error: [FatalErrorException] Call to undefined method ClientsController::query()
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:43:40 Error: Fatal Error (1): Cannot use string offset as an array in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 17:43:40 Error: [FatalErrorException] Cannot use string offset as an array
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Cannot use stri...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use stri...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Cannot use stri...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:44:12 Error: Fatal Error (4): syntax error, unexpected '[', expecting ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 17:44:12 Error: [FatalErrorException] syntax error, unexpected '[', expecting ')'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:44:25 Error: Fatal Error (4): syntax error, unexpected '[', expecting ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 17:44:25 Error: [FatalErrorException] syntax error, unexpected '[', expecting ')'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:44:27 Error: Fatal Error (4): syntax error, unexpected '[', expecting ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 17:44:27 Error: [FatalErrorException] syntax error, unexpected '[', expecting ')'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:44:29 Error: Fatal Error (4): syntax error, unexpected '[', expecting ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 17:44:29 Error: [FatalErrorException] syntax error, unexpected '[', expecting ')'
+Request URL: /~ml335/cakePHP/clients/view/
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:44:30 Error: Fatal Error (4): syntax error, unexpected '[', expecting ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 17:44:30 Error: [FatalErrorException] syntax error, unexpected '[', expecting ')'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:48:29 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 17:48:29 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:48:31 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 17:48:31 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:48:37 Error: Fatal Error (4): syntax error, unexpected T_VARIABLE in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 17:48:37 Error: [FatalErrorException] syntax error, unexpected T_VARIABLE
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:50:55 Error: Fatal Error (1): Call to undefined method ClientsController::query() in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 196]
+2015-02-08 17:50:55 Error: [FatalErrorException] Call to undefined method ClientsController::query()
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/home/cs3/ml335...', 196)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/home/cs3/ml335...', 196, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/home/cs3/ml335...', 196, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:51:02 Error: Fatal Error (1): Call to undefined method ClientsController::query() in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 196]
+2015-02-08 17:51:02 Error: [FatalErrorException] Call to undefined method ClientsController::query()
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/home/cs3/ml335...', 196)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/home/cs3/ml335...', 196, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/home/cs3/ml335...', 196, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:51:05 Error: Fatal Error (1): Call to undefined method ClientsController::query() in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 196]
+2015-02-08 17:51:05 Error: [FatalErrorException] Call to undefined method ClientsController::query()
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/home/cs3/ml335...', 196)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/home/cs3/ml335...', 196, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/home/cs3/ml335...', 196, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 17:59:47 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= purchases.stock' at line 1
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT stocklis...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT stocklis...', Array, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT stocklis...')
+#4 [internal function]: DboSource->query('SELECT stocklis...')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3354): call_user_func_array(Array, Array)
+#6 /home/cs3/ml335/public_html/cakePHP/app/Model/Client.php(60): Model->query('SELECT stocklis...')
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(56): Client->getQuery('SELECT stocklis...')
+#8 [internal function]: ClientsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-02-08 18:00:05 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= purchases.stock' at line 1
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT stocklis...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT stocklis...', Array, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT stocklis...')
+#4 [internal function]: DboSource->query('SELECT stocklis...')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3354): call_user_func_array(Array, Array)
+#6 /home/cs3/ml335/public_html/cakePHP/app/Model/Client.php(60): Model->query('SELECT stocklis...')
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(56): Client->getQuery('SELECT stocklis...')
+#8 [internal function]: ClientsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-02-08 18:00:06 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= purchases.stock' at line 1
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT stocklis...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT stocklis...', Array, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT stocklis...')
+#4 [internal function]: DboSource->query('SELECT stocklis...')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3354): call_user_func_array(Array, Array)
+#6 /home/cs3/ml335/public_html/cakePHP/app/Model/Client.php(60): Model->query('SELECT stocklis...')
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(56): Client->getQuery('SELECT stocklis...')
+#8 [internal function]: ClientsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-02-08 18:00:08 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= purchases.stock' at line 1
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT stocklis...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT stocklis...', Array, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT stocklis...')
+#4 [internal function]: DboSource->query('SELECT stocklis...')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3354): call_user_func_array(Array, Array)
+#6 /home/cs3/ml335/public_html/cakePHP/app/Model/Client.php(60): Model->query('SELECT stocklis...')
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(56): Client->getQuery('SELECT stocklis...')
+#8 [internal function]: ClientsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-02-08 18:00:09 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= purchases.stock' at line 1
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT stocklis...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT stocklis...', Array, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT stocklis...')
+#4 [internal function]: DboSource->query('SELECT stocklis...')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3354): call_user_func_array(Array, Array)
+#6 /home/cs3/ml335/public_html/cakePHP/app/Model/Client.php(60): Model->query('SELECT stocklis...')
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(56): Client->getQuery('SELECT stocklis...')
+#8 [internal function]: ClientsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-02-08 18:00:20 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= purchases.stock' at line 1
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT stocklis...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT stocklis...', Array, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT stocklis...')
+#4 [internal function]: DboSource->query('SELECT stocklis...')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3354): call_user_func_array(Array, Array)
+#6 /home/cs3/ml335/public_html/cakePHP/app/Model/Client.php(60): Model->query('SELECT stocklis...')
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(56): Client->getQuery('SELECT stocklis...')
+#8 [internal function]: ClientsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-02-08 18:00:21 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= purchases.stock' at line 1
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT stocklis...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT stocklis...', Array, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT stocklis...')
+#4 [internal function]: DboSource->query('SELECT stocklis...')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3354): call_user_func_array(Array, Array)
+#6 /home/cs3/ml335/public_html/cakePHP/app/Model/Client.php(60): Model->query('SELECT stocklis...')
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(56): Client->getQuery('SELECT stocklis...')
+#8 [internal function]: ClientsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-02-08 18:00:24 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= purchases.stock' at line 1
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT stocklis...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT stocklis...', Array, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT stocklis...')
+#4 [internal function]: DboSource->query('SELECT stocklis...')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3354): call_user_func_array(Array, Array)
+#6 /home/cs3/ml335/public_html/cakePHP/app/Model/Client.php(60): Model->query('SELECT stocklis...')
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(56): Client->getQuery('SELECT stocklis...')
+#8 [internal function]: ClientsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-02-08 18:08:53 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= stocklists.id' at line 1
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT stocklis...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT stocklis...', Array, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT stocklis...')
+#4 [internal function]: DboSource->query('SELECT stocklis...')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3354): call_user_func_array(Array, Array)
+#6 /home/cs3/ml335/public_html/cakePHP/app/Model/Client.php(60): Model->query('SELECT stocklis...')
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(63): Client->getQuery('SELECT stocklis...')
+#8 [internal function]: ClientsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-02-08 18:10:16 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= stocklists.id' at line 1
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT stocklis...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT stocklis...', Array, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT stocklis...')
+#4 [internal function]: DboSource->query('SELECT stocklis...')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3354): call_user_func_array(Array, Array)
+#6 /home/cs3/ml335/public_html/cakePHP/app/Model/Client.php(60): Model->query('SELECT stocklis...')
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(63): Client->getQuery('SELECT stocklis...')
+#8 [internal function]: ClientsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-02-08 18:10:26 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= stocklists.id' at line 1
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT stocklis...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT stocklis...', Array, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT stocklis...')
+#4 [internal function]: DboSource->query('SELECT stocklis...')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3354): call_user_func_array(Array, Array)
+#6 /home/cs3/ml335/public_html/cakePHP/app/Model/Client.php(60): Model->query('SELECT stocklis...')
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(63): Client->getQuery('SELECT stocklis...')
+#8 [internal function]: ClientsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-02-08 18:10:33 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= stocklists.id' at line 1
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT stocklis...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT stocklis...', Array, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT stocklis...')
+#4 [internal function]: DboSource->query('SELECT stocklis...')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3354): call_user_func_array(Array, Array)
+#6 /home/cs3/ml335/public_html/cakePHP/app/Model/Client.php(60): Model->query('SELECT stocklis...')
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(63): Client->getQuery('SELECT stocklis...')
+#8 [internal function]: ClientsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-02-08 18:11:09 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= stocklists.id' at line 1
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT stocklis...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT stocklis...', Array, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT stocklis...')
+#4 [internal function]: DboSource->query('SELECT stocklis...')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3354): call_user_func_array(Array, Array)
+#6 /home/cs3/ml335/public_html/cakePHP/app/Model/Client.php(60): Model->query('SELECT stocklis...')
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(63): Client->getQuery('SELECT stocklis...')
+#8 [internal function]: ClientsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-02-08 18:11:15 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= stocklists.id' at line 1
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT stocklis...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT stocklis...', Array, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT stocklis...')
+#4 [internal function]: DboSource->query('SELECT stocklis...')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3354): call_user_func_array(Array, Array)
+#6 /home/cs3/ml335/public_html/cakePHP/app/Model/Client.php(60): Model->query('SELECT stocklis...')
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(63): Client->getQuery('SELECT stocklis...')
+#8 [internal function]: ClientsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-02-08 18:11:20 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= stocklists.id' at line 1
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT stocklis...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT stocklis...', Array, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT stocklis...')
+#4 [internal function]: DboSource->query('SELECT stocklis...')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3354): call_user_func_array(Array, Array)
+#6 /home/cs3/ml335/public_html/cakePHP/app/Model/Client.php(60): Model->query('SELECT stocklis...')
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(63): Client->getQuery('SELECT stocklis...')
+#8 [internal function]: ClientsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-02-08 18:11:32 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= stocklists.id' at line 1
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT stocklis...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT stocklis...', Array, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT stocklis...')
+#4 [internal function]: DboSource->query('SELECT stocklis...')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3354): call_user_func_array(Array, Array)
+#6 /home/cs3/ml335/public_html/cakePHP/app/Model/Client.php(60): Model->query('SELECT stocklis...')
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(63): Client->getQuery('SELECT stocklis...')
+#8 [internal function]: ClientsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-02-08 18:12:11 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= stocklists.id' at line 1
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT stocklis...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT stocklis...', Array, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT stocklis...')
+#4 [internal function]: DboSource->query('SELECT stocklis...')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3354): call_user_func_array(Array, Array)
+#6 /home/cs3/ml335/public_html/cakePHP/app/Model/Client.php(60): Model->query('SELECT stocklis...')
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(63): Client->getQuery('SELECT stocklis...')
+#8 [internal function]: ClientsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-02-08 18:12:19 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= stocklists.id' at line 1
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT stocklis...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT stocklis...', Array, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT stocklis...')
+#4 [internal function]: DboSource->query('SELECT stocklis...')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3354): call_user_func_array(Array, Array)
+#6 /home/cs3/ml335/public_html/cakePHP/app/Model/Client.php(60): Model->query('SELECT stocklis...')
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(63): Client->getQuery('SELECT stocklis...')
+#8 [internal function]: ClientsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-02-08 18:12:27 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= stocklists.id' at line 1
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT stocklis...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT stocklis...', Array, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT stocklis...')
+#4 [internal function]: DboSource->query('SELECT stocklis...')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3354): call_user_func_array(Array, Array)
+#6 /home/cs3/ml335/public_html/cakePHP/app/Model/Client.php(60): Model->query('SELECT stocklis...')
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(63): Client->getQuery('SELECT stocklis...')
+#8 [internal function]: ClientsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-02-08 18:13:18 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT stocklis...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT stocklis...', Array, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT stocklis...')
+#4 [internal function]: DboSource->query('SELECT stocklis...')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3354): call_user_func_array(Array, Array)
+#6 /home/cs3/ml335/public_html/cakePHP/app/Model/Client.php(60): Model->query('SELECT stocklis...')
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(64): Client->getQuery('SELECT stocklis...')
+#8 [internal function]: ClientsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-02-08 18:13:25 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT stocklis...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT stocklis...', Array, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT stocklis...')
+#4 [internal function]: DboSource->query('SELECT stocklis...')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3354): call_user_func_array(Array, Array)
+#6 /home/cs3/ml335/public_html/cakePHP/app/Model/Client.php(60): Model->query('SELECT stocklis...')
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(64): Client->getQuery('SELECT stocklis...')
+#8 [internal function]: ClientsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-02-08 18:14:18 Error: Fatal Error (4): syntax error, unexpected ']' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 18:14:18 Error: [FatalErrorException] syntax error, unexpected ']'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 18:14:43 Error: Fatal Error (4): syntax error, unexpected '[', expecting ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 18:14:43 Error: [FatalErrorException] syntax error, unexpected '[', expecting ')'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 18:14:50 Error: Fatal Error (4): syntax error, unexpected '[', expecting ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 18:14:50 Error: [FatalErrorException] syntax error, unexpected '[', expecting ')'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 18:14:54 Error: Fatal Error (4): syntax error, unexpected '[', expecting ')' in [/home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php, line 60]
+2015-02-08 18:14:54 Error: [FatalErrorException] syntax error, unexpected '[', expecting ')'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/cs3/ml335...', 60)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/cs3/ml335...', 60, Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/cs3/ml335...', 60, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-02-08 18:22:50 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'stocklists.id = purchases.stock' at line 1
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT stocklis...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT stocklis...', Array, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT stocklis...')
+#4 [internal function]: DboSource->query('SELECT stocklis...')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3354): call_user_func_array(Array, Array)
+#6 /home/cs3/ml335/public_html/cakePHP/app/Model/Client.php(60): Model->query('SELECT stocklis...')
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(63): Client->getQuery('SELECT stocklis...')
+#8 [internal function]: ClientsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-02-08 18:29:55 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'GOOG' in 'where clause'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT stocklis...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT stocklis...', Array, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT stocklis...')
+#4 [internal function]: DboSource->query('SELECT stocklis...')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3354): call_user_func_array(Array, Array)
+#6 /home/cs3/ml335/public_html/cakePHP/app/Model/Client.php(60): Model->query('SELECT stocklis...')
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(56): Client->getQuery('SELECT stocklis...')
+#8 [internal function]: ClientsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-02-08 18:29:56 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'GOOG' in 'where clause'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT stocklis...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT stocklis...', Array, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT stocklis...')
+#4 [internal function]: DboSource->query('SELECT stocklis...')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3354): call_user_func_array(Array, Array)
+#6 /home/cs3/ml335/public_html/cakePHP/app/Model/Client.php(60): Model->query('SELECT stocklis...')
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(56): Client->getQuery('SELECT stocklis...')
+#8 [internal function]: ClientsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-02-08 18:30:06 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'GOOG' in 'where clause'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT stocklis...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT stocklis...', Array, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT stocklis...')
+#4 [internal function]: DboSource->query('SELECT stocklis...')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3354): call_user_func_array(Array, Array)
+#6 /home/cs3/ml335/public_html/cakePHP/app/Model/Client.php(60): Model->query('SELECT stocklis...')
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(56): Client->getQuery('SELECT stocklis...')
+#8 [internal function]: ClientsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2015-02-08 18:30:07 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'GOOG' in 'where clause'
+Request URL: /~ml335/cakePHP/clients/view/1
+Stack Trace:
+#0 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(458): PDOStatement->execute(Array)
+#1 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(424): DboSource->_execute('SELECT stocklis...', Array)
+#2 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT stocklis...', Array, Array)
+#3 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Datasource/DboSource.php(537): DboSource->fetchAll('SELECT stocklis...')
+#4 [internal function]: DboSource->query('SELECT stocklis...')
+#5 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Model/Model.php(3354): call_user_func_array(Array, Array)
+#6 /home/cs3/ml335/public_html/cakePHP/app/Model/Client.php(60): Model->query('SELECT stocklis...')
+#7 /home/cs3/ml335/public_html/cakePHP/app/Controller/ClientsController.php(56): Client->getQuery('SELECT stocklis...')
+#8 [internal function]: ClientsController->view('1')
+#9 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#11 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#12 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}

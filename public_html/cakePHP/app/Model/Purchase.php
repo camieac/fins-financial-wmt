@@ -3,8 +3,11 @@
 'stock' => array(
 'rule' => 'notEmpty'
 ),
-'quantity' => array(
-'rule' => 'notEmpty'
+ 'balance' => array(
+    	'Numeric' => array(
+        	'rule' => 'numeric',
+        	'message' => 'Please use only numbers.'
+	),
 )
 );
 	

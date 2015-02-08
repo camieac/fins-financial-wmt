@@ -2,9 +2,22 @@
 
 <?php $User = ClassRegistry::init('User'); ?>
 
+	<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.css">
+		
+<script type="text/javascript"> $(document).ready(function() {
+	$('#clients').DataTable({
+	"bLengthChange": false
+	}
+	);
+} ); </script>
+
+
 <h1><font size="6">Clients</font></h1>
 <p><?php echo $this->Html->link('Add client', array('action' => 'add')); ?></p>
-<table>
+<table id="clients" class="display" cellspacing="0" width="100%">
+<thead>
 <tr>
 <th>Id</th>
 <th>Name</th>
@@ -13,10 +26,12 @@
 <th>National Insurance Number</th>
 <th>Phone Number</th>
 <th>Address</th>
+<th>Balance</th>
 <th>F.A</th>
 <th>Actions</th>
 <th>Created</th>
 </tr>
+</thead>
 <!-- Here's where we loop through our $clients array, printing out client info -->
 <?php foreach ($clients as $client): ?>
 <tr>
@@ -34,6 +49,7 @@ array('action' => 'view', $client['Client']['id'])
 <td><?php echo $client['Client']['nis']; ?></td>
 <td><?php echo $client['Client']['phoneNo']; ?></td>
 <td><?php echo $client['Client']['address']; ?></td>
+<td><?php echo $client['Client']['balance']; ?></td>
 <td><?php echo $client['Client']['fa']; ?></td>
 <td>
 <?php
