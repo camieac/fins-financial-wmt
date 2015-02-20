@@ -1,4 +1,16 @@
 <!-- File: /app/View/Clients/view.ctp -->
+
+	<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.css">
+		
+<script type="text/javascript"> $(document).ready(function() {
+	$('#clientstocks').DataTable({
+	"bLengthChange": false
+	}
+	);
+} ); </script>
+
 <?php if ($this->Session->read('Auth.User')) 
 { ?>
 <h1><?php echo h($client['Client']['name']); ?></h1>
@@ -16,7 +28,8 @@
 
 <?php $id = $this->params['pass']; ?>
 
-<table>
+<table id="clientstocks" class="display" cellspacing="0" width="100%">
+<thead>
 <tr>
 <th>Symbol</th>
 <th>Name</th>
@@ -27,6 +40,7 @@
 <th>Actions</th>
 <th>Created</th>
 </tr>
+</thead>
 
 
 <?php 
@@ -58,7 +72,7 @@ else {?>
 <?php } ?>
 
 <td><?php echo "£".number_format($value, 2); ?></td>
-<td><?php echo $this->Form->postLink('Delete', array('action' => 'deleteStock'.'/'. $stock['purchases']['id'] . '/'. $id[0]), array('confirm' => 'Are you sure?')); ?></td>
+<td><?php echo $this->Form->postLink('Sell', array('action' => 'deleteStock'.'/'. $stock['purchases']['id'] . '/'. $id[0]),array('confirm' => 'Are you sure?')); ?></td>
 <td><?php echo $stock['purchases']['created']; ?></td>
 </tr>
 

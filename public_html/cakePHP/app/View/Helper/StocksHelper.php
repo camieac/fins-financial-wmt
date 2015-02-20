@@ -10,7 +10,7 @@ class StocksHelper extends AppHelper {
 			$request ='http://download.finance.yahoo.com/d/quotes.csv?s=';
 			foreach ($subset_symbols as $s) $request .= $s.'+';
 			$request = substr($request, 0, strlen($request)-1);
-			$request .= '&f=nsc6b2ophgd1';
+			$request .= '&f=nsc6b2ophgd1t7';
 			$ch = curl_init();
 			curl_setopt($ch, CURLOPT_URL, $request);
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -29,7 +29,8 @@ class StocksHelper extends AppHelper {
 						'close' => $s_data[5],
 						'high' => $s_data[6],
 						'low' => $s_data[7],
-						'date' => $s_data[8]
+						'date' => $s_data[8],
+						'prediction' => $s_data[9]
 					);
 				}
 			}

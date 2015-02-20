@@ -80,6 +80,8 @@ $price = $quantity * $result[0]['current'];
 	if ($this->Purchase->save($this->request->data)) 
 	{
 	$this->Client->updateAll(array('Client.balance' => 'Client.balance - ' . $price), array('Client.id' => $id));
+	$pid = $this->Purchase->getLastInsertID();
+	$this->Purchase->updateAll(array('Purchase.price' => $price), array('Purchase.id' => $pid));
 	$this->Session->setFlash(__('Your stock has been saved.'));
 	return $this->redirect(array('action' => 'view', $id));
 	}

@@ -20,7 +20,7 @@
 <th>Stock</th>
 <th>Customer</th>
 <th>Quantity</th>
-<th>Single Value</th>
+<th>Price Bought At</th>
 <th>Total Value</th>
 <th>Created</th>
 </tr>
@@ -39,14 +39,8 @@
 
 <?php $i++; ?> <!-- increments array -->
 
-<?php if(($stock['open']) === 'N/A')
-{ ?>
-<td><?php echo "£".number_format($stock['close'], 2); ?></td>
-<?php }
-else {?>
-<td><?php echo "£".number_format($stock['open'], 2); ?></td>
-<?php } ?>
-<?php $value = ($purchase['Purchase']['quantity'])*($stock['open']); ?>
+<td><?php echo $purchase['Purchase']['price']; ?></td>
+<?php $value = ($purchase['Purchase']['quantity'])*($purchase['Purchase']['price']); ?>
 <td><?php echo "£".number_format($value, 2); ?></td>
 <?php endforeach; ?>
 
