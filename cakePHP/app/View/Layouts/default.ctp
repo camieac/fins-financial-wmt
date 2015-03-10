@@ -29,8 +29,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->script('skel-layers.min.js');
 		echo $this->Html->script('js/init.js');
 		
-		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		
 		
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
