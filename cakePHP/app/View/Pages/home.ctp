@@ -28,13 +28,13 @@
 					<div class="12u">
 						
 						<header id="header">
-							<h1><a href="http://financials.zz.vc/cakePHP/" id="logo">eMarket Trader</a></h1>
+							<h1><a href="/cakePHP/" id="logo">eMarket Trader</a></h1>
 							<nav id="nav">
-								<a href="http://financials.zz.vc/cakePHP/" class="current-page-item" >Homepage</a>
-								<a href="http://financials.zz.vc/cakePHP/Clients">Clients</a>
-								<a href="http://financials.zz.vc/cakePHP/Meetings">Meetings</a>
-								<a href="http://financials.zz.vc/cakePHP/stocklists" >Stocklists</a>
-								<a href="http://financials.zz.vc/cakePHP/Purchases" >Purchases</a>
+								<a href="/cakePHP/" class="current-page-item" >Homepage</a>
+								<a href="/cakePHP/Clients">Clients</a>
+								<a href="/cakePHP/Meetings">Meetings</a>
+								<a href="/cakePHP/stocklists" >Stocklists</a>
+								<a href="/cakePHP/Purchases" >Purchases</a>
 							</nav>
 						</header>
 					

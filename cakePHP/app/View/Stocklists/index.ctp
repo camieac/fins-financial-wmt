@@ -26,13 +26,13 @@
 					<div class="12u">
 						
 						<header id="header">
-							<h1><a href="http://financials.zz.vc/cakePHP/" id="logo">Finance Tool</a></h1>
+							<h1><a href="/cakePHP/" id="logo">Finance Tool</a></h1>
 							<nav id="nav">
-								<a href="http://financials.zz.vc/cakePHP/" >Homepage</a>
-								<a href="http://financials.zz.vc/cakePHP/Clients">Clients</a>
-								<a href="http://financials.zz.vc/cakePHP/Meetings">Meetings</a>
-								<a href="http://financials.zz.vc/cakePHP/stocklists" " class="current-page-item">Stocklists</a>
-								<a href="http://financials.zz.vc/cakePHP/purchases" >Purchases</a>
+								<a href="/cakePHP/" >Homepage</a>
+								<a href="/cakePHP/Clients">Clients</a>
+								<a href="/cakePHP/Meetings">Meetings</a>
+								<a href="/cakePHP/stocklists" " class="current-page-item">Stocklists</a>
+								<a href="/cakePHP/purchases" >Purchases</a>
 							</nav>
 						</header>
 					

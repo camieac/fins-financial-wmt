@@ -31,13 +31,13 @@
 					<div class="12u">
 						
 						<header id="header">
-							<h1><a href="http://financials.zz.vc/cakePHP/" id="logo">Finance Tool</a></h1>
+							<h1><a href="/cakePHP/" id="logo">Finance Tool</a></h1>
 							<nav id="nav">
-								<a href="http://financials.zz.vc/cakePHP/" >Homepage</a>
-								<a href="http://financials.zz.vc/cakePHP/Clients"class="current-page-item">Clients</a>
-								<a href="http://financials.zz.vc/cakePHP/Meetings">Meetings</a>
-								<a href="http://financials.zz.vc/cakePHP/stocklists" >Stocklists</a>
-								<a href="http://financials.zz.vc/cakePHP/purchases" >Purchases</a>
+								<a href="/cakePHP/" >Homepage</a>
+								<a href="/cakePHP/Clients"class="current-page-item">Clients</a>
+								<a href="/cakePHP/Meetings">Meetings</a>
+								<a href="/cakePHP/stocklists" >Stocklists</a>
+								<a href="/cakePHP/purchases" >Purchases</a>
 							</nav>
 						</header>
 					
@@ -76,7 +76,7 @@ echo $this->Form->end('Save Client');
 					<div class="12u">
 
 						<div id="copyright">
-								&copy; Untitled. All rights reserved. | For assistance: <a href="http://financials.zz.vc/cakePHP/Help">Help</a>
+								&copy; Untitled. All rights reserved. | For assistance: <a href="/cakePHP/Help">Help</a>
 						</div>
 
 					</div>
