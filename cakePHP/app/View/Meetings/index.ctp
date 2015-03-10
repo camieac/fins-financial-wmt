@@ -12,11 +12,7 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
-		<noscript>
-			echo $this->Html->css('skel');
-			echo $this->Html->css('style');
-			echo $this->Html->css('style-desktop');
-		</noscript>
+		
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
 	</head>
