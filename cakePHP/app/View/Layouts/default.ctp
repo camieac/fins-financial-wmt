@@ -18,7 +18,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->css('style-desktop');
 		echo $this->Html->css('fullcalendar'); 
 		echo $this->Html->css('fullcalendar.print'); 
-		<link href="http://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+		
 		
 		echo $this->Html->script('jquery-1.3.2.min.'); 
 		echo $this->Html->script('moment.min'); 
