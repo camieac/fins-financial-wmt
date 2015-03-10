@@ -3,18 +3,12 @@
 
 <html>
 	<head>
-		<title>Home</title>
+		<title>Meetings</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<link href="http://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
-		<script src="js/jquery.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
 		
-		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+	
 	</head>
 	<body>
 <div id="header-wrapper">
