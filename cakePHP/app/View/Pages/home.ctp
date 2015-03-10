@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Homepage</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href="http://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+		
+		<?php echo $this->Html->script('jquery.min'); ?>
+		
+		<?php echo $this->Html->script('skel.min'); ?>
+		
+		<?php echo $this->Html->script('skel-layers.min'); ?>
+		
+		<?php echo $this->Html->script('init'); ?>
+		<noscript>
+	<?php echo $this->Html->css(array('skel', 'style', 'style-desktop')); ?>
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+	</head>
+	<body>
+<div id="header-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="12u">
+						
+						<header id="header">
+							<h1><a href="http://financials.zz.vc/cakePHP/" id="logo">eMarket Trader</a></h1>
+							<nav id="nav">
+								<a href="http://financials.zz.vc/cakePHP/" class="current-page-item" >Homepage</a>
+								<a href="http://financials.zz.vc/cakePHP/Clients">Clients</a>
+								<a href="http://financials.zz.vc/cakePHP/Meetings">Meetings</a>
+								<a href="http://financials.zz.vc/cakePHP/stocklists" >Stocklists</a>
+								<a href="http://financials.zz.vc/cakePHP/Purchases" >Purchases</a>
+							</nav>
+						</header>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+						</header>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="banner-wrapper">
+			<div class="container">
+
+				<div id="banner">
+					<h2>Possible graph here</h2>
+					<span>And put something almost as cool here, but a bit longer ...</span>
+				</div>
+
+			</div>
+		</div>
+		<div id="main">
+			<div class="container">
+				<div class="row main-row">
+					<div class="4u">
+						
+						<section>
+							<h2>Financial Twitter Feed</h2>
+							<p><a class="twitter-timeline"  href="https://twitter.com/hashtag/Finance" data-widget-id="564605993368449024">#Finance Tweets</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
+							<footer class="controls">
+								<a href="http://html5up.net" class="button">link to designer page</a>
+							</footer>
+						</section>
+					
+					</div>
+					<div class="4u">
+						
+						<section>
+							<h2>Financial Times Feed</h2>
+							<?php echo $this->requestAction(array('controller' => 'home', 'action' => 'getFTFeed'),array('return')); ?>
+							
+							<ul class="small-image-list">
+								<li>
+									<?php	echo $this->Html->image('pic2.jpg')?>
+									<h4>Jane Anderson</h4>
+									<p>Varius nibh. Suspendisse vitae magna eget et amet mollis justo facilisis amet quis.</p>
+								</li>
+								<li>
+								<?php	echo $this->Html->image('pic2.jpg')?>
+									<h4>James Doe</h4>
+									<p>Vitae magna eget odio amet mollis justo facilisis amet quis. Sed sagittis consequat.</p>
+								</li>
+							</ul>
+						</section>
+					
+					</div>
+					<div class="4u">
+					
+						<section>
+							<h2>How about some links?</h2>
+							<div>
+								<div class="row">
+									<div class="6u">
+										<ul class="link-list">
+											<li><a href="#">Sed neque nisi consequat</a></li>
+											<li><a href="#">Dapibus sed mattis blandit</a></li>
+											<li><a href="#">Quis accumsan lorem</a></li>
+											<li><a href="#">Suspendisse varius ipsum</a></li>
+											<li><a href="#">Eget et amet consequat</a></li>
+										</ul>
+									</div>
+									<div class="6u">
+										<ul class="link-list">
+											<li><a href="#">Quis accumsan lorem</a></li>
+											<li><a href="#">Sed neque nisi consequat</a></li>
+											<li><a href="#">Eget et amet consequat</a></li>
+											<li><a href="#">Dapibus sed mattis blandit</a></li>
+											<li><a href="#">Vitae magna sed dolore</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+
+					</div>
+				</div>
+				
+					
+						
+				<div class="row">
+					<div class="12u">
+
+						<div id="copyright">
+							&copy; Untitled. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
