@@ -28,13 +28,13 @@
 					<div class="12u">
 						
 						<header id="header">
-							<h1><a href="/cakePHP/" id="logo">eMarket Trader</a></h1>
+							<h1><a href="/" id="logo">eMarket Trader</a></h1>
 							<nav id="nav">
-								<a href="/cakePHP/" class="current-page-item" >Homepage</a>
-								<a href="/cakePHP/Clients">Clients</a>
-								<a href="/cakePHP/Meetings">Meetings</a>
-								<a href="/cakePHP/stocklists" >Stocklists</a>
-								<a href="/cakePHP/Purchases" >Purchases</a>
+								<a href="/" class="current-page-item" >Homepage</a>
+								<a href="/Clients">Clients</a>
+								<a href="/Meetings">Meetings</a>
+								<a href="/stocklists" >Stocklists</a>
+								<a href="/Purchases" >Purchases</a>
 							</nav>
 						</header>
 					

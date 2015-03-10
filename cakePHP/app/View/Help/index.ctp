@@ -106,7 +106,7 @@
 					<div class="12u">
 
 						<div id="copyright">
-								&copy; Untitled. All rights reserved. | For assistance: <a href="/cakePHP/Help">Help</a>
+								&copy; Untitled. All rights reserved. | For assistance: <a href="/Help">Help</a>
 						</div>
 
 					</div>
