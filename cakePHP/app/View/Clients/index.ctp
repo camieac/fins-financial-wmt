@@ -9,7 +9,7 @@
 		<meta name="keywords" content="" />
 		<link href="http://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
 		
-		<?php echo $this->Html->script('jquery.min'); ?>
+		
 		
 		<?php echo $this->Html->script('skel.min'); ?>
 		
@@ -29,7 +29,7 @@
 					<div class="12u">
 						
 						<header id="header">
-							<h1><a href="/" id="logo">Finance Tool</a></h1>
+							<h1><a href="/" id="logo">eMarketTrader</a></h1>
 							<nav id="nav">
 								<a href="/" >Homepage</a>
 								<a href="/Clients"class="current-page-item">Clients</a>
