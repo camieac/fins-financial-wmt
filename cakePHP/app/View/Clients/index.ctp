@@ -9,13 +9,6 @@
 		<meta name="keywords" content="" />
 		<link href="http://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
 		
-		
-		
-		<?php echo $this->Html->script('skel.min'); ?>
-		
-		<?php echo $this->Html->script('skel-layers.min'); ?>
-		
-		<?php echo $this->Html->script('init'); ?>
 		<noscript>
 	<?php echo $this->Html->css(array('skel', 'style', 'style-desktop')); ?>
 		</noscript>
