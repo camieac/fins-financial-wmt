@@ -101,4 +101,4 @@ echo $this->Html->link(str_replace("\"", "", $stock['name']), array('action' => 
 </tr>
 <?php endforeach; ?>
 </table>
-<p><?php echo $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout')); ?></p>
+<p><?php echo $this->Html->link('Logout','logout' array('controller' => 'users', 'class' => 'button')); ?></p>
