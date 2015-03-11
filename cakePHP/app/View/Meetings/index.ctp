@@ -55,12 +55,11 @@
 <h1><font size="6">Meetings</font></h1>
 <p><?php echo $this->Html->link('Add meeting','add',
 									array(
-									'class' => 'button',
-									'action' => 'add'
+									'class' => 'button'
 									)); ?></p>
-<p><?php echo $this->Html->link('View in Calendar', array(
-									'class' => 'button',
-									'action' => 'test'
+<p><?php echo $this->Html->link('View in Calendar','test',
+									array(
+									'class' => 'button'
 									)); ?></p>
 <table id="meetings" class="display" cellspacing="0" width="100%">
 <thead>
