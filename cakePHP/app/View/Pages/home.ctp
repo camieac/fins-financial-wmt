@@ -22,32 +22,7 @@
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
 	</head>
 	<body>
-<div id="header-wrapper">
-			<div class="container">
-				<div class="row">
-					<div class="12u">
-						
-						<header id="header">
-							<h1><a href="/" id="logo">eMarket Trader</a></h1>
-							<nav id="nav">
-								<a href="/" class="current-page-item" >Homepage</a>
-								<a href="/Clients">Clients</a>
-								<a href="/Meetings">Meetings</a>
-								<a href="/stocklists" >Stocklists</a>
-								<a href="/Purchases" >Purchases</a>
-							</nav>
-						</header>
-					
-					</div>
-				</div>
-			</div>
-		</div>
-						</header>
-					
-					</div>
-				</div>
-			</div>
-		</div>
+
 		<div id="banner-wrapper">
 			<div class="container">
 
