@@ -217,3 +217,9 @@ input#UserUsername, input#UserPassword {
 margin:1em 2em;
 
 }
+.dRoundedBox {
+border-radius: 1em;
+background: white;
+padding: 1em 1em;
+margin: 0em;
+}
