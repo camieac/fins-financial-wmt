@@ -12,28 +12,7 @@
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
 	</head>
 	<body>
-		<div id="header-wrapper">
-			<div class="container">
-				<div class="row">
-					<div class="12u">
-						
-						<header id="header">
-							<h1><a href="home.html" id="logo">eMarketTrader</a></h1>
-							<nav id="nav">
-								
-								
-								<a href="home.html" >Homepage</a>
-								<a href="clients.html" >Clients</a>
-								<a href="calendar.html" >Calendar</a>
-								<a href="market.html">Market</a>
-								<a href="threecolumn.html" >Party</a>
-							</nav>
-						</header>
-					
-					</div>
-				</div>
-			</div>
-		</div>
+		
 		<div id="main">
 			<div class="container">
 				<div class="row main-row">
