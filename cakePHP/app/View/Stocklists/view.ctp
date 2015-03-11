@@ -1,8 +1,8 @@
- 
+<link href="../style.css" rel="stylesheet" type="text/css" />  
 
 
 <?php
-$this->layout = 'graph2';
+$this->layout = 'graph3';
 $company = $this->params['url']['stock'];
 $result = $this->Stocks->get(array($company));
 
