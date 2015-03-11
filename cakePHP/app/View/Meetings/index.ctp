@@ -18,7 +18,7 @@
 					<div class="12u">
 						
 						<header id="header">
-							<h1><a href="/" id="logo">Finance Tool</a></h1>
+							<h1><a href="/" id="logo">eMarketTrader</a></h1>
 							<nav id="nav">
 								<a href="/" >Homepage</a>
 								<a href="/Clients">Clients</a>
@@ -53,8 +53,9 @@
 
 
 <h1><font size="6">Meetings</font></h1>
-<p><?php echo $this->Html->link('Add meeting',
+<p><?php echo $this->Html->link(
 									array(
+									'text' => 'Add Meeting',
 									'class' => 'button',
 									'action' => 'add'
 									)); ?></p>
