@@ -53,9 +53,8 @@
 
 
 <h1><font size="6">Meetings</font></h1>
-<p><?php echo $this->Html->link(
+<p><?php echo $this->Html->link('Add meeting','add'
 									array(
-									'text' => 'Add Meeting',
 									'class' => 'button',
 									'action' => 'add'
 									)); ?></p>
