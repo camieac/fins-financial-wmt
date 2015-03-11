@@ -10,13 +10,7 @@
 		<meta name="keywords" content="" />
 		<link href="http://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
 		
-		<?php echo $this->Html->script('jquery.min'); ?>
 		
-		<?php echo $this->Html->script('skel.min'); ?>
-		
-		<?php echo $this->Html->script('skel-layers.min'); ?>
-		
-		<?php echo $this->Html->script('init'); ?>
 		<noscript>
 		<?php echo $this->Html->css('skel'); ?>
 		<?php echo $this->Html->css('style'); ?>
@@ -27,27 +21,7 @@
 	</head>
 	<body>
 
-<div id="header-wrapper">
-			<div class="container">
-				<div class="row">
-					<div class="12u">
-						
-						<header id="header">
-							<h1><a href="/" id="logo">Finance Tool</a></h1>
-							<nav id="nav">
-								<a href="/" >Homepage</a>
-								<a href="/Clients"class="current-page-item">Clients</a>
-								<a href="/Meetings">Meetings</a>
-								<a href="/stocklists" >Stocklists</a>
-								<a href="/purchases" >Purchases</a>
-							</nav>
-						</header>
-					
-					</div>
-				</div>
-			</div>
-		</div>
-						</header>
+
 
 	<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
