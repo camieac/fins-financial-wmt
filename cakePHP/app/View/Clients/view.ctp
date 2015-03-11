@@ -38,7 +38,8 @@
 
 <?php if ($this->Session->read('Auth.User')) 
 { ?>
-<table style="width:100%">
+<div class = "dRoundedBox">
+<table id = "tClientDates" style="width:100%">
 
 <tr>
 <b>
@@ -58,16 +59,19 @@
 <td><?php echo $client['Client']['modified']; ?></td>
 </tr>
 </table>
+</div> <!-- for dRoundedBox -->
 
 </section>
-<p><?php echo 'Gender: ', h($client['Client']['gender']); ?></p> 
-<p><?php echo 'Date of Birth: ', h($client['Client']['dateOfBirth']); ?></p> 
-<p><?php echo 'National Insurance Number: ', h($client['Client']['nis']); ?></p> 
-<p><?php echo 'Phone Number: ', h($client['Client']['phoneNo']); ?></p>
-<p><?php echo 'Address: ', h($client['Client']['address']); ?></p> 
-<p><?php echo 'Balance: ', "£".number_format($client['Client']['balance'], 2); ?></p> 
-<p><?php echo 'F.A: ', h($client['Client']['fa']); ?></p> 
+<div class = "dRoundedBox">
+<?php echo 'Gender: ', h($client['Client']['gender']); ?>
+<?php echo 'Date of Birth: ', h($client['Client']['dateOfBirth']); ?>
+<?php echo 'National Insurance Number: ', h($client['Client']['nis']); ?>
+<?php echo 'Phone Number: ', h($client['Client']['phoneNo']); ?>
+<?php echo 'Address: ', h($client['Client']['address']); ?>
+<?php echo 'Balance: ', "£".number_format($client['Client']['balance'], 2); ?>
+<?php echo 'F.A: ', h($client['Client']['fa']); ?>
 <br/><br/>
+</div> <!-- for dRoundedBox -->
 <font size = "4"><p><b>Stocks:</b></p></font>
 
 <?php $id = $this->params['pass']; ?>
