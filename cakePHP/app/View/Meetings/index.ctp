@@ -53,8 +53,15 @@
 
 
 <h1><font size="6">Meetings</font></h1>
-<p><?php echo $this->Html->link('Add meeting', array('action' => 'add','class' => 'button')); ?></p>
-<p><?php echo $this->Html->link('View in Calendar', array('action' => 'test','class' => 'button')); ?></p>
+<p><?php echo $this->Html->link('Add meeting',
+									array(
+									'class' => 'button',
+									'action' => 'add'
+									)); ?></p>
+<p><?php echo $this->Html->link('View in Calendar', array(
+									'class' => 'button',
+									'action' => 'test'
+									)); ?></p>
 <table id="meetings" class="display" cellspacing="0" width="100%">
 <thead>
 <tr>
