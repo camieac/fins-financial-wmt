@@ -40,7 +40,27 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <body>
 
 		<div id="content">
-
+<div id="header-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="12u">
+						
+						<header id="header">
+							<h1><a href="/" id="logo">eMarketTrader</a></h1>
+							<nav id="nav">
+								<a href="/" >Homepage</a>
+								<a href="/Clients">Clients</a>
+								<a href="/Meetings">Meetings</a>
+								<a href="/stocklists" " class="current-page-item">Stocklists</a>
+								<a href="/purchases" >Purchases</a>
+							</nav>
+						</header>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+						</header>
 			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $this->fetch('content'); ?>
