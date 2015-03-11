@@ -27,9 +27,11 @@
 <?php echo $this->Html->css('fullcalendar.print'); ?>
  
 <?php echo $this->Html->script('jquery-1.3.2.min'); ?>
+<?php echo $this->Html->script('jquery.min'); ?>
 <?php echo $this->Html->script('moment.min'); ?>
 <?php echo $this->Html->script('jquery.min'); ?>
 <?php echo $this->Html->script('fullcalendar.min'); ?>
+<?php echo $this->Html->script('fullcalendar'); ?>
 
 
 
