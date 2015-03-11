@@ -8,10 +8,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link href="http://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
-		<script src="js/jquery.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
+	
 		<noscript>
 			echo $this->Html->css('skel');
 			echo $this->Html->css('style');
@@ -21,27 +18,7 @@
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
 	</head>
 	<body>
-<div id="header-wrapper">
-			<div class="container">
-				<div class="row">
-					<div class="12u">
-						
-						<header id="header">
-							<h1><a href="/" id="logo">Finance Tool</a></h1>
-							<nav id="nav">
-								<a href="/" >Homepage</a>
-								<a href="/Clients">Clients</a>
-								<a href="/Meetings">Meetings</a>
-								<a href="/stocklists" >Stocklists</a>
-								<a href="/purchases" " class="current-page-item">Purchases</a>
-							</nav>
-						</header>
-					
-					</div>
-				</div>
-			</div>
-		</div>
-						</header>
+
 
 <div class="user-login users form">
 <?php echo $this->Session->flash('auth'); ?>
