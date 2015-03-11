@@ -92,15 +92,7 @@ array('confirm' => 'Are you sure?')
 </table>
 <p><?php echo $this->Html->link('Logout','logout', array('controller' => 'users', 'class' => 'button')); ?></p>
 
-<div class="row">
-					<div class="12u">
 
-						<div id="copyright">
-							&copy; Untitled. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
-						</div>
-
-					</div>
-				</div>
 			</div>
 		</div>
 </body>

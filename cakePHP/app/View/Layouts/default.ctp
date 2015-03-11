@@ -73,5 +73,13 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		</div>
 	</div>
 </div> <!-- for page div -->
+<div class="row">
+	<div class="12u">
+		<div id="copyright">
+			&copy; Untitled. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
+		</div>
+
+	</div>
+</div>
 </body>
 </html>
