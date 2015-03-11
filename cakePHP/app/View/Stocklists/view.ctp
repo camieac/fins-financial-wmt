@@ -2,7 +2,7 @@
 
 
 <?php
-$this->layout = 'graph';
+$this->layout = 'graph2';
 $company = $this->params['url']['stock'];
 $result = $this->Stocks->get(array($company));
 
