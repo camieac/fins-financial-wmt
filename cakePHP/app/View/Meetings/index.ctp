@@ -33,6 +33,7 @@
 
 
 <h1><font size="6">Meetings</font></h1>
+<div class = "dRoundedBox">
 <p><?php echo $this->Html->link('Add meeting','add',
 									array(
 									'class' => 'button'
@@ -41,6 +42,7 @@
 									array(
 									'class' => 'button'
 									)); ?></p>
+</div>
 <table id="meetings" class="display" cellspacing="0" width="100%">
 <thead>
 <tr>
