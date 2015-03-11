@@ -142,27 +142,7 @@
 </head>
 <body>
 	<body>
-<div id="header-wrapper">
-			<div class="container">
-				<div class="row">
-					<div class="12u">
-						
-						<header id="header">
-							<h1><a href="/" id="logo">Finance Tool</a></h1>
-							<nav id="nav">
-								<a href="/" >Homepage</a>
-								<a href="/Clients">Clients</a>
-								<a href="/Meetings" class="current-page-item">Meetings</a>
-								<a href="/stocklists" >Stocklists</a>
-								<a href="/purchases" >Purchases</a>
-							</nav>
-						</header>
-					
-					</div>
-				</div>
-			</div>
-		</div>
-						</header>
+
 
 	<div id='calendar'></div>
 
