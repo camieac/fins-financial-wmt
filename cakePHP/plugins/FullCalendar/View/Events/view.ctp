@@ -34,10 +34,10 @@
 	</dl>
 </div>
 <div class="actions dRoundedBox">
-	<ul>
-		<li><?php echo $this->Html->link('Edit Event','edit', array('plugin' => 'full_calendar', 'class' => 'button', $event['Event']['id'])); ?> </li>
-		<li><?php echo $this->Html->link('Delete Event','delete', array('plugin' => 'full_calendar', 'class' => 'button', $event['Event']['id']), null, sprintf(__('Are you sure you want to delete this %s event?', true), $event['EventType']['name'])); ?> </li>
-		<li><?php echo $this->Html->link('Manage Events','index', array('plugin' => 'full_calendar', 'class' => 'button')); ?> </li>
-		<li><li><?php echo $this->Html->link('View Calendar','/full_calendar', array('plugin' => 'full_calendar', 'class' => 'button')); ?></li>
-	</ul>
+
+		<?php echo $this->Html->link('Edit Event','edit', array('plugin' => 'full_calendar', 'class' => 'button', $event['Event']['id'])); ?> 
+		<?php echo $this->Html->link('Delete Event','delete', array('plugin' => 'full_calendar', 'class' => 'button', $event['Event']['id']), null, sprintf(__('Are you sure you want to delete this %s event?', true), $event['EventType']['name'])); ?>
+		<?php echo $this->Html->link('Manage Events','index', array('plugin' => 'full_calendar', 'class' => 'button')); ?>
+		<?php echo $this->Html->link('View Calendar','/full_calendar', array('plugin' => 'full_calendar', 'class' => 'button')); ?>
+	
 </div>

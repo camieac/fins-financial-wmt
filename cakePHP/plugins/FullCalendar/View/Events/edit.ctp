@@ -33,9 +33,9 @@
 <?php echo $this->Form->end(__('Submit', true));?>
 </div>
 <div class="actions dRoundedBox">
-	<ul>
-		<li><?php echo $this->Html->link('View Event','view', array('plugin' => 'full_calendar', 'class' => 'button', $this->Form->value('Event.id'))); ?></li>
-		<li><?php echo $this->Html->link('Manage Events','index', array('plugin' => 'full_calendar', 'class' => 'button'));?></li>
-		<li><li><?php echo $this->Html->link('View Calendar','/full_calendar', array('plugin' => 'full_calendar', 'class' => 'button')); ?></li>
-	</ul>
+	
+		<?php echo $this->Html->link('View Event','view', array('plugin' => 'full_calendar', 'class' => 'button', $this->Form->value('Event.id'))); ?>
+		<?php echo $this->Html->link('Manage Events','index', array('plugin' => 'full_calendar', 'class' => 'button'));?>
+		<?php echo $this->Html->link('View Calendar','/full_calendar', array('plugin' => 'full_calendar', 'class' => 'button')); ?>
+	
 </div>
