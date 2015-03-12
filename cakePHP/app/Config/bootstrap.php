@@ -120,7 +120,7 @@ App::uses('LocalFileStorageListener', 'FileStorage.Event');
 App::uses('FileStorageListener', 'FileStorage.Event');
 
 // Only required if you're *NOT* using composer or another autoloader!
-spl_autoload_register(__NAMESPACE__ .'\FileStorageUtils::gaufretteLoader');
+spl_autoload_register(__NAMESPACE__ .'FileStorageUtils::gaufretteLoader');//removed / from start
 
 $listener = new LocalFileStorageListener();
 CakeEventManager::instance()->attach($listener);
