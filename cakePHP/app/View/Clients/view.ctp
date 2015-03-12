@@ -63,8 +63,13 @@
 
 </section>
 <div class = "dRoundedBox">
-<?php echo $this->Html->image('profile_pictures/default.png', array('alt' => 'Profile image','width' => '100','class' => 'aProfileImage')); ?>
-Client id:<?php echo h($client['Client']['id']); ?>
+<?php $clientID =  ($client['Client']['id']);
+	$imageURL = 'profile_pictures/' + $clientID + '.png';
+	if (!file_exists($imageURL)) {
+		$imageURL = 'profile_pictures/default.png';
+	}?>
+<?php echo $this->Html->image($imageURL, array('alt' => 'Profile image','width' => '100','class' => 'aProfileImage')); ?>
+
 <?php echo 'Gender: ', h($client['Client']['gender']); ?>
 <?php echo 'Date of Birth: ', h($client['Client']['dateOfBirth']); ?>
 <?php echo 'National Insurance Number: ', h($client['Client']['nis']); ?>
