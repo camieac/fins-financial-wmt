@@ -109,8 +109,9 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
-CakePlugin::load('FullCalendar');
-CakePlugin::load('FileStorage');
+//CakePlugin::load('FullCalendar');
+//CakePlugin::load('FileStorage');
+CakePlugin::loadAll();
 App::uses('CakeEventManager', 'Event');
 App::uses('FileStorageUtils', 'FileStorage.Lib/Utility');
 App::uses('StorageManager', 'FileStorage.Lib');
