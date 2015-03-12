@@ -25,21 +25,25 @@
 	"bLengthChange": false
 	}
 	);
+	$('#submit-link').click(function(){
+  $('#StocklistIndexForm').submit();
+});
 } ); </script>
 
 
 <h1><font size="6">Stocks</font></h1>
-
+<div class="dRoundedBox">
 <?php
 echo $this->Form->create('Stocklist');
 echo $this->Form->input('symbol'); ?>
 <div class='submit'>
 <?php echo $this->Form->submit('Add Stock', array('div'=>false, 'name'=>'add')); 
+<?php echo $this->Html->link('Add Stock','#', array('id' => 'submit-link')); ?>
 ?>
 </div>
 <?php echo $this->Form->end()?>
-
-
+</div>
+<div class="dRoundedBox">
 <table id="stocks" class="display" cellspacing="0" width="100%">
 <thead>
 <tr>
@@ -81,4 +85,5 @@ echo $this->Html->link(str_replace("\"", "", $stock['name']), array('action' => 
 </tr>
 <?php endforeach; ?>
 </table>
+</div>
 <p><?php echo $this->Html->link('Logout','logout', array('controller' => 'users', 'class' => 'button')); ?></p>
