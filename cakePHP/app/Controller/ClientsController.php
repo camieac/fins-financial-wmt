@@ -93,13 +93,14 @@ $price = $quantity * $result[0]['current'];
 
 public function add() {
 	
-
+if($this->request->data
 $this->set('FAquery', $this->Client->getFAs());
 
 if ($this->request->is('post')) {
 $this->Client->create();
 if ($this->Client->save($this->request->data)) {
 $this->Session->setFlash(__('Your client has been saved.'));
+uploadImage();
 return $this->redirect(array('action' => 'index'));
 }
 $this->Session->setFlash(__('Unable to add your client.'));
@@ -114,6 +115,7 @@ throw new NotFoundException(__('Invalid Client'));
 $client = $this->Client->findById($id);
 if (!$client) {
 throw new NotFoundException(__('Invalid Client'));
+
 }
 
 $this->set('FAquery', $this->Client->getFAs());
@@ -122,6 +124,7 @@ if ($this->request->is(array('Client', 'put'))) {
 $this->Client->id = $id;
 if ($this->Client->save($this->request->data)) {
 $this->Session->setFlash(__('Your Client has been updated.'));
+uploadImage();
 return $this->redirect(array('action' => 'index'));
 }
 $this->Session->setFlash(__('Unable to update your Client.'));
