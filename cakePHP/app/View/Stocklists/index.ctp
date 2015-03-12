@@ -37,9 +37,9 @@
 echo $this->Form->create('Stocklist');
 echo $this->Form->input('symbol'); ?>
 <div class='submit'>
-<?php echo $this->Form->submit('Add Stock', array('div'=>false, 'name'=>'add')); 
+<?php echo $this->Form->submit('Add Stock', array('div'=>false, 'name'=>'add')); ?>
 <?php echo $this->Html->link('Add Stock','#', array('id' => 'submit-link')); ?>
-?>
+
 </div>
 <?php echo $this->Form->end()?>
 </div>
