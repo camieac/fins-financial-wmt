@@ -73,7 +73,7 @@
 <?php echo 'F.A: ', h($client['Client']['fa']); ?>
 <br/><br/>
 </div> <!-- for dRoundedBox -->
-<font size = "4"><p><b>Stocks:</b></p></font>
+<div class = "dRoundedBox">
 
 <?php $id = $this->params['pass']; ?>
 
@@ -129,7 +129,8 @@ else {?>
 
 <?php endforeach; ?>
 </table>
-
+</div>
+<div class = "dRoundedBox">
 <font size = "4"><p><b>Total:</b></p></font>
 <p><?php echo "£".number_format($total, 2); ?></p>
 
@@ -149,7 +150,7 @@ echo $this->Form->input('quantity'); ?>
 <?php echo $this->Form->submit('Buy Stock', array('div'=>false, 'name'=>'buy', array('rule' => 'notEmpty'))); ?>
 </div>
 <?php echo $this->Form->end()?>
-
+</div>
 <?php }
 else
 {
