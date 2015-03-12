@@ -38,9 +38,8 @@
 									array(
 									'class' => 'button'
 									)); ?>
-<?php echo $this->Html->link('View in Calendar','../full_calendar',
+<?php echo $this->Html->link('View in Calendar','/full_calendar',
 									array(
-									'plugin' => 'full_calendar',
 									'class' => 'button'
 									)); ?>
 </div>
