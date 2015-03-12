@@ -5,7 +5,7 @@ class RssHelper extends AppHelper {
 
     function parseRss($limit = 3) {
         // Parse the RSS feed
-        $xml = new Xml('http://example.com/rss-feed.xml');
+        $xml = new Xml('http://www.ft.com/rss/home/uk');
         $data = $xml->toArray();
 
         // Filter any non-news items
