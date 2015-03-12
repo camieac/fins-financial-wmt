@@ -20,7 +20,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->css('fullcalendar.print'); 
 		
 		
-		echo $this->Html->script('jquery-1.3.2.min.'); 
+		echo $this->Html->script('jquery-1.3.2.min'); 
 		echo $this->Html->script('moment.min'); 
  		echo $this->Html->script('jquery.min'); 
 		echo $this->Html->script('fullcalendar.min');
