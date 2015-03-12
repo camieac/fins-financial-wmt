@@ -112,19 +112,3 @@ CakeLog::config('error', array(
 //CakePlugin::load('FullCalendar');
 //CakePlugin::load('FileStorage');
 CakePlugin::loadAll();
-App::uses('CakeEventManager', 'Event');
-App::uses('FileStorageUtils', 'FileStorage.Lib/Utility');
-App::uses('StorageManager', 'FileStorage.Lib');
-App::uses('ImageProcessingListener', 'FileStorage.Event');
-App::uses('LocalFileStorageListener', 'FileStorage.Event');
-App::uses('FileStorageListener', 'FileStorage.Event');
-
-// Only required if you're *NOT* using composer or another autoloader!
-//spl_autoload_register(__NAMESPACE__ .'\FileStorageUtils::gaufretteLoader');//removed / from start
-
-$listener = new LocalFileStorageListener();
-CakeEventManager::instance()->attach($listener);
-
-// For automated image processing you'll have to attach this listener as well
-$listener = new ImageProcessingListener();
-CakeEventManager::instance()->attach($listener);
