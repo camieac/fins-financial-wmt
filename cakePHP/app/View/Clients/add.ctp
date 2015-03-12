@@ -52,14 +52,5 @@ echo $this->Form->input('fa',array('type'=>'select','options'=>$fa));
 echo $this->Form->end('Save Client');
 ?>
 </div>
-<div class="row">
-					<div class="12u">
 
-						<div id="copyright">
-								&copy; Untitled. All rights reserved. | For assistance: <a href="/Help">Help</a>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
+			
