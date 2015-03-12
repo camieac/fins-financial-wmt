@@ -25,7 +25,7 @@
 		</dd>
 	</dl>
 </div>
-<div class="actions dRounedBox">
+<div class="actions dRoundedBox">
 	<ul>
 		<li><?php echo $this->Html->link('Edit Event Type','edit', array('plugin' => 'full_calendar', 'class' => 'button', $eventType['EventType']['id'])); ?> </li>
 		<li><?php echo $this->Html->link('Delete Event Type','delete', array('plugin' => 'full_calendar', 'class' => 'button', $eventType['EventType']['id']), null, sprintf(__('Are you sure you want to delete %s?', true), $eventType['EventType']['name'])); ?> </li>
