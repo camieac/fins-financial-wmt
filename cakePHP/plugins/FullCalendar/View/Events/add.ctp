@@ -33,7 +33,7 @@
 </div>
 <div class="actions dRoundedBox">
 	<ul>
-		<li><?php echo $this->Html->link('Manage Events','index' array('plugin' => 'full_calendar', 'class' => 'button'));?></li>
+		<li><?php echo $this->Html->link('Manage Events','index', array('plugin' => 'full_calendar', 'class' => 'button'));?></li>
 		<li><li><?php echo $this->Html->link('View Calendar','/full_calendar', array('plugin' => 'full_calendar', 'class' => 'button')); ?></li>
 	</ul>
 </div>
