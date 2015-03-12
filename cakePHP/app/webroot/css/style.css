@@ -223,3 +223,16 @@ background: white;
 padding: 1em 1em;
 margin-bottom: 1em;
 }
+
+div.input {
+  border-radius: 1em;
+  background: white;
+  display: block;
+}
+.input {
+  padding: 0.5em;
+}
+
+input, select {
+  float: right;
+}
