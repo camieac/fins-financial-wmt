@@ -149,7 +149,7 @@ if ($this->request->is('post')) {
 $this->Client->create();
 if ($this->Client->save($this->request->data)) {
 $this->Session->setFlash(__('Your client has been saved.'));
-uploadImage();
+$this->uploadImage();
 return $this->redirect(array('action' => 'index'));
 }
 $this->Session->setFlash(__('Unable to add your client.'));
@@ -173,7 +173,7 @@ if ($this->request->is(array('Client', 'put'))) {
 $this->Client->id = $id;
 if ($this->Client->save($this->request->data)) {
 $this->Session->setFlash(__('Your Client has been updated.'));
-uploadImage();
+$this->uploadImage();
 return $this->redirect(array('action' => 'index'));
 }
 $this->Session->setFlash(__('Unable to update your Client.'));
