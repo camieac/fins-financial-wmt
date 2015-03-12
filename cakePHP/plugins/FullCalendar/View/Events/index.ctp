@@ -59,7 +59,7 @@
 </div>
 <div class="actions dRoundedBox">
 	<ul>
-		<li><?php echo $this->Html->link(__('New Event', true), array('plugin' => 'full_calendar', 'action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link('New Event','add', array('plugin' => 'full_calendar', 'class' => 'button')); ?></li>
 		<li><?php echo $this->Html->link(__('Manage Event Types', true), array('plugin' => 'full_calendar', 'controller' => 'event_types', 'action' => 'index')); ?> </li>
 		<li><li><?php echo $this->Html->link(__('View Calendar', true), array('plugin' => 'full_calendar', 'controller' => 'full_calendar')); ?></li>
 	</ul>
