@@ -24,8 +24,8 @@ echo $this->Html->css('/full_calendar/css/fullcalendar', null, array('inline' =>
 </div>
 <div class="actions">
 	<ul>
-	    <li><?php echo $this->Html->link(__('New Event', true), array('plugin' => 'full_calendar', 'controller' => 'events', 'action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('Manage Events', true), array('plugin' => 'full_calendar', 'controller' => 'events')); ?></li>
-		<li><?php echo $this->Html->link(__('Manage Events Types', true), array('plugin' => 'full_calendar', 'controller' => 'event_types')); ?></li>
+	    <li><?php echo $this->Html->link('New Event','add', array('plugin' => 'full_calendar', 'controller' => 'events', 'class' => 'button')); ?></li>
+		<li><?php echo $this->Html->link('Manage Events', array('plugin' => 'full_calendar', 'controller' => 'events')); ?></li>
+		<li><?php echo $this->Html->link('Manage Events Types', array('plugin' => 'full_calendar', 'controller' => 'event_types')); ?></li>
 	</ul>
 </div>
