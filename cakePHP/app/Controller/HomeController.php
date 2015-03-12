@@ -1,5 +1,5 @@
 <?php
-App::uses('Xml', 'Utility');
+App::uses('Xml', 'Utility','Rss');
 	
 class HomeController extends AppController {
 public $helpers = array('Html', 'Form');
