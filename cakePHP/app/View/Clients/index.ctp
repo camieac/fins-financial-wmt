@@ -91,9 +91,9 @@ array('confirm' => 'Are you sure?')
 </tr>
 <?php endforeach; ?>
 </table></div>
-<div class = "dRoundedBox">
+
 <?php echo $this->Html->link('Logout','logout', array('controller' => 'users', 'class' => 'button')); ?>
-</div>
+
 
 			</div>
 		</div>
