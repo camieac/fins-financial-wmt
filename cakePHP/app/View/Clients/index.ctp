@@ -33,7 +33,7 @@
 
 
 <h1><font size="6">Clients</font></h1>
-<p><?php echo $this->Html->link('Add client','add', array('class' => 'button')); ?></p>
+<?php echo $this->Html->link('Add client','add', array('class' => 'button')); ?>
 <table id="clients" class="display" cellspacing="0" width="100%">
 <thead>
 <tr>
@@ -89,9 +89,9 @@ array('confirm' => 'Are you sure?')
 </td>
 </tr>
 <?php endforeach; ?>
-</table>
-<p><?php echo $this->Html->link('Logout','logout', array('controller' => 'users', 'class' => 'button')); ?></p>
-
+</table><div class = "dRoundedBox">
+<?php echo $this->Html->link('Logout','logout', array('controller' => 'users', 'class' => 'button')); ?>
+</div>
 
 			</div>
 		</div>
