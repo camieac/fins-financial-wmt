@@ -65,6 +65,7 @@
 <div class = "dRoundedBox">
 <?php $clientID =  ($client['Client']['id']);
 	$imageURL = 'profile_pictures/' + $clientID + '.png';
+	echo $imageURL;
 	if (!file_exists($imageURL)) {
 		$imageURL = 'profile_pictures/default.png';
 	}?>
