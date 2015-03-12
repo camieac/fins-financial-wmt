@@ -236,3 +236,7 @@ div.input {
 input, select {
   float: right;
 }
+
+form#MeetingEditForm {
+  width: 20em;
+}
