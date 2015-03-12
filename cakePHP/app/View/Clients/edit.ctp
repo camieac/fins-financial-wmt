@@ -39,6 +39,7 @@ echo $this->Form->input('address');
 echo $this->Form->input('balance');
 echo $this->Form->input('fa',array('type'=>'select','options'=>$fa)); 
 echo $this->Form->input('id', array('type' => 'hidden'));
+echo $this->Form->input('Image.profileImage', array('type' => 'file'));
 echo $this->Form->end('Save Post');
 ?>
 </div>
