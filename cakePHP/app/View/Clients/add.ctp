@@ -40,7 +40,7 @@
 
 
 <?php
-echo $this->Form->create('Client');
+echo $this->Form->create('Client', array('class' => 'fForm'));
 echo $this->Form->input('name');
 echo $this->Form->input('gender');
 echo $this->Form->input('dateOfBirth', array('dateFormat'=>'DMY', 'minYear'=>date('Y')-99, 'maxYear'=>date('Y')-9, 'empty'=>array('- -')));

@@ -21,7 +21,7 @@ $advisorarray = Set::flatten($FAquery);
 </pre>
 
 <?php
-echo $this->Form->create('Meeting');
+echo $this->Form->create('Meeting', array('class' => 'fForm'));
 echo $this->Form->input('name');
 echo $this->Form->input('description');
 echo $this->Form->input('customer',array('type'=>'select','options'=>$customer)); 

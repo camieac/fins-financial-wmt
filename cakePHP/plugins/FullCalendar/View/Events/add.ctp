@@ -11,7 +11,7 @@
  */
 ?>
 <div class="events form dRoundedBox">
-<?php echo $this->Form->create('Event');?>
+<?php echo $this->Form->create('Event', array('class' => 'fForm'));?>
 	<fieldset>
  		<legend><?php __('Add Event'); ?></legend>
 	<?php

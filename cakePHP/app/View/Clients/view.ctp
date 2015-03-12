@@ -140,7 +140,7 @@ for ($j = 0; $j < count($query)/2; ++$j)
  } 
 ?>
 <?php
-echo $this->Form->create('Purchase');
+echo $this->Form->create('Purchase', array('class' => 'fForm'));
 echo $this->Form->input('stock',array('type'=>'select','options'=>$stockoptions)); 
 echo $this->Form->input('customer',array('type'=>'select','options'=>$id, 'default'=>$id, 'type' => 'hidden')); 
 echo $this->Form->input('quantity'); ?>

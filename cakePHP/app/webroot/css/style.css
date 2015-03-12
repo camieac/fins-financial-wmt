@@ -237,6 +237,6 @@ input, select {
   float: right;
 }
 
-form#MeetingEditForm {
+form.fForm {
   width: 20em;
 }

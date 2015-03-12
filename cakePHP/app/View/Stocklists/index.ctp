@@ -34,7 +34,7 @@
 <h1><font size="6">Stocks</font></h1>
 <div class="dRoundedBox">
 <?php
-echo $this->Form->create('Stocklist');
+echo $this->Form->create('Stocklist', array('class' => 'fForm'));
 echo $this->Form->input('symbol'); ?>
 <div class='submit'>
 <?php // echo $this->Form->submit('Add Stock', array('div'=>false, 'name'=>'add'));
