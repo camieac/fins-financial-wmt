@@ -10,7 +10,7 @@
  * http://www.opensource.org/licenses/mit-license.php
  */
 ?>
-<div class="events form">
+<div class="events form dRoundedBox">
 <?php echo $this->Form->create('Event');?>
 	<fieldset>
  		<legend><?php __('Edit Event'); ?></legend>
@@ -32,10 +32,10 @@
 	</fieldset>
 <?php echo $this->Form->end(__('Submit', true));?>
 </div>
-<div class="actions">
+<div class="actions dRoundedBox">
 	<ul>
-		<li><?php echo $this->Html->link(__('View Event', true), array('plugin' => 'full_calendar', 'action' => 'view', $this->Form->value('Event.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('Manage Events', true), array('plugin' => 'full_calendar', 'action' => 'index'));?></li>
-		<li><li><?php echo $this->Html->link(__('View Calendar', true), array('plugin' => 'full_calendar', 'controller' => 'full_calendar')); ?></li>
+		<li><?php echo $this->Html->link('View Event','view', array('plugin' => 'full_calendar', 'class' => 'button', $this->Form->value('Event.id'))); ?></li>
+		<li><?php echo $this->Html->link('Manage Events','index', array('plugin' => 'full_calendar', 'class' => 'button'));?></li>
+		<li><li><?php echo $this->Html->link('View Calendar','/full_calendar', array('plugin' => 'full_calendar', 'class' => 'button')); ?></li>
 	</ul>
 </div>

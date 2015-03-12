@@ -10,7 +10,7 @@
  * http://www.opensource.org/licenses/mit-license.php
  */
 ?>
-<div class="events view">
+<div class="events view dRoundedBox">
 <h2><?php echo __('Event'); ?></h2>
 	<dl><?php $i = 0; $class = ' class="altrow"';?>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Event Type'); ?></dt>
@@ -33,11 +33,11 @@
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>><?php echo $event['Event']['modified']; ?></dd>
 	</dl>
 </div>
-<div class="actions">
+<div class="actions dRoundedBox">
 	<ul>
-		<li><?php echo $this->Html->link(__('Edit Event', true), array('plugin' => 'full_calendar', 'action' => 'edit', $event['Event']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('Delete Event', true), array('plugin' => 'full_calendar', 'action' => 'delete', $event['Event']['id']), null, sprintf(__('Are you sure you want to delete this %s event?', true), $event['EventType']['name'])); ?> </li>
-		<li><?php echo $this->Html->link(__('Manage Events', true), array('plugin' => 'full_calendar', 'action' => 'index')); ?> </li>
-		<li><li><?php echo $this->Html->link(__('View Calendar', true), array('plugin' => 'full_calendar', 'controller' => 'full_calendar')); ?></li>
+		<li><?php echo $this->Html->link('Edit Event','edit', array('plugin' => 'full_calendar', 'class' => 'button', $event['Event']['id'])); ?> </li>
+		<li><?php echo $this->Html->link('Delete Event','delete', array('plugin' => 'full_calendar', 'class' => 'button', $event['Event']['id']), null, sprintf(__('Are you sure you want to delete this %s event?', true), $event['EventType']['name'])); ?> </li>
+		<li><?php echo $this->Html->link('Manage Events','index', array('plugin' => 'full_calendar', 'class' => 'button')); ?> </li>
+		<li><li><?php echo $this->Html->link('View Calendar','/full_calendar', array('plugin' => 'full_calendar', 'class' => 'button')); ?></li>
 	</ul>
 </div>

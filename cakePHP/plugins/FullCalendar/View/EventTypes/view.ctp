@@ -10,7 +10,7 @@
  * http://www.opensource.org/licenses/mit-license.php
  */
 ?>
-<div class="eventTypes view">
+<div class="eventTypes view dRoundedBox">
 <h2><?php echo __('Event Type');?></h2>
 	<dl><?php $i = 0; $class = ' class="altrow"';?>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Name'); ?></dt>
@@ -25,15 +25,15 @@
 		</dd>
 	</dl>
 </div>
-<div class="actions">
+<div class="actions dRounedBox">
 	<ul>
-		<li><?php echo $this->Html->link(__('Edit Event Type', true), array('plugin' => 'full_calendar', 'action' => 'edit', $eventType['EventType']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('Delete Event Type', true), array('plugin' => 'full_calendar', 'action' => 'delete', $eventType['EventType']['id']), null, sprintf(__('Are you sure you want to delete %s?', true), $eventType['EventType']['name'])); ?> </li>
-		<li><?php echo $this->Html->link(__('Manage Event Types', true), array('plugin' => 'full_calendar', 'action' => 'index')); ?> </li>
-		<li><li><?php echo $this->Html->link(__('View Calendar', true), array('plugin' => 'full_calendar', 'controller' => 'full_calendar')); ?></li>
+		<li><?php echo $this->Html->link('Edit Event Type','edit', array('plugin' => 'full_calendar', 'class' => 'button', $eventType['EventType']['id'])); ?> </li>
+		<li><?php echo $this->Html->link('Delete Event Type','delete', array('plugin' => 'full_calendar', 'class' => 'button', $eventType['EventType']['id']), null, sprintf(__('Are you sure you want to delete %s?', true), $eventType['EventType']['name'])); ?> </li>
+		<li><?php echo $this->Html->link('Manage Event Types','index', array('plugin' => 'full_calendar', 'class' => 'button')); ?> </li>
+		<li><li><?php echo $this->Html->link('View Calendar','/full_calendar', array('plugin' => 'full_calendar', 'class' => 'button')); ?></li>
 	</ul>
 </div>
-<div class="related">
+<div class="related dRoundedBox">
 	<h3><?php echo __('Related Events');?></h3>
 	<?php if (!empty($eventType['Event'])):?>
 	<table cellpadding = "0" cellspacing = "0">
@@ -62,8 +62,8 @@
             <td><?php if($event['all_day'] == 1) { echo "Yes"; } else { echo "No"; }?></td>
 			<td><?php echo $event['modified'];?></td>
 			<td class="actions">
-				<?php echo $this->Html->link(__('View', true), array('plugin' => 'full_calendar', 'controller' => 'events', 'action' => 'view', $event['id'])); ?>
-				<?php echo $this->Html->link(__('Edit', true), array('plugin' => 'full_calendar', 'controller' => 'events', 'action' => 'edit', $event['id'])); ?>
+				<?php echo $this->Html->link('View','view', array('plugin' => 'full_calendar', 'controller' => 'events', 'class' => 'button', $event['id'])); ?>
+				<?php echo $this->Html->link('Edit','edit', array('plugin' => 'full_calendar', 'controller' => 'events', 'class' => 'button', $event['id'])); ?>
 			</td>
 		</tr>
 	<?php endforeach; ?>

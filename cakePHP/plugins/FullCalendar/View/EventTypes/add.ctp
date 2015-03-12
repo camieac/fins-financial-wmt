@@ -10,7 +10,7 @@
  * http://www.opensource.org/licenses/mit-license.php
  */
 ?>
-<div class="eventTypes form">
+<div class="eventTypes form dRoundedBox">
 <?php echo $this->Form->create('EventType');?>
 	<fieldset>
  		<legend><?php __('Add Event Type'); ?></legend>
@@ -33,9 +33,9 @@
 	</fieldset>
 <?php echo $this->Form->end(__('Submit', true));?>
 </div>
-<div class="actions">
+<div class="actions dRoundedBox">
 	<ul>
-		<li><?php echo $this->Html->link(__('Manage Event Types', true), array('plugin' => 'full_calendar', 'action' => 'index'));?></li>
-		<li><li><?php echo $this->Html->link(__('View Calendar', true), array('plugin' => 'full_calendar', 'controller' => 'full_calendar')); ?></li>
+		<li><?php echo $this->Html->link('Manage Event Types','index', array('plugin' => 'full_calendar', 'class' => 'button'));?></li>
+		<li><li><?php echo $this->Html->link('View Calendar','/full_calendar', array('plugin' => 'full_calendar', 'class' => 'button')); ?></li>
 	</ul>
 </div>

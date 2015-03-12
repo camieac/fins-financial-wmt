@@ -10,7 +10,7 @@
  * http://www.opensource.org/licenses/mit-license.php
  */
 ?>
-<div class="eventTypes index">
+<div class="eventTypes index dRoundedBox">
 	<h2><?php __('Event Types');?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
@@ -44,10 +44,10 @@
 		<?php echo $this->Paginator->next(__('next', true) . ' >>', array(), null, array('class' => 'disabled'));?>
 	</div>
 </div>
-<div class="actions">
+<div class="actions dRoundedBox">
 	<ul>
-		<li><?php echo $this->Html->link(__('New Event Type', true), array('plugin' => 'full_calendar', 'action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('Manage Events', true), array('plugin' => 'full_calendar', 'controller' => 'events', 'action' => 'index')); ?></li>
-        <li><li><?php echo $this->Html->link(__('View Calendar', true), array('plugin' => 'full_calendar', 'controller' => 'full_calendar')); ?></li>
+		<li><?php echo $this->Html->link('New Event Type','add', array('plugin' => 'full_calendar', 'class' => 'button')); ?></li>
+		<li><?php echo $this->Html->link('Manage Events','index', array('plugin' => 'full_calendar', 'controller' => 'events', 'class' => 'button')); ?></li>
+        <li><li><?php echo $this->Html->link('View Calendar','/full_calendar', array('plugin' => 'full_calendar', 'class' => 'button')); ?></li>
 	</ul>
 </div>
