@@ -115,7 +115,7 @@ CakePlugin::loadAll();
 App::uses('CakeEventManager', 'Event');
 App::uses('FileStorageUtils', 'FileStorage.Lib/Utility');
 App::uses('StorageManager', 'FileStorage.Lib');
-App::uses('LocalImageProcessingListener', 'FileStorage.Event');
+App::uses('ImageProcessingListener', 'FileStorage.Event');
 App::uses('LocalFileStorageListener', 'FileStorage.Event');
 App::uses('FileStorageListener', 'FileStorage.Event');
 
