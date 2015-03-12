@@ -13,7 +13,7 @@
 	</head>
 	<body>
 		
-		<div id="main">
+		<div id="main" class = "dRoundedBox">
 			<div class="container">
 				<div class="row main-row">
 					<div class="8u">
