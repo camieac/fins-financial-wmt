@@ -19,7 +19,7 @@ echo $this->Html->css('/full_calendar/css/fullcalendar', null, array('inline' =>
 ?>
 
 
-<div class="Calendar index">
+<div class="Calendar index dRoundedBox">
 	<div id="calendar"></div>
 </div>
 <div class="actions">
