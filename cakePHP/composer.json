@@ -41,7 +41,7 @@
     },
     "extra": {
         "installer-paths": {
-            "plugins/FileStorage": ["burzum/file-storage"],
+            "app/Plugin/FileStorage": ["burzum/file-storage"],
         }
     }
 }
