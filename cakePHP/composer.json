@@ -30,18 +30,4 @@
 	]
 }
 
-{
-    "config": {
-        "vendor-dir": "app/Vendor/",
-        "preferred-install": "source"
-    },
-    "require": {
-        "burzum/file-storage": "master",
-        "knplabs/gaufrette": "*"
-    },
-    "extra": {
-        "installer-paths": {
-            "app/Plugin/FileStorage": ["burzum/file-storage"],
-        }
-    }
-}
+
