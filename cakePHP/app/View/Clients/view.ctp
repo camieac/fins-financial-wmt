@@ -63,6 +63,7 @@
 
 </section>
 <div class = "dRoundedBox">
+<?php echo $this->Html->image('profile_pictures/default.png', array('alt' => 'Profile image')); ?>
 <?php echo 'Gender: ', h($client['Client']['gender']); ?>
 <?php echo 'Date of Birth: ', h($client['Client']['dateOfBirth']); ?>
 <?php echo 'National Insurance Number: ', h($client['Client']['nis']); ?>
