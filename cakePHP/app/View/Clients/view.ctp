@@ -66,7 +66,7 @@
 <?php $clientID =  ($client['Client']['id']);
 	$imageURL = 'profile_pictures/' . $clientID . '.png';
 	echo $imageURL;
-	if (!file_exists($imageURL)) {
+	if (!file_exists('img/'.$imageURL)) {
 		$imageURL = 'profile_pictures/default.png';
 	}?>
 <?php echo $this->Html->image($imageURL, array('alt' => 'Profile image','width' => '100','class' => 'aProfileImage')); ?>
