@@ -652,5 +652,8 @@ table.fc-header {
 	text-align: center;
 	cursor: s-resize;
 	}
-	
+div.events.index {
+	border-radius:1em;
+	padding:1em;
+}
 	
