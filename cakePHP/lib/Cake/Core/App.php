@@ -225,7 +225,6 @@ class App {
 		if (!empty($plugin)) {
 			$path = array();
 			$pluginPath = CakePlugin::path($plugin);
-			echo $pluginPath;
 			$packageFormat = self::_packageFormat();
 			if (!empty($packageFormat[$type])) {
 				foreach ($packageFormat[$type] as $f) {
