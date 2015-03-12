@@ -43,6 +43,7 @@
 									'class' => 'button'
 									)); ?></p>
 </div>
+<div class = "dRoundedBox"></div>
 <table id="meetings" class="display" cellspacing="0" width="100%">
 <thead>
 <tr>
@@ -94,4 +95,5 @@ array('confirm' => 'Are you sure?')
 </tr>
 <?php endforeach; ?>
 </table>
-<p><?php echo $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout')); ?></p>
+</div>
+<p><?php echo $this->Html->link('Logout','logout', array('controller' => 'users', 'class' => 'button')); ?></p>
