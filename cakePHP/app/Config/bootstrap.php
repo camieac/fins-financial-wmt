@@ -110,7 +110,7 @@ CakeLog::config('error', array(
 	'file' => 'error',
 ));
 CakePlugin::load('FullCalendar');
-
+CakePlugin::load('FileStorage');
 App::uses('CakeEventManager', 'Event');
 App::uses('FileStorageUtils', 'FileStorage.Lib/Utility');
 App::uses('StorageManager', 'FileStorage.Lib');
