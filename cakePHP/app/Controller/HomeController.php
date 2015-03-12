@@ -13,7 +13,7 @@ public function getFTFeed(){
 	// $xml now is a instance of SimpleXMLElement
 	
 	//$parsed_xml =& new XML($url);
-	return $parsed_xml + "Hello";
+	return $parsed_xml . "Hello";
     //$feed = Xml::toArray(Xml::build(Configure::read($feed)));
 }
 }
