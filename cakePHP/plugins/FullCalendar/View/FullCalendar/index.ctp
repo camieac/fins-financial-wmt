@@ -23,10 +23,10 @@ echo $this->Html->css('/full_calendar/css/fullcalendar', null, array('inline' =>
 	<div id="calendar"></div>
 </div>
 <div class="actions dRoundedBox">
-	<ul>
-	    <li><?php echo $this->Html->link('New Event','events/add', array('plugin' => 'full_calendar','class' => 'button')); ?></li>
-		<li><?php echo $this->Html->link('Manage Events','events', array('plugin' => 'full_calendar', 'controller' => 'events','class' => 'button')); ?></li>
-		<li><?php echo $this->Html->link('Manage Events Types','event_types', array('plugin' => 'full_calendar', 'controller' => 'event_types','class' => 'button')); ?></li>
-	</ul>
+	
+	    <?php echo $this->Html->link('New Event','events/add', array('plugin' => 'full_calendar','class' => 'button')); ?>
+		<?php echo $this->Html->link('Manage Events','events', array('plugin' => 'full_calendar', 'controller' => 'events','class' => 'button')); ?>
+		<?php echo $this->Html->link('Manage Events Types','event_types', array('plugin' => 'full_calendar', 'controller' => 'event_types','class' => 'button')); ?>
+	
 	</div>
 </div>
