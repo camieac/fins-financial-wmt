@@ -34,5 +34,5 @@ echo $this->Form->input('meetingTime');
 echo $this->Form->input('dateMeeting', array('dateFormat'=>'DMY', 'minYear'=>date('Y'), 'maxYear'=>date('Y')+10, 'empty'=>array('- -')));
 echo $this->Form->input('id', array('type' => 'hidden'));
 echo $this->Form->end('Save Post');
-</div>
-?>
+
+?></div>
