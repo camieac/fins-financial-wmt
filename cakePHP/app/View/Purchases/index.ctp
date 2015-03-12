@@ -28,6 +28,7 @@
 <?php $i = 0;  ?>
 
 <h1><font size="6">Purchases</font></h1>
+<div class="dRoundedBox">
 <table id="purchases" class="display" cellspacing="0" width="100%">
 <thead>
 <tr>
@@ -63,4 +64,5 @@
 <?php endforeach; ?>
 </tr>
 </table>
+</div>
 <p><?php echo $this->Html->link('Logout','logout', array('controller' => 'users', 'class' => 'button')); ?></p>
