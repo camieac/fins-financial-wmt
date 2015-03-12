@@ -976,7 +976,4 @@ be a descendant of the grid when it is being dragged.
 	content: "=";
 }
 
-div.events.index {
-	border-radius:1em;
-	padding:1em;
-}
+

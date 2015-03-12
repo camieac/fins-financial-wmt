@@ -10,7 +10,7 @@
  * http://www.opensource.org/licenses/mit-license.php
  */
 ?>
-<div class="events index">
+<div class="events index dRoundedBox">
 	<h2><?php __('Events');?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
@@ -57,7 +57,7 @@
 		<?php echo $this->Paginator->next(__('next', true) . ' >>', array(), null, array('class' => 'disabled'));?>
 	</div>
 </div>
-<div class="actions">
+<div class="actions dRoundedBox">
 	<ul>
 		<li><?php echo $this->Html->link(__('New Event', true), array('plugin' => 'full_calendar', 'action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('Manage Event Types', true), array('plugin' => 'full_calendar', 'controller' => 'event_types', 'action' => 'index')); ?> </li>
