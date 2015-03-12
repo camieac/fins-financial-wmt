@@ -4,6 +4,7 @@
 <html>
 	<head>
 		<title>Add Client</title>
+		
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -28,7 +29,6 @@
 
 
 
-<h3>
 <?php $advisorarray = Set::flatten($FAquery); 
 
  for ($j = 0; $j < count($advisorarray)/2; ++$j) 
@@ -38,7 +38,7 @@
 
 ?>
 
-
+<div class = "dRoundedBox">
 <?php
 echo $this->Form->create('Client', array('class' => 'fForm'));
 echo $this->Form->input('name');
@@ -51,7 +51,7 @@ echo $this->Form->input('balance');
 echo $this->Form->input('fa',array('type'=>'select','options'=>$fa)); 
 echo $this->Form->end('Save Client');
 ?>
-</h3>
+</div>
 <div class="row">
 					<div class="12u">
 
