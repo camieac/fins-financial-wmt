@@ -53,6 +53,45 @@
 						<section>
 							<h2>Financial Times Feed</h2>
 							<?php
+							
+							function load_file($url) 
+							    {
+							        $ch = curl_init($url);
+							        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+							        $xml = simplexml_load_string(curl_exec($ch));
+							        return $xml;
+							    }
+							
+							    $feedurl = 'http://www.astrology.com/horoscopes/daily-extended.rss';
+							    $rss = load_file($feedurl);
+							
+							    $items = array();
+							    $count = 0;
+							    $descriptions = array();
+								foreach($array->channel->item as $item){
+									$descriptions[] = $item->description;
+								}
+							    echo $items[0];							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
 								$array = $this->requestAction(array('controller' => 'home', 'action' => 'getFTFeed'),array('return'));
 								//echo implode(" ", $array);
 								//foreach($array['data'] as $result) {
