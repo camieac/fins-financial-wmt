@@ -52,21 +52,11 @@
 						
 						<section>
 							<h2>Financial Times Feed</h2>
-							<?php $array = $this->requestAction(array('controller' => 'home', 'action' => 'getFTFeed'),array('return')); ?>
-							<dl id="news" class="box">
 							<?php
-							//$news = $this->Rss->parseRss(5);
-							$news = $array;
-							echo implode(" ",$news);
-							foreach($news as $item):?>
-								<dt><?php echo date('d-m-Y H:i',strtotime($item['lastBuildDate'])); ?></dt>
-									<dd><?php echo $this->Html->link(
-																	$item['title'],
-																	$item['link'],
-																	array('target' => '_blank')
-																	); ?></dd>
-							<?php endforeach; ?>
-							</dl>
+								$array = $this->requestAction(array('controller' => 'home', 'action' => 'getFTFeed'),array('return'));
+								echo implode(" ", $array);
+							?>
+							
 							<ul class="small-image-list">
 								<li>
 									<?php	echo $this->Html->image('pic2.jpg')?>
