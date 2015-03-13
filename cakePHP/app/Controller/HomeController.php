@@ -10,10 +10,11 @@ public function getFTFeed(){
 	$this->autoRender = false;
 	$url = "http://www.ft.com/rss/home/uk";
 	$parsed_xml = $xml = Xml::build($url);
+	$array = Xml::toArray($parsed_xml);
 	// $xml now is a instance of SimpleXMLElement
 	
 	//$parsed_xml =& new XML($url);
-	return $parsed_xml . "Hello";
+	return $array;
     //$feed = Xml::toArray(Xml::build(Configure::read($feed)));
 }
 }

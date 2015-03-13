@@ -52,10 +52,11 @@
 						
 						<section>
 							<h2>Financial Times Feed</h2>
-							<?php echo $this->requestAction(array('controller' => 'home', 'action' => 'getFTFeed'),array('return')); ?>
+							<?php $array = $this->requestAction(array('controller' => 'home', 'action' => 'getFTFeed'),array('return')); ?>
 							<dl id="news" class="box">
 							<?php
-							$news = $this->Rss->parseRss(5);
+							//$news = $this->Rss->parseRss(5);
+							$news = $array;
 							foreach($news as $item):?>
 								<dt><?php echo date('d-m-Y H:i',strtotime($item['lastBuildDate'])); ?></dt>
 									<dd><?php echo $this->Html->link(
