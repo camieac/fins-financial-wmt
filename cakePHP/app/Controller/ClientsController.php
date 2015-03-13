@@ -41,9 +41,9 @@ public function uploadImage() {
     if(!empty($this->request->data))
     {
         //Check if image has been uploaded
-        if(!empty($this->request->data['Image']['profileImage']))
+        if(!empty($this->request->data['Client']['profileImage']))
         {
-                $file = $this->request->data['Image']['profileImage']; //put the data into a var for easy use
+                $file = $this->request->data['Client']['profileImage']; //put the data into a var for easy use
                 debug( $file );
                 $ext = substr(strtolower(strrchr($file['name'], '.')), 1); //get the extension
                 $arr_ext = array('png', 'jpeg', 'jpg'); //set allowed extensions
@@ -137,10 +137,7 @@ $price = $quantity * $result[0]['current'];
 
 
 public function add() {
-	
-
 $this->set('FAquery', $this->Client->getFAs());
-
 if ($this->request->is('post')) {
 $this->Client->create();
 if ($this->Client->save($this->request->data)) {
