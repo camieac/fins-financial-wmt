@@ -239,3 +239,6 @@ input, select {
 form.fForm {
   width: 20em;
 }
+table#fc-header td {
+border:0px;
+}
