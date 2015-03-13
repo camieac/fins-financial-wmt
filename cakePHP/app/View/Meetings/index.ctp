@@ -97,4 +97,4 @@ array('confirm' => 'Are you sure?')
 </table>
 </div>
 
-<p><?php echo $this->Html->link('Logout','logout', array('controller' => 'users', 'class' => 'button')); ?></p>
+<p><?php echo $this->Html->link('Logout','/users/logout', array('class' => 'button','controller' => 'users', 'action' => 'logout')); ?></p>
