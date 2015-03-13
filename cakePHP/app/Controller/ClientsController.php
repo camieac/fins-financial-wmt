@@ -36,27 +36,47 @@ $this->redirect(array('controller' => 'users', 'action' => 'login'));
 public function uploadImage() {
 	$this->Session->setFlash('starting uploading function...');
     // Custom
-    $folderToSaveFiles = WWW_ROOT . 'img/profile_pictures/' ;
+    $folderToSaveFiles = WWW_ROOT . 'img/profile_pictures/' ;//removed WWW_ROOT . 
+$this->Session->setFlash('Got path');
     if (!$this->request->is('post')){
 		$this->Session->setFlash('NOT A POST');
 		 return false;        // Not a POST data!
 	 }
+$this->Session->setFlash('Checked post');
     if(!empty($this->request->data))
     {
+	$this->Session->setFlash('Checked data');
         //Check if image has been uploaded
-        if(!empty($this->request->data['Client']['profileImage']))
-        {
+        if(!empty($this->request->data['Client']['profileImage'])){
+$this->Session->setFlash('Checked image');
                 $file = $this->request->data['Client']['profileImage']; //put the data into a var for easy use
                 debug( $file );
-                $ext = substr(strtolower(strrchr($file['name'], '.')), 1); //get the extension
+                $ext = pathinfo($file, PATHINFO_EXTENSION);
                 $arr_ext = array('png', 'jpeg', 'jpg'); //set allowed extensions
                 //only process if the extension is valid
+$this->Session->setFlash('Extension:'.$ext);
                 if(in_array($ext, $arr_ext))
                 {
+//$this->Session->setFlash('Checked valid extension');
                     //do the actual uploading of the file. First arg is the tmp name, second arg is 
                     //where we are putting it
-                    $newFilename = $this->request->data['nis'];//$file['name']; // edit/add here as you like your new filename to be.
-                    $result = move_uploaded_file( $file['tmp_name'], $folderToSaveFiles . $newFilename );
+                    $newFilename = $this->request->data['Client']['nis'];//$file['name']; // edit/add here as you like your new filename to be.
+$this->Session->setFlash('new FileName:'.$newFilename);
+
+$newSaveDirectory = $folderToSaveFiles.$newFilename.'.'.$ext;
+$this->Session->setFlash('save directory:'.$newSaveDirectory);
+if(is_dir($folderToSaveFiles)){
+	$this->Session->setFlash('isDIr');
+}else{
+$this->Session->setFlash('no dir');
+}
+$this->Session->setFlash('tmp name:'.pathinfo($file, PATHINFO_BASENAME));
+                    $result = move_uploaded_file( $file['tmp_name'], '$newFilename'.'.'.$ext);
+if($result){
+$this->Session->setFlash('DONE');
+}else{
+$this->Session->setFlash('Directory: '.$newSaveDirectory. ' name '.$file['tmp_name']);
+}
                     debug( $result );
                     //prepare the filename for database entry (optional)
                     //$this->data['Image']['image'] = $file['name'];
@@ -69,11 +89,11 @@ public function uploadImage() {
 		}
        
         //now do the save (optional)
-        if($this->Image->save($this->data)) {
-			$this->Session->setFlash('Image saved');
-			} else {
-				$this->Session->setFlash('Image not saved');
-				}
+        //if($this->Image->save($this->data)) {
+			//$this->Session->setFlash('Image saved');
+			//} else {
+				//$this->Session->setFlash('Image not saved');
+				//}
     }
 
 
