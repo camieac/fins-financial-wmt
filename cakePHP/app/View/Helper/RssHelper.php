@@ -9,7 +9,7 @@ class RssHelper extends AppHelper {
         $data = Xml::toArray($xml);
 
         // Filter any non-news items
-        $items = $this->filterItems($data);
+        $items = $data;//$items = $this->filterItems($data);
         // Prepare output array
         $output = array();
 
