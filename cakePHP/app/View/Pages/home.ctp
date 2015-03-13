@@ -57,6 +57,7 @@
 							<?php
 							//$news = $this->Rss->parseRss(5);
 							$news = $array;
+							echo $news;
 							foreach($news as $item):?>
 								<dt><?php echo date('d-m-Y H:i',strtotime($item['lastBuildDate'])); ?></dt>
 									<dd><?php echo $this->Html->link(
