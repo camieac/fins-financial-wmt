@@ -11,6 +11,7 @@
 		
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		</head>
 		<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript"> $(document).ready(function() {
 	
@@ -31,7 +32,7 @@ label {
 </style>
 
 
-	</head>
+	
 	<body>
 
 
