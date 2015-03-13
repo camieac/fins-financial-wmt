@@ -16,6 +16,17 @@
 		</noscript>
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<style>
+div.input{
+background:none;
+}
+input {
+	float:none;
+}
+label {
+	margin-right:1em;
+}
+</style>
 	</head>
 	<body>
 
@@ -27,7 +38,7 @@
         <legend>
             <?php echo __('Please enter your username and password'); ?>
         </legend>
-       <?php echo $this->Form->input('username');
+       <?php echo $this->Form->input('username'));
         echo $this->Form->input('password');
     ?>
     </fieldset>
