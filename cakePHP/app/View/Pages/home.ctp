@@ -57,10 +57,10 @@
 							<?php
 							$news = $this->Rss->parseRss(5);
 							foreach($news as $item):?>
-								<dt><?php echo date('d-m-Y H:i',strtotime($item['pubDate'])); ?></dt>
+								<dt><?php echo date('d-m-Y H:i',strtotime($item['lastBuildDate'])); ?></dt>
 									<dd><?php echo $this->Html->link(
 																	$item['title'],
-																	$item['origLink'],
+																	$item['link'],
 																	array('target' => '_blank')
 																	); ?></dd>
 							<?php endforeach; ?>
