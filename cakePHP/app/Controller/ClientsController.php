@@ -34,7 +34,7 @@ $this->redirect(array('controller' => 'users', 'action' => 'login'));
 }
 
 public function uploadImage() {
-	$this->Session->setFlash(__('starting uploading function...'));
+	$this->Session->setFlash('starting uploading function...');
     // Custom
     $folderToSaveFiles = WWW_ROOT . 'img/profile_pictures/' ;
     if (!$this->request->is('post')) return false;        // Not a POST data!
@@ -61,15 +61,15 @@ public function uploadImage() {
 					return false;
 				}
         }else{
-			$this->Session->setFlash(__('Image has not been uploaded'));
+			$this->Session->setFlash('Image has not been uploaded');
 			 return false;
 		}
        
         //now do the save (optional)
         if($this->Image->save($this->data)) {
-			$this->Session->setFlash(__('Image saved'));
+			$this->Session->setFlash('Image saved');
 			} else {
-				$this->Session->setFlash(__('Image not saved'));
+				$this->Session->setFlash('Image not saved');
 				}
     }
 

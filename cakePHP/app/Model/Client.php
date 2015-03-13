@@ -38,6 +38,7 @@ public $validate = array(
 'fa' => array(
 'rule' => 'notEmpty'
 )
+
 );
 
      public function getFAs()
