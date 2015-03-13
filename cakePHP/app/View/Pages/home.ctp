@@ -59,7 +59,7 @@
 									//echo $result['title'], '<br>';
 								//}
 								$descriptions = array();
-								foreach($rss->channel->item as $item){
+								foreach($array->channel->item as $item){
 									$descriptions[] = $item->description;
 								}
 								echo $descriptions;
