@@ -143,7 +143,7 @@ $this->Client->create();
 if ($this->Client->save($this->request->data)) {
 $this->Session->setFlash(__('Your client has been saved.'));
 $success = $this->uploadImage();
-$this->Session->setFlash(__('File upload:'.$success));
+//$this->Session->setFlash(__('File upload:'.$success));
 return $this->redirect(array('action' => 'index'));
 }
 $this->Session->setFlash(__('Unable to add your client.'));
