@@ -55,9 +55,14 @@
 							<?php
 								$array = $this->requestAction(array('controller' => 'home', 'action' => 'getFTFeed'),array('return'));
 								//echo implode(" ", $array);
-								foreach($array['data'] as $result) {
-									echo $result['title'], '<br>';
+								//foreach($array['data'] as $result) {
+									//echo $result['title'], '<br>';
+								//}
+								$descriptions = array();
+								foreach($rss->channel->item as $item){
+									$descriptions[] = $item->description;
 								}
+								echo $descriptions;
 							?>
 							
 							<ul class="small-image-list">
