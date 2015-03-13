@@ -54,7 +54,10 @@
 							<h2>Financial Times Feed</h2>
 							<?php
 								$array = $this->requestAction(array('controller' => 'home', 'action' => 'getFTFeed'),array('return'));
-								echo implode(" ", $array);
+								//echo implode(" ", $array);
+								foreach($array['data'] as $result) {
+									echo $result['title'], '<br>';
+								}
 							?>
 							
 							<ul class="small-image-list">
