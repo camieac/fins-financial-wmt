@@ -17,7 +17,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->css('style');
 		echo $this->Html->css('style-desktop');
 		echo $this->Html->css('fullcalendar'); 
-		echo $this->Html->css('fullcalendar.print'); 
+		//echo $this->Html->css('fullcalendar.print'); 
 		echo $this->Html->css('/full_calendar/css/fullcalendar', null, array('inline' => false));
 		
 		
