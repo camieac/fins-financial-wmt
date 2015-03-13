@@ -17,9 +17,9 @@ $advisorarray = Set::flatten($FAquery);
 ?>
 
 <pre>
-<?php print_r($fa); ?>
+<?php // print_r($fa); ?>
 </pre>
-
+<div class = "dRoundedBox">
 <?php
 echo $this->Form->create('Meeting', array('class' => 'fForm'));
 echo $this->Form->input('name');
@@ -39,4 +39,4 @@ echo $this->Form->input('meetingTime');
 echo $this->Form->input('dateMeeting', array('dateFormat'=>'DMY', 'minYear'=>date('Y'), 'maxYear'=>date('Y')+5, 'empty'=>array('- -')));
 echo $this->Form->end('Save Meeting');
 ?>
-
+</div>
