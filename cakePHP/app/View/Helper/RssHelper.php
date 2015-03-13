@@ -6,7 +6,7 @@ class RssHelper extends AppHelper {
     function parseRss($limit = 3) {
         // Parse the RSS feed
         $xml = Xml::build('http://feeds.bbci.co.uk/news/business/rss.xml');
-        $data = $xml->toArray();
+        $data = Xml::toArray($xml);
 
         // Filter any non-news items
         $items = $this->filterItems($data);
