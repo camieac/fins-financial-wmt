@@ -68,7 +68,7 @@
 							    $items = array();
 							    $count = 0;
 							    $descriptions = array();
-								foreach($array->channel->item as $item){
+								foreach($items->channel->item as $item){
 									$descriptions[] = $item->description;
 								}
 							    echo $items[0];							
