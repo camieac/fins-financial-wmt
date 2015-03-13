@@ -1,6 +1,5 @@
 <?php //app/View/Users/login.ctp ?>
 <!DOCTYPE HTML>
-
 <html>
 	<head>
 		<title>Home</title>
@@ -9,11 +8,7 @@
 		<meta name="keywords" content="" />
 		<link href="http://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
 	
-		<noscript>
-			echo $this->Html->css('skel');
-			echo $this->Html->css('style');
-			echo $this->Html->css('style-desktop');
-		</noscript>
+		
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
 		<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>

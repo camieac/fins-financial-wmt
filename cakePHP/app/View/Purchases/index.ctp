@@ -1,4 +1,5 @@
 <!-- File: /app/View/Purchase/index.ctp -->
+<!DOCTYPE HTML>
 <html>
 	<head>
 		<title>Home</title>
@@ -11,7 +12,7 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
 	</head>
-	<body>
+	
 
 
 	<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -24,7 +25,7 @@
 	}
 	);
 } ); </script>
-
+<body>
 <?php $i = 0;  ?>
 
 <h1><font size="6">Purchases</font></h1>
