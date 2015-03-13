@@ -62,7 +62,7 @@
 							        return $xml;
 							    }
 							
-							    $feedurl = 'http://www.astrology.com/horoscopes/daily-extended.rss';
+							    $feedurl = 'http://www.ft.com/rss/home/uk';
 							    $rss = load_file($feedurl);
 							
 							    $items = array();
