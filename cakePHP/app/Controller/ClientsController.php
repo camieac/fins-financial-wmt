@@ -37,7 +37,10 @@ public function uploadImage() {
 	$this->Session->setFlash('starting uploading function...');
     // Custom
     $folderToSaveFiles = WWW_ROOT . 'img/profile_pictures/' ;
-    if (!$this->request->is('post')) return false;        // Not a POST data!
+    if (!$this->request->is('post')){
+		$this->Session->setFlash('NOT A POST');
+		 return false;        // Not a POST data!
+	 }
     if(!empty($this->request->data))
     {
         //Check if image has been uploaded
