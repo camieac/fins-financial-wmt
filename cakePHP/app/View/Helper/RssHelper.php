@@ -15,7 +15,8 @@ class RssHelper extends AppHelper {
 
         // Loop over the results
         for($i = 0;$i < $limit;$i++) {
-            $output[$i] = $items[$i];
+            //$output = $items[$i];
+            array_push($output, $items[$i]);
         }
 
         // Return the filtered and limited items list
