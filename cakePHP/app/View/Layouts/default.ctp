@@ -18,6 +18,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->css('style-desktop');
 		echo $this->Html->css('fullcalendar'); 
 		echo $this->Html->css('fullcalendar.print'); 
+		echo $this->Html->css('/full_calendar/css/fullcalendar', null, array('inline' => false));
+		
 		
 		
 		echo $this->Html->script('jquery-1.3.2.min'); 
@@ -27,6 +29,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->script('skel.min');
 		echo $this->Html->script('skel-layers.min');
 		echo $this->Html->script('fullcalendar.min');
+		echo $this->Html->script(array('/full_calendar/js/jquery-1.5.min', '/full_calendar/js/jquery-ui-1.8.9.custom.min', '/full_calendar/js/fullcalendar.min', '/full_calendar/js/jquery.qtip-1.0.0-rc3.min', '/full_calendar/js/ready'), array('inline' => 'false'));
 		echo $this->Html->script('init');
 		
 		
