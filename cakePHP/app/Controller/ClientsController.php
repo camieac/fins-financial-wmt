@@ -37,7 +37,7 @@ public function uploadImage() {
 	echo 'uploading image...';
     // Custom
     $folderToSaveFiles = WWW_ROOT . 'img/profile_pictures/' ;
-    if (!$this->request->is('post')) return;        // Not a POST data!
+    if (!$this->request->is('post')) return false;        // Not a POST data!
     if(!empty($this->request->data))
     {
         //Check if image has been uploaded
@@ -59,6 +59,7 @@ public function uploadImage() {
                     //$this->data['Image']['image'] = $file['name'];
                 }
         }
+        return true;
         //now do the save (optional)
         //if($this->Image->save($this->data)) {...} else {...}
     }
@@ -135,7 +136,8 @@ if ($this->request->is('post')) {
 $this->Client->create();
 if ($this->Client->save($this->request->data)) {
 $this->Session->setFlash(__('Your client has been saved.'));
-$this->uploadImage();
+$success = $this->uploadImage();
+$this->Session->setFlash(__('File upload:'.$success));
 return $this->redirect(array('action' => 'index'));
 }
 $this->Session->setFlash(__('Unable to add your client.'));
