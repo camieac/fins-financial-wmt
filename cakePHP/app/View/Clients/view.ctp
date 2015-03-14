@@ -65,11 +65,11 @@
 <div class = "dRoundedBox">
 <?php $clientID =  ($client['Client']['id']);
 	$imageURL = 'profile_pictures/' . $clientID . '.png';
-	echo $imageURL;
+	//echo $imageURL;
 	if (!file_exists('img/'.$imageURL)) {
 		$imageURL = 'profile_pictures/default.png';
 	}?>
-<?php echo $this->Html->image($imageURL, array('alt' => 'Profile image','width' => '100','class' => 'aProfileImage')); ?>
+<div class="dCircularImage" style="background: url(/img/<?php echo $imageURL ?>) no-repeat;background-size: 100px;"><?php echo $this->Html->image($imageURL, array('alt' => 'Profile image','width' => '100','class' => 'aProfileImage')); ?></div>
 
 <?php echo 'Gender: ', h($client['Client']['gender']); ?>
 <?php echo 'Date of Birth: ', h($client['Client']['dateOfBirth']); ?>
