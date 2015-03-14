@@ -56,7 +56,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 								<a href="/Meetings">Meetings</a>
 								<a href="/stocklists">Stocklists</a>
 								<a href="/purchases" >Purchases</a>
+								
 							</nav>
+							
 						</header>
 					
 					</div>
@@ -70,9 +72,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		
-			<p>
-				
-			</p>
+			
 		</div>
 	</div>
 </div> <!-- for page div -->
@@ -80,7 +80,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<div class="12u">
 		<div id="copyright">
 			&copy; Fin's Financials Ltd. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
-			 | <a href = "/help">Help</a>
+			 | <a href = "/help">Help</a>  <?php if ($this->Session->read('Auth.User')){echo '|'.$this->Html->link('Logout','/users/logout', array('class' => 'button','controller' => 'users', 'action' => 'logout'));} ?>
 		</div>
 
 	</div>

@@ -4,7 +4,7 @@
 
 <html>
 	<head>
-		<title>View Client</title>
+		<title>View Client: <?php echo h($client['Client']['name']); ?></title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -21,7 +21,7 @@
 	</head>
 	<body>
 
-
+<h2><?php if ($this->Session->read('Auth.User')){echo $client['Client']['name'];} ?></h2>
 
 	<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
@@ -31,38 +31,22 @@
 	$('#clientstocks').DataTable({
 	"bLengthChange": false
 	}
+	
+	);
+	$('#clientinfo').DataTable({
+	"bLengthChange": false
+	}
+	
 	);
 } ); </script>
 
-<section>
+
 
 <?php if ($this->Session->read('Auth.User')) 
 { ?>
 <div class = "dRoundedBox">
-<table id = "tClientDates" style="width:100%">
+	
 
-<tr>
-<b>
-<td><strong><?php echo h($client['Client']['name']); ?></strong></td>
-</b>
-</tr>
-
-
-<p>
-<tr>
-<td>Created: </td>
-<td> <?php echo $client['Client']['created']; ?></td>
-</tr>
-
-<tr>
-<td>Modified: </td>
-<td><?php echo $client['Client']['modified']; ?></td>
-</tr>
-</table>
-</div> <!-- for dRoundedBox -->
-
-</section>
-<div class = "dRoundedBox">
 <?php $clientID =  ($client['Client']['id']);
 	$imageURL = 'profile_pictures/' . $clientID . '.png';
 	//echo $imageURL;
@@ -71,20 +55,35 @@
 	}?>
 <div class="dCircularImage" style="background: url(/img/<?php echo $imageURL ?>) no-repeat;background-size: 100px;"><?php echo $this->Html->image($imageURL, array('alt' => 'Profile image','width' => '100','class' => 'aProfileImage')); ?></div>
 
-<?php echo 'Gender: ', h($client['Client']['gender']); ?>
-<?php echo 'Date of Birth: ', h($client['Client']['dateOfBirth']); ?>
-<?php echo 'National Insurance Number: ', h($client['Client']['nis']); ?>
-<?php echo 'Phone Number: ', h($client['Client']['phoneNo']); ?>
-<?php echo 'Address: ', h($client['Client']['address']); ?>
-<?php echo 'Balance: ', "£".number_format($client['Client']['balance'], 2); ?>
-<?php echo 'F.A: ', h($client['Client']['fa']); ?>
-<br/><br/>
+
+
+
+
+<table class="display" id="clientinfo">
+<tr><td>Gender</td><td><?php echo $client['Client']['gender']; ?></td></tr>
+<tr><td>Date of Birth</td><td><?php echo $client['Client']['dateOfBirth']; ?></td></tr>
+<tr><td>National Insurance Number</td><td><?php echo $client['Client']['nis']; ?></td></tr>
+<tr><td>Phone Number</td><td><?php echo $client['Client']['phoneNo']; ?></td></tr>
+<tr><td>Address</td><td><?php echo $client['Client']['address']; ?></td></tr>
+<tr><td>Balance</td><td><?php echo "£".number_format($client['Client']['balance'], 2); ?></td></tr>
+<tr><td>Financial Advisor</td><td><?php echo $client['Client']['fa']; ?></td></tr>
+</table>
+
+
+
+<br>
+
+
+Created: <?php echo $client['Client']['created']; ?>
+<br>
+Last Modified: <?php echo $client['Client']['modified']; ?>
+
 </div> <!-- for dRoundedBox -->
 <div class = "dRoundedBox">
 
 <?php $id = $this->params['pass']; ?>
 
-<table id="clientstocks" class="display" cellspacing="0" width="100%">
+<table id="clientstocks" class="display">
 <thead>
 <tr>
 <th>Symbol</th>

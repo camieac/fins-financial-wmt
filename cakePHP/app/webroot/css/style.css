@@ -222,6 +222,10 @@ border-radius: 1em;
 background: white;
 padding: 1em 1em 2em 1em;
 margin-bottom: 1em;
+  width: 30em;
+  display: inline-table;
+  float: left;
+  margin: 1em;
 }
 
 div.input {
@@ -263,9 +267,12 @@ div.dCircularImage {
 	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	margin:1em;
 	}
 
 div.dCircularImage img.aProfileImage {
 	opacity: 0;
 	filter: alpha(opacity=0);
 	}
+	
+
