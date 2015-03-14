@@ -63,11 +63,12 @@ if ($this->request->is('post'))
 	$company = $query[0]['stocklists']['symbol'];
 	$result = $this->getStock(array($company));
 
-if(($result[0]['current']) === '0.00')
+if(($result[0]['current']) === '0.00' || ($result[0]['current']) === 'N/A')
 { 
 $price = $quantity * $result[0]['close']; 
 }
-else {
+else 
+{
 $price = $quantity * $result[0]['current']; 
 }
 

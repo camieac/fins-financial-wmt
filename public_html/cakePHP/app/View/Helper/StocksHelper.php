@@ -53,7 +53,7 @@ class StocksHelper extends AppHelper {
 			$currentMonth = date('M');
 			$currentDay = date('D');
 			$lastYear = date('Y'-1);
-			$request .= '&a=01&b=01&c=1900';
+			$request .= '&a=01&b=01&c=2000';
 			$request .= '&d=$currentMonth&e=$currentDay&f=$currentYear';
 			$request .= '&g=w'; // &g=w is weekly, &g=d is daily
 			$ch = curl_init();

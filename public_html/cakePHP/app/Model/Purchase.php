@@ -3,6 +3,11 @@
 'stock' => array(
 'rule' => 'notEmpty'
 ),
+'quantity' => array(
+'Numeric' => array(
+			'rule' => array('range', 0, 999999999999999999),
+        	'message' => 'Please use only positive numbers.'),
+        	),
  'balance' => array(
     	'Numeric' => array(
         	'rule' => 'numeric',
