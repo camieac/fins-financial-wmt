@@ -67,8 +67,8 @@
 <?php echo $meeting['Meeting']['name'];?>
 </td>
 <td><?php echo $meeting['Meeting']['description']; ?></td>
-<td><?php echo str_replace("\"", "", $query[$i]['clients']['name']); ?></td>
-<td><?php echo str_replace("\"", "", $query[$i]['fas']['name']); ?></td>
+<td><?php if(isset($query[$i]['clients']['name'])) {echo str_replace("\"", "", $query[$i]['clients']['name']);}else{echo 'Deleted Client';} ?></td>
+<td><?php if(isset($query[$i]['fas']['name'])){echo str_replace("\"", "", $query[$i]['fas']['name']);}else{echo 'Deleted FA';} ?></td>
 
 <?php $i++; ?> <!-- increments array -->
 
