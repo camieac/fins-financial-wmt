@@ -41,15 +41,16 @@
 <th>Created</th>
 </tr>
 </thead>
-<?php foreach ($purchases as $purchase): ?>
-
-<?php $result = $this->Stocks->get(array($query[$i]['stocklists']['symbol'])); ?>
+<?php foreach ($purchases as $purchase):
+if(isset($query[$i]['stocklists']['symbol'])){
+$result = $this->Stocks->get(array($query[$i]['stocklists']['symbol'])); 
+}?>
 
 <?php foreach ($result as $stock): ?>
 
 <tr>
 <td><?php echo str_replace("\"", "", $stock['name']); ?></td>
-<td><?php echo str_replace("\"", "", $query[$i]['clients']['name']) ?></td>
+<td><?php if (isset($query[$i]['clients']['name'])){echo str_replace("\"", "", $query[$i]['clients']['name']) ;}else{echo 'Deleted Client';}?></td>
 <td><?php echo $purchase['Purchase']['quantity']; ?></td>
 
 
@@ -66,4 +67,4 @@
 </tr>
 </table>
 </div>
-
+<p><?php echo $this->Html->link('Logout','/users/logout', array('class' => 'button','controller' => 'users', 'action' => 'logout')); ?></p>
