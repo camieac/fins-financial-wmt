@@ -163,7 +163,14 @@ public function add() {
 $this->set('FAquery', $this->Client->getFAs());
 if ($this->request->is('post')) {
 $this->Client->create();
-if ($this->Client->save($this->request->data)) {
+try{
+	$test = $this->Client->save($this->request->data);
+}catch(Exception $e){
+	$this->Session->setFlash(__('Invalid National Insurance Number'));
+    // The exact error message is $e->getMessage();
+    return;
+}
+if ($test) {
 $this->Session->setFlash(__('Your client has been saved.'));
 $success = $this->uploadImage();
 //$this->Session->setFlash(__('File upload:'.$success));
@@ -268,6 +275,13 @@ __('The Stock with id: %s has been deleted.', h($id))
 		return $stocks;
 	}
 
-
+function twitterAccountExists($username){
+    $headers = get_headers("https://twitter.com/".$username);
+    if(strpos($headers[0], '404') !== false ) {
+        return false; //404 found
+    } else {
+        return true;
+    }
+}
 
 } ?>

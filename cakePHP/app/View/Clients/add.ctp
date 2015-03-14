@@ -49,6 +49,7 @@ echo $this->Form->input('phoneNo');
 echo $this->Form->input('address');
 echo $this->Form->input('balance');
 echo $this->Form->input('fa',array('type'=>'select','options'=>$fa)); 
+echo $this->Form->input('twitter');
 echo $this->Form->input('Client.profileImage', array('type' => 'file'));
 echo $this->Form->end('Save Client');
 ?>

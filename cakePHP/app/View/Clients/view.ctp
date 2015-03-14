@@ -39,6 +39,7 @@
 	
 	);
 } ); </script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 
 
@@ -122,7 +123,7 @@ $result = $this->Stocks->get(array($company));  ?>
 <?php }
 else {?>
 
-<td><?php echo "£".number_format($result[0]['current'], 2); ?></td>
+<td><?php if(!$result[0]['current'] == 'N/A'){ echo "£".number_format($result[0]['current'], 2); }else{echo $result[0]['current'];}?></td>
 <?php $value = ($stock['purchases']['quantity'])*($result[0]['current']); ?>
 <?php } ?>
 
@@ -157,6 +158,18 @@ echo $this->Form->input('quantity'); ?>
 </div>
 <?php echo $this->Form->end()?>
 </div>
+<?php //Optional twitter feed here
+
+if(isset($client['Client']['twitter'])){
+	$href = 'https://twitter.com/'.$client['Client']['twitter'];
+	$validUser = $this->requestAction(array('controller' => 'clients', 'action' => 'twitterAccountExists','pass' => array($client['Client']['twitter'] )));
+	
+	if($validUser){
+	echo '<div class="dRoundedBox"><a class="twitter-timeline" href="'.$href.'" data-widget-id="576861420341559296">Tweets by @'.$client['Client']['twitter'].'</a></div>';
+}
+}else{
+	echo 'NO TWITTER FOR US';
+} ?>
 <?php }
 else
 {

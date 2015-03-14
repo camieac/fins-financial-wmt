@@ -37,7 +37,18 @@ public $validate = array(
 ),
 'fa' => array(
 'rule' => 'notEmpty'
-)
+),
+'twitter' => array(
+            'alphaNumeric' => array(
+                'rule' => 'alphaNumeric',
+                'required' => false,
+                'message' => 'Letters and numbers only'
+            ),
+            'between' => array(
+                'rule'    => array('maxLength', 15),
+                'message' => 'Between 5 to 15 characters'
+            )
+        )
 
 );
 
