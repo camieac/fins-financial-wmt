@@ -242,3 +242,15 @@ form.fForm {
 table.fc-header td {
 border:0px;
 }
+div#flashMessage {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  width: 20em;
+  margin-right: auto;
+  border-radius: 1em;
+  padding: 1em 0.5em;
+  background: rgb(145, 255, 138);
+  color: black;
+}
+
