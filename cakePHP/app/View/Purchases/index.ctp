@@ -66,4 +66,4 @@
 </tr>
 </table>
 </div>
-<p><?php echo $this->Html->link('Logout','/users/logout', array('class' => 'button','controller' => 'users', 'action' => 'logout')); ?></p>
+
