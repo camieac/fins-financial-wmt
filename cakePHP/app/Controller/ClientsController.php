@@ -200,13 +200,13 @@ $this->request->data = $client;
 }
 }
 
-public function delete($id) {
+public function delete($id,$name) {
 if ($this->request->is('get')) {
 throw new MethodNotAllowedException();
 }
 if ($this->Client->delete($id)) {
 $this->Session->setFlash(
-__('The Client with id: %s has been deleted.', h($id))
+__('%s has been deleted.', h($name))
 );
 return $this->redirect(array('action' => 'index'));
 }

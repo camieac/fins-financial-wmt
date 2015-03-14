@@ -78,11 +78,10 @@ echo $this->Html->link(
 ?>
 <?php
 echo '    ';
-echo $this->Form->postLink(
-'Delete',
-array('action' => 'delete', $client['Client']['id']),
-array('confirm' => 'Are you sure?')
-);
+
+echo $this->Form->postLink('Delete',
+array('action' => 'delete',$client['Client']['id'],$client['Client']['name']),
+array('confirm' => 'Are you sure?'));
 ?>
 </td>
 <td>
