@@ -3,10 +3,10 @@
 var $user;
 	
 public $validate = array(
-'name' => array(
+'title' => array(
 'rule' => 'notEmpty'
 ),
-'description' => array(
+'details' => array(
 'rule' => 'notEmpty'
 ),
 'customer' => array(
@@ -15,10 +15,10 @@ public $validate = array(
 'fa' => array(
 'rule' => 'notEmpty'
 ),
-'meetingTime' => array(
+'start' => array(
 'rule' => 'notEmpty'
 ),
-'dateMeeting' => array(
+'end' => array(
 'rule' => 'notEmpty'
 ),
 );
@@ -27,12 +27,12 @@ public $validate = array(
     {
 		if($this->user==="admin")
 		{
-       return $this->query("SELECT * FROM meetings, clients, fas WHERE meetings.customer = clients.id AND meetings.fa = fas.username ORDER BY meetings.id;");
+       return $this->query("SELECT * FROM events, clients, fas WHERE events.customer = clients.id AND events.fa = fas.username ORDER BY events.id;");
 		}
 		
 		else
 		{
-       return $this->query("SELECT * FROM meetings, clients, fas WHERE meetings.customer = clients.id AND meetings.fa = fas.username AND fas.username ='". $this->user. "' ORDER BY meetings.id;");
+       return $this->query("SELECT * FROM events, clients, fas WHERE events.customer = clients.id AND events.fa = fas.username AND fas.username ='". $this->user. "' ORDER BY events.id;");
 		}	
     }
     

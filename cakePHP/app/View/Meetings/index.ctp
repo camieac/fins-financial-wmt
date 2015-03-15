@@ -48,49 +48,51 @@
 <thead>
 <tr>
 <th>Id</th>
-<th>Name</th>
-<th>Description</th>
+<th>Title</th>
+<th>Details</th>
 <th>Customer</th>
 <th>F.A</th>
-<th>Time</th>
+<th>Start Time</th>
+<th>End Time</th>
 <th>Date</th>
 <th>Actions</th>
 <th>Created</th>
 </tr>
 </thead>
-<!-- Here's where we loop through our $meetings array, printing out meeting info -->
-<?php foreach ($meetings as $meeting): ?>
+<!-- Here's where we loop through our $events array, printing out meeting info -->
+<?php foreach ($events as $event): ?>
 
 <tr>
-<td><?php echo $meeting['Meeting']['id']; ?></td>
+<td><?php echo $event['Meeting']['id']; ?></td>
 <td>
-<?php echo $meeting['Meeting']['name'];?>
+<?php echo $event['Meeting']['title'];?>
 </td>
-<td><?php echo $meeting['Meeting']['description']; ?></td>
+<td><?php echo $event['Meeting']['details']; ?></td>
 <td><?php if(isset($query[$i]['clients']['name'])) {echo str_replace("\"", "", $query[$i]['clients']['name']);}else{echo 'Deleted Client';} ?></td>
 <td><?php if(isset($query[$i]['fas']['name'])){echo str_replace("\"", "", $query[$i]['fas']['name']);}else{echo 'Deleted FA';} ?></td>
 
 <?php $i++; ?> <!-- increments array -->
 
-<td><?php echo date("H:i", strtotime($meeting['Meeting']['meetingTime'])); ?></td>
-<td><?php echo $meeting['Meeting']['dateMeeting']; ?></td>
+<td><?php echo date("H:i", strtotime($event['Meeting']['start'])); ?></td>
+<td><?php echo date("H:i", strtotime($event['Meeting']['end'])); ?></td>
+<td><?php echo date("Y-m-d",strtotime($event['Meeting']['end'])); ?></td>
 <td>
 <?php
 echo $this->Html->link(
-'Edit', array('action' => 'edit', $meeting['Meeting']['id'])
+'Edit', array('action' => 'edit', $event['Meeting']['id'])
 );
 ?>
 <?php
 echo '    ';
 echo $this->Form->postLink(
 'Delete',
-array('action' => 'delete', $meeting['Meeting']['id']),
+array('action' => 'delete', $event['Meeting']['id']),
 array('confirm' => 'Are you sure?')
 );
 ?>
 </td>
 <td>
-<?php echo $meeting['Meeting']['created']; ?>
+<?php echo $event['Meeting']['created']; ?>
 </td>
 </tr>
 <?php endforeach; ?>

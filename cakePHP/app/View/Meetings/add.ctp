@@ -22,8 +22,8 @@ $advisorarray = Set::flatten($FAquery);
 <div class = "dRoundedBox">
 <?php
 echo $this->Form->create('Meeting', array('class' => 'fForm'));
-echo $this->Form->input('name');
-echo $this->Form->input('description');
+echo $this->Form->input('title');
+echo $this->Form->input('details');
 echo $this->Form->input('customer',array('type'=>'select','options'=>$customer)); 
 
 if($user==="admin")
@@ -35,8 +35,8 @@ else
 echo $this->Form->input('fa',array('type'=>'select','options'=>$fa, 'default'=>$user, 'type' => 'hidden')); 
 }
 
-echo $this->Form->input('meetingTime');
-echo $this->Form->input('dateMeeting', array('dateFormat'=>'DMY', 'minYear'=>date('Y'), 'maxYear'=>date('Y')+5, 'empty'=>array('- -')));
+echo $this->Form->input('start', array('dateFormat'=>'DMY', 'minYear'=>date('Y'), 'maxYear'=>date('Y')+5, 'empty'=>array('- -')));
+echo $this->Form->input('end', array('dateFormat'=>'DMY', 'minYear'=>date('Y'), 'maxYear'=>date('Y')+5, 'empty'=>array('- -')));
 echo $this->Form->end('Save Meeting');
 ?>
 </div>

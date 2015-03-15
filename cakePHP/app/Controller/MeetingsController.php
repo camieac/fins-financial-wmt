@@ -21,11 +21,11 @@ $this->Meeting->user = $user;
 
 if ($this->User->hasAny($conditions))
 {
-$this->set('meetings', $this->Meeting->find('all'));
+$this->set('events', $this->Meeting->find('all'));
 }
 else
 {
-$this->set('meetings', $this->Meeting->find('all', array('conditions' => array("'$user' = fa"))));
+$this->set('events', $this->Meeting->find('all', array('conditions' => array("'$user' = fa"))));
 }
 $this->set('query', $this->Meeting->get());
 
@@ -122,11 +122,11 @@ $this->Meeting->user = $user;
 
 if ($this->User->hasAny($conditions))
 {
-$this->set('meetings', $this->Meeting->find('all'));
+$this->set('events', $this->Meeting->find('all'));
 }
 else
 {
-$this->set('meetings', $this->Meeting->find('all', array('conditions' => array("'$user' = fa"))));
+$this->set('events', $this->Meeting->find('all', array('conditions' => array("'$user' = fa"))));
 }
 $this->set('query', $this->Meeting->get());
 
