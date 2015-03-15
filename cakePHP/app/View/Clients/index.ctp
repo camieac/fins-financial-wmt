@@ -3,7 +3,7 @@
 
 <html>
 	<head>
-		<title>Add Client</title>
+		<title>Clients</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -75,6 +75,7 @@ array('action' => 'view', $client['Client']['id'])
 echo $this->Html->link(
 'Edit', array('action' => 'edit', $client['Client']['id'])
 );
+
 ?>
 <?php
 echo '    ';

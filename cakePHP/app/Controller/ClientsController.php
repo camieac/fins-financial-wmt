@@ -7,7 +7,7 @@ class ClientsController extends AppController {
 public $helpers = array('Html', 'Form');
 
 public function index() {
-if ($this->Session->read('Auth.User')) 
+if ($this->Session->read('Auth.User'))
 {
 $user = AuthComponent::user('username');
 
@@ -155,6 +155,8 @@ $price = $quantity * $result[0]['current'];
 	}
 	$this->Session->setFlash(__('Unable to add your stock.'));
 	}
+}else{
+	$this->redirect(array('controller' => 'users', 'action' => 'login'));
 }
 }
 

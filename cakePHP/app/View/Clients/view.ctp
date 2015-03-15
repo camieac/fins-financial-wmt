@@ -78,6 +78,13 @@
 Created: <?php echo $client['Client']['created']; ?>
 <br>
 Last Modified: <?php echo $client['Client']['modified']; ?>
+<br>
+
+<?php echo $this->Html->link('Edit', array(
+    'controller' => 'clients', // Optional if already in the PostsController
+    'action'=>'edit',
+    $client['Client']['id']
+),array('class' => 'button',)); ?>
 
 </div> <!-- for dRoundedBox -->
 <div class = "dRoundedBox">
