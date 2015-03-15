@@ -17,14 +17,17 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->css('style');
 		echo $this->Html->css('style-desktop');
 		echo $this->Html->css('fullcalendar'); 
+		
 		//echo $this->Html->css('fullcalendar.print'); 
 		echo $this->Html->css('/full_calendar/css/fullcalendar', null, array('inline' => false));
 		
 		
 		
 		echo $this->Html->script('jquery-1.3.2.min'); 
-		echo $this->Html->script('moment.min'); 
+		echo $this->Html->script('moment.min');
+		
  		echo $this->Html->script('jquery.min'); 
+ 		
 		echo $this->Html->script('jquery.min.js');
 		echo $this->Html->script('skel.min');
 		echo $this->Html->script('skel-layers.min');
@@ -86,4 +89,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	</div>
 </div>
 </body>
+<?php echo $this->Html->script('jquery'); 
+echo $this->Html->script('jquery.datetimepicker');  
+echo $this->Html->css('jquery.datetimepicker');
+?>
 </html>

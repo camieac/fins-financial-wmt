@@ -21,9 +21,9 @@ plgFcRoot = '<?php echo $this->Html->url('/'); ?>' + "full_calendar";
 </div>
 <div class="actions dRoundedBox">
 	
-	    <?php echo $this->Html->link('New Event','events/add', array('plugin' => 'full_calendar','class' => 'button')); ?>
-		<?php echo $this->Html->link('Manage Events','events', array('plugin' => 'full_calendar', 'controller' => 'events','class' => 'button')); ?>
-		<?php echo $this->Html->link('Manage Events Types','event_types', array('plugin' => 'full_calendar', 'controller' => 'event_types','class' => 'button')); ?>
+	    <?php echo $this->Html->link('Add Meeting','../meetings/add', array('class' => 'button')); ?>
+		<?php echo $this->Html->link('View Meetings','../meetings', array('class' => 'button')); ?>
+		
 	
 	</div>
 </div>

@@ -1,5 +1,6 @@
 <?php class Meeting extends AppModel 
 {
+	public $useTable = 'events'; // This model uses a database table 'events'
 var $user;
 	
 public $validate = array(
