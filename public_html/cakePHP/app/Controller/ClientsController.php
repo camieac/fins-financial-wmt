@@ -56,6 +56,8 @@ throw new NotFoundException(__('Invalid client'));
 
 if ($this->request->is('post'))
 {
+	if(isset($this->params['data']['buy']))
+	{
 	$this->Purchase->create();
 	$quantity = $this->request->data['Purchase']['quantity'];
 	$stock = $this->request->data['Purchase']['stock'];
@@ -63,14 +65,14 @@ if ($this->request->is('post'))
 	$company = $query[0]['stocklists']['symbol'];
 	$result = $this->getStock(array($company));
 
-if(($result[0]['current']) === '0.00' || ($result[0]['current']) === 'N/A')
-{ 
-$price = $quantity * $result[0]['close']; 
-}
-else 
-{
-$price = $quantity * $result[0]['current']; 
-}
+	if(($result[0]['current']) === '0.00' || ($result[0]['current']) === 'N/A')
+	{ 
+	$price = $quantity * $result[0]['close']; 
+	}
+	else 
+	{
+	$price = $quantity * $result[0]['current']; 
+	}
 
 	if($client['Client']['balance'] < $price)
 	{
@@ -88,6 +90,55 @@ $price = $quantity * $result[0]['current'];
 	}
 	$this->Session->setFlash(__('Unable to add your stock.'));
 	}
+	
+	
+	if(isset($this->params['data']['sell']))
+	{
+	$this->Purchase->create();
+	$quantity = $this->request->data['Purchase']['quantity'];
+	$rowid = $this->request->data['Purchase']['id'];
+	$query = $this->Client->getQuery("SELECT purchases.quantity, stocklists.symbol FROM purchases, stocklists WHERE purchases.id = " . $rowid . " AND purchases.stock = stocklists.id;");
+	$company = $query[0]['stocklists']['symbol'];
+	$result = $this->getStock(array($company));
+
+	if(($result[0]['current']) === '0.00' || ($result[0]['current']) === 'N/A')
+	{ 
+	$price = $quantity * $result[0]['close']; 
+	}
+	else 
+	{
+	$price = $quantity * $result[0]['current']; 
+	}
+
+	if($quantity > $query[0]['purchases']['quantity'])
+	{
+	$this->Session->setFlash(__('Client does not have this many stocks.'));
+	return $this->redirect(array('action' => 'view', $id));
+	}
+	
+	if ($this->Purchase->save($this->request->data)) 
+	{
+	if($quantity < $query[0]['purchases']['quantity'])
+	{
+	$newQuan = $query[0]['purchases']['quantity'] - $quantity;
+	$this->Client->updateAll(array('Client.balance' => 'Client.balance + ' . $price), array('Client.id' => $id));
+	$this->Purchase->updateAll(array('Purchase.quantity' => $newQuan), array('Purchase.id' => $rowid));
+	return $this->redirect(array('action' => 'view', $id));
+	}
+	
+	
+	if($quantity == $query[0]['purchases']['quantity'])
+	{
+	$this->Client->updateAll(array('Client.balance' => 'Client.balance + ' . $price), array('Client.id' => $id));
+	$this->Purchase->delete(array('Purchase.id' => $rowid));
+	return $this->redirect(array('action' => 'view', $id));	
+	}
+	}
+	
+
+	
+	}
+}
 }
 }
 
