@@ -109,9 +109,5 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
-<<<<<<< HEAD
-//CakePlugin::load('FullCalendar');
-//CakePlugin::load('FileStorage');
-CakePlugin::loadAll();
-=======
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+
+
