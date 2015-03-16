@@ -24,4 +24,8 @@ $this->redirect(array('controller' => 'users', 'action' => 'login'));
 }
 }
 
+<<<<<<< HEAD
 } ?>
+=======
+} ?>
+>>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375

@@ -1,4 +1,5 @@
 <!-- File: /app/View/Clients/view.ctp -->
+<<<<<<< HEAD
 <!DOCTYPE HTML>
 
 <html>
@@ -28,6 +29,9 @@
 	<body>
 
 
+=======
+<h1>Add Client</h1>
+>>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
 
 <?php $advisorarray = Set::flatten($FAquery); 
 
@@ -38,9 +42,15 @@
 
 ?>
 
+<<<<<<< HEAD
 <div class = "dRoundedBox">
 <?php
 echo $this->Form->create('Client', array('class' => 'fForm'));
+=======
+
+<?php
+echo $this->Form->create('Client');
+>>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
 echo $this->Form->input('name');
 echo $this->Form->input('gender');
 echo $this->Form->input('dateOfBirth', array('dateFormat'=>'DMY', 'minYear'=>date('Y')-99, 'maxYear'=>date('Y')-9, 'empty'=>array('- -')));
@@ -49,6 +59,7 @@ echo $this->Form->input('phoneNo');
 echo $this->Form->input('address');
 echo $this->Form->input('balance');
 echo $this->Form->input('fa',array('type'=>'select','options'=>$fa)); 
+<<<<<<< HEAD
 echo $this->Form->input('twitter');
 echo $this->Form->input('Client.profileImage', array('type' => 'file'));
 echo $this->Form->end('Save Client');
@@ -56,3 +67,7 @@ echo $this->Form->end('Save Client');
 </div>
 
 			
+=======
+echo $this->Form->end('Save Client');
+?>
+>>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375

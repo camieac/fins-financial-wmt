@@ -2,7 +2,10 @@
 
 
 <?php
+<<<<<<< HEAD
 $this->layout = 'graph3';
+=======
+>>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
 $company = $this->params['url']['stock'];
 $result = $this->Stocks->get(array($company));
 
