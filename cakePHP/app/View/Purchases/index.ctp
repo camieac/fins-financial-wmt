@@ -31,12 +31,7 @@
 
 <h1><font size="6">Purchases</font></h1>
 <div class="dRoundedBox">
-=======
 
-<?php $i = 0;  ?>
-
-<h1><font size="6">Purchases</font></h1>
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
 <table id="purchases" class="display" cellspacing="0" width="100%">
 <thead>
 <tr>
