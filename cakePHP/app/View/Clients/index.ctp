@@ -25,7 +25,12 @@
 	<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.css">
-		
+		<style>
+.dRoundedBox {
+width:100%;
+
+}
+		</style>
 <script type="text/javascript"> $(document).ready(function() {
 	$('#clients').DataTable({
 	"bLengthChange": false
