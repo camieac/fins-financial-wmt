@@ -2,7 +2,6 @@
 $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
 $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 ?>
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -18,18 +17,20 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		
 			//echo $this->Html->css('fullcalendar.print'); 
 			echo $this->Html->css('/full_calendar/css/fullcalendar', null, array('inline' => false));
-		
-		
-		
+			//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css
+			echo $this->Html->css(array('//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css'), null, array('inline' => false));
+			echo $this->Html->script('jquery-1.11.2.js'); 
 			//echo $this->Html->script('jquery-1.3.2.min'); 
 			echo $this->Html->script('moment.min');
-			echo $this->Html->script('jquery.min'); 
+			//echo $this->Html->script('jquery.min'); 
 			//echo $this->Html->script('jquery.min.js');
+			
 			echo $this->Html->script('skel.min');
 			echo $this->Html->script('skel-layers.min');
 			echo $this->Html->script('fullcalendar.min');
 			echo $this->Html->script(array('/full_calendar/js/jquery-1.5.min', '/full_calendar/js/jquery-ui-1.8.9.custom.min', '/full_calendar/js/fullcalendar.min', '/full_calendar/js/jquery.qtip-1.0.0-rc3.min', '/full_calendar/js/ready'), array('inline' => 'false'));
 			echo $this->Html->script('init');
+			echo $this->Html->script(array('//cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js'), array('inline' => false));
 	
 			echo $this->fetch('meta');
 			echo $this->fetch('css');
@@ -74,8 +75,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			</div>
 		</div>
 	</body>
-	<?php echo $this->Html->script('jquery'); 
-		echo $this->Html->script('jquery.datetimepicker');  
-		echo $this->Html->css('jquery.datetimepicker');
-	?>
+	<?php echo $this->Html->script('jquery.datetimepicker');  ?>
+	<?php echo $this->Html->css('jquery.datetimepicker');?>
 </html>
