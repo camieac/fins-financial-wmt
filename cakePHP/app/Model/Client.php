@@ -54,7 +54,7 @@ public $validate = array(
 
 )
 
-);
+;
 
      public function getFAs()
     {
