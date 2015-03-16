@@ -1,6 +1,5 @@
 <!-- File: /app/View/Clients/view.ctp -->
 
-
 <!DOCTYPE HTML>
 
 <html>
@@ -32,7 +31,6 @@
 	$('#clientstocks').DataTable({
 	"bLengthChange": false
 	}
-
 	
 	);
 	$('#clientinfo').DataTable({
@@ -80,13 +78,6 @@
 Created: <?php echo $client['Client']['created']; ?>
 <br>
 Last Modified: <?php echo $client['Client']['modified']; ?>
-<br>
-
-<?php echo $this->Html->link('Edit', array(
-    'controller' => 'clients', // Optional if already in the PostsController
-    'action'=>'edit',
-    $client['Client']['id']
-),array('class' => 'button',)); ?>
 
 </div> <!-- for dRoundedBox -->
 <div class = "dRoundedBox">
@@ -94,29 +85,6 @@ Last Modified: <?php echo $client['Client']['modified']; ?>
 <?php $id = $this->params['pass']; ?>
 
 <table id="clientstocks" class="display">
-
-	);
-} ); </script>
-
-<?php if ($this->Session->read('Auth.User')) 
-{ ?>
-<h1><?php echo h($client['Client']['name']); ?></h1>
-<p><small>Created: <?php echo $client['Client']['created']; ?></small><br>
-<small>Modified: <?php echo $client['Client']['modified']; ?></small></p>
-<p><?php echo 'Gender: ', h($client['Client']['gender']); ?></p> 
-<p><?php echo 'Date of Birth: ', h($client['Client']['dateOfBirth']); ?></p> 
-<p><?php echo 'National Insurance Number: ', h($client['Client']['nis']); ?></p> 
-<p><?php echo 'Phone Number: ', h($client['Client']['phoneNo']); ?></p>
-<p><?php echo 'Address: ', h($client['Client']['address']); ?></p> 
-<p><?php echo 'Balance: ', "£".number_format($client['Client']['balance'], 2); ?></p> 
-<p><?php echo 'F.A: ', h($client['Client']['fa']); ?></p> 
-<br/><br/>
-<font size = "4"><p><b>Stocks:</b></p></font>
-
-<?php $id = $this->params['pass']; ?>
-
-<table id="clientstocks" class="display" cellspacing="0" width="100%">
-
 <thead>
 <tr>
 <th>Symbol</th>
@@ -132,9 +100,7 @@ Last Modified: <?php echo $client['Client']['modified']; ?>
 
 
 <?php 
-
 $total = 0;
-
 foreach ($query as $stock): ?>
 
 <?php
@@ -146,11 +112,7 @@ $result = $this->Stocks->get(array($company));  ?>
 <td><?php echo str_replace("\"", "",($result[0]['change'])) . "%" ?></td>
 <td><?php echo $stock['purchases']['quantity']; ?></td>
 
-
 <?php if(($result[0]['current']) === '0.00')
-
-<?php if(($result[0]['current']) === '0.00' || ($result[0]['current']) === 'N/A')
-
 { ?>
 
 
@@ -159,39 +121,21 @@ $result = $this->Stocks->get(array($company));  ?>
 <?php }
 else {?>
 
-
 <td><?php if(!$result[0]['current'] == 'N/A'){ echo "£".number_format($result[0]['current'], 2); }else{echo $result[0]['current'];}?></td>
-
-<td><?php echo "£".number_format($result[0]['current'], 2); ?></td>
-
 <?php $value = ($stock['purchases']['quantity'])*($result[0]['current']); ?>
 <?php } ?>
 
 <td><?php echo "£".number_format($value, 2); ?></td>
-
 <td><?php echo $this->Form->postLink('Sell', array('action' => 'deleteStock'.'/'. $stock['purchases']['id'] . '/'. $id[0]),array('confirm' => 'Are you sure?')); ?></td>
 <td><?php echo $stock['purchases']['created']; ?></td>
-
-<td><?php echo $this->Form->create('Purchase');
-echo $this->Form->input('quantity');
-$test = $stock['purchases']['id'];
-echo $this->Form->hidden('id', array('default'=>$test));
-echo $this->Form->submit('Sell Stock', array('div'=>false, 'name'=>('sell'), array('rule' => 'notEmpty')));
-echo $this->Form->end()?></td>
-<td><?php echo $stock['purchases']['created']; ?> </td>
-
 </tr>
 
 <?$total = $total + $value; ?>
 
 <?php endforeach; ?>
 </table>
-
 </div>
 <div class = "dRoundedBox">
-=======
-
-
 <font size = "4"><p><b>Total:</b></p></font>
 <p><?php echo "£".number_format($total, 2); ?></p>
 
@@ -202,14 +146,8 @@ for ($j = 0; $j < count($query)/2; ++$j)
         $stockoptions[$query[$j.'.stocklists.id']] = $query[$j.'.stocklists.symbol'];
  } 
 ?>
-
 <?php
 echo $this->Form->create('Purchase', array('class' => 'fForm'));
-=======
-
-<?php
-echo $this->Form->create('Purchase');
-
 echo $this->Form->input('stock',array('type'=>'select','options'=>$stockoptions)); 
 echo $this->Form->input('customer',array('type'=>'select','options'=>$id, 'default'=>$id, 'type' => 'hidden')); 
 echo $this->Form->input('quantity'); ?>
@@ -217,10 +155,8 @@ echo $this->Form->input('quantity'); ?>
 <?php echo $this->Form->submit('Buy Stock', array('div'=>false, 'name'=>'buy', array('rule' => 'notEmpty'))); ?>
 </div>
 <?php echo $this->Form->end()?>
-
 </div>
 <?php //Optional twitter feed here
-
 if(isset($client['Client']['twitter'])){
 	$href = 'https://twitter.com/'.$client['Client']['twitter'];
 	$validUser = $this->requestAction(array('controller' => 'clients', 'action' => 'twitterAccountExists','pass' => array($client['Client']['twitter'] )));
@@ -231,9 +167,6 @@ if(isset($client['Client']['twitter'])){
 }else{
 	echo 'NO TWITTER FOR US';
 } ?>
-
-
-
 <?php }
 else
 {
