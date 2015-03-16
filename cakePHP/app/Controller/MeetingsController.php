@@ -21,19 +21,13 @@ $this->Meeting->user = $user;
 
 if ($this->User->hasAny($conditions))
 {
-<<<<<<< HEAD
+
 $this->set('events', $this->Meeting->find('all'));
 }
 else
 {
 $this->set('events', $this->Meeting->find('all', array('conditions' => array("'$user' = fa"))));
-=======
-$this->set('meetings', $this->Meeting->find('all'));
-}
-else
-{
-$this->set('meetings', $this->Meeting->find('all', array('conditions' => array("'$user' = fa"))));
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+
 }
 $this->set('query', $this->Meeting->get());
 
@@ -109,7 +103,7 @@ return $this->redirect(array('action' => 'index'));
 }
 }
 
-<<<<<<< HEAD
+
 public function Calendar() {
 	
 
@@ -149,11 +143,8 @@ $this->redirect(array('controller' => 'users', 'action' => 'login'));
 
 
 }
-=======
-public function test() {
 
-	}
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+
 
 
 

@@ -1,6 +1,6 @@
 <!-- File: /app/View/Clients/view.ctp -->
 
-<<<<<<< HEAD
+
 <!DOCTYPE HTML>
 
 <html>
@@ -24,8 +24,6 @@
 
 <h2><?php if ($this->Session->read('Auth.User')){echo $client['Client']['name'];} ?></h2>
 
-=======
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
 	<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.css">
@@ -34,7 +32,7 @@
 	$('#clientstocks').DataTable({
 	"bLengthChange": false
 	}
-<<<<<<< HEAD
+
 	
 	);
 	$('#clientinfo').DataTable({
@@ -96,7 +94,7 @@ Last Modified: <?php echo $client['Client']['modified']; ?>
 <?php $id = $this->params['pass']; ?>
 
 <table id="clientstocks" class="display">
-=======
+
 	);
 } ); </script>
 
@@ -118,7 +116,7 @@ Last Modified: <?php echo $client['Client']['modified']; ?>
 <?php $id = $this->params['pass']; ?>
 
 <table id="clientstocks" class="display" cellspacing="0" width="100%">
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+
 <thead>
 <tr>
 <th>Symbol</th>
@@ -148,11 +146,11 @@ $result = $this->Stocks->get(array($company));  ?>
 <td><?php echo str_replace("\"", "",($result[0]['change'])) . "%" ?></td>
 <td><?php echo $stock['purchases']['quantity']; ?></td>
 
-<<<<<<< HEAD
+
 <?php if(($result[0]['current']) === '0.00')
-=======
+
 <?php if(($result[0]['current']) === '0.00' || ($result[0]['current']) === 'N/A')
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+
 { ?>
 
 
@@ -161,19 +159,19 @@ $result = $this->Stocks->get(array($company));  ?>
 <?php }
 else {?>
 
-<<<<<<< HEAD
+
 <td><?php if(!$result[0]['current'] == 'N/A'){ echo "£".number_format($result[0]['current'], 2); }else{echo $result[0]['current'];}?></td>
-=======
+
 <td><?php echo "£".number_format($result[0]['current'], 2); ?></td>
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+
 <?php $value = ($stock['purchases']['quantity'])*($result[0]['current']); ?>
 <?php } ?>
 
 <td><?php echo "£".number_format($value, 2); ?></td>
-<<<<<<< HEAD
+
 <td><?php echo $this->Form->postLink('Sell', array('action' => 'deleteStock'.'/'. $stock['purchases']['id'] . '/'. $id[0]),array('confirm' => 'Are you sure?')); ?></td>
 <td><?php echo $stock['purchases']['created']; ?></td>
-=======
+
 <td><?php echo $this->Form->create('Purchase');
 echo $this->Form->input('quantity');
 $test = $stock['purchases']['id'];
@@ -181,19 +179,19 @@ echo $this->Form->hidden('id', array('default'=>$test));
 echo $this->Form->submit('Sell Stock', array('div'=>false, 'name'=>('sell'), array('rule' => 'notEmpty')));
 echo $this->Form->end()?></td>
 <td><?php echo $stock['purchases']['created']; ?> </td>
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+
 </tr>
 
 <?$total = $total + $value; ?>
 
 <?php endforeach; ?>
 </table>
-<<<<<<< HEAD
+
 </div>
 <div class = "dRoundedBox">
 =======
 
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+
 <font size = "4"><p><b>Total:</b></p></font>
 <p><?php echo "£".number_format($total, 2); ?></p>
 
@@ -204,14 +202,14 @@ for ($j = 0; $j < count($query)/2; ++$j)
         $stockoptions[$query[$j.'.stocklists.id']] = $query[$j.'.stocklists.symbol'];
  } 
 ?>
-<<<<<<< HEAD
+
 <?php
 echo $this->Form->create('Purchase', array('class' => 'fForm'));
 =======
 
 <?php
 echo $this->Form->create('Purchase');
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+
 echo $this->Form->input('stock',array('type'=>'select','options'=>$stockoptions)); 
 echo $this->Form->input('customer',array('type'=>'select','options'=>$id, 'default'=>$id, 'type' => 'hidden')); 
 echo $this->Form->input('quantity'); ?>
@@ -219,7 +217,7 @@ echo $this->Form->input('quantity'); ?>
 <?php echo $this->Form->submit('Buy Stock', array('div'=>false, 'name'=>'buy', array('rule' => 'notEmpty'))); ?>
 </div>
 <?php echo $this->Form->end()?>
-<<<<<<< HEAD
+
 </div>
 <?php //Optional twitter feed here
 
@@ -233,9 +231,9 @@ if(isset($client['Client']['twitter'])){
 }else{
 	echo 'NO TWITTER FOR US';
 } ?>
-=======
 
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+
+
 <?php }
 else
 {

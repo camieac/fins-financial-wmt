@@ -1,5 +1,5 @@
 <!-- File: /app/View/clients/index.ctp -->
-<<<<<<< HEAD
+
 <!DOCTYPE HTML>
 
 <html>
@@ -18,8 +18,7 @@
 	</head>
 	<body>
 
-=======
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+
 
 <?php $User = ClassRegistry::init('User'); ?>
 
@@ -36,12 +35,10 @@
 
 
 <h1><font size="6">Clients</font></h1>
-<<<<<<< HEAD
+
 <div class = "dRoundedBox"><?php echo $this->Html->link('Add client','add', array('class' => 'button')); ?></div>
 <div class = "dRoundedBox">
-=======
-<p><?php echo $this->Html->link('Add client', array('action' => 'add')); ?></p>
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+
 <table id="clients" class="display" cellspacing="0" width="100%">
 <thead>
 <tr>
@@ -82,7 +79,7 @@ array('action' => 'view', $client['Client']['id'])
 echo $this->Html->link(
 'Edit', array('action' => 'edit', $client['Client']['id'])
 );
-<<<<<<< HEAD
+
 
 ?>
 <?php
@@ -91,16 +88,7 @@ echo '    ';
 echo $this->Form->postLink('Delete',
 array('action' => 'delete',$client['Client']['id'],$client['Client']['name']),
 array('confirm' => 'Are you sure?'));
-=======
-?>
-<?php
-echo '    ';
-echo $this->Form->postLink(
-'Delete',
-array('action' => 'delete', $client['Client']['id']),
-array('confirm' => 'Are you sure?')
-);
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+
 ?>
 </td>
 <td>
@@ -108,7 +96,7 @@ array('confirm' => 'Are you sure?')
 </td>
 </tr>
 <?php endforeach; ?>
-<<<<<<< HEAD
+
 </table></div>
 
 
@@ -118,7 +106,4 @@ array('confirm' => 'Are you sure?')
 		</div>
 </body>
 </html>
-=======
-</table>
-<p><?php echo $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout')); ?></p>
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+

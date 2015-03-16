@@ -7,11 +7,9 @@ class ClientsController extends AppController {
 public $helpers = array('Html', 'Form');
 
 public function index() {
-<<<<<<< HEAD
+
 if ($this->Session->read('Auth.User'))
-=======
-if ($this->Session->read('Auth.User')) 
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+
 {
 $user = AuthComponent::user('username');
 
@@ -37,7 +35,7 @@ $this->redirect(array('controller' => 'users', 'action' => 'login'));
 }
 }
 
-<<<<<<< HEAD
+
 public function uploadImage() {
 	$this->Session->setFlash('starting uploading function...');
     // Custom
@@ -106,8 +104,7 @@ $this->Session->setFlash('Directory: '.$newSaveDirectory. ' name '.$file['tmp_na
 
 }
 
-=======
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+
 public function view($id = null) {
 	
 $this->set('listofstocks', $this->Client->getStockNames());
@@ -131,11 +128,10 @@ throw new NotFoundException(__('Invalid client'));
 
 if ($this->request->is('post'))
 {
-<<<<<<< HEAD
-=======
+
 	if(isset($this->params['data']['buy']))
 	{
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+
 	$this->Purchase->create();
 	$quantity = $this->request->data['Purchase']['quantity'];
 	$stock = $this->request->data['Purchase']['stock'];
@@ -143,7 +139,7 @@ if ($this->request->is('post'))
 	$company = $query[0]['stocklists']['symbol'];
 	$result = $this->getStock(array($company));
 
-<<<<<<< HEAD
+
 if(($result[0]['current']) === '0.00')
 { 
 $price = $quantity * $result[0]['close']; 
@@ -151,7 +147,7 @@ $price = $quantity * $result[0]['close'];
 else {
 $price = $quantity * $result[0]['current']; 
 }
-=======
+
 	if(($result[0]['current']) === '0.00' || ($result[0]['current']) === 'N/A')
 	{ 
 	$price = $quantity * $result[0]['close']; 
@@ -160,7 +156,7 @@ $price = $quantity * $result[0]['current'];
 	{
 	$price = $quantity * $result[0]['current']; 
 	}
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+
 
 	if($client['Client']['balance'] < $price)
 	{
@@ -178,10 +174,10 @@ $price = $quantity * $result[0]['current'];
 	}
 	$this->Session->setFlash(__('Unable to add your stock.'));
 	}
-<<<<<<< HEAD
+
 }else{
 	$this->redirect(array('controller' => 'users', 'action' => 'login'));
-=======
+
 	
 	
 	if(isset($this->params['data']['sell']))
@@ -231,7 +227,7 @@ $price = $quantity * $result[0]['current'];
 	
 	}
 }
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+
 }
 }
 
@@ -252,7 +248,7 @@ if ($test) {
 $this->Session->setFlash(__('Your client has been saved.'));
 $success = $this->uploadImage();
 //$this->Session->setFlash(__('File upload:'.$success));
-=======
+
 	
 
 $this->set('FAquery', $this->Client->getFAs());
@@ -261,7 +257,7 @@ if ($this->request->is('post')) {
 $this->Client->create();
 if ($this->Client->save($this->request->data)) {
 $this->Session->setFlash(__('Your client has been saved.'));
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+
 return $this->redirect(array('action' => 'index'));
 }
 $this->Session->setFlash(__('Unable to add your client.'));
@@ -276,10 +272,7 @@ throw new NotFoundException(__('Invalid Client'));
 $client = $this->Client->findById($id);
 if (!$client) {
 throw new NotFoundException(__('Invalid Client'));
-<<<<<<< HEAD
 
-=======
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
 }
 
 $this->set('FAquery', $this->Client->getFAs());
@@ -288,10 +281,10 @@ if ($this->request->is(array('Client', 'put'))) {
 $this->Client->id = $id;
 if ($this->Client->save($this->request->data)) {
 $this->Session->setFlash(__('Your Client has been updated.'));
-<<<<<<< HEAD
+
 $this->uploadImage();
-=======
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+
+
 return $this->redirect(array('action' => 'index'));
 }
 $this->Session->setFlash(__('Unable to update your Client.'));
@@ -301,21 +294,15 @@ $this->request->data = $client;
 }
 }
 
-<<<<<<< HEAD
+
 public function delete($id,$name) {
-=======
-public function delete($id) {
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+
 if ($this->request->is('get')) {
 throw new MethodNotAllowedException();
 }
 if ($this->Client->delete($id)) {
-$this->Session->setFlash(
-<<<<<<< HEAD
-__('%s has been deleted.', h($name))
-=======
-__('The Client with id: %s has been deleted.', h($id))
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+$this->Session->setFlash(__('%s has been deleted.', h($name))
+
 );
 return $this->redirect(array('action' => 'index'));
 }
@@ -377,7 +364,7 @@ __('The Stock with id: %s has been deleted.', h($id))
 		return $stocks;
 	}
 
-<<<<<<< HEAD
+
 function twitterAccountExists($username){
     $headers = get_headers("https://twitter.com/".$username);
     if(strpos($headers[0], '404') !== false ) {
@@ -386,8 +373,8 @@ function twitterAccountExists($username){
         return true;
     }
 }
-=======
 
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+
+
 
 } ?>

@@ -1,9 +1,9 @@
 <h1>Edit Meeting</h1>
-<<<<<<< HEAD
-<div class="dRoundedBox">
-=======
 
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+<div class="dRoundedBox">
+
+
+
 <?php $customerarray = Set::flatten($Custquery); 
 $advisorarray = Set::flatten($FAquery); 
 
@@ -20,11 +20,9 @@ $advisorarray = Set::flatten($FAquery);
 ?>
 
 <?php
-<<<<<<< HEAD
+
 echo $this->Form->create('Meeting', array('class' => 'fForm'));
-=======
-echo $this->Form->create('Meeting');
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+
 echo $this->Form->input('name');
 echo $this->Form->input('description');
 echo $this->Form->input('customer',array('type'=>'select','options'=>$customer)); 
@@ -42,9 +40,6 @@ echo $this->Form->input('meetingTime');
 echo $this->Form->input('dateMeeting', array('dateFormat'=>'DMY', 'minYear'=>date('Y'), 'maxYear'=>date('Y')+10, 'empty'=>array('- -')));
 echo $this->Form->input('id', array('type' => 'hidden'));
 echo $this->Form->end('Save Post');
-<<<<<<< HEAD
 
 ?></div>
-=======
-?>
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+

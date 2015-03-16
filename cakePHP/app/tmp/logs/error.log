@@ -19746,7 +19746,7 @@ Stack Trace:
 #8 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(StocklistsController), Object(CakeRequest))
 #9 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #10 {main}
-<<<<<<< HEAD
+
 2015-02-23 13:33:39 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
 Exception Attributes: array (
   'class' => 'Mysql',
@@ -39623,4 +39623,4 @@ Stack Trace:
 #10 /home/cs3/ml335/public_html/cakePHP/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
 #11 /home/cs3/ml335/public_html/cakePHP/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #12 {main}
->>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
+
