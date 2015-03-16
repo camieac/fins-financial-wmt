@@ -3,16 +3,16 @@
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-
+var url = window.location.protocol + "//" + window.location.hostname;
 (function($) {
 
 	skel.init({
 		reset: 'full',
 		breakpoints: {
-			'global':	{ range: '*', href: 'css/style.css' },
-			'desktop':	{ range: '737-', href: 'css/style-desktop.css', containers: 1200, grid: { gutters: 25 } },
-			'1000px':	{ range: '737-1200', href: 'css/style-1000px.css', containers: 1000, grid: { gutters: 20 }, viewport: { width: 1080 } },
-			'mobile':	{ range: '-736', href: 'css/style-mobile.css', containers: '100%!', grid: { collapse: true, gutters: 20 }, viewport: { scalable: false } }
+			'global':	{ range: '*', href: url+'/css/style.css' },
+			'desktop':	{ range: '737-', href: url+'/css/style-desktop.css', containers: 1200, grid: { gutters: 25 } },
+			'1000px':	{ range: '737-1200', href: url+'/css/style-1000px.css', containers: 1000, grid: { gutters: 20 }, viewport: { width: 1080 } },
+			'mobile':	{ range: '-736', href: url+'/css/style-mobile.css', containers: '100%!', grid: { collapse: true, gutters: 20 }, viewport: { scalable: false } }
 		},
 		plugins: {
 			layers: {
