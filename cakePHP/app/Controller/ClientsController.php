@@ -233,7 +233,7 @@ $price = $quantity * $result[0]['current'];
 
 
 public function add() {
-<<<<<<< HEAD
+
 $this->set('FAquery', $this->Client->getFAs());
 if ($this->request->is('post')) {
 $this->Client->create();
