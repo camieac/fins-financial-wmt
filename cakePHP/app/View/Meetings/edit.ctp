@@ -23,8 +23,8 @@ $advisorarray = Set::flatten($FAquery);
 
 echo $this->Form->create('Meeting', array('class' => 'fForm'));
 
-echo $this->Form->input('name');
-echo $this->Form->input('description');
+echo $this->Form->input('title');
+echo $this->Form->input('details');
 echo $this->Form->input('customer',array('type'=>'select','options'=>$customer)); 
 
 if($user==="admin")
@@ -36,10 +36,18 @@ else
 echo $this->Form->input('fa',array('type'=>'select','options'=>$fa, 'default'=>$user, 'type' => 'hidden')); 
 }
 
-echo $this->Form->input('meetingTime');
-echo $this->Form->input('dateMeeting', array('dateFormat'=>'DMY', 'minYear'=>date('Y'), 'maxYear'=>date('Y')+10, 'empty'=>array('- -')));
+
 echo $this->Form->input('id', array('type' => 'hidden'));
-echo $this->Form->end('Save Post');
+echo $this->Form->input('status', array('options' => array(
+					'Scheduled' => 'Scheduled','Confirmed' => 'Confirmed','In Progress' => 'In Progress',
+					'Rescheduled' => 'Rescheduled','Completed' => 'Completed'
+				)
+			)
+		);
+echo $this->Form->input('start', array('class'=>'datepicker','type'=>'text'));
+echo $this->Form->input('end', array('class'=>'datepicker','type'=>'text'));
+echo $this->Form->input('all_day', array('checked' => 'checked'));
+echo $this->Form->end('Save Meeting');
 
 ?></div>
 
