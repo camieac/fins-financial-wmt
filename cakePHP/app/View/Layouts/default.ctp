@@ -1,82 +1,57 @@
 <?php
+/**
+ * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://cakephp.org CakePHP(tm) Project
+ * @package       app.View.Layouts
+ * @since         CakePHP(tm) v 0.10.0.1076
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ */
+
 $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
 $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 ?>
-
 <!DOCTYPE html>
 <html>
-	<head>
-		<?php echo $this->Html->charset(); ?>
-	
-		<?php
+<head>
+	<?php echo $this->Html->charset(); ?>
+	<title>
+		<?php echo "Fin's Financials" ?>:
+		<?php echo $title_for_layout; ?>
+	</title>
+	<?php
 		
-			echo $this->Html->meta('icon');
+	echo $this->Html->meta('favicon.ico','img/favicon.ico',array('type' => 'icon'));
 
-			echo $this->Html->css('skel');
-			echo $this->Html->css('style');
-			echo $this->Html->css('style-desktop');
-			echo $this->Html->css('fullcalendar'); 
-		
-			//echo $this->Html->css('fullcalendar.print'); 
-			echo $this->Html->css('/full_calendar/css/fullcalendar', null, array('inline' => false));
-		
-		
-		
-			//echo $this->Html->script('jquery-1.3.2.min'); 
-			echo $this->Html->script('moment.min');
-			echo $this->Html->script('jquery.min'); 
-			//echo $this->Html->script('jquery.min.js');
-			echo $this->Html->script('skel.min');
-			echo $this->Html->script('skel-layers.min');
-			echo $this->Html->script('fullcalendar.min');
-			echo $this->Html->script(array('/full_calendar/js/jquery-1.5.min', '/full_calendar/js/jquery-ui-1.8.9.custom.min', '/full_calendar/js/fullcalendar.min', '/full_calendar/js/jquery.qtip-1.0.0-rc3.min', '/full_calendar/js/ready'), array('inline' => 'false'));
-			echo $this->Html->script('init');
-	
-			echo $this->fetch('meta');
-			echo $this->fetch('css');
-			echo $this->fetch('script');
+
+		echo $this->Html->css('cake.generic');
+
+		echo $this->fetch('meta');
+		echo $this->fetch('css');
+		echo $this->fetch('script');
 	?>
-	</head>
-	<body>
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+	<!-- Image Example: <?php echo $this->Html->image('favicon.ico', array('alt' => 'CakePHP')) ?> -->
+		</div>
+		
 		<div id="content">
-			<div id="header-wrapper">
-				<div class="container">
-					<div class="row">
-						<div class="12u">
-							<header id="header">
-								<h1>
-									<a href="/" id="logo">eMarketTrader</a>
-								</h1>
-								<nav id="nav">
-									<a href="/">Homepage</a>
-									<a href="/Clients">Clients</a>
-									<a href="/Meetings">Meetings</a>
-									<a href="/stocklists">Stocklists</a>
-									<a href="/purchases" >Purchases</a>
-								</nav>
-							</header>
-						</div>
-					</div>
-				</div>
-			</div>
-						
-			<div id="page">
-				<?php echo $this->Session->flash(); ?>
-				<?php echo $this->fetch('content'); ?>
-			</div>
+
+			<?php echo $this->Session->flash(); ?>
+
+			<?php echo $this->fetch('content'); ?>
 		</div>
-	
-		<div class="row">
-			<div class="12u">
-				<div id="copyright">
-					&copy; Fin's Financials Ltd. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
-			 | 		<a href = "/help">Help</a>  <?php if ($this->Session->read('Auth.User')){echo '|'.$this->Html->link('Logout','/users/logout', array('class' => 'button','controller' => 'users', 'action' => 'logout'));} ?>
-				</div>
-			</div>
+		<div id="footer">
 		</div>
-	</body>
-	<?php echo $this->Html->script('jquery'); 
-		echo $this->Html->script('jquery.datetimepicker');  
-		echo $this->Html->css('jquery.datetimepicker');
-	?>
+	</div>
+	<?php // echo $this->element('sql_dump'); ?> 
+</body>
 </html>

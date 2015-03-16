@@ -1,5 +1,6 @@
 <!-- File: /app/View/meetings/index.ctp -->
 
+<<<<<<< HEAD
 
 <html>
 	<head>
@@ -27,10 +28,13 @@
 } ); </script>
 
 
+=======
+>>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
 <?php $User = ClassRegistry::init('User'); ?>
 
 <?php $i = 0; ?>
 
+<<<<<<< HEAD
 
 <h1><font size="6">Meetings</font></h1>
 <div class = "dRoundedBox">
@@ -54,10 +58,23 @@
 <th>F.A</th>
 <th>Start Time</th>
 <th>End Time</th>
+=======
+<h1><font size="6">Meetings</font></h1>
+<p><?php echo $this->Html->link('Add meeting', array('action' => 'add')); ?></p>
+<table>
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Description</th>
+<th>Customer</th>
+<th>F.A</th>
+<th>Time</th>
+>>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
 <th>Date</th>
 <th>Actions</th>
 <th>Created</th>
 </tr>
+<<<<<<< HEAD
 </thead>
 <!-- Here's where we loop through our $events array, printing out meeting info -->
 <?php foreach ($events as $event): ?>
@@ -80,22 +97,56 @@
 <?php
 echo $this->Html->link(
 'Edit', array('action' => 'edit', $event['Meeting']['id'])
+=======
+<!-- Here's where we loop through our $meetings array, printing out meeting info -->
+<?php foreach ($meetings as $meeting): ?>
+
+<tr>
+<td><?php echo $meeting['Meeting']['id']; ?></td>
+<td>
+<?php echo $meeting['Meeting']['name'];?>
+</td>
+<td><?php echo $meeting['Meeting']['description']; ?></td>
+<td><?php echo str_replace("\"", "", $query[$i]['clients']['name']); ?></td>
+<td><?php echo str_replace("\"", "", $query[$i]['fas']['name']); ?></td>
+
+<?php $i++; ?> <!-- increments array -->
+
+<td><?php echo date("H:i", strtotime($meeting['Meeting']['meetingTime'])); ?></td>
+<td><?php echo $meeting['Meeting']['dateMeeting']; ?></td>
+<td>
+<?php
+echo $this->Html->link(
+'Edit', array('action' => 'edit', $meeting['Meeting']['id'])
+>>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
 );
 ?>
 <?php
 echo '    ';
 echo $this->Form->postLink(
 'Delete',
+<<<<<<< HEAD
 array('action' => 'delete', $event['Meeting']['id']),
+=======
+array('action' => 'delete', $meeting['Meeting']['id']),
+>>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
 array('confirm' => 'Are you sure?')
 );
 ?>
 </td>
 <td>
+<<<<<<< HEAD
 <?php echo $event['Meeting']['created']; ?>
+=======
+<?php echo $meeting['Meeting']['created']; ?>
+>>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
 </td>
 </tr>
 <?php endforeach; ?>
 </table>
+<<<<<<< HEAD
 </div>
 
+=======
+<p><?php echo $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout')); ?></p>
+>>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375

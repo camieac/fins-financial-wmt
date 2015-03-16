@@ -1,5 +1,6 @@
 <!-- File: /app/View/Stocklists/index.ctp -->
 
+<<<<<<< HEAD
 <html>
 	<head>
 		<title>Home</title>
@@ -14,6 +15,8 @@
 	</head>
 	<body>
 
+=======
+>>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
 <?php $User = ClassRegistry::init('User'); ?>
 
 	<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -25,13 +28,17 @@
 	"bLengthChange": false
 	}
 	);
+<<<<<<< HEAD
 	$('#submit-link').click(function(){
   $('#StocklistIndexForm').submit();
 });
+=======
+>>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
 } ); </script>
 
 
 <h1><font size="6">Stocks</font></h1>
+<<<<<<< HEAD
 <div class="dRoundedBox">
 <?php
 echo $this->Form->create('Stocklist', array('class' => 'fForm'));
@@ -45,6 +52,19 @@ echo $this->Form->input('symbol'); ?>
 <?php echo $this->Form->end()?>
 </div>
 <div class="dRoundedBox">
+=======
+
+<?php
+echo $this->Form->create('Stocklist');
+echo $this->Form->input('symbol'); ?>
+<div class='submit'>
+<?php echo $this->Form->submit('Add Stock', array('div'=>false, 'name'=>'add')); 
+?>
+</div>
+<?php echo $this->Form->end()?>
+
+
+>>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
 <table id="stocks" class="display" cellspacing="0" width="100%">
 <thead>
 <tr>
@@ -86,5 +106,9 @@ echo $this->Html->link(str_replace("\"", "", $stock['name']), array('action' => 
 </tr>
 <?php endforeach; ?>
 </table>
+<<<<<<< HEAD
 </div>
 
+=======
+<p><?php echo $this->Html->link('Logout', array('controller' => 'users', 'action' => 'logout')); ?></p>
+>>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375

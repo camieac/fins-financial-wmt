@@ -1,4 +1,5 @@
 <!-- File: /app/View/meetings/add.ctp -->
+<<<<<<< HEAD
 <head>
 
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -11,6 +12,8 @@
   </script>
 
 </head>
+=======
+>>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
 <h1>Add Meeting</h1>
 
 <?php $customerarray = Set::flatten($Custquery); 
@@ -29,6 +32,7 @@ $advisorarray = Set::flatten($FAquery);
 ?>
 
 <pre>
+<<<<<<< HEAD
 <?php // print_r($fa); ?>
 </pre>
 <div class = "dRoundedBox">
@@ -36,6 +40,15 @@ $advisorarray = Set::flatten($FAquery);
 echo $this->Form->create('Meeting', array('class' => 'fForm'));
 echo $this->Form->input('title');
 echo $this->Form->input('details');
+=======
+<?php print_r($fa); ?>
+</pre>
+
+<?php
+echo $this->Form->create('Meeting');
+echo $this->Form->input('name');
+echo $this->Form->input('description');
+>>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
 echo $this->Form->input('customer',array('type'=>'select','options'=>$customer)); 
 
 if($user==="admin")
@@ -46,6 +59,7 @@ else
 {
 echo $this->Form->input('fa',array('type'=>'select','options'=>$fa, 'default'=>$user, 'type' => 'hidden')); 
 }
+<<<<<<< HEAD
 echo $this->Form->input('event_type_id',array('type'=>'select', 'default'=>0, 'type' => 'hidden'));
 		
 		
@@ -64,3 +78,11 @@ echo $this->Form->input('all_day', array('checked' => 'checked'));
 echo $this->Form->end('Save Meeting');
 ?>
 </div>
+=======
+
+echo $this->Form->input('meetingTime');
+echo $this->Form->input('dateMeeting', array('dateFormat'=>'DMY', 'minYear'=>date('Y'), 'maxYear'=>date('Y')+5, 'empty'=>array('- -')));
+echo $this->Form->end('Save Meeting');
+?>
+
+>>>>>>> 9283f741b8c75a119d90aa68d0ac45998f85d375
