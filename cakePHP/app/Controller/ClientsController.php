@@ -263,7 +263,8 @@ return $this->redirect(array('action' => 'index'));
 $this->Session->setFlash(__('Unable to add your client.'));
 }
 }
-
+}
+}
 public function edit($id = null) {
 	
 if (!$id) {
