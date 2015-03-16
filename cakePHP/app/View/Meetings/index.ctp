@@ -90,7 +90,7 @@ echo $this->Html->link(
 echo '    ';
 echo $this->Form->postLink(
 'Delete',
-array('action' => 'delete', $meeting['Meeting']['id']),
+array('action' => 'delete', $event['Meeting']['id']),
 array('confirm' => 'Are you sure?')
 );
 ?>
