@@ -1,4 +1,5 @@
-<?php //app/View/Users/login.ctp ?>
+<?php //app/View/Users/login.ctp 
+?>
 
 <!DOCTYPE HTML>
 <html>
@@ -41,18 +42,33 @@ label {
 
 
 
-<?php echo $this->Session->flash('auth'); ?>
-<?php echo $this->Form->create('User'); ?>
+<?php
+echo $this->Session->flash('auth');
+?>
+<?php
+echo $this->Form->create('User');
+?>
     <fieldset>
         <legend>
-            <?php echo __('Please enter your username and password'); ?>
+            <?php
+echo __('Please enter your username and password');
+?>
         </legend>
 
-       <?php echo $this->Form->input('username');
-        echo $this->Form->input('password');
-    ?>
+       <?php
+echo $this->Form->input('username');
+echo $this->Form->input('password');
+?>
     </fieldset>
-<?php //echo $this->Form->end(__('Login')); ?>
-<?php echo $this->Html->link('Login','#', array('id' => 'submit-link','class' => 'button')); ?>
+<?php
+echo $this->Form->submit('Login', array(
+    'class' => 'button',
+    'title' => 'Login'
+));
+?>
+<?php
+echo $this->Form->end();
+?>
+
 
 </div>
