@@ -49,7 +49,7 @@
 	
 
 <?php $clientNIS =  ($client['Client']['nis']);
-echo $client['Client']['imageName']
+echo $client['Client']['imageName'];
 	$imageURL = 'profile_pictures/' . $clientNIS . '.jpg';
 	//echo $imageURL;
 	if (!file_exists('img/'.$imageURL)) {

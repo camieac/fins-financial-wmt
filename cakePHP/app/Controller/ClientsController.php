@@ -213,6 +213,7 @@ public function add() {
 $this->set('FAquery', $this->Client->getFAs());
 if ($this->request->is('post')) {
 $this->Client->create();
+$this->Client->set('imageName', 'New title for the article');
 try{
 	$test = $this->Client->save($this->request->data);
 }catch(Exception $e){

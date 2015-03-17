@@ -37,8 +37,24 @@ public $validate = array(
 ),
 'fa' => array(
 'rule' => 'notEmpty'
+
+),
+'twitter' => array(
+            'alphaNumeric' => array(
+                'rule' => 'alphaNumeric',
+                'required' => false,
+                'message' => 'Letters and numbers only'
+            ),
+            'between' => array(
+                'rule'    => array('maxLength', 15),
+                'message' => 'Between 5 to 15 characters'
+            )
+        )
+
+
 )
-);
+
+;
 
      public function getFAs()
     {
@@ -55,9 +71,9 @@ public $validate = array(
        return $this->query("SELECT stocklists.id, stocklists.symbol FROM stocklists ORDER BY stocklists.id;");
     }
 
-    public function getQuery()
+    public function getQuery($a)
     {
-       return $this->query("SELECT stocklists.id, stocklists.symbol FROM stocklists ORDER BY stocklists.id;");
+       return $this->query($a);
     }
     
 
