@@ -78,13 +78,6 @@
 Created: <?php echo $client['Client']['created']; ?>
 <br>
 Last Modified: <?php echo $client['Client']['modified']; ?>
-<br>
-
-<?php echo $this->Html->link('Edit', array(
-    'controller' => 'clients', // Optional if already in the PostsController
-    'action'=>'edit',
-    $client['Client']['id']
-),array('class' => 'button',)); ?>
 
 </div> <!-- for dRoundedBox -->
 <div class = "dRoundedBox">
@@ -172,7 +165,7 @@ if(isset($client['Client']['twitter'])){
 	echo '<div class="dRoundedBox"><a class="twitter-timeline" href="'.$href.'" data-widget-id="576861420341559296">Tweets by @'.$client['Client']['twitter'].'</a></div>';
 }
 }else{
-	//No twitter for us
+	echo 'NO TWITTER FOR US';
 } ?>
 <?php }
 else

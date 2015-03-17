@@ -40,77 +40,78 @@ public function uploadImage() {
 	$this->Session->setFlash('starting uploading function...');
     // Custom
     $folderToSaveFiles = WWW_ROOT . 'img/profile_pictures/' ;//removed WWW_ROOT . 
-$this->Session->setFlash('Got path');
+	$this->Session->setFlash('Got path');
     if (!$this->request->is('post')){
 		$this->Session->setFlash('NOT A POST');
-		 return false;        // Not a POST data!
-	 }
-$this->Session->setFlash('Checked post');
-    if(!empty($this->request->data))
-    {
-	$this->Session->setFlash('Checked data');
+		return false;        // Not a POST data!
+	}
+	$this->Session->setFlash('Checked post');
+    if(!empty($this->request->data)){
+		$this->Session->setFlash('Checked data');
         //Check if image has been uploaded
         if(!empty($this->request->data['Client']['profileImage'])){
-$this->Session->setFlash('Checked image');
-                $file = $this->request->data['Client']['profileImage']; //put the data into a var for easy use
-                debug( $file );
-                $ext = pathinfo($file, PATHINFO_EXTENSION);
-                $arr_ext = array('png', 'jpeg', 'jpg'); //set allowed extensions
-                //only process if the extension is valid
-$this->Session->setFlash('Extension:'.$ext);
-                if(in_array($ext, $arr_ext))
-                {
-//$this->Session->setFlash('Checked valid extension');
-                    //do the actual uploading of the file. First arg is the tmp name, second arg is 
-                    //where we are putting it
-                    $newFilename = $this->request->data['Client']['nis'];//$file['name']; // edit/add here as you like your new filename to be.
-$this->Session->setFlash('new FileName:'.$newFilename);
+			$this->Session->setFlash('Checked image');
+            $file = $this->request->data['Client']['profileImage']; //put the data into a var for easy use
+            debug( $file );
+            $ext = $file['type'];//pathinfo($file['name'], PATHINFO_EXTENSION);
+            $ext2 = pathinfo($file['name'], PATHINFO_EXTENSION);
+            $arr_ext = array('image/png', 'image/jpeg', 'image/jpg'); //set allowed extensions
+            //only process if the extension is valid
+			$this->Session->setFlash('Type:'.$ext);
+            if(in_array($ext, $arr_ext)){
+				//$this->Session->setFlash('Checked valid extension');
+                //do the actual uploading of the file. First arg is the tmp name, second arg is 
+                //where we are putting it
+                 $newFilename = $this->request->data['Client']['nis'];//$file['name']; // edit/add here as you like your new filename to be.
+				$this->Session->setFlash('new FileName:'.$newFilename);
 
-$newSaveDirectory = $folderToSaveFiles.$newFilename.'.'.$ext;
-$this->Session->setFlash('save directory:'.$newSaveDirectory);
-if(is_dir($folderToSaveFiles)){
-	$this->Session->setFlash('isDIr');
-}else{
-$this->Session->setFlash('no dir');
-}
-$this->Session->setFlash('tmp name:'.pathinfo($file, PATHINFO_BASENAME));
-                    $result = move_uploaded_file( $file['tmp_name'], '$newFilename'.'.'.$ext);
-if($result){
-$this->Session->setFlash('DONE');
-}else{
-$this->Session->setFlash('Directory: '.$newSaveDirectory. ' name '.$file['tmp_name']);
-}
-                    debug( $result );
-                    //prepare the filename for database entry (optional)
-                    //$this->data['Image']['image'] = $file['name'];
+				$newSaveDirectory = $folderToSaveFiles.$newFilename.'.'.$ext2;
+				$this->Session->setFlash('save directory:'.$newSaveDirectory);
+				if(is_dir($folderToSaveFiles)){
+					$this->Session->setFlash('isDIr');
+				}else{
+					$this->Session->setFlash('Specifies save directory is not a directory');
+					return;
+				}
+				$isImage = getimagesize($file['tmp_name']);
+				debug($isImage);
+				if(!$isImage){
+					$this->Session->setFlash('File was not an image.');
+					return;
+				}
+				$this->Session->setFlash('tmp name:'.$file['tmp_name']);
+
+                $result = move_uploaded_file( $file['tmp_name'], $newSaveDirectory);
+				if($result){
+					$this->Session->setFlash('File uploaded to '.$newSaveDirectory);
+				}else{
+					$this->Session->setFlash('Directory: '.$newSaveDirectory. ' name '.$file['tmp_name']);
+				}
+                debug( $result );
+                //prepare the filename for database entry (optional)
+                //$this->data['Image']['image'] = $file['name'];
                 }else{
 					return false;
 				}
-        }else{
+		}else{
 			$this->Session->setFlash('Image has not been uploaded');
-			 return false;
+			return false;
 		}
        
-        //now do the save (optional)
-        //if($this->Image->save($this->data)) {
-			//$this->Session->setFlash('Image saved');
+			//now do the save (optional)
+			//if($this->Image->save($this->data)) {
+				//$this->Session->setFlash('Image saved');
 			//} else {
 				//$this->Session->setFlash('Image not saved');
-				//}
+			//}
     }
-
-
-
-
 }
 
 
 public function view($id = null) {
 	
 $this->set('listofstocks', $this->Client->getStockNames());
-
 	
-
 if ($this->Session->read('Auth.User')) 
 {
 if (!$id) {
@@ -124,30 +125,16 @@ throw new NotFoundException(__('Invalid client'));
 	$this->set('client', $client);
 	$this->Client->id = $id;
 	$this->set('query', $this->Client->getStocks());
-
-
 if ($this->request->is('post'))
 {
-
 	if(isset($this->params['data']['buy']))
 	{
-
 	$this->Purchase->create();
 	$quantity = $this->request->data['Purchase']['quantity'];
 	$stock = $this->request->data['Purchase']['stock'];
 	$query = $this->Client->getQuery("SELECT stocklists.symbol FROM stocklists WHERE stocklists.id = " . $stock . ";");
 	$company = $query[0]['stocklists']['symbol'];
 	$result = $this->getStock(array($company));
-
-
-if(($result[0]['current']) === '0.00')
-{ 
-$price = $quantity * $result[0]['close']; 
-}
-else {
-$price = $quantity * $result[0]['current']; 
-}
-
 	if(($result[0]['current']) === '0.00' || ($result[0]['current']) === 'N/A')
 	{ 
 	$price = $quantity * $result[0]['close']; 
@@ -156,14 +143,11 @@ $price = $quantity * $result[0]['current'];
 	{
 	$price = $quantity * $result[0]['current']; 
 	}
-
-
 	if($client['Client']['balance'] < $price)
 	{
 	$this->Session->setFlash(__('Client does not have enough money to buy this stock.'));
 	return $this->redirect(array('action' => 'view', $id));
 	}
-
 	if ($this->Purchase->save($this->request->data)) 
 	{
 	$this->Client->updateAll(array('Client.balance' => 'Client.balance - ' . $price), array('Client.id' => $id));
@@ -174,10 +158,6 @@ $price = $quantity * $result[0]['current'];
 	}
 	$this->Session->setFlash(__('Unable to add your stock.'));
 	}
-
-}else{
-	$this->redirect(array('controller' => 'users', 'action' => 'login'));
-
 	
 	
 	if(isset($this->params['data']['sell']))
@@ -188,7 +168,6 @@ $price = $quantity * $result[0]['current'];
 	$query = $this->Client->getQuery("SELECT purchases.quantity, stocklists.symbol FROM purchases, stocklists WHERE purchases.id = " . $rowid . " AND purchases.stock = stocklists.id;");
 	$company = $query[0]['stocklists']['symbol'];
 	$result = $this->getStock(array($company));
-
 	if(($result[0]['current']) === '0.00' || ($result[0]['current']) === 'N/A')
 	{ 
 	$price = $quantity * $result[0]['close']; 
@@ -197,7 +176,6 @@ $price = $quantity * $result[0]['current'];
 	{
 	$price = $quantity * $result[0]['current']; 
 	}
-
 	if($quantity > $query[0]['purchases']['quantity'])
 	{
 	$this->Session->setFlash(__('Client does not have this many stocks.'));
@@ -223,11 +201,9 @@ $price = $quantity * $result[0]['current'];
 	}
 	}
 	
-
 	
 	}
 }
-
 }
 }
 
