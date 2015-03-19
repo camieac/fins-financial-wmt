@@ -164,6 +164,7 @@ if(isset($client['Client']['twitter'])){
 	
 	if($validUser){
 	echo '<div class="dRoundedBox"><a class="twitter-timeline" href="'.$href.'" data-widget-id="576861420341559296">Tweets by @'.$client['Client']['twitter'].'</a></div>';
+	//echo $twitter_timeline;
 }
 }else{
 	echo 'NO TWITTER FOR US';
