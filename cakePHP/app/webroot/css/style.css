@@ -169,18 +169,7 @@
 	
 	/* Custom CSS Below here.
 	 */
-	.user-login{
-	display:block;
-	margin: auto;
-  text-align: center;
-  margin-left: auto;
-  width: 20em;
-  margin-right: auto;
-  margin-top: 10%;
-	border: 1px solid black;
-	border-radius:1em;
-	box-shadow: 10px 10px 5px #888888;
-	}
+	
 	h1{
 	text-transform:none;
 	}

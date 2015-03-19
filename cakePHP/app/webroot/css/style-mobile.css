@@ -246,3 +246,15 @@
 			margin: auto;
 			margin-bottom: 1em;
 		}
+.user-login {
+  float: none;
+  margin: 0;
+  text-align: center;
+  margin-top: 3em;
+border:none;
+border-radius:0em;
+box-shadow:none;
+}
+#copyright {
+	text-align:left;
+}
