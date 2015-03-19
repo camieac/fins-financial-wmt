@@ -73,11 +73,11 @@ if ($this->Session->read('Auth.User')) {
 	
 
 <?php
-    $clientNIS = ($client['Client']['nis']);
-    echo $client['Client']['imageName'];
-    $imageURL = 'profile_pictures/' . $clientNIS . '.jpg';
+    $imageName = ($client['Client']['imageName']);
+    //echo $client['Client']['imageName'];
+    $imageURL = 'profile_pictures/' . $imageName;
     //echo $imageURL;
-    if (!file_exists('img/' . $imageURL)) {
+    if (!file_exists('img/'.$imageURL)) {
         $imageURL = 'profile_pictures/default.png';
     }
 ?>

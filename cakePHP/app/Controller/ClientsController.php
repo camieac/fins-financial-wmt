@@ -76,8 +76,14 @@ class ClientsController extends AppController
                     //do the actual uploading of the file. First arg is the tmp name, second arg is 
                     //where we are putting it
                     $newFilename = sha1($this->request->data['Client']['nis']); //$file['name']; // edit/add here as you like your new filename to be.
-                    $this->Client->set('imageName', $newFileName . '.' . $ext2);
-                    
+                    //$this->Client->set('imageName', $newFilename . '.' . $ext2);
+                    $id = $this->Model->id;//Client->find('first');
+                    $user = $this->Client->read();
+					$id = $user['Client']['id'];
+                    $data = array('id' => $id, 'imageName' => $newFilename. '.'.$ext2);
+                    //debug($data);
+					// This will update Recipe with id 10
+					$this->Client->save($data);
                     //$this->Client->setProfileImageName($newFileName . '.' . $ext2);
                     $this->Session->setFlash('new FileName:' . $newFilename);
                     
@@ -90,7 +96,7 @@ class ClientsController extends AppController
                         return;
                     }
                     $isImage = getimagesize($file['tmp_name']);
-                    debug($isImage);
+                    //debug($isImage);
                     if (!$isImage) {
                         $this->Session->setFlash('File was not an image.');
                         return;
@@ -103,7 +109,7 @@ class ClientsController extends AppController
                     } else {
                         $this->Session->setFlash('Directory: ' . $newSaveDirectory . ' name ' . $file['tmp_name']);
                     }
-                    debug($result);
+                    //debug($result);
                     //prepare the filename for database entry (optional)
                     //$this->data['Image']['image'] = $file['name'];
                 } else {
@@ -277,7 +283,8 @@ class ClientsController extends AppController
         $this->set('FAquery', $this->Client->getFAs());
         if ($this->request->is('post')) {
             $this->Client->create();
-            $this->Client->set('imageName', 'New title for the article');
+            
+            //$this->Client->set('imageName', 'New title for the article');
             try {
                 $test = $this->Client->save($this->request->data);
             }

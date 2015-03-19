@@ -101,7 +101,7 @@ echo $this->Form->input('Client.profileImage', array(
 ));
 echo $this->Form->input('imageName', array(
     'type' => 'hidden',
-    'value' => 'Heelo'
+    'value' => sha1(openssl_random_pseudo_bytes(100))
 ));
 echo $this->Form->end('Save Client');
 ?>
