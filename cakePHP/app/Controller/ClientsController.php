@@ -1,7 +1,7 @@
 <?php
 //require_once(APP . 'Vendor/twitteroauth/src/TwitterOAuth.php');
-require_once(APP . 'Vendor/twitteroauth/autoload.php'); 
-require_once(APP . 'Vendor/twitteroauth/src/TwitterOAuth.php'); 
+require_once(APP . 'Vendor/twitteroauth/autoload.php');
+require_once(APP . 'Vendor/twitteroauth/src/TwitterOAuth.php');
 use Abraham\TwitterOAuth\TwitterOAuth;
 // File: /app/Controller/clientsController.php
 //	App::uses('Api', 'Vendor');
@@ -9,10 +9,7 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 class ClientsController extends AppController
 {
     public $helpers = array('Html', 'Form');
-    public $consumerkey = 'TesESdfreMqIMbSoiVxcRXrhv';
-    public $consumersecret = 'b6RZHOVRzkaGLglmzJ7bVxYiw3E0EZmQYpvnXrWJtschBeiSWi';
-    public $accesstoken = '47281927-E5iae83zOv2Pa5Sp7SohUZzvFFepFMwmvnobHOGjZ';
-    public $accesstokensecret = 'YODdoXXkQpziThq9synzUhMRjpuonVWPAlhyXCf5psIVS';
+    
     public function index()
     {
         
@@ -35,7 +32,7 @@ class ClientsController extends AppController
                 )));
             }
             
-			
+            
         } else {
             $this->redirect(array(
                 'controller' => 'users',
@@ -44,12 +41,9 @@ class ClientsController extends AppController
         }
     }
     
-public function getConnectionWithAccessToken($cons_key, $cons_secret, $oauth_token, $oauth_token_secret) {
-  $connection = new TwitterOAuth($cons_key, $cons_secret, $oauth_token, $oauth_token_secret);
-  return $connection;
-}
-  
-
+    
+    
+    
     public function uploadImage()
     {
         $this->Session->setFlash('starting uploading function...');
@@ -82,9 +76,9 @@ public function getConnectionWithAccessToken($cons_key, $cons_secret, $oauth_tok
                     //do the actual uploading of the file. First arg is the tmp name, second arg is 
                     //where we are putting it
                     $newFilename = sha1($this->request->data['Client']['nis']); //$file['name']; // edit/add here as you like your new filename to be.
-		    $this->Client->set('imageName', $newFileName . '.' . $ext2);
-		    
-		    //$this->Client->setProfileImageName($newFileName . '.' . $ext2);
+                    $this->Client->set('imageName', $newFileName . '.' . $ext2);
+                    
+                    //$this->Client->setProfileImageName($newFileName . '.' . $ext2);
                     $this->Session->setFlash('new FileName:' . $newFilename);
                     
                     $newSaveDirectory = $folderToSaveFiles . $newFilename . '.' . $ext2;
@@ -253,19 +247,26 @@ public function getConnectionWithAccessToken($cons_key, $cons_secret, $oauth_tok
                 }
             }
             
-            //$client = $this->Client->find('all');
-            //$twitteruser = $client['Client']['twitter'];
-            $twitteruser = 'camieac';
-            $notweets = 10;
-            global $consumerkey, $consumersecret, $accesstoken, $accesstokensecret;
-			$connection = $this->getConnectionWithAccessToken($consumerkey, $consumersecret, $accesstoken, $accesstokensecret);
-			$requestURL = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=".$twitteruser."&count=".$notweets;
-			echo 'Request URL:' . $requestURL;
-			$tweets = $connection->get($requestURL);
-			$content = $connection->get('statuses/show',array('id' => '279702611312115712'));
-			debug($content);
-			$this->set('twitter_timeline', json_encode($tweets));;
-			//debug($tweets); //testing remove for production 
+            
+            $twitteruser = $client['Client']['twitter'];
+            
+            $notweets          = 10;
+            $consumerkey       = 'TesESdfreMqIMbSoiVxcRXrhv';
+            $consumersecret    = 'b6RZHOVRzkaGLglmzJ7bVxYiw3E0EZmQYpvnXrWJtschBeiSWi';
+            $accesstoken       = '47281927-E5iae83zOv2Pa5Sp7SohUZzvFFepFMwmvnobHOGjZ';
+            $accesstokensecret = 'YODdoXXkQpziThq9synzUhMRjpuonVWPAlhyXCf5psIVS';
+            $connection        = new TwitterOAuth($consumerkey, $consumersecret, $accesstoken, $accesstokensecret);
+            $requestURL        = 'https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=' . $twitteruser . '&count=' . $notweets;
+            
+            $usertime = $connection->get("statuses/user_timeline", array(
+                "screen_name" => $twitteruser,
+                "count" => 25,
+                "exclude_replies" => true
+            ));
+            
+            $this->set('twitter_timeline', json_encode($usertime));
+            ;
+            
         }
     }
     
