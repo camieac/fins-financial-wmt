@@ -75,7 +75,6 @@ else{
 function checkExists($symbol){
 		//Example request https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.stocks%20where%20symbol%3D%22kokok%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=
 		$request = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.stocks%20where%20symbol%3D%22'.$symbol.'%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=';
-		debug($request);
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $request);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);

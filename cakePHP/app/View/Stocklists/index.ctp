@@ -29,7 +29,8 @@ width:100%;
 		</style>
 <script type="text/javascript"> $(document).ready(function() {
 	$('#stocks').DataTable({
-	"bLengthChange": false
+	"bLengthChange": false,
+	"searching": true
 	}
 	);
 
@@ -47,7 +48,7 @@ width:100%;
 echo $this->Form->create('Stocklist', array('class' => 'fForm'));
 echo $this->Form->input('symbol'); ?>
 <div class='submit'>
-<?php  echo $this->Form->submit('Add Stock', array('div'=>false, 'name'=>'add'));
+<?php  echo $this->Form->submit('Add Stock', array('div'=>false, 'name'=>'add', 'class' => 'button'));
 ?>
 <?php //echo $this->Html->link('Add Stock','#', array('id' => 'submit-link','class' => 'button')); ?>
 
@@ -92,9 +93,7 @@ echo $this->Html->link(str_replace("\"", "", $stock['name']), array('action' => 
 <td><?php echo str_replace('"','',$stock['date']); ?></td>
 <?php endforeach; ?>
 </td>
-<td>
 
-</td>
 </tr>
 <?php endforeach; ?>
 </table>
