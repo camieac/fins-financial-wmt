@@ -46,22 +46,22 @@ class ClientsController extends AppController
     
     public function uploadImage()
     {
-        $this->Session->setFlash('starting uploading function...');
+        
         // Custom
         $folderToSaveFiles = WWW_ROOT . 'img/profile_pictures/'; //removed WWW_ROOT . 
-        $this->Session->setFlash('Got path');
+        
         if (!$this->request->is('post')) {
-            $this->Session->setFlash('NOT A POST');
+            $this->Session->setFlash('Image could not be uploaded, please contact your system administrator.');
             return false; // Not a POST data!
         }
-        $this->Session->setFlash('Checked post');
+        
         if (!empty($this->request->data)) {
-            $this->Session->setFlash('Checked data');
+            
             //Check if image has been uploaded
             if (!empty($this->request->data['Client']['profileImage'])) {
-                $this->Session->setFlash('Checked image');
+                
                 $file = $this->request->data['Client']['profileImage']; //put the data into a var for easy use
-                debug($file);
+                //debug($file);
                 $ext     = $file['type']; //pathinfo($file['name'], PATHINFO_EXTENSION);
                 $ext2    = pathinfo($file['name'], PATHINFO_EXTENSION);
                 $arr_ext = array(
@@ -70,7 +70,7 @@ class ClientsController extends AppController
                     'image/jpg'
                 ); //set allowed extensions
                 //only process if the extension is valid
-                $this->Session->setFlash('Type:' . $ext);
+                
                 if (in_array($ext, $arr_ext)) {
                     //$this->Session->setFlash('Checked valid extension');
                     //do the actual uploading of the file. First arg is the tmp name, second arg is 
@@ -85,38 +85,38 @@ class ClientsController extends AppController
 					// This will update Recipe with id 10
 					$this->Client->save($data);
                     //$this->Client->setProfileImageName($newFileName . '.' . $ext2);
-                    $this->Session->setFlash('new FileName:' . $newFilename);
+                    
                     
                     $newSaveDirectory = $folderToSaveFiles . $newFilename . '.' . $ext2;
-                    $this->Session->setFlash('save directory:' . $newSaveDirectory);
+                    
                     if (is_dir($folderToSaveFiles)) {
-                        $this->Session->setFlash('isDIr');
+                        
                     } else {
-                        $this->Session->setFlash('Specifies save directory is not a directory');
+                        $this->Session->setFlash('Image could not be uploaded, please contact your system administrator.');
                         return;
                     }
                     $isImage = getimagesize($file['tmp_name']);
-                    //debug($isImage);
+                    
                     if (!$isImage) {
-                        $this->Session->setFlash('File was not an image.');
-                        return;
+                        $this->Session->setFlash('Image could not be uploaded, please contact your system administrator.');
+                        return false;
                     }
-                    $this->Session->setFlash('tmp name:' . $file['tmp_name']);
+                    
                     
                     $result = move_uploaded_file($file['tmp_name'], $newSaveDirectory);
                     if ($result) {
-                        $this->Session->setFlash('File uploaded to ' . $newSaveDirectory);
+                       //IMage has been uploaded succesfully
+                        return true;
                     } else {
-                        $this->Session->setFlash('Directory: ' . $newSaveDirectory . ' name ' . $file['tmp_name']);
+                        $this->Session->setFlash('Image could not be uploaded, please contact your system administrator.');
+                        return false;
                     }
-                    //debug($result);
-                    //prepare the filename for database entry (optional)
-                    //$this->data['Image']['image'] = $file['name'];
+                    
                 } else {
                     return false;
                 }
             } else {
-                $this->Session->setFlash('Image has not been uploaded');
+                $this->Session->setFlash('Image could not be uploaded, please contact your system administrator.');
                 return false;
             }
             
@@ -181,7 +181,7 @@ class ClientsController extends AppController
                         ), array(
                             'Purchase.id' => $pid
                         ));
-                        $this->Session->setFlash(__('Your stock has been saved.'));
+                        $this->Session->setFlash(__('Your transaction has been processed.'));
                         return $this->redirect(array(
                             'action' => 'view',
                             $id
@@ -298,21 +298,13 @@ class ClientsController extends AppController
                 $success = $this->uploadImage();
                 //$this->Session->setFlash(__('File upload:'.$success));
                 
-                
+                return $this->redirect(array(
+                            'action' => 'index'
+                        ));
                 
                 $this->set('FAquery', $this->Client->getFAs());
                 
-                if ($this->request->is('post')) {
-                    $this->Client->create();
-                    if ($this->Client->save($this->request->data)) {
-                        $this->Session->setFlash(__('Your client has been saved.'));
-                        
-                        return $this->redirect(array(
-                            'action' => 'index'
-                        ));
-                    }
-                    $this->Session->setFlash(__('Unable to add your client.'));
-                }
+                
             }
         }
     }

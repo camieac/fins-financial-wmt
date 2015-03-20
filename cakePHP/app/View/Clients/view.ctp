@@ -70,14 +70,14 @@ if ($this->Session->read('Auth.User')) {
 if ($this->Session->read('Auth.User')) {
 ?>
 <div class = "dRoundedBox">
-	
+	<h3>Personal Profile</h3>
 
 <?php
     $imageName = ($client['Client']['imageName']);
     //echo $client['Client']['imageName'];
     $imageURL = 'profile_pictures/' . $imageName;
     //echo $imageURL;
-    if (!file_exists('img/'.$imageURL)) {
+    if (!file_exists('img/'.$imageURL) | !isset($imageName)) {
         $imageURL = 'profile_pictures/default.png';
     }
 ?>
@@ -143,7 +143,7 @@ Last Modified: <?php
 
 </div> <!-- for dRoundedBox -->
 <div class = "dRoundedBox">
-
+<h3>Transaction History</h3>
 <?php
     $id = $this->params['pass'];
 ?>
@@ -242,6 +242,7 @@ Last Modified: <?php
 </table>
 </div>
 <div class = "dRoundedBox">
+	<h3>New Transaction</h3>
 <font size = "4"><p><b>Total:</b></p></font>
 <p><?php
     echo "£" . number_format($total, 2);
@@ -274,6 +275,7 @@ Last Modified: <?php
     echo $this->Form->submit('Buy Stock', array(
         'div' => false,
         'name' => 'buy',
+        'class' => 'button',
         array(
             'rule' => 'notEmpty'
         )
@@ -301,7 +303,7 @@ Last Modified: <?php
             //echo $twitter_timeline;
             $decode = json_decode($twitter_timeline, true); //getting the file content as array
             
-            echo '<div class = "dRoundedBox">';
+            echo '<div class = "dRoundedBox"><h3>Twitter Feed</h3>';
             //foreach($decode as $tweet) {
             //   $tweet_text = $tweet["text"];
             //   echo '<li>';
@@ -318,7 +320,7 @@ Last Modified: <?php
 ?>
 <thead>
 <tr>
-<th>Twitter Feed for @<?php
+<th>@<?php
             echo $client['Client']['twitter'];
 ?></th>
 </tr>

@@ -101,8 +101,11 @@ echo $this->Form->input('Client.profileImage', array(
 ));
 echo $this->Form->input('imageName', array(
     'type' => 'hidden',
-    'value' => sha1(openssl_random_pseudo_bytes(100))
+    'value' => ''
 ));
-echo $this->Form->end('Save Client');
+echo $this->Form->end(array(
+    'label' => 'Save Client',
+    'class' => 'button'
+));
 ?>
 </div>
