@@ -5,6 +5,17 @@ class HomeController extends AppController {
 public $helpers = array('Html', 'Form');
 
 public function index(){
+	if ($this->Session->read('Auth.User')) {
+
+$user = AuthComponent::user('username');
+$this->set('user',$user);
+debug($user);
+$chartData = array();
+$this->set('chartData',$chartData);
+	
+}else{
+	$this->redirect(array('controller' => 'users', 'action' => 'login'));
+}
 }
 public function getFTFeed(){
 	$this->autoRender = false;

@@ -50,13 +50,20 @@ return $this->redirect(array('action' => 'index'));
 }
 
 public function view() {
-if ($this->Session->read('Auth.User')) 
-{
-$this->set('stock', $this->Stocklist->find('all'));
+if ($this->Session->read('Auth.User')) {
+	$this->set('stock', $this->Stocklist->find('all'));
 }
-else
-{
-$this->redirect(array('controller' => 'users', 'action' => 'login'));
+else{
+	$this->redirect(array('controller' => 'users', 'action' => 'login'));
+}
+}
+
+public function quickview() {
+if ($this->Session->read('Auth.User')) {
+	$this->set('stock', $this->Stocklist->find('all'));
+}
+else{
+	$this->redirect(array('controller' => 'users', 'action' => 'login'));
 }
 }
 

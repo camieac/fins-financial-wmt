@@ -20,19 +20,70 @@
 		</noscript>
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+<style>
+.iChart {
+border-radius:1em;
+background:white;
+padding:0.5em;
+margin:0.5em;
+background:grey;
+}
+.dQuickview{
+padding:1em;
+border-radius:1em;
+background:white;
+}
+</style>
+
+<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" language="javascript" src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.css">
+<script type="text/javascript"> $(document).ready(function() {
+	$('#tQuickView').DataTable({
+	"bLengthChange": false,
+	"scrollX": true,
+	"paging": false,
+	"searching":false,
+	"ordering":false,
+	"info":false
+	}
+	);
+
+	$( ".iChart" ).draggable({ snap: ".iChart" });
+
+} ); 
+
+</script>
 	</head>
 	<body>
 
 		<div id="banner-wrapper">
 			<div class="container">
 
-				<div id="banner">
-					<h2>Possible graph here</h2>
-					<span>And put something almost as cool here, but a bit longer ...</span>
+				
+					
+<div class = "dQuickView">
+<table id = "tQuickView">
+<thead><tr><th></th><th></th><th></th><th></th><th></th><th></th></tr></thead>
+<tbody>
+<tr>
+<td><div class="iChart" draggable="true"><iframe scrolling = "no" src = "http://emarkettrader.co.uk/stocklists/quickview?stock=GOOG" ></iframe></div></td>
+<td><div class="iChart" draggable="true"><iframe scrolling = "no" src = "http://emarkettrader.co.uk/stocklists/quickview?stock=YHOO" ></iframe></div></td>
+<td><div class="iChart" draggable="true"><iframe scrolling = "no" src = "http://emarkettrader.co.uk/stocklists/quickview?stock=GOOG" ></iframe></div></td>
+<td><div class="iChart" draggable="true"><iframe scrolling = "no" src = "http://emarkettrader.co.uk/stocklists/quickview?stock=YHOO" ></iframe></div></td>
+<td><div class="iChart" draggable="true"><iframe scrolling = "no" src = "http://emarkettrader.co.uk/stocklists/quickview?stock=GOOG" ></iframe></div></td>
+<td><div class="iChart" draggable="true"><iframe scrolling = "no" src = "http://emarkettrader.co.uk/stocklists/quickview?stock=YHOO" ></iframe></div></td>
+</tr>
+</tbody>
+</table>
+					
 				</div>
 
 			</div>
 		</div>
+		<?php if ($user = 'admin') { ?>
+			
 		<div id="main">
 			<div class="container">
 				<div class="row main-row">
@@ -104,6 +155,7 @@
 						
 				
 			</div>
+			<?php } ?>
 		</div>
 	</body>
 </html>
