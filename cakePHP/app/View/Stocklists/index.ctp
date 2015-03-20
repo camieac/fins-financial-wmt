@@ -59,7 +59,7 @@ echo $this->Form->input('symbol'); ?>
 <table id="stocks" class="display" cellspacing="0" width="100%">
 <thead>
 <tr>
-<th>Id</th>
+
 <th>Symbol</th>
 <th>Name</th>
 <th>Change Percentage</th>
@@ -68,13 +68,13 @@ echo $this->Form->input('symbol'); ?>
 <th>Close Value</th>
 <th>High Value</th>
 <th>Low Value</th>
-<th>Created</th>
+<th>Date Checked</th>
 </tr>
 </thead>
 <!-- Here's where we loop through our $stocklists array, printing out stocklist info -->
 <?php foreach ($stocklists as $stocklist): ?>
 <tr>
-<td><?php echo $stocklist['Stocklist']['id']; ?></td>
+
 <td><?php echo $stocklist['Stocklist']['symbol']; ?></td>
 <td>
 <?php $company = $stocklist['Stocklist']['symbol'];
@@ -84,15 +84,16 @@ $result = $this->Stocks->get(array($company));?>
 echo $this->Html->link(str_replace("\"", "", $stock['name']), array('action' => 'view?stock=' . $stocklist['Stocklist']['symbol']));?>
 </td>
 <td><?php echo str_replace("\"", "", $stock['change']).'%'; ?></td>
-<td><?php echo $stock['current'] ?></td>
+<td><?php if($stock['current'] = 'N/A'){echo $stock['close'];}else{echo $stock['current']; } //Using close price if current price is not available ?></td> 
 <td><?php echo $stock['open'] ?></td>
 <td><?php echo $stock['close'] ?></td>
 <td><?php echo $stock['high'] ?></td>
 <td><?php echo $stock['low'] ?></td>
+<td><?php echo str_replace('"','',$stock['date']); ?></td>
 <?php endforeach; ?>
 </td>
 <td>
-<?php echo $stocklist['Stocklist']['created']; ?>
+
 </td>
 </tr>
 <?php endforeach; ?>

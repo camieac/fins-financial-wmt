@@ -1,5 +1,5 @@
 <?php
-
+App::uses('StocksHelper', 'View/Helper');
 // File: /app/Controller/StocklistsController.php
 
 class StocklistsController extends AppController {
@@ -21,11 +21,16 @@ $value = $this->request->data['Stocklist']['symbol'];
 $this->set('companySym', $value);
 
 $this->Stocklist->create();
+if($this->checkExists($value)){
 if ($this->Stocklist->save($this->request->data)) {
 $this->Session->setFlash(__('Your stock has been saved.'));
 return $this->redirect(array('action' => 'index'));
+}else{
+	$this->Session->setFlash(__('Your stock could not be saved.'));
 }
-$this->Session->setFlash(__('Unable to add your stock.'));
+}else{
+$this->Session->setFlash(__('Stock was not added because it does not exist.'));
+}
 }
 
 
@@ -66,6 +71,19 @@ else{
 	$this->redirect(array('controller' => 'users', 'action' => 'login'));
 }
 }
+
+function checkExists($symbol){
+		//Example request https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.stocks%20where%20symbol%3D%22kokok%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=
+		$request = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.stocks%20where%20symbol%3D%22'.$symbol.'%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=';
+		debug($request);
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $request);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		$output = curl_exec($ch);
+		curl_close($ch);
+		$exists = (strpos($output,'CompanyName') !== false);
+		return $exists;
+	}
 
 
 } ?>
