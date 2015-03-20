@@ -49,6 +49,10 @@ public $validate = array(
     {
        return $this->query("SELECT clients.name FROM clients");
     }
+    public function getCustomer($id)
+    {
+       return $this->query('SELECT * FROM clients WHERE clients.id = '.$id);
+    }
     
      public function getFAs()
     {

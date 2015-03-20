@@ -61,7 +61,6 @@ echo $this->Html->link('View in Calendar', '/full_calendar', array(
 <table id="meetings" class="display" cellspacing="0" width="100%">
 <thead>
 <tr>
-<th>Id</th>
 <th>Title</th>
 <th>Details</th>
 <th>Customer</th>
@@ -80,9 +79,6 @@ foreach ($events as $event):
 ?>
 
 <tr>
-<td><?php
-    echo $event['Meeting']['id'];
-?></td>
 <td>
 <?php
     echo $event['Meeting']['title'];

@@ -97,17 +97,14 @@ throw new MethodNotAllowedException();
 }
 if ($this->Meeting->delete($id)) {
 $this->Session->setFlash(
-__('The Meeting with id: %s has been deleted.', h($id))
+__('The Meeting has been deleted.')
 );
 return $this->redirect(array('action' => 'index'));
 }
 }
 
 
-public function Calendar() {
-	
 
-}
 public function test() {
 
 if ($this->Session->read('Auth.User')) 
