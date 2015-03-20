@@ -55,8 +55,11 @@ return $this->redirect(array('action' => 'index'));
 }
 
 public function view() {
+	$stock = $this->request->query['stock'];
+	debug($stock);
 if ($this->Session->read('Auth.User')) {
 	$this->set('stock', $this->Stocklist->find('all'));
+	$this->set('rss',$this->getRSS($stock));
 }
 else{
 	$this->redirect(array('controller' => 'users', 'action' => 'login'));
@@ -83,6 +86,16 @@ function checkExists($symbol){
 		$exists = (strpos($output,'CompanyName') !== false);
 		return $exists;
 	}
+	
+function getRSS($symbol){
+	//Example request http://finance.yahoo.com/rss/headline?s=ticker(s)
+	$request = 'http://finance.yahoo.com/rss/headline?s='.$symbol;
+	debug($request);
+	$output = $xml = Xml::build($request);
+	$output = Xml::toArray($output);
+	//debug($output);
+	return $output;
+}
 
 
 } ?>

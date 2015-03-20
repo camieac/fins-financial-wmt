@@ -7,7 +7,11 @@
 	"bLengthChange": false
 	}
 	);
-
+$('#tNews').DataTable({
+	"bLengthChange": false,
+	"scrollY":"200px"
+	}
+	);
 	$('#submit-link').click(function(){
   $('#StocklistIndexForm').submit();
 });
@@ -153,5 +157,24 @@ else {
 	<?php endforeach; ?>
 	</table>
 	</div>
-</script>
+<div id="chart_table_div" class="dRoundedBox">
+  <h3><?php echo str_replace('Yahoo! Finance:','',$rss['rss']['channel']['title']);?></h3>
+  <table id ="tNews">
+	  <thead><tr><th></th></tr></thead>
+	  <tbody>
+	<?php
+	//$items = $rss['rss'];
+	//debug($items);
+	$itemss = $rss['rss']['channel']['item'];
+	
+	//debug($itemss);
+foreach($itemss as $item) { ?>
+<tr><td><a title = "<?php echo $item['pubDate'] ?>" href="<?php echo $item['link'] ?>"><?php echo $item['title']; ?></a>	</td></tr>
+	
+<?php
+}
+
+	
+	?></tbody></table>
+	</div>
 
