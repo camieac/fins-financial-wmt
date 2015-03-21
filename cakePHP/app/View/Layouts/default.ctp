@@ -21,6 +21,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css
 			echo $this->Html->css(array('//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css'), null, array('inline' => false));
 			echo $this->Html->script('jquery-1.11.2.js'); 
+			echo $this->Html->script('jquery-ui'); 
 			//echo $this->Html->script('jquery-1.3.2.min'); 
 			echo $this->Html->script('moment.min');
 			//echo $this->Html->script('jquery.min'); 

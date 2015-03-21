@@ -7,6 +7,7 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link href="http://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		
 		<?php echo $this->Html->script('jquery.min'); ?>
 		
@@ -21,26 +22,34 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
 <style>
-.iChart {
-border-radius:1em;
-background:white;
-padding:0.5em;
-margin:0.5em;
-background:grey;
-}
+
 .dQuickview{
 padding:1em;
 border-radius:1em;
 background:white;
 }
-</style>
+.frameWrap{
+    width :520px;
+    height: 220px;
+    display:inline;
+}
 
-<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+.loader {
+	position:relative;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) ;
+    width:36px;
+    height:36px;
+    bottom:60px;
+
+}
+</style>
 <script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" language="javascript" src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.css">
-<script type="text/javascript"> $(document).ready(function() {
-	$('#tQuickView').DataTable({
+<script type="text/javascript">
+	$(document).ready(function() {
+	$('#tChart').DataTable({
 	"bLengthChange": false,
 	"scrollX": true,
 	"paging": false,
@@ -49,39 +58,93 @@ background:white;
 	"info":false
 	}
 	);
-
-	$( ".iChart" ).draggable({ snap: ".iChart" });
-
 } ); 
-
 </script>
 	</head>
 	<body>
 
-		<div id="banner-wrapper">
-			<div class="container">
 
-				
-					
-<div class = "dQuickView">
-<table id = "tQuickView">
-<thead><tr><th></th><th></th><th></th><th></th><th></th><th></th></tr></thead>
-<tbody>
-<tr>
-<td><div class="iChart" draggable="true"><iframe scrolling = "no" src = "http://emarkettrader.co.uk/stocklists/quickview?stock=GOOG" ></iframe></div></td>
-<td><div class="iChart" draggable="true"><iframe scrolling = "no" src = "http://emarkettrader.co.uk/stocklists/quickview?stock=YHOO" ></iframe></div></td>
-<td><div class="iChart" draggable="true"><iframe scrolling = "no" src = "http://emarkettrader.co.uk/stocklists/quickview?stock=GOOG" ></iframe></div></td>
-<td><div class="iChart" draggable="true"><iframe scrolling = "no" src = "http://emarkettrader.co.uk/stocklists/quickview?stock=YHOO" ></iframe></div></td>
-<td><div class="iChart" draggable="true"><iframe scrolling = "no" src = "http://emarkettrader.co.uk/stocklists/quickview?stock=GOOG" ></iframe></div></td>
-<td><div class="iChart" draggable="true"><iframe scrolling = "no" src = "http://emarkettrader.co.uk/stocklists/quickview?stock=YHOO" ></iframe></div></td>
-</tr>
-</tbody>
-</table>
-					
-				</div>
+<div id="banner-wrapper">
+	<table id = "tChart">
+		<thead>
+			<tr>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<div class="frameWrap">
+						<img class = "loader" id="loader1" src="img/loader.gif" width="36" height="36" alt="loading gif"/>
+						<iframe id="iframe1" width="520" height="220"src="http://emarkettrader.co.uk/stocklists/quickview?stock=GOOG" ></iframe>
+					</div>
+					<script>
+						$(document).ready(function () {
+							$('#iframe1').on('load', function () {
+								$('#loader1').hide();
+							});
+						});
+					</script>
+				</td>
+				<td>
+					<div class="frameWrap">
+						<img class = "loader" id="loader2" src="img/loader.gif" width="36" height="36" alt="loading gif"/>
+						<iframe id="iframe2" width="520" height="220"src="http://emarkettrader.co.uk/stocklists/quickview?stock=GOOG" ></iframe>
+					</div>
+					<script>
+						$(document).ready(function () {
+							$('#iframe2').on('load', function () {
+								$('#loader2').hide();
+							});
+						});
+					</script>
+				</td>
+				<td>
+					<div class="frameWrap">
+						<img class = "loader" id="loader3" src="img/loader.gif" width="36" height="36" alt="loading gif"/>
+						<iframe id="iframe3" width="520" height="220"src="http://emarkettrader.co.uk/stocklists/quickview?stock=GOOG" ></iframe>
+					</div>
+					<script>
+						$(document).ready(function () {
+							$('#iframe3').on('load', function () {
+								$('#loader3').hide();
+							});
+						});
+					</script>
+				</td>
+				<td>
+					<div class="frameWrap">
+						<img class = "loader" id="loader4" src="img/loader.gif" width="36" height="36" alt="loading gif"/>
+						<iframe id="iframe4" width="520" height="220"src="http://emarkettrader.co.uk/stocklists/quickview?stock=GOOG" ></iframe>
+					</div>
+					<script>
+						$(document).ready(function () {
+							$('#iframe4').on('load', function () {
+								$('#loader4').hide();
+							});
+						});
+					</script>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+		
+		
+		
+		
+		
 
-			</div>
-		</div>
+
+		
+		
+		
+		
+		
+		
 		<?php if ($user = 'admin') { ?>
 			
 		<div id="main">
