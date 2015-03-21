@@ -58,6 +58,17 @@ background:white;
 	"info":false
 	}
 	);
+});
+$(document).ready(function() {
+	$('#tNews').DataTable({
+	"bLengthChange": false,
+	"scrollY": '600px',
+	"paging": false,
+	"searching":false,
+	"ordering":false,
+	"info":false
+	}
+	);
 } ); 
 </script>
 	</head>
@@ -166,20 +177,28 @@ background:white;
 						
 						<section>
 							<h2>Financial Times Feed</h2>
+						<?php //debug($this->params) ;?>
+							<?php //debug($financialTimes); ?>
+
+  <table id ="tNews">
+	  <thead><tr><th></th></tr></thead>
+	  <tbody>
+	<?php
+	//$items = $rss['rss'];
+	//debug($items);
+	$itemss = $financialTimes['rss']['channel']['item'];
+	
+	//debug($itemss);
+foreach($itemss as $item) { ?>
+<tr><td><a title = "<?php echo $item['pubDate'] ?>" href="<?php echo $item['link'] ?>"><?php echo $item['title']; ?></a>	</td></tr>
+<tr><td style = "padding-left:5em;"><?php echo $item['description']; ?></td></tr>
+	
+<?php
+}
+
+	
+	?></tbody></table>
 							
-							
-							<ul class="small-image-list">
-								<li>
-									<?php	echo $this->Html->image('pic2.jpg')?>
-									<h4>Jane Anderson</h4>
-									<p>Varius nibh. Suspendisse vitae magna eget et amet mollis justo facilisis amet quis.</p>
-								</li>
-								<li>
-								<?php	echo $this->Html->image('pic2.jpg')?>
-									<h4>James Doe</h4>
-									<p>Vitae magna eget odio amet mollis justo facilisis amet quis. Sed sagittis consequat.</p>
-								</li>
-							</ul>
 						</section>
 					
 					</div>

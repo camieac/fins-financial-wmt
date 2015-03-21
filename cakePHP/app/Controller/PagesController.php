@@ -18,7 +18,8 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-App::uses('AppController', 'Controller');
+App::uses('AppController', 'Controller','Xml','Utility');
+
 
 /**
  * Static content controller
@@ -46,6 +47,7 @@ class PagesController extends AppController {
  *	or MissingViewException in debug mode.
  */
 	public function display() {
+ 		$this->set('financialTimes', $this->getFTFeed());
 		$path = func_get_args();
 
 		$count = count($path);
@@ -74,4 +76,19 @@ class PagesController extends AppController {
 			throw new NotFoundException();
 		}
 	}
+
+
+
+public function getFTFeed(){
+ App::import('Utility', 'Xml');
+	$this->autoRender = false;
+	$url = "http://www.ft.com/rss/home/uk";
+	$parsed_xml = $xml = Xml::build($url);
+	$array = Xml::toArray($parsed_xml);
+	// $xml now is a instance of SimpleXMLElement
+	
+	//$parsed_xml =& new XML($url);
+	return $array;
+    //$feed = Xml::toArray(Xml::build(Configure::read($feed)));
+}
 }
