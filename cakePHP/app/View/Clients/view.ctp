@@ -139,6 +139,9 @@ Created: <?php
 <br>
 Last Modified: <?php
     echo $client['Client']['modified'];
+	echo $this->Html->link(
+'Edit', array('action' => 'edit', 'controller' => 'clients', $client['Client']['id'])
+);
 ?>
 
 </div> <!-- for dRoundedBox -->
