@@ -9,6 +9,9 @@ public function beforeFilter() {
     $this->Auth->allow('add', 'logout');
 }
 
+
+
+
 public function login() {
     if ($this->request->is('post')) {
         if ($this->Auth->login()) {
@@ -56,24 +59,18 @@ public function logout() {
         }
     }
 
-    public function edit($id = null) {
-        $this->User->id = $id;
-        if (!$this->User->exists()) {
-            throw new NotFoundException(__('Invalid user'));
-        }
-        if ($this->request->is('post') || $this->request->is('put')) {
-            if ($this->User->save($this->request->data)) {
-                $this->Session->setFlash(__('The user has been saved'));
-                return $this->redirect(array('action' => 'index'));
-            }
-            $this->Session->setFlash(
-                __('The user could not be saved. Please, try again.')
-            );
+    function change_password() {
+    if (!empty($this->data)) {
+        if ($this->User->save($this->data)) {
+            $this->Session->setFlash('Password has been changed.');
+            // call $this->redirect() here
         } else {
-            $this->request->data = $this->User->read(null, $id);
-            unset($this->request->data['User']['password']);
+            $this->Session->setFlash('Password could not be changed.');
         }
+    } else {
+        $this->data = $this->User->findById($this->Auth->user('id'));
     }
+}
 
     public function delete($id = null) {
         // Prior to 2.5 use
