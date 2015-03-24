@@ -72,7 +72,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			<div class="12u">
 				<div id="copyright">
 					&copy; Fin's Financials Ltd. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
-			 | 		<a href = "/help">Help</a>  <?php if ($this->Session->read('Auth.User')){echo '|'.$this->Html->link('Logout','/users/logout', array('class' => 'button','controller' => 'users', 'action' => 'logout'));} ?>
+			 | 		<a href = "/help">Help</a>  <?php if ($this->Session->read('Auth.User')){echo '|'.$this->Html->link('Logout','/users/logout', array('class' => 'button','controller' => 'users', 'action' => 'logout')). '|' . $this->Html->link('Settings','/users', array('class' => 'button','controller' => 'users', 'action' => 'index'));} ?>
 				</div>
 			</div>
 		</div>
