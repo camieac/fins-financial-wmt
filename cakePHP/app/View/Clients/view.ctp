@@ -234,13 +234,14 @@ echo $this->Form->end()?></td>
 
 <?php endforeach; ?>
 </table>
-</div>
-<div class = "dRoundedBox">
-	<h3>New Transaction</h3>
 <font size = "4"><p><b>Total:</b></p></font>
 <p><?php
     echo "£" . number_format($total, 2);
 ?></p>
+</div>
+<div class = "dRoundedBox">
+	<h3>New Transaction</h3>
+
 
 <?php
     $query = Set::flatten($listofstocks);
