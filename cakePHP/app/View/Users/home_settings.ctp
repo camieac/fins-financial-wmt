@@ -7,14 +7,17 @@
         <?php 
 		echo $this->Form->create('User');
 		echo $this->Form->input('id');
-		echo $this->Form->input('index1');
-		echo $this->Form->input('index2');
-		echo $this->Form->input('index3');
-		echo $this->Form->input('index4');
-		echo $this->Form->input('home_twitter');
+		echo $this->Form->input('index1',array('label' => array('text' => 'Ticker 1')));
+		echo $this->Form->input('index2',array('label' => array('text' => 'Ticker 2')));
+		echo $this->Form->input('index3',array('label' => array('text' => 'Ticker 3')));
+		echo $this->Form->input('index4',array('label' => array('text' => 'Ticker 4')));
+		echo $this->Form->input('home_twitter',array('label' => array('text' => 'Twitter Hashtag')));
 
 	?>
     </fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(array(
+    'label' => 'Save Settings',
+    'class' => 'button'
+)); ?>
 </div>
 </div>
