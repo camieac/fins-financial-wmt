@@ -220,28 +220,19 @@ Last Modified: <?php
         }
 ?>
 
-<td><?php
-        echo "£" . number_format($value, 2);
-?></td>
-<td><?php
-        echo $this->Form->postLink('Sell', array(
-            'action' => 'deleteStock' . '/' . $stock['purchases']['id'] . '/' . $id[0]
-        ), array(
-            'confirm' => 'Are you sure?'
-        ));
-?></td>
-<td><?php
-        echo $stock['purchases']['created'];
-?></td>
+<td><?php echo "£".number_format($value, 2); ?></td>
+<td><?php echo $this->Form->create('Purchase');
+echo $this->Form->input('quantity');
+$test = $stock['purchases']['id'];
+echo $this->Form->hidden('id', array('default'=>$test));
+echo $this->Form->submit('Sell Stock', array('div'=>false, 'name'=>('sell'), 'class' => 'button buttonTable',array('rule' => 'notEmpty')));
+echo $this->Form->end()?></td>
+<td><?php echo $stock['purchases']['created']; ?> </td>
 </tr>
 
-<?
-        $total = $total + $value;
-?>
+<?$total = $total + $value; ?>
 
-<?php
-    endforeach;
-?>
+<?php endforeach; ?>
 </table>
 </div>
 <div class = "dRoundedBox">
