@@ -40,6 +40,30 @@ class User extends AppModel {
 				'rule' => 'passwordsMatch',
 				'message' => 'Passwords do not match',
 			)
+		),
+	 	'index1' => array(
+			'valid' => array(
+				'rule' => 'validIndex1',
+				'message' => 'Not a valid index.',
+			)
+		),
+	 	'index2' => array(
+			'valid' => array(
+				'rule' => 'validIndex2',
+				'message' => 'Not a valid index.',
+			)
+		),
+	 	'index3' => array(
+			'valid' => array(
+				'rule' => 'validIndex3',
+				'message' => 'Not a valid index.',
+			)
+		),
+	 	'index4' => array(
+			'valid' => array(
+				'rule' => 'validIndex4',
+				'message' => 'Not a valid index.',
+			)
 		)
     );
     
@@ -80,6 +104,29 @@ public function checkPasswordStrength($data) {
   	return false;
     }else{
     return(true); }
+}
+public function validIndex1($data){
+return $this->validIndex($this->data[$this->alias]['index1']);
+}
+public function validIndex2($data){
+return $this->validIndex($this->data[$this->alias]['index2']);
+}
+public function validIndex3($data){
+return $this->validIndex($this->data[$this->alias]['index3']);
+}
+public function validIndex4($data){
+return $this->validIndex($this->data[$this->alias]['index4']);
+}
+public function validIndex($index){
+//Example request https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.stocks%20where%20symbol%3D%22kokok%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=
+		$request = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.stocks%20where%20symbol%3D%22'.urlencode($index).'%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=';
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $request);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		$output = curl_exec($ch);
+		curl_close($ch);
+		$exists = (strpos($output,'CompanyName') !== false);
+		return $exists;
 }
 
 } ?>

@@ -72,6 +72,19 @@ public function logout() {
     }
 }
 
+function home_settings() {
+    if (!empty($this->data)) {
+        if ($this->User->save($this->data)) {
+            $this->Session->setFlash('Home settings have been updated');
+            // call $this->redirect() here
+        } else {
+            $this->Session->setFlash('Settings could not be changed.');
+        }
+    } else {
+        $this->data = $this->User->findById($this->Auth->user('id'));
+    }
+}
+
     public function delete($id = null) {
         // Prior to 2.5 use
         // $this->request->onlyAllow('post');
