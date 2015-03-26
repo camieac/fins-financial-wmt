@@ -187,7 +187,7 @@
     border: none;
     text-decoration:underline;
 }
-input#UserUsername, input#UserPassword {
+input#UserUsername.iLogin, input#UserPassword.iLogin {
 	border: 5px solid white; 
     -webkit-box-shadow: 
       inset 0 0 8px  rgba(0,0,0,0.1),

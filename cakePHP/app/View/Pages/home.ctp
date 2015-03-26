@@ -167,9 +167,7 @@ $(document).ready(function() {
 							<h2>Financial Twitter Feed</h2>
 							<p><a class="twitter-timeline"  href="https://twitter.com/hashtag/Finance" data-widget-id="564605993368449024">#Finance Tweets</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
-							<footer class="controls">
-								<a href="http://html5up.net" class="button">link to designer page</a>
-							</footer>
+							
 						</section>
 					
 					</div>

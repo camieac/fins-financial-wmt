@@ -12,7 +12,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		
 			echo $this->Html->meta('icon');
 			echo $this->Html->css('skel');
-			echo $this->Html->css('style');
+			//echo $this->Html->css('style');
 			echo $this->Html->css('style-desktop');
 			echo $this->Html->css('fullcalendar'); 
 		

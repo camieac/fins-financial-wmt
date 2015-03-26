@@ -41,7 +41,7 @@ width:100%;
 } ); </script>
 
 
-<h1><font size="6">Stocks</font></h1>
+<h2>Stocks</h2>
 
 <div class="dRoundedBox">
 <?php

@@ -56,8 +56,8 @@ echo __('Please enter your username and password');
         </legend>
 
        <?php
-echo $this->Form->input('username');
-echo $this->Form->input('password');
+echo $this->Form->input('username',array('class' => 'iLogin'));
+echo $this->Form->input('password',array('class' => 'iLogin'));
 ?>
     </fieldset>
 <?php

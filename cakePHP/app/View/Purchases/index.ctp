@@ -34,7 +34,7 @@ width:100%;
 <body>
 <?php $i = 0;  ?>
 
-<h1><font size="6">Purchases</font></h1>
+<h2>Purchases</h2>
 <div class="dRoundedBox">
 
 <table id="purchases" class="display" cellspacing="0" width="100%">
@@ -45,7 +45,7 @@ width:100%;
 <th>Quantity</th>
 <th>Price Bought At</th>
 <th>Total Value</th>
-<th>Created</th>
+<th>Purchase Date</th>
 </tr>
 </thead>
 
@@ -73,4 +73,3 @@ $result = $this->Stocks->get(array($query[$i]['stocklists']['symbol']));
 </table>
 
 </div>
-<p><?php echo $this->Html->link('Logout','/users/logout', array('class' => 'button','controller' => 'users', 'action' => 'logout')); ?></p>

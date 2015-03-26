@@ -44,7 +44,7 @@ $i = 0;
 
 
 
-<h1><font size="6">Meetings</font></h1>
+<h2>Meetings</h2>
 <div class = "dRoundedBox">
 <?php
 echo $this->Html->link('Add meeting', 'add', array(

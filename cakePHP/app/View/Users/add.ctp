@@ -1,4 +1,6 @@
 <!-- app/View/Users/add.ctp -->
+<h2>Add User</h2>
+<div class = "dRoundedBox">
 <div class="users form">
 <?php echo $this->Form->create('User'); ?>
     <fieldset>
@@ -10,5 +12,6 @@
         ));
     ?>
     </fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(array('label' =>'Add User','class' =>'button')); ?>
+</div>
 </div>

@@ -39,7 +39,7 @@ width:100%;
 } ); </script>
 
 
-<h1><font size="6">Clients</font></h1>
+<h2>Clients</h2>
 
 <div class = "dRoundedBox"><?php echo $this->Html->link('Add client','add', array('class' => 'button')); ?></div>
 <div class = "dRoundedBox">
