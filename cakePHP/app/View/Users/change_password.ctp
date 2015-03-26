@@ -3,7 +3,7 @@
 <div class="users form">
 <?php echo $this->Form->create('User'); ?>
     <fieldset>
-        <legend><?php echo __('Add User'); ?></legend>
+        <legend><?php echo __('Change Password'); ?></legend>
         <?php 
 		echo $this->Form->create('User');
 		echo $this->Form->input('id');
