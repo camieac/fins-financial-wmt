@@ -60,9 +60,10 @@ public $validate = array(
 
 );
 
+
      public function getFAs()
     {
-       return $this->query("SELECT fas.name, fas.username FROM fas");
+       return $this->query('SELECT users.name, users.username FROM users WHERE role = "fa"');
     }
     
      public function getStocks()
@@ -79,6 +80,9 @@ public $validate = array(
     {
        return $this->query($a);
     }
+	public function setProfileImageName(){
+		//$this->query("INSERT INTO ff (clients) VALUES (imageName);");
+	}
     
 
 }

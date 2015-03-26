@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 10.113.211.9
--- Generation Time: Mar 25, 2015 at 12:12 PM
+-- Generation Time: Mar 26, 2015 at 04:08 PM
 -- Server version: 5.6.20-log
 -- PHP Version: 5.3.3
 
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `clients` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `nis` (`nis`),
   KEY `fa` (`fa`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=257 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=260 ;
 
 --
 -- Dumping data for table `clients`
@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS `clients` (
 INSERT INTO `clients` (`id`, `name`, `gender`, `dateOfBirth`, `nis`, `phoneNo`, `address`, `balance`, `fa`, `created`, `modified`, `twitter`, `imageName`) VALUES
 (104, 'John Smith', 'F', '2006-02-03', '637126389', '123123', 'dasdasdas', 23424, 'pe70', '2015-03-12 18:37:07', '2015-03-12 18:37:07', NULL, NULL),
 (197, 'Finlay Reynolds', 'm', '1932-05-05', '8057354', '7979878979', 'Heriot-Watt', 999999, 'Duis', '2015-03-15 15:48:33', '2015-03-15 15:48:33', '13Finster', NULL),
-(8, 'Kitra Hubbard', 'M', '2013-11-13', 'JZ-75-64-72-99 B', '01115781703', 'Ap #885-8859 Pellentesque Rd.', 10399, 'pe70', '2015-09-18 03:40:20', '2015-03-20 18:20:40', 'camieac', NULL),
+(8, 'Kitra Hubbard', 'M', '2013-11-13', 'JZ-75-64-72-99 B', '01115781703', 'Ap #885-8859 Pellentesque Rd.', 1276, 'pe70', '2015-09-18 03:40:20', '2015-03-26 15:58:46', 'camieac', ''),
 (198, 'Jack Doe', 'F', '2004-08-05', 'JZ 55 77 66 99 z', '92830921', 'PHP Avenue', 34, 'pede.', '2015-03-16 21:14:19', '2015-03-17 14:15:17', 'camieac', NULL),
 (10, 'Nicole Dickerson', 'M', '2001-10-14', 'JZ-93-41-16-26 B', '01911500592', '252-4987 Eu, St.', 73953, 'pe70', '2014-10-18 01:09:02', '2014-11-24 00:35:24', NULL, NULL),
 (11, 'Ariana Cabrera', 'F', '2003-01-16', 'JZ-62-32-42-66 B', '01916114216', '626-5263 Sed Rd.', 24545, 'er49', '2015-08-04 05:55:21', '2015-07-26 03:49:27', NULL, NULL),
@@ -60,7 +60,7 @@ INSERT INTO `clients` (`id`, `name`, `gender`, `dateOfBirth`, `nis`, `phoneNo`, 
 (13, 'Jamalia Hess', 'F', '2027-02-15', 'JZ-43-15-20-64 B', '01617951285', 'P.O. Box 202, 2024 Elit Rd.', 86010, 'er49', '2015-09-07 05:46:38', '2014-08-12 07:44:34', NULL, NULL),
 (14, 'Jade Mcpherson', 'M', '2021-02-15', 'JZ-18-53-68-60 B', '01819699925', '702-1948 Vitae, Ave', 34757, 'pe70', '2015-07-08 22:53:44', '2015-03-20 17:35:49', 'camieac', NULL),
 (15, 'Patrick Watkins', 'F', '2003-09-14', 'JZ-83-20-91-19 B', '01613291117', 'P.O. Box 953, 6619 Ridiculus Road', 90891, 'er49', '2014-04-06 19:52:12', '2014-04-21 15:42:49', NULL, NULL),
-(16, 'Hayden Boyer', 'M', '2017-03-15', 'JZ-01-01-65-24 B', '01914510019', 'P.O. Box 615, 6632 Justo Av.', 43380, 'pe70', '2015-07-04 08:25:48', '2014-11-27 04:31:30', NULL, NULL),
+(16, 'Hayden Boyer', 'M', '2017-03-15', 'JZ-01-01-65-24 B', '01914510019', 'P.O. Box 615, 6632 Justo Av.', 18235, 'pe70', '2015-07-04 08:25:48', '2014-11-27 04:31:30', NULL, NULL),
 (17, 'Amethyst Guy', 'F', '2002-04-15', 'JZ-92-52-16-38 B', '01810210822', '524-2278 Quis Avenue', 9488, 'er49', '2016-02-26 14:09:32', '2014-05-30 04:41:08', NULL, NULL),
 (18, 'Rhiannon Mcfadden', 'M', '2027-05-15', 'JZ-39-10-52-64 B', '01915777563', 'Ap #864-4851 At, Av.', 50060, 'pe70', '2014-04-11 04:01:43', '2014-09-14 19:02:02', NULL, NULL),
 (19, 'Sydnee Allen', 'F', '2016-07-14', 'JZ-76-18-68-28 B', '01612073147', 'P.O. Box 950, 4193 Dui St.', 58185, 'er49', '2015-04-29 16:15:07', '2015-02-25 22:36:11', NULL, NULL),
@@ -175,7 +175,7 @@ INSERT INTO `clients` (`id`, `name`, `gender`, `dateOfBirth`, `nis`, `phoneNo`, 
 (205, 'Image Image', 'F', '2004-08-05', '354380-4', '709809', 'PHP Avenue', 34, 'pede.', '2015-03-16 21:42:20', '2015-03-16 21:42:20', 'camieac', NULL),
 (206, 'Image Image', 'F', '2004-08-05', '90678f', '709809', 'PHP Avenue', 34, 'pede.', '2015-03-16 21:44:45', '2015-03-16 21:44:45', 'camieac', NULL),
 (207, 'Image Image', 'F', '2004-08-05', '9fdgdf', '709809', 'PHP Avenue', 34, 'pede.', '2015-03-16 21:50:22', '2015-03-16 21:50:22', 'camieac', NULL),
-(208, 'Image Image', 'F', '2004-08-05', '9fdgdfd', '709809', 'PHP Avenue', 34, 'pede.', '2015-03-16 21:51:35', '2015-03-16 21:51:35', 'camieac', NULL),
+(259, 'Cameron Craig', 'M', '2015-03-10', 'JB555555555', '3123123', 'sdasdasd', 12312, 'sad', '2015-03-26 15:50:24', '2015-03-26 15:50:24', 'camieac', ''),
 (209, 'Image Image', 'F', '2004-08-05', '9fdgdfda', '709809', 'PHP Avenue', 34, 'pede.', '2015-03-16 21:52:22', '2015-03-16 21:52:22', 'camieac', NULL),
 (210, 'Image Image', 'F', '2004-08-05', '9fdgdfddgf', '709809', 'PHP Avenue', 34, 'pede.', '2015-03-16 21:54:00', '2015-03-16 21:54:00', 'camieac', NULL),
 (211, 'Image Image', 'F', '2004-08-05', 'fxcxzc', '709809', 'PHP Avenue', 34, 'pede.', '2015-03-16 21:54:59', '2015-03-16 21:54:59', 'camieac', NULL),
@@ -184,34 +184,12 @@ INSERT INTO `clients` (`id`, `name`, `gender`, `dateOfBirth`, `nis`, `phoneNo`, 
 (226, 'Gerard Butler', 'M', '2002-01-02', 'n54645645', '6456456', 'fgdfg', 3453, 'er49', '2015-03-17 10:50:43', '2015-03-17 10:50:43', 'harrypotter', ''),
 (227, 'Gerard Butler', 'M', '2002-01-02', 'n546456456', '6456456', 'fgdfg', 3453, 'er49', '2015-03-17 10:59:14', '2015-03-17 10:59:14', 'harrypotter', ''),
 (228, 'Gerard Butler', 'M', '2002-01-02', 'n546456456a', '6456456', 'fgdfg', 3453, 'er49', '2015-03-17 11:02:51', '2015-03-17 11:02:51', 'harrypotter', ''),
-(236, 'Image Image', 'M', '2015-03-10', 'AC F5 EK PL fdsd', '35453454', 'desfdsfdsf', 999999, 'Proin', '2015-03-19 21:09:27', '2015-03-19 21:09:27', 'eevblog', 'hashed value of nis goes here'),
+(236, 'Image Image', 'M', '2015-03-10', 'AC F5 EK PL', '35453454', 'desfdsfdsf', 999999, 'Proin', '2015-03-19 21:09:27', '2015-03-26 12:05:13', 'eevblog', 'hashed value of nis goes here'),
 (255, 'Stuart Thain', 'M', '1991-10-31', 'JG 48 97 96 B', '767867868', 'b n nbvnjvgj', 856758, 'Proin', '2015-03-23 11:37:12', '2015-03-23 11:37:12', 'camieac', 'cae2f34755296b9ffc83125e51aa6808950073ea.png'),
 (251, 'Cameron Alexander Craig', 'M', '2015-03-02', 'fd54rdrg', '+447712255272', '83 Inveresk Road', 5345, 'pe70', '2015-03-20 17:46:37', '2015-03-20 17:46:37', 'camieac', '13ef214c519ff0629c5cacb5d5f6d8efe6dda3b7.png'),
 (252, 'Cameron Alexander Craig', 'M', '2015-03-02', 'fd54rdrgs', '+447712255272', '83 Inveresk Road', 5345, 'pe70', '2015-03-20 17:47:08', '2015-03-20 17:47:08', 'camieac', 'b29525061c16efbf4abed35b6d3d4428c7362b3b.png'),
 (253, 'Cameron Alexander Craig', 'M', '2015-03-02', 'fd54rdrgsd', '+447712255272', '83 Inveresk Road', 3640, 'pe70', '2015-03-20 17:50:55', '2015-03-20 17:50:55', 'camieac', '9d8663339abbbeb1271d3f0e0811c21cdf15f02d.png'),
 (254, 'Cameron Alexander Craig', 'M', '2015-03-10', 'fge54gfd', '+447712255272', '83 Inveresk Road', 3423, 'pe70', '2015-03-20 18:05:37', '2015-03-20 18:06:39', 'camieac', 'cf17850457dda2f4b3e95605531e232333a05692.jpg');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `event_types`
---
-
-CREATE TABLE IF NOT EXISTS `event_types` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `color` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
-
---
--- Dumping data for table `event_types`
---
-
-INSERT INTO `event_types` (`id`, `name`, `color`) VALUES
-(1, 'Meeting', 'Blue'),
-(2, 'Dinner', 'Red'),
-(3, 'Raving', 'Orange');
 
 -- --------------------------------------------------------
 
@@ -243,50 +221,30 @@ CREATE TABLE IF NOT EXISTS `events` (
 --
 
 INSERT INTO `events` (`id`, `title`, `details`, `customer`, `fa`, `created`, `modified`, `event_type_id`, `start`, `end`, `all_day`, `status`, `active`) VALUES
-(37, 'James Bond Meeting', 'Specre front-row seats', 7, 'sed', '2015-03-20 23:00:41', '2015-03-24 00:08:11', 1, '2015-03-24 22:00:00', '2015-04-03 11:00:00', 0, 'Scheduled', 1),
-(38, 'Meeting with Mr Parker', 'Discussing savings ', 101, 'pe70', '2015-03-23 09:18:23', '2015-03-23 09:18:54', 0, '2015-04-02 09:30:00', '2015-03-23 10:00:00', 1, 'Scheduled', 1);
+(37, 'James Bond Meeting', 'Specre front-row seats', 7, 'sed', '2015-03-20 23:00:41', '2015-03-25 14:39:37', 1, '2015-03-10 22:00:00', '2015-03-20 11:00:00', 0, 'Scheduled', 1),
+(38, 'Meeting with Mr Parker', 'Discussing savings ', 101, 'pe70', '2015-03-23 09:18:23', '2015-03-25 17:15:50', 0, '2015-03-24 09:30:00', '1970-01-01 01:00:00', 1, 'Scheduled', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fas`
+-- Table structure for table `event_types`
 --
 
-CREATE TABLE IF NOT EXISTS `fas` (
-  `username` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `name` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `gender` varchar(1) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `dateOfBirth` date DEFAULT NULL,
-  `created` datetime DEFAULT NULL,
-  `modified` datetime DEFAULT NULL,
-  `homeStock` varchar(200) CHARACTER SET utf8 DEFAULT NULL COMMENT 'The stocks to display on the home page',
-  PRIMARY KEY (`username`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+CREATE TABLE IF NOT EXISTS `event_types` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `color` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
 
 --
--- Dumping data for table `fas`
+-- Dumping data for table `event_types`
 --
 
-INSERT INTO `fas` (`username`, `name`, `gender`, `dateOfBirth`, `created`, `modified`, `homeStock`) VALUES
-('pe70', 'Patrice Evra', 'M', '1984-06-06', '2015-02-23 13:41:06', NULL, NULL),
-('er49', 'Evina Richards', 'F', '1988-04-09', '2015-02-23 13:41:06', NULL, NULL),
-('neque.', 'Cade Valencia', NULL, '2003-03-15', '2015-07-01 17:49:46', '2015-10-23 20:27:10', NULL),
-('taciti', 'Tanek Williams', NULL, '2028-10-15', '2014-12-11 22:52:52', '2015-11-28 02:57:01', NULL),
-('Cras', 'Leilani Martin', NULL, '2031-10-15', '2015-05-03 02:39:39', '2014-11-08 11:17:59', NULL),
-('Aenean', 'Grant Horn', NULL, '2007-04-15', '2015-07-08 21:25:18', '2015-03-05 20:53:23', NULL),
-('Duis', 'Vaughan Olsen', NULL, '2019-12-15', '2014-06-20 20:43:34', '2014-05-08 19:26:51', NULL),
-('adipiscing', 'Winifred Chan', NULL, '2004-01-16', '2014-11-07 04:16:02', '2014-09-08 20:08:25', NULL),
-('sed', 'Chava Hays', NULL, '2027-05-14', '2015-07-04 20:02:00', '2015-08-31 07:59:03', NULL),
-('Proin', 'Hayfa Dean', NULL, '2027-04-14', '2015-01-06 09:44:50', '2015-04-15 11:15:10', NULL),
-('orci', 'Salvador Coleman', NULL, '2005-10-15', '2015-07-07 08:18:13', '2014-09-17 22:48:37', NULL),
-('molestie', 'Florence Valentine', NULL, '2005-01-16', '2014-09-01 11:48:26', '2014-10-17 03:32:32', NULL),
-('pede.', 'Ruby Knight', NULL, '2026-04-14', '2015-05-22 14:46:43', '2014-08-21 10:34:18', NULL),
-('gravida', 'Melyssa Mcneil', NULL, '2030-04-14', '2015-08-11 23:51:56', '2015-10-03 19:04:41', NULL),
-('Donec', 'Audrey Kaufman', NULL, '2003-05-14', '2014-12-24 13:03:40', '2014-08-24 16:14:05', NULL),
-('malesuada', 'Thomas Caldwell', NULL, '2025-05-14', '2015-09-21 16:20:27', '2014-04-18 13:09:26', NULL),
-('vestibulum,', 'Jakeem White', NULL, '2030-06-15', '2016-01-31 08:10:33', '2014-10-14 18:50:39', NULL),
-('vel', 'Molly Gomez', NULL, '2019-04-14', '2014-11-14 08:37:56', '2015-06-23 21:33:26', NULL),
-('Morbi', 'Wilma Stout', NULL, '2028-09-15', '2015-01-14 02:20:59', '2015-10-03 12:57:32', NULL);
+INSERT INTO `event_types` (`id`, `name`, `color`) VALUES
+(1, 'Meeting', 'Blue'),
+(2, 'Dinner', 'Red'),
+(3, 'Raving', 'Orange');
 
 -- --------------------------------------------------------
 
@@ -305,7 +263,7 @@ CREATE TABLE IF NOT EXISTS `purchases` (
   PRIMARY KEY (`id`),
   KEY `customer` (`customer`),
   KEY `stock` (`stock`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=28 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=34 ;
 
 --
 -- Dumping data for table `purchases`
@@ -334,7 +292,13 @@ INSERT INTO `purchases` (`id`, `stock`, `customer`, `quantity`, `price`, `create
 (23, 316, 256, 1, '8.68', '2015-03-24 00:54:16', '2015-03-24 00:54:16'),
 (24, 318, 256, 1, '68.55', '2015-03-24 00:54:42', '2015-03-24 00:54:42'),
 (26, 1067, 256, 1, '558.81', '2015-03-24 14:35:13', '2015-03-24 14:35:13'),
-(27, 1067, 256, 1, '558.81', '2015-03-24 14:35:18', '2015-03-24 14:35:18');
+(27, 1067, 256, 1, '558.81', '2015-03-24 14:35:18', '2015-03-24 14:35:18'),
+(28, 1067, 8, 3, '2850.95', '2015-03-25 13:07:42', '2015-03-25 15:19:14'),
+(29, 1067, 8, 7, '3991.33', '2015-03-25 13:07:55', '2015-03-25 13:07:55'),
+(30, 1067, 8, 5, '2850.95', '2015-03-25 13:08:25', '2015-03-25 13:08:25'),
+(31, 1067, 8, 1, '570.19', '2015-03-25 13:08:55', '2015-03-25 13:08:55'),
+(32, 1067, 258, 200, '114038', '2015-03-26 10:48:19', '2015-03-26 10:48:19'),
+(33, 1067, 16, 45, '25145.1', '2015-03-26 16:02:50', '2015-03-26 16:02:50');
 
 -- --------------------------------------------------------
 
@@ -375,28 +339,40 @@ CREATE TABLE IF NOT EXISTS `users` (
   `role` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
-  `index1` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Home page index display',
-  `index2` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Home page index display',
-  `index3` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Home page index display',
-  `index4` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Home page index display',
+  `index1` varchar(100) COLLATE utf8_unicode_ci DEFAULT 'AAPL' COMMENT 'Home page index display',
+  `index2` varchar(100) COLLATE utf8_unicode_ci DEFAULT 'GOOG' COMMENT 'Home page index display',
+  `index3` varchar(100) COLLATE utf8_unicode_ci DEFAULT 'INTC' COMMENT 'Home page index display',
+  `index4` varchar(100) COLLATE utf8_unicode_ci DEFAULT 'YHOO' COMMENT 'Home page index display',
   `home_twitter` varchar(15) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Hashtag for twitter home page',
+  `name` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'Name of user',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=10 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=21 ;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`, `role`, `created`, `modified`, `index1`, `index2`, `index3`, `index4`, `home_twitter`) VALUES
-(1, 'admin', '$2a$10$ZZkkXB1O.K1/n.DvgHsKg.4.fKIREBZQxk60cztBR0J9H8wYy6IKO', 'admin', '2015-02-23 13:37:48', '2015-03-25 10:00:45', 'INDU', 'GOOG', 'YHOO', 'INTC', 'Finance'),
-(2, 'pe70', '$2a$10$rIAVfHNlL6apdvPRlyp17uRybio6aGOZXYMSyaN03UFT16Z1STc1m', 'fa', '2015-02-23 13:38:04', '2015-02-23 13:38:04', NULL, NULL, NULL, NULL, NULL),
-(3, 'er49', '$2a$10$eAYK8./J3IDU5wMcHlMfx.6tIE/i1/zB63bRjKPR1DswBjTPHRRqO', 'fa', '2015-02-23 13:38:12', '2015-02-23 13:38:12', NULL, NULL, NULL, NULL, NULL),
-(4, 'admin', '$2a$10$jqbmAGsvknh4MnsG9JKLquq9IiZ3DCrii1vlGighR0h09NZ7bJLde', 'admin', '2015-03-09 14:35:49', '2015-03-09 14:35:49', NULL, NULL, NULL, NULL, NULL),
-(5, 'admin', '$2a$10$0OKLuTdlB2z/7W7yjceFjOGOVEevoQob7weKDKaj06AU5nS/rXwfm', 'admin', '2015-03-09 14:38:49', '2015-03-09 14:38:49', NULL, NULL, NULL, NULL, NULL),
-(6, 'admin', '$2a$10$q1JaliqOnL5JJxlq8w9bOuu/tPJ63wDjGKkRbg..c5fZaRmIx/nbe', 'admin', '2015-03-09 14:38:57', '2015-03-09 14:38:57', NULL, NULL, NULL, NULL, NULL),
-(7, 'admin', '$2a$10$mj6FIVVP2swIgAUUoyJjHeq6JKPX2C1lXhPmyUNioW.4BQKS1B0PS', 'admin', '2015-03-09 14:40:07', '2015-03-09 14:40:07', NULL, NULL, NULL, NULL, NULL),
-(8, 'admin1', '$2a$10$xDVQXkeLjGssMDIcVmWlNepMwLYHWAvbVLfqs6HvQvNWk8bqM11Ja', 'admin', '2015-03-16 13:19:30', '2015-03-16 13:19:30', NULL, NULL, NULL, NULL, NULL),
-(9, 'camieac', '$2a$10$16qmx5vBsoD07ziyju6uPeaSXRs5GIC7GGFyfUbdPHtlYiXmvF0HG', 'admin', '2015-03-24 14:05:45', '2015-03-24 15:06:30', NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `users` (`id`, `username`, `password`, `role`, `created`, `modified`, `index1`, `index2`, `index3`, `index4`, `home_twitter`, `name`) VALUES
+(1, 'admin', '$2a$10$ZZkkXB1O.K1/n.DvgHsKg.4.fKIREBZQxk60cztBR0J9H8wYy6IKO', 'admin', '2015-02-23 13:37:48', '2015-03-25 16:45:40', 'AAPL', 'GOOG', 'YHOO', 'INTC', 'Finance', NULL),
+(2, 'pe70', '$2a$10$rIAVfHNlL6apdvPRlyp17uRybio6aGOZXYMSyaN03UFT16Z1STc1m', 'fa', '2015-02-23 13:38:04', '2015-02-23 13:38:04', NULL, NULL, NULL, NULL, NULL, NULL),
+(3, 'er49', '$2a$10$eAYK8./J3IDU5wMcHlMfx.6tIE/i1/zB63bRjKPR1DswBjTPHRRqO', 'fa', '2015-02-23 13:38:12', '2015-02-23 13:38:12', NULL, NULL, NULL, NULL, NULL, NULL),
+(4, 'admin', '$2a$10$jqbmAGsvknh4MnsG9JKLquq9IiZ3DCrii1vlGighR0h09NZ7bJLde', 'admin', '2015-03-09 14:35:49', '2015-03-09 14:35:49', NULL, NULL, NULL, NULL, NULL, NULL),
+(5, 'admin', '$2a$10$0OKLuTdlB2z/7W7yjceFjOGOVEevoQob7weKDKaj06AU5nS/rXwfm', 'admin', '2015-03-09 14:38:49', '2015-03-09 14:38:49', NULL, NULL, NULL, NULL, NULL, NULL),
+(6, 'admin', '$2a$10$q1JaliqOnL5JJxlq8w9bOuu/tPJ63wDjGKkRbg..c5fZaRmIx/nbe', 'admin', '2015-03-09 14:38:57', '2015-03-09 14:38:57', NULL, NULL, NULL, NULL, NULL, NULL),
+(7, 'admin', '$2a$10$mj6FIVVP2swIgAUUoyJjHeq6JKPX2C1lXhPmyUNioW.4BQKS1B0PS', 'admin', '2015-03-09 14:40:07', '2015-03-09 14:40:07', NULL, NULL, NULL, NULL, NULL, NULL),
+(8, 'admin1', '$2a$10$xDVQXkeLjGssMDIcVmWlNepMwLYHWAvbVLfqs6HvQvNWk8bqM11Ja', 'admin', '2015-03-16 13:19:30', '2015-03-16 13:19:30', NULL, NULL, NULL, NULL, NULL, NULL),
+(9, 'camieac', '$2a$10$16qmx5vBsoD07ziyju6uPeaSXRs5GIC7GGFyfUbdPHtlYiXmvF0HG', 'admin', '2015-03-24 14:05:45', '2015-03-24 15:06:30', NULL, NULL, NULL, NULL, NULL, NULL),
+(10, 'Morbi', '$2a$10$q5wD/BULwwEcgjYg.q3NfemSnKzmLpWWnN4UpuzJiNqYXReYjVCHy', 'admin', '2015-03-25 12:13:53', '2015-03-25 12:13:53', NULL, NULL, NULL, NULL, NULL, NULL),
+(11, 'camieac', '$2a$10$4cDD8UNucTkYVQu1D/7B7OVbBXJZoQB2Fy0Mrp2pyxrgu1Psgnx3W', 'admin', '2015-03-26 14:38:07', '2015-03-26 14:38:07', NULL, NULL, NULL, NULL, NULL, NULL),
+(12, 'Em123', '$2a$10$eaLp3omZ/Vn4B4CQpgjYOOcJTSZHAg1YZTpqc5zTTUbTRtgaCB0NS', 'fa', '2015-03-26 14:48:01', '2015-03-26 14:48:01', NULL, NULL, NULL, NULL, NULL, NULL),
+(13, 'cac30', '$2a$10$7Ye6u52/hroNPPRN35HMFeEaNNBPkVLHB2DUAlv0HtBWHAnliUlGy', 'admin', '2015-03-26 14:58:21', '2015-03-26 14:58:21', NULL, NULL, NULL, NULL, NULL, 'Cameron Alexander Craig'),
+(14, 'Camron', '$2a$10$o2KX7T/2bFHurIFaDvB8h.yZiPXhhc64WDcxaKhN7fo1pxOFtun/y', 'admin', '2015-03-26 15:01:23', '2015-03-26 15:01:23', 'AAPL', 'GOOG', 'INTC', 'YHOO', NULL, 'Camron '),
+(15, 'asd', '$2a$10$trUeWN2X6LbEJKyId7IVGOQ.7AM.BHK4LEtkIaaSnjc0N9TsI1tba', 'admin', '2015-03-26 15:06:47', '2015-03-26 15:06:47', 'AAPL', 'GOOG', 'INTC', 'YHOO', NULL, 'Caasdasdsa'),
+(16, 'asd', '$2a$10$eBQXfpf7qHZ2Rsi6336Js.iDPa/Nk2N0vW1bxAkb7gzuA5babaNTO', 'admin', '2015-03-26 15:09:33', '2015-03-26 15:09:33', 'AAPL', 'GOOG', 'INTC', 'YHOO', NULL, 'Caasdasdsa'),
+(17, 'cas', '$2a$10$xIlLwDbOAROIsESvwvLkR.lIo5xnCvfgZueXgIEXOFV3LJUm13WjG', 'admin', '2015-03-26 15:10:40', '2015-03-26 15:10:40', 'AAPL', 'GOOG', 'INTC', 'YHOO', NULL, 'Caasasasasasasasasasasasasasasasasas'),
+(18, 'a', '$2a$10$pqZfK3xqapk1XMs2u5cApOCOHkBowzC82uga1e.1UV4EMBHbCA0Cq', 'admin', '2015-03-26 15:14:27', '2015-03-26 15:14:27', 'AAPL', 'GOOG', 'INTC', 'YHOO', NULL, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'),
+(19, 'fa', '$2a$10$vyk2gB4n3/mHcgIatwvnZeA71Gg9T6YO5vpBtWDwwVa8gJnFtXfhS', 'fa', '2015-03-26 15:20:32', '2015-03-26 15:20:32', 'AAPL', 'GOOG', 'INTC', 'YHOO', NULL, 'FA'),
+(20, 'sad', '$2a$10$kKod7eB.0156SjYdkhWt..P08bduklFulSvHc7iJxku9QOD97lhiW', 'fa', '2015-03-26 15:38:45', '2015-03-26 15:38:45', 'AAPL', 'GOOG', 'INTC', 'YHOO', NULL, 'sasa');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

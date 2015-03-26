@@ -40,22 +40,23 @@ $this->Html->css('style-desktop', 'stylesheet', array(
 
 
 
-<h1>Edit Client</h1>
+<h2>Edit Client</h2>
 
 
 <?php
 $advisorarray = Set::flatten($FAquery);
 
 for ($j = 0; $j < count($advisorarray) / 2; ++$j) {
-    $fa[$advisorarray[$j . '.fas.username']] = $advisorarray[$j . '.fas.name'];
+    $fa[$advisorarray[$j . '.users.username']] = $advisorarray[$j . '.users.name'];
 }
-
+$user = AuthComponent::user('username');
 ?>
 
 <div class = "dRoundedBox">
 <?php
 echo $this->Form->create('Client', array(
-    'class' => 'fForm'
+    'class' => 'fForm',
+    'type' => 'file'
 ));
 echo $this->Form->input('name');
 echo $this->Form->input('gender');
@@ -71,16 +72,24 @@ echo $this->Form->input('nis', array(
 echo $this->Form->input('phoneNo');
 echo $this->Form->input('address');
 echo $this->Form->input('balance');
-echo $this->Form->input('Image.profileImage', array(
-    'type' => 'file'
-));
+if(AuthComponent::user('role') == 'admin'){
 echo $this->Form->input('fa', array(
     'type' => 'select',
     'options' => $fa
 ));
+}else{
+echo $this->Form->input('fa', array(
+    'type' => 'hidden',
+    'value' => $user
+));
+}
 echo $this->Form->input('twitter');
-echo $this->Form->input('id', array(
-    'type' => 'hidden'
+echo $this->Form->input('Client.profileImage', array(
+    'type' => 'file'
+));
+echo $this->Form->input('imageName', array(
+    'type' => 'hidden',
+    'value' => ''
 ));
 echo $this->Form->end(array(
     'label' => 'Save Client',

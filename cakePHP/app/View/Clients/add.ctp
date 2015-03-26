@@ -57,16 +57,16 @@ $this->Html->css('style-desktop', 'stylesheet', array(
 
 
 
-<h1>Add Client</h1>
+<h2>Add Client</h2>
 
 
 <?php
 $advisorarray = Set::flatten($FAquery);
 
 for ($j = 0; $j < count($advisorarray) / 2; ++$j) {
-    $fa[$advisorarray[$j . '.fas.username']] = $advisorarray[$j . '.fas.name'];
+    $fa[$advisorarray[$j . '.users.username']] = $advisorarray[$j . '.users.name'];
 }
-
+$user = AuthComponent::user('username');
 ?>
 
 
@@ -90,10 +90,17 @@ echo $this->Form->input('nis', array(
 echo $this->Form->input('phoneNo');
 echo $this->Form->input('address');
 echo $this->Form->input('balance');
+if(AuthComponent::user('role') == 'admin'){
 echo $this->Form->input('fa', array(
     'type' => 'select',
     'options' => $fa
 ));
+}else{
+echo $this->Form->input('fa', array(
+    'type' => 'hidden',
+    'value' => $user
+));
+}
 echo $this->Form->input('twitter');
 echo $this->Form->input('Client.profileImage', array(
     'type' => 'file'

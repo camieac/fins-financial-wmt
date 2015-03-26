@@ -12,8 +12,16 @@ class User extends AppModel {
         	),
 		'password' => array(
 			'required' => array(
-				'rule' => array('notEmpty'),
-				'message' => 'A password is required'
+				'rule' => 'checkPasswordStrength',
+				'message' => 'Your password must incude lowercase, uppercase and numbers.'
+            		),
+			'maxLength' => array(
+				'rule' => array('maxLength','16'),
+				'message' => 'Your password is too long (16 characters max)'
+            		),
+			'minLength' => array(
+				'rule' => array('minLength','8'),
+				'message' => 'Your password is too short (8 characters min)'
             		)
        		),
         	'role' => array(
@@ -33,7 +41,15 @@ class User extends AppModel {
 			'valid' => array(
 				'rule' => 'checkPasswordStrength',
 				'message' => 'Your password is too weak',
-			)
+			),
+			'maxLength' => array(
+				'rule' => array('maxLength','16'),
+				'message' => 'Your password is too long (16 characters max)'
+            		),
+			'minLength' => array(
+				'rule' => array('minLength','8'),
+				'message' => 'Your password is too short (8 characters min)'
+            		)
 		),
 	 	'password2' => array(
 			'valid' => array(
@@ -64,6 +80,16 @@ class User extends AppModel {
 				'rule' => 'validIndex4',
 				'message' => 'Not a valid index.',
 			)
+		),
+	 	'name' => array(
+			'maxLength' => array(
+				'rule' => array('maxLength', '40'),
+            			'message' => 'Maximum 40 Characters'
+           		),
+			'minLength' => array(
+				'rule' => array('minLength', '2'),
+            			'message' => 'Minimum 2 Characters'
+           		)
 		)
     );
     
@@ -95,27 +121,28 @@ public function passwordsMatch($data) {
     return($password1 == $password2);
 }
 public function checkPasswordStrength($data) {
-    $password = $this->data[$this->alias]['password1'];
-    $uppercase = preg_match('@[A-Z]@', $password);
-    $lowercase = preg_match('@[a-z]@', $password);
-    $number    = preg_match('@[0-9]@', $password);
+    	$password = array_values($data);
+	$password = $password[0];
+	$uppercase = preg_match('@[A-Z]@', $password);
+	$lowercase = preg_match('@[a-z]@', $password);
+	$number    = preg_match('@[0-9]@', $password);
 
-    if(!$uppercase || !$lowercase || !$number || strlen($password) < 8) {
-  	return false;
-    }else{
-    return(true); }
+	if(!$uppercase || !$lowercase || !$number) {
+		return false;
+	}else{
+		return(true); }
 }
 public function validIndex1($data){
-return $this->validIndex($this->data[$this->alias]['index1']);
+	return $this->validIndex($this->data[$this->alias]['index1']);
 }
 public function validIndex2($data){
-return $this->validIndex($this->data[$this->alias]['index2']);
+	return $this->validIndex($this->data[$this->alias]['index2']);
 }
 public function validIndex3($data){
-return $this->validIndex($this->data[$this->alias]['index3']);
+	return $this->validIndex($this->data[$this->alias]['index3']);
 }
 public function validIndex4($data){
-return $this->validIndex($this->data[$this->alias]['index4']);
+	return $this->validIndex($this->data[$this->alias]['index4']);
 }
 public function validIndex($index){
 //Example request https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.stocks%20where%20symbol%3D%22kokok%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=
