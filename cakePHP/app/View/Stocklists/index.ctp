@@ -63,7 +63,7 @@ echo $this->Form->input('symbol'); ?>
 
 <th>Symbol</th>
 <th>Name</th>
-<th>Change Percentage</th>
+<!--<th>Change Percentage</th> -->
 <th>Current Value</th>
 <th>Open Value</th>
 <th>Close Value</th>
@@ -82,15 +82,15 @@ echo $this->Form->input('symbol'); ?>
 $result = $this->Stocks->get(array($company));?>
 <?php foreach ($result as $stock): ?>
 <?php
-echo $this->Html->link(str_replace("\"", "", $stock['name']), array('action' => 'view?stock=' . $stocklist['Stocklist']['symbol']));?>
+echo $this->Html->link(str_replace("\"", "", $stocklist['Stocklist']['name']), array('action' => 'view?stock=' . $stocklist['Stocklist']['symbol']));?>
 </td>
-<td><?php echo str_replace("\"", "", $stock['change']).'%'; ?></td>
+<!td ><?php //echo str_replace("\"", "", $stock['change']).'%'; ?><!/td>
 <td><?php if($stock['current'] = 'N/A'){echo $stock['close'];}else{echo $stock['current']; } //Using close price if current price is not available ?></td> 
-<td><?php echo $stock['open'] ?></td>
-<td><?php echo $stock['close'] ?></td>
-<td><?php echo $stock['high'] ?></td>
-<td><?php echo $stock['low'] ?></td>
-<td><?php echo str_replace('"','',$stock['date']); ?></td>
+<td><?php echo $stocklist['Stocklist']['open'] ?></td>
+<td><?php echo $stocklist['Stocklist']['close'] ?></td>
+<td><?php echo $stocklist['Stocklist']['high'] ?></td>
+<td><?php echo $stocklist['Stocklist']['low'] ?></td>
+<td><?php echo $stocklist['Stocklist']['date'] . '   ' . $this->Html->link('Update', array('action' => 'update?id=' . $stocklist['Stocklist']['id'])) ?></td>
 <?php endforeach; ?>
 </td>
 

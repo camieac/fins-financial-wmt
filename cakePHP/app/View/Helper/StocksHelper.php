@@ -81,6 +81,8 @@ class StocksHelper extends AppHelper {
 		}
 		return $stocks;
 	}
+	
+	
 }
 
 ?>

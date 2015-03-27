@@ -7,48 +7,58 @@ public $validate = array(
 'message' => 'Stock already exists'
 ),
 'name' => array(
-'rule' => 'notEmpty'
+'rule' => 'checkId'
 )
 );
-public function checkUpdates($id){
-	$symbol = array('AAPL');
-	$api = new Api();
-
-	$stock = $api->get($symbol);
-	$stock = $stock[0];
-
-	foreach ($stock as $item){
-		if(strcmp($item,'N/A') != 0){
-			 $item = null;
-		}
+public function checkId(){
+	$id = $this->id;
+	$this->autoRender = false;
+	$stock = $this->find('first', array('conditions'=>array('Stocklist.id' => $id)));
+	$this->checkUpdate($stock); //Update stocks 
+}
+public function checkUpdates(){
+	$allStocks = $this->find('all');
+	foreach($allStocks as $s){
+		$this->checkUpdate($s);
 	}
-	$name = $stock['name'];
-	$symbol = $stock['symbol'];
-	$change = $stock['change'];
-	$current = $stock['current'];
-	$open = $stock['open'];
-	$close = $stock['close'];
-	$high = $stock['high'];
-	$low = $stock['low'];
-	$date = $stock['date'];
+}
 
-	//Input validation
-	$name = str_replace('"','',$name);
-	$symbol = str_replace('"','',$symbol);
-	$date = str_replace('"','',$date);
-	if($current == 'N/A'){ $current = 0;}
-	if($change == 'N/A'){ $change = 0;}
+public function checkUpdate($s){ //Input parameter is the stock array
+		$id = $s['Stocklist']['id'];
+		$symbol = array($s['Stocklist']['symbol']);
+		$api = new Api();
+
+		$stock = $api->get($symbol);
+		$stock = $stock[0];
+
+		
+		$name = $stock['name'];
+		$symbol = $stock['symbol'];
+		$change = $stock['change'];
+		$current = $stock['current'];
+		$open = $stock['open'];
+		$close = $stock['close'];
+		$high = $stock['high'];
+		$low = $stock['low'];
+		$date = $stock['date'];
+
+		//Input validation
+		$name = str_replace('"','',$name);
+		$name = str_replace(',','',$name);
+		$symbol = str_replace('"','',$symbol);
+		if($change == 'N/A'){ $change = 0;}
+		if($current == 'N/A'){ $current = 0;}
+		if($open == 'N/A'){ $open = 0;}
+		if($close == 'N/A'){ $close = 0;}
+		if($high == 'N/A'){ $high = 0;}
+		if($low == 'N/A'){ $low = 0;}
+		$date = str_replace('"','',$date);
+		
+		
 	
 
-	$data = array('id' => $id,'name' => $name,'symbol' => $symbol,'change' => $change, 'current' => $current,'open' => $open,'close' => $close,'high' => $high,'low' => $low,'date' => $date);
-debug($data);
-	$this->save($data);
-
-	//$this->saveField('current', $current);
-	//$this->saveField('open', $open);
-	//$this->saveField('low', $low);
-	//$this->saveField('high', $high);
-	//$this->saveField('close', $close);
+		$data = array('id' => $id,'name' => $name,'symbol' => $symbol,'change' => $change, 'current' => $current,'open' => $open,'close' => $close,'high' => $high,'low' => $low,'date' => $date);
+		$this->save($data);
 }
 }
 ?>
