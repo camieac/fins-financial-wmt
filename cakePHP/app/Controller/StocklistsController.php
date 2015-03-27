@@ -13,7 +13,7 @@ if ($this->Session->read('Auth.User'))
 $this->loadModel('User');
 
 $this->set('stocklists', $this->Stocklist->find('all'));
-$this->Stocklist->checkUpdates(); //Update stocks 
+$this->Stocklist->checkUpdates(1077); //Update stocks 
 
 if ($this->request->is('post')) 
 {
