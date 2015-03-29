@@ -47,11 +47,11 @@ class StocklistsController extends AppController
         }
     }
     public function update(){
-	$id = $this->request->query['id'];
-	$this->autoRender = false;
-	$stock = $this->Stocklist->find('first', array('conditions'=>array('Stocklist.id' => $id)));
-	$this->Stocklist->checkUpdate($stock); //Update stocks 
-	$this->redirect(array(
+		$this->autoRender = false;
+		$id = $this->request->query['id'];
+		$stock = $this->Stocklist->find('first', array('conditions'=>array('Stocklist.id' => $id)));
+		$this->Stocklist->checkUpdate($stock); //Update stocks 
+		$this->redirect(array(
                 'controller' => 'stocklists',
                 'action' => 'index'
             ));

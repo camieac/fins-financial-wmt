@@ -1,4 +1,5 @@
 <?php
+/* Code adapted from https://github.com/benmills/cake-stock-data/blob/master/stocks.php*/
 class Api {
 	function get($symbols = array()) {
 		$limit = 200;
@@ -34,6 +35,7 @@ class Api {
 				}
 			}
 		}
+		
 		return $stocks;
 	}
 	

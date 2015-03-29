@@ -85,7 +85,7 @@ $result = $this->Stocks->get(array($company));?>
 echo $this->Html->link(str_replace("\"", "", $stocklist['Stocklist']['name']), array('action' => 'view?stock=' . $stocklist['Stocklist']['symbol']));?>
 </td>
 <!td ><?php //echo str_replace("\"", "", $stock['change']).'%'; ?><!/td>
-<td><?php if($stock['current'] = 'N/A'){echo $stock['close'];}else{echo $stock['current']; } //Using close price if current price is not available ?></td> 
+<td><?php if($stocklist['Stocklist']['current'] = 'N/A'){echo $stocklist['Stocklist']['close'];}else{echo $stocklist['Stocklist']['current']; } //Using close price if current price is not available ?></td> 
 <td><?php echo $stocklist['Stocklist']['open'] ?></td>
 <td><?php echo $stocklist['Stocklist']['close'] ?></td>
 <td><?php echo $stocklist['Stocklist']['high'] ?></td>
