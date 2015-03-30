@@ -1,25 +1,23 @@
-<?php $this->layout = false; ?>
+<?php $this->layout = false;
+App::uses('Api', 'Vendor');
+?>
 <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['annotationchart']}]}"></script>
 
 <?php
 ini_set('memory_limit','256M');
-$company = $this->params['url']['stock'];
-$result = $this->Stocks->get(array($company));
+
 
 echo $this->Html->script('javascript');
 ?>
 
 <?php
-$result = $this->Stocks->getHistory(array($company));
+$company = $this->params['url']['stock'];
+$api = new Api();
+$result = $api->getHistory(array($company));
 array_shift($result); //Takes away the first array position that contains the names of the elements.
 ?>
 
-<?php
-$company = $this->params['url']['stock'];
-$result = $this->Stocks->getHistory(array($company));
-array_shift($result); //Takes away the first array position that contains the names of the elements.
-
-?>   
+   
 
 
     <script type="text/javascript">

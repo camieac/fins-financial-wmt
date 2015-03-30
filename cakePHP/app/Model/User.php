@@ -90,7 +90,13 @@ class User extends AppModel {
 				'rule' => array('minLength', '2'),
             			'message' => 'Minimum 2 Characters'
            		)
-		)
+		),
+		'indexDisplay' => array(
+			'valid' => array(
+				'rule' => 'notEmpty',
+				'message' => 'Please select a value.',
+			)
+		),
     );
     
     public function beforeSave($options = array()) {

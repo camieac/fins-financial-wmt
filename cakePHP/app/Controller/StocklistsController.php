@@ -50,7 +50,7 @@ class StocklistsController extends AppController
 		$this->autoRender = false;
 		$id = $this->request->query['id'];
 		$stock = $this->Stocklist->find('first', array('conditions'=>array('Stocklist.id' => $id)));
-		$this->Stocklist->checkUpdate($stock); //Update stocks 
+		$this->Stocklist->checkUpdate($stock); //Update stock
 		$this->redirect(array(
                 'controller' => 'stocklists',
                 'action' => 'index'

@@ -75,86 +75,13 @@ $(document).ready(function() {
 	<body>
 
 
-<div id="banner-wrapper">
-	<table id = "tChart">
-		<thead>
-			<tr>
-				<th></th>
-				<th></th>
-				<th></th>
-				<th></th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>
-					<div class="frameWrap">
-						<img class = "loader" id="loader1" src="img/loader.gif" width="36" height="36" alt="loading gif"/>
-						<iframe id="iframe1" width="520" height="220"src="http://emarkettrader.co.uk/stocklists/quickview?stock=<?php echo $index1 ?>" ></iframe>
-					</div>
-					<script>
-						$(document).ready(function () {
-							$('#iframe1').on('load', function () {
-								$('#loader1').hide();
-							});
-						});
-					</script>
-				</td>
-				<td>
-					<div class="frameWrap">
-						<img class = "loader" id="loader2" src="img/loader.gif" width="36" height="36" alt="loading gif"/>
-						<iframe id="iframe2" width="520" height="220"src="http://emarkettrader.co.uk/stocklists/quickview?stock=<?php echo $index2 ?>" ></iframe>
-					</div>
-					<script>
-						$(document).ready(function () {
-							$('#iframe2').on('load', function () {
-								$('#loader2').hide();
-							});
-						});
-					</script>
-				</td>
-				<td>
-					<div class="frameWrap">
-						<img class = "loader" id="loader3" src="img/loader.gif" width="36" height="36" alt="loading gif"/>
-						<iframe id="iframe3" width="520" height="220"src="http://emarkettrader.co.uk/stocklists/quickview?stock=<?php echo $index3 ?>" ></iframe>
-					</div>
-					<script>
-						$(document).ready(function () {
-							$('#iframe3').on('load', function () {
-								$('#loader3').hide();
-							});
-						});
-					</script>
-				</td>
-				<td>
-					<div class="frameWrap">
-						<img class = "loader" id="loader4" src="img/loader.gif" width="36" height="36" alt="loading gif"/>
-						<iframe id="iframe4" width="520" height="220"src="http://emarkettrader.co.uk/stocklists/quickview?stock=<?php echo $index4 ?>" ></iframe>
-					</div>
-					<script>
-						$(document).ready(function () {
-							$('#iframe4').on('load', function () {
-								$('#loader4').hide();
-							});
-						});
-					</script>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-		
-		
-		
-		
+<! HOME GRAPHS GO HERE !>
+
+	<?php if ($indexDisplay) { 
+		include 'home_graphs.php';
+		}?>	
 		
 
-
-		
-		
-		
-		
-		
 		
 		<?php if ($user = 'admin') { ?>
 			
@@ -200,35 +127,7 @@ foreach($itemss as $item) { ?>
 						</section>
 					
 					</div>
-					<div class="4u">
 					
-						<section>
-							<h2>How about some links?</h2>
-							<div>
-								<div class="row">
-									<div class="6u">
-										<ul class="link-list">
-											<li><a href="#">Sed neque nisi consequat</a></li>
-											<li><a href="#">Dapibus sed mattis blandit</a></li>
-											<li><a href="#">Quis accumsan lorem</a></li>
-											<li><a href="#">Suspendisse varius ipsum</a></li>
-											<li><a href="#">Eget et amet consequat</a></li>
-										</ul>
-									</div>
-									<div class="6u">
-										<ul class="link-list">
-											<li><a href="#">Quis accumsan lorem</a></li>
-											<li><a href="#">Sed neque nisi consequat</a></li>
-											<li><a href="#">Eget et amet consequat</a></li>
-											<li><a href="#">Dapibus sed mattis blandit</a></li>
-											<li><a href="#">Vitae magna sed dolore</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</section>
-
-					</div>
 				</div>
 				
 					

@@ -59,6 +59,7 @@ echo $this->Form->create('Client', array(
     'type' => 'file'
 ));
 echo $this->Form->input('name');
+echo $this->Form->input('email');
 echo $this->Form->input('gender');
 echo $this->Form->input('dateOfBirth', array(
     'class' => 'datepicker',

@@ -47,6 +47,8 @@ class PagesController extends AppController {
  *	or MissingViewException in debug mode.
  */
 	public function display() {
+		//$stockTitles = array($user['User']['index1'],$user['User']['index2'],$user['User']['index3'],$user['User']['index4'])
+		//$this->set('homeStock', $stockTitles);
  		$this->set('financialTimes', $this->getFTFeed());
 		$path = func_get_args();
 		$this->getHomeSettings();
@@ -101,6 +103,7 @@ $this->set('index2', $user['User']['index2']);
 $this->set('index3', $user['User']['index3']);
 $this->set('index4', $user['User']['index4']);
 $this->set('home_twitter', $user['User']['home_twitter']);
+$this->set('indexDisplay', $user['User']['indexDisplay']);
 
 }
 }

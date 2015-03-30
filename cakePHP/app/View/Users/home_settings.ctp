@@ -11,6 +11,7 @@
 		echo $this->Form->input('index2',array('label' => array('text' => 'Ticker 2')));
 		echo $this->Form->input('index3',array('label' => array('text' => 'Ticker 3')));
 		echo $this->Form->input('index4',array('label' => array('text' => 'Ticker 4')));
+		echo $this->Form->input('indexDisplay', array('label' => array('text' => 'Enable home page graphs')));
 		echo $this->Form->input('home_twitter',array('label' => array('text' => 'Twitter Hashtag')));
 
 	?>

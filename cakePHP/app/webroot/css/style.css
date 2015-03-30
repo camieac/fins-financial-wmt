@@ -276,5 +276,8 @@ margin-bottom:1em;
   padding: 0.1em 1em;
   float: left;
 }
+.graphTitle {
+	text-align:center;
+}
 	
 

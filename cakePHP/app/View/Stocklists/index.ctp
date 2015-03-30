@@ -79,9 +79,8 @@ echo $this->Form->input('symbol'); ?>
 <td><?php echo $stocklist['Stocklist']['symbol']; ?></td>
 <td>
 <?php $company = $stocklist['Stocklist']['symbol'];
-$result = $this->Stocks->get(array($company));?>
-<?php foreach ($result as $stock): ?>
-<?php
+
+
 echo $this->Html->link(str_replace("\"", "", $stocklist['Stocklist']['name']), array('action' => 'view?stock=' . $stocklist['Stocklist']['symbol']));?>
 </td>
 <!td ><?php //echo str_replace("\"", "", $stock['change']).'%'; ?><!/td>
@@ -91,7 +90,7 @@ echo $this->Html->link(str_replace("\"", "", $stocklist['Stocklist']['name']), a
 <td><?php echo $stocklist['Stocklist']['high'] ?></td>
 <td><?php echo $stocklist['Stocklist']['low'] ?></td>
 <td><?php echo $stocklist['Stocklist']['date'] . '   ' . $this->Html->link('Update', array('action' => 'update?id=' . $stocklist['Stocklist']['id'])) ?></td>
-<?php endforeach; ?>
+
 </td>
 
 </tr>
