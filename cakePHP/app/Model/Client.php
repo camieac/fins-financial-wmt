@@ -7,6 +7,9 @@ public $validate = array(
 'name' => array(
 'rule' => 'notEmpty'
 ),
+'email' => array(
+'rule' => 'email'
+),
 'gender' => array(
 'rule' => 'notEmpty'
 ),
@@ -50,14 +53,6 @@ public $validate = array(
                 'message' => 'Between 5 to 15 characters'
             )
         )
-
-
-
-
-
-
-
-
 );
 
 

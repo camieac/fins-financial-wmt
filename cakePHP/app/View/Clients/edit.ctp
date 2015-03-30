@@ -44,12 +44,15 @@ $this->Html->css('style-desktop', 'stylesheet', array(
 
 
 <?php
+$user = AuthComponent::user('username');
 $advisorarray = Set::flatten($FAquery);
-
+/*In the event that no FAs exist, use the current user as the FA. The current user will be an admin, since no FAs exist*/
+if(empty($advisorarray)){$fa = array($user);}
+else{
 for ($j = 0; $j < count($advisorarray) / 2; ++$j) {
     $fa[$advisorarray[$j . '.users.username']] = $advisorarray[$j . '.users.name'];
 }
-$user = AuthComponent::user('username');
+}
 ?>
 
 <div class = "dRoundedBox">
