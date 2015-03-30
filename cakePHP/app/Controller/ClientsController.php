@@ -1,4 +1,5 @@
 <?php
+App::uses('Api', 'Vendor');
 //require_once(APP . 'Vendor/twitteroauth/src/TwitterOAuth.php');
 require_once(APP . 'Vendor/twitteroauth/autoload.php');
 require_once(APP . 'Vendor/twitteroauth/src/TwitterOAuth.php');
@@ -132,7 +133,7 @@ class ClientsController extends AppController
     
     public function view($id = null)
     {
-        
+        $api = new Api();
         $this->set('listofstocks', $this->Client->getStockNames());
         
         if ($this->Session->read('Auth.User')) {
@@ -146,22 +147,27 @@ class ClientsController extends AppController
             $this->loadModel('Purchase');
             $this->set('client', $client);
             $this->Client->id = $id;
-            $this->set('query', $this->Client->getStocks());
+            $this->set('clientStocks', $this->Client->getStocks());
             if ($this->request->is('post')) {
-                if (isset($this->params['data']['buy'])) {
+                if (isset($this->params['data']['buy'])) {		//Buying stocks
                     $this->Purchase->create();
                     $quantity = $this->request->data['Purchase']['quantity'];
                     $stock    = $this->request->data['Purchase']['stock'];
                     $query    = $this->Client->getQuery("SELECT stocklists.symbol FROM stocklists WHERE stocklists.id = " . $stock . ";");
                     $company  = $query[0]['stocklists']['symbol'];
-                    $result   = $this->getStock(array(
-                        $company
-                    ));
-                    if (($result[0]['current']) === '0.00' || ($result[0]['current']) === 'N/A') {
-                        $price = $quantity * $result[0]['close'];
+                    //$result   = $this->$api->getStock(array($company));
+			$this->loadModel('Stocklist');
+			$result = $this->Stocklist->find('first', array('conditions' => array('Stocklist.symbol' => $company)));
+			$result = array_shift($result);
+			//debug($result);
+                    if (($result['current']) == 0 || ($result['current']) == 'N/A') {
+                        $price = $quantity * $result['close'];
+
                     } else {
-                        $price = $quantity * $result[0]['current'];
+                        $price = $quantity * $result['current'];
                     }
+echo 'PRICE'.$price;
+debug($price);
                     if ($client['Client']['balance'] < $price) {
                         $this->Session->setFlash(__('Client does not have enough money to buy this stock.'));
                         return $this->redirect(array(
@@ -191,19 +197,19 @@ class ClientsController extends AppController
                 }
                 
                 
-                if (isset($this->params['data']['sell'])) {
+                if (isset($this->params['data']['sell'])) {	//Selling a stock
                     $this->Purchase->create();
                     $quantity = $this->request->data['Purchase']['quantity'];
                     $rowid    = $this->request->data['Purchase']['id'];
                     $query    = $this->Client->getQuery("SELECT purchases.quantity, stocklists.symbol FROM purchases, stocklists WHERE purchases.id = " . $rowid . " AND purchases.stock = stocklists.id;");
                     $company  = $query[0]['stocklists']['symbol'];
-                    $result   = $this->getStock(array(
-                        $company
-                    ));
-                    if (($result[0]['current']) === '0.00' || ($result[0]['current']) === 'N/A') {
-                        $price = $quantity * $result[0]['close'];
+		    $this->loadModel('Stocklist');
+                    $result = $this->Stocklist->find('first', array('conditions' => array('Stocklist.symbol' => $company)));
+		    $result = array_shift($result);
+                    if (($result['current']) == 0 || ($result['current']) === 'N/A') {
+                        $price = $quantity * $result['close'];
                     } else {
-                        $price = $quantity * $result[0]['current'];
+                        $price = $quantity * $result['current'];
                     }
                     if ($quantity > $query[0]['purchases']['quantity']) {
                         $this->Session->setFlash(__('Client does not have this many stocks.'));
@@ -379,7 +385,7 @@ class ClientsController extends AppController
     
     
     
-    function getStock($symbols = array())
+    function getStock0($symbols = array())
     {
         $limit  = 200;
         $chunks = ceil(count($symbols) / $limit);

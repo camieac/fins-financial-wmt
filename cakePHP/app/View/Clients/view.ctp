@@ -75,9 +75,9 @@ if ($this->Session->read('Auth.User')) {
 <?php
     $imageName = ($client['Client']['imageName']);
     //echo $client['Client']['imageName'];
-    $imageURL = 'profile_pictures/' . $imageName;
+    $imageURL  = 'profile_pictures/' . $imageName;
     //echo $imageURL;
-    if (!file_exists('img/'.$imageURL) | !isset($imageName)) {
+    if (!file_exists('img/' . $imageURL) | !isset($imageName)) {
         $imageURL = 'profile_pictures/default.png';
     }
 ?>
@@ -139,7 +139,13 @@ Created: <?php
 <br>
 Last Modified: <?php
     echo $client['Client']['modified'];
-	echo $this->Html->link('Edit', array('action' => 'edit', 'controller' => 'clients', $client['Client']['id']),array('class' => 'button'));
+    echo $this->Html->link('Edit', array(
+        'action' => 'edit',
+        'controller' => 'clients',
+        $client['Client']['id']
+    ), array(
+        'class' => 'button'
+    ));
 ?>
 
 </div> <!-- for dRoundedBox -->
@@ -154,7 +160,6 @@ Last Modified: <?php
 <tr>
 <th>Symbol</th>
 <th>Name</th>
-<th>Change Percentage</th>
 <th>Quantity</th>
 <th>Current Value</th>
 <th>Total Value</th>
@@ -166,71 +171,58 @@ Last Modified: <?php
 
 <?php
     $total = 0;
-    foreach ($query as $stock):
-?>
-
-<?php
+    //debug($clientStocks);
+    foreach ($clientStocks as $stock):
         $company = $stock['stocklists']['symbol'];
-        $result  = $this->Stocks->get(array(
-            $company
-        ));
+        ?><td><?php
+		echo $stock['stocklists']['symbol'];
+	?></td><td><?php
+        	echo str_replace("\"", "", ($stock['stocklists']['name']));
+	?></td><td><?php
+       	 echo $stock['purchases']['quantity'];
+	?></td><?php
+        	if (($stock['stocklists']['current']) == 0) {
+		?><td><?php
+            		echo "£" . number_format($stock['stocklists']['close'], 2);
+		?></td><?php
+            		$value = ($stock['purchases']['quantity']) * ($stock['stocklists']['close']);
+
+        	}else{
+			?><td><?php
+            		if (!$stock['stocklists']['current'] == 0) {
+                		echo "£" . number_format($stock['stocklists']['current'], 2);
+            		}else{
+                		echo $stock['stocklists']['current'];
+            		}
+			?></td><?php
+            			$value = ($stock['purchases']['quantity']) * ($stock['stocklists']['current']);
+
+		}
+		?><td><?php
+        		echo "£" . number_format($value, 2);
+		?></td><td><?php
+        		echo $this->Form->create('Purchase');
+        		echo $this->Form->input('quantity');
+        		$test = $stock['purchases']['id'];
+        		echo $this->Form->hidden('id', array(
+            			'default' => $test
+        		));
+        		echo $this->Form->submit('Sell Stock', array(
+            			'div' => false,
+            			'name' => ('sell'),
+            			'class' => 'button buttonTable',
+            			array(
+                			'rule' => 'notEmpty'
+           			)
+        		));
+        		echo $this->Form->end();
+			?></td><td><?php
+        			echo $stock['purchases']['created'];
+			?> </td></tr><?php
+        $total = $total + $value;
+
+    endforeach;
 ?>
-
-<td><?php
-        echo $stock['stocklists']['symbol'];
-?></td>
-<td><?php
-        echo str_replace("\"", "", ($result[0]['name']));
-?></td>
-<td><?php
-        echo str_replace("\"", "", ($result[0]['change'])) . "%";
-?></td>
-<td><?php
-        echo $stock['purchases']['quantity'];
-?></td>
-
-<?php
-        if (($result[0]['current']) === '0.00') {
-?>
-
-
-<td><?php
-            echo "£" . number_format($result[0]['close'], 2);
-?></td>
-<?php
-            $value = ($stock['purchases']['quantity']) * ($result[0]['close']);
-?>
-<?php
-        } else {
-?>
-
-<td><?php
-            if (!$result[0]['current'] == 'N/A') {
-                echo "£" . number_format($result[0]['current'], 2);
-            } else {
-                echo $result[0]['current'];
-            }
-?></td>
-<?php
-            $value = ($stock['purchases']['quantity']) * ($result[0]['current']);
-?>
-<?php
-        }
-?>
-
-<td><?php echo "£".number_format($value, 2); ?></td>
-<td><?php echo $this->Form->create('Purchase');
-echo $this->Form->input('quantity');
-$test = $stock['purchases']['id'];
-echo $this->Form->hidden('id', array('default'=>$test));
-echo $this->Form->submit('Sell Stock', array('div'=>false, 'name'=>('sell'), 'class' => 'button buttonTable',array('rule' => 'notEmpty')));
-echo $this->Form->end()?></td>
-<td><?php echo $stock['purchases']['created']; ?> </td>
-</tr>
-
-<?$total = $total + $value; ?>
-
-<?php endforeach; ?>
 </table>
 <font size = "4"><p><b>Total:</b></p></font>
 <p><?php
@@ -242,9 +234,9 @@ echo $this->Form->end()?></td>
 
 
 <?php
-    $query = Set::flatten($listofstocks);
-    for ($j = 0; $j < count($query) / 2; ++$j) {
-        $stockoptions[$query[$j . '.stocklists.id']] = $query[$j . '.stocklists.symbol'];
+    $clientStocks = Set::flatten($listofstocks);
+    for ($j = 0; $j < count($clientStocks) / 2; ++$j) {
+        $stockoptions[$clientStocks[$j . '.stocklists.id']] = $clientStocks[$j . '.stocklists.symbol'];
     }
 ?>
 <?php

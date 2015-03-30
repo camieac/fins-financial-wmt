@@ -7,7 +7,7 @@ public $validate = array(
 'message' => 'Stock already exists'
 ),
 'name' => array(
-'rule' => 'checkId'
+'rule' => 'notEmpty'
 )
 );
 public function checkId(){
