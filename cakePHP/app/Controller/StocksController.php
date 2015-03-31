@@ -1,6 +1,6 @@
 <?php
 App::uses('StocksHelper', 'View/Helper');
-//App::uses('StockScraper', 'Vendor');
+App::uses('Api', 'Vendor');
 // File: /app/Controller/StocklistsController.php
 
 class StocksController extends AppController
@@ -11,7 +11,7 @@ class StocksController extends AppController
 		/*https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.industry%20where%20id%3D%22113%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=
 	*/
 			$data = array();
-		
+			$api = new Api();
 			$r ='https://query.yahooapis.com/v1/public/yql?q=';
 			$b = 'select%20*%20from%20yahoo.finance.industry%20where%20id%3D%22';
 			$a = '%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=';
@@ -28,16 +28,16 @@ class StocksController extends AppController
 					$findTest = $this->Stock->find('first', array(
 					'conditions' => array('Stock.symbol' => $stock['symbol'])
 					));
-					if(empty($findTest)){
+					if(empty($findTest) && $api->checkExists($stock['symbol'])){
 						$this->Stock->create();
 						try{
 							$this->Stock->save(array('company'=>$stock['name'],'symbol' =>$stock['symbol']));
 						}catch(Exception $e){
 							echo 'Database error'.PHP_EOL;
 						}
-						echo '********'.$stock['name']. 'added********'.PHP_EOL;
+						echo '********'.$stock['name']. ' added********<br/>'.PHP_EOL;
 					}else{
-						echo $stock['name']. 'skipped, already exists'.PHP_EOL;
+						//echo $stock['name']. 'skipped, already exists'.PHP_EOL;
 					}
 				
 				}

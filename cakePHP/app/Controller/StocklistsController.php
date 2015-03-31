@@ -1,6 +1,6 @@
 <?php
 App::uses('StocksHelper', 'View/Helper');
-//App::uses('StockScraper', 'Vendor');
+App::uses('Api', 'Vendor');
 // File: /app/Controller/StocklistsController.php
 
 class StocklistsController extends AppController
@@ -33,7 +33,8 @@ class StocklistsController extends AppController
                 $this->set('companySym', $value);
                 
                 $this->Stocklist->create();
-                if ($this->checkExists($value)) {
+		$api = new Api();
+                if ($api->checkExists($value)) {
                     if ($this->Stocklist->save($this->request->data)) {
                         $this->Session->setFlash(__('Your stock has been saved.'));
                         return $this->redirect(array(
@@ -106,18 +107,7 @@ class StocklistsController extends AppController
         }
     }
     
-    function checkExists($symbol)
-    {
-        //Example request https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.stocks%20where%20symbol%3D%22kokok%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=
-        $request = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.stocks%20where%20symbol%3D%22' . $symbol . '%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=';
-        $ch      = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $request);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        $output = curl_exec($ch);
-        curl_close($ch);
-        $exists = (strpos($output, 'CompanyName') !== false);
-        return $exists;
-    }
+    
     
     function getRSS($symbol)
     {
