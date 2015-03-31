@@ -22,17 +22,24 @@
 <h1>Add Meeting</h1>
 
 <?php
+/*
 $customerarray = Set::flatten($Custquery);
-$advisorarray  = Set::flatten($FAquery);
 
 for ($i = 0; $i < count($customerarray); ++$i) {
     $customer[$i + 1] = $customerarray[$i . '.clients.name'];
 }
 
-for ($j = 0; $j < count($advisorarray) / 2; ++$j) {
-    $fa[$advisorarray[$j . '.fas.username']] = $advisorarray[$j . '.fas.name'];
-}
 
+
+$advisorarray = Set::flatten($FAquery);
+In the event that no FAs exist, use the current user as the FA. The current user will be an admin, since no FAs exist
+
+if(empty($advisorarray)){$fa = array($user);}
+else{
+for ($j = 0; $j < count($advisorarray) / 2; ++$j) {
+    $fa[$advisorarray[$j . '.users.username']] = $advisorarray[$j . '.users.name'];
+}
+}*/
 ?>
 
 <pre>
@@ -46,19 +53,34 @@ echo $this->Form->create('Meeting', array(
 ));
 echo $this->Form->input('title');
 echo $this->Form->input('details');
+
+$namesC = array_column(array_column($customer,'Client'),'name');
+$idsC = array_column(array_column($customer,'Client'),'id');
+$idNamesC = array_combine($idsC,$namesC);
+$fas = array_column(array_column($fa,'User'),'username');
+
+
 echo $this->Form->input('customer', array(
     'type' => 'select',
-    'options' => $customer
+    'options' => $idNamesC
 ));
-if ($user === "admin") {
+
+
+$namesF = array_column(array_column($fa,'User'),'username');
+$idsF = array_column(array_column($fa,'User'),'id');
+//debug($names);
+$idNamesF = array_combine($idsF,$namesF);
+
+
+if ($user == "admin") {
     echo $this->Form->input('fa', array(
         'type' => 'select',
-        'options' => $fa
+        'options' => $idNamesF
     ));
 } else {
     echo $this->Form->input('fa', array(
         'type' => 'select',
-        'options' => $fa,
+        'options' => $idNamesF,
         'default' => $user,
         'type' => 'hidden'
     ));

@@ -87,42 +87,21 @@ foreach ($events as $event):
 <td><?php
     echo $event['Meeting']['details'];
 ?></td>
-<td><?php
-    if (isset($query[$i]['clients']['name'])) {
-        echo str_replace("\"", "", $query[$i]['clients']['name']);
-    } else {
-        echo 'Deleted Client';
-    }
-?></td>
-<td><?php
-    if (isset($query[$i]['fas']['name'])) {
-        echo str_replace("\"", "", $query[$i]['fas']['name']);
-    } else {
-        echo 'Deleted FA';
-    }
-?></td>
+<td><?php echo $clients[$i]['Client']['name']; ?></td>
+<td><?php echo $fas[$i]['User']['username']; ?></td>
 
 <?php
     $i++;
 ?> <!-- increments array -->
 
-<td><?php
-    echo date("H:i", strtotime($event['Meeting']['start']));
-?></td>
-<td><?php
-    echo date("H:i", strtotime($event['Meeting']['end']));
-?></td>
-<td><?php
-    echo date("Y-m-d", strtotime($event['Meeting']['end']));
-?></td>
-<td>
-<?php
-    echo $this->Html->link('Edit', array(
+<td><?php echo date("H:i", strtotime($event['Meeting']['start'])); ?></td>
+<td><?php echo date("H:i", strtotime($event['Meeting']['end'])); ?></td>
+<td><?php echo date("Y-m-d", strtotime($event['Meeting']['end'])); ?></td>
+<td><?php echo $this->Html->link('Edit', array(
         'action' => 'edit',
         $event['Meeting']['id']
     ));
-?>
-<?php
+
     echo '    ';
     echo $this->Form->postLink('Delete', array(
         'action' => 'delete',

@@ -21,15 +21,33 @@ $this->Meeting->user = $user;
 
 if ($this->User->hasAny($conditions))
 {
-
-$this->set('events', $this->Meeting->find('all'));
+$events = $this->Meeting->find('all');
 }
 else
 {
-$this->set('events', $this->Meeting->find('all', array('conditions' => array("'$user' = fa"))));
-
+$events = $this->Meeting->find('all', array('conditions' => array("'$user' = fa")));
 }
+$this->set('events', $events);
+$clientNames = array();
+$this->loadModel('Client');
+foreach($events as $event){
+//debug($event);
+$cID = $event['Meeting']['customer'];
+$fID = $event['Meeting']['fa'];
+//debug($cID);
+$clientNames[] = $this->Client->find('first', array(
+        'conditions' => array('Client.id' => $cID)
+    ));
+$faNames[] = $this->User->find('first', array(
+        'conditions' => array('User.id' => $fID)
+    ));
+}
+//debug($clientNames);
+$this->set('clients', $clientNames);
+$this->set('fas', $faNames);
+//debug($this->Meeting->get());
 $this->set('query', $this->Meeting->get());
+
 
 
 }
@@ -46,9 +64,10 @@ public function add() {
 	
 $user = AuthComponent::user('username');
 $this->Meeting->user = $user;
-
-$this->set('Custquery', $this->Meeting->getCustomers());
-$this->set('FAquery', $this->Meeting->getFAs());
+$this->loadModel('Client');
+$this->set('customer', $this->Client->find('all'));
+$this->loadModel('User');
+$this->set('fa', $this->User->find('all'));
 $this->set('user', $user);
 	
 if ($this->request->is('post')) {
@@ -72,9 +91,10 @@ throw new NotFoundException(__('Invalid Meeting'));
 
 $user = AuthComponent::user('username');
 $this->Meeting->user = $user;
-
-$this->set('Custquery', $this->Meeting->getCustomers());
-$this->set('FAquery', $this->Meeting->getFAs());
+$this->loadModel('Client');
+$this->set('customer', $this->Client->find('all'));
+$this->loadModel('User');
+$this->set('fa', $this->User->find('all'));
 $this->set('user', $user);
 
 
