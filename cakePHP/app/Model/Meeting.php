@@ -33,14 +33,14 @@ public $validate = array(
 		if($this->user==="admin")
 		{
 
-       return $this->query("SELECT * FROM events, clients, fas WHERE events.customer = clients.id AND events.fa = fas.username ORDER BY events.id;");
+       return $this->query("SELECT * FROM events, clients, users WHERE events.customer = clients.id AND events.fa = users.username ORDER BY events.id;");
 
 		}
 		
 		else
 		{
 
-       return $this->query("SELECT * FROM events, clients, fas WHERE events.customer = clients.id AND events.fa = fas.username AND fas.username ='". $this->user. "' ORDER BY events.id;");
+       return $this->query("SELECT * FROM events, clients, users WHERE events.customer = clients.id AND events.fa = users.username AND users.username ='". $this->user. "' ORDER BY events.id;");
 
 		}	
     }
@@ -58,12 +58,12 @@ public $validate = array(
     {
 		if($this->user==="admin")
 		{
-       return $this->query("SELECT fas.name, fas.username FROM fas");
+       return $this->query("SELECT users.name, users.username FROM users");
 		}
 		
 		else
 		{
-		return $this->query("SELECT fas.name, fas.username FROM fas WHERE fas.username ='". $this->user. "';");
+		return $this->query("SELECT users.name, users.username FROM users WHERE users.username ='". $this->user. "';");
 		}
     }
 }
