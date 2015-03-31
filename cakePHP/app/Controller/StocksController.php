@@ -8,6 +8,7 @@ class StocksController extends AppController
     public $helpers = array('Html', 'Form');
     
     public function scrape() {
+ini_set('max_execution_time', 300);
 		/*https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.industry%20where%20id%3D%22113%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=
 	*/
 			$data = array();
@@ -28,14 +29,16 @@ class StocksController extends AppController
 					$findTest = $this->Stock->find('first', array(
 					'conditions' => array('Stock.symbol' => $stock['symbol'])
 					));
-					if(empty($findTest) && $api->checkExists($stock['symbol'])){
-						$this->Stock->create();
-						try{
-							$this->Stock->save(array('company'=>$stock['name'],'symbol' =>$stock['symbol']));
-						}catch(Exception $e){
-							echo 'Database error'.PHP_EOL;
-						}
+					if(empty($findTest)){
+						if($api->checkExists($stock['symbol'])){
+							$this->Stock->create();
+							try{
+								$this->Stock->save(array('company'=>$stock['name'],'symbol' =>$stock['symbol']));
+							}catch(Exception $e){
+								echo 'Database error'.PHP_EOL;
+							}
 						echo '********'.$stock['name']. ' added********<br/>'.PHP_EOL;
+						}
 					}else{
 						//echo $stock['name']. 'skipped, already exists'.PHP_EOL;
 					}
