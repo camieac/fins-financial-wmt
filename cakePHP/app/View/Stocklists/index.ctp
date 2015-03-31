@@ -19,6 +19,9 @@
 <?php $User = ClassRegistry::init('User'); ?>
 
 	<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+ 	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	<script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.css">
 		<style>
@@ -39,6 +42,35 @@ width:100%;
 });
 
 } ); </script>
+<script>
+  $(function() {
+function custom_source(request, response) {
+        var matcher = new RegExp($.ui.autocomplete.escapeRegex(request.term), "i");
+        response($.grep(stocks, function(value) {
+            return matcher.test(value.label)
+                || matcher.test(value.desc);
+        }));
+    }
+    var stocks = <?php echo $jsonStocks ?>;
+    $( "#dSearch" ).autocomplete({
+      source: custom_source,
+	minLength: 0,
+	
+	select: function( event, ui ) {
+        	$( "#dSearch" ).val( ui.item.label );
+		$( "#dSearch-description" ).html( ui.item.desc );
+		return false;
+	}
+    })
+	.autocomplete( "instance" )._renderItem = function( ul, item ) {
+      return $( "<li>" )
+        .append( "<a>" + item.label + "<br>" + item.desc + "</a>" )
+        .appendTo( ul );
+    };
+  });
+
+
+  </script>
 
 
 <h2>Stocks</h2>
@@ -46,7 +78,8 @@ width:100%;
 <div class="dRoundedBox">
 <?php
 echo $this->Form->create('Stocklist', array('class' => 'fForm'));
-echo $this->Form->input('symbol'); ?>
+echo $this->Form->input('symbol', array('id' => 'dSearch')); ?>
+<p id="dSearch-description"></p>
 <div class='submit'>
 <?php  echo $this->Form->submit('Add Stock', array('div'=>false, 'name'=>'add', 'class' => 'button'));
 ?>

@@ -1,15 +1,26 @@
 <?php
 App::uses('StocksHelper', 'View/Helper');
+//App::uses('StockScraper', 'Vendor');
 // File: /app/Controller/StocklistsController.php
 
 class StocklistsController extends AppController
 {
     public $helpers = array('Html', 'Form');
-    
+
+    public function prepareStockJSON(){
+	$this->loadModel('Stock');
+	$jsonStocks = ($this->Stock->find('all'));
+	foreach($jsonStocks as $stock){
+		$properJSON[] = array('label' =>$stock['Stock']['symbol'],'desc' =>$stock['Stock']['company']);
+	}
+	$properJSON = json_encode($properJSON);
+	$this->set('jsonStocks', $properJSON);
+    }
+   
     public function index()
     {
         if ($this->Session->read('Auth.User')) {
-            
+            $this->prepareStockJSON();
             
             $this->loadModel('User');
             
