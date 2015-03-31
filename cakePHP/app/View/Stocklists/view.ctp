@@ -20,19 +20,20 @@ $('#tNews').DataTable({
 <?php
 ini_set('memory_limit','256M');
 $company = $this->params['url']['stock'];
-$result = $this->Stocks->get(array($company));
+
+$result = $api->get(array($company));
 
 echo $this->Html->script('javascript');
 ?>
 
 <?php
-$result = $this->Stocks->getHistory(array($company));
+$result = $api->getHistory(array($company));
 array_shift($result); //Takes away the first array position that contains the names of the elements.
 ?>
 
 <?php
 $company = $this->params['url']['stock'];
-$result = $this->Stocks->getHistory(array($company));
+$result = $api->getHistory(array($company));
 array_shift($result); //Takes away the first array position that contains the names of the elements.
 
 ?>   
@@ -106,9 +107,7 @@ array_shift($result); //Takes away the first array position that contains the na
 chart.draw(data, options);
 	}
 
-function resizeChart () {
-    chart.draw(data, options);
-}
+
 if (document.addEventListener) {
     window.addEventListener('resize', resizeChart);
 }
@@ -122,7 +121,9 @@ else {
     </script>
 
     <!--Div that will hold the line chart-->
+<h3><?php echo $comp.' ('.$symb.')' ?></h3>
     <div id="chart_div" class="dRoundedBox"></div>
+
 	<!--<div id="chart_controls" class="dRoundedBox">
 	<button type="button" onclick="hideColumn(1)">Open Price</button>
 	<button type="button" onclick="hideColumn(2)">Close Price</button>
@@ -130,6 +131,7 @@ else {
 	<button type="button" onclick="hideColumn(4)">Low Price</button>
 	</div> -->
 	<div id="chart_table_div" class="dRoundedBox">
+
 	<table id ="chart_table">
 		<thead>
 <tr>
@@ -142,7 +144,9 @@ else {
 </tr>
 </thead>
 
-<?php foreach ($result as $stock): ?>
+<?php 
+
+foreach ($result as $stock): ?>
 <tr>
 	<?php $date = $stock['date'];
 	//list($year, $month, $day) = split('[/.-]', $date);
@@ -168,6 +172,7 @@ else {
 	$itemss = $rss['rss']['channel']['item'];
 	
 	//debug($itemss);
+
 foreach($itemss as $item) { ?>
 <tr><td><a title = "<?php echo $item['pubDate'] ?>" href="<?php echo $item['link'] ?>"><?php echo $item['title']; ?></a>	</td></tr>
 	

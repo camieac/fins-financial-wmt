@@ -3,24 +3,59 @@ App::uses('StocksHelper', 'View/Helper');
 App::uses('Api', 'Vendor');
 // File: /app/Controller/StocklistsController.php
 
-class StocklistsController extends AppController
+class StocksController extends AppController
 {
     public $helpers = array('Html', 'Form');
-
-    public function prepareStockJSON(){
-	$this->loadModel('Stock');
-	$jsonStocks = ($this->Stock->find('all'));
-	foreach($jsonStocks as $stock){
-		$properJSON[] = array('label' =>$stock['Stock']['symbol'],'desc' =>$stock['Stock']['company']);
+    
+    public function scrape() {
+ini_set('max_execution_time', 300);
+		/*https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.industry%20where%20id%3D%22113%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=
+	*/
+			$data = array();
+			$api = new Api();
+			$r ='https://query.yahooapis.com/v1/public/yql?q=';
+			$b = 'select%20*%20from%20yahoo.finance.industry%20where%20id%3D%22';
+			$a = '%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=';
+			for ($id = 110; $id <= 210; $id++) {
+				$request = $r.$b.$id.$a;
+				$ch = curl_init();
+				curl_setopt($ch, CURLOPT_URL, $request);
+				curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+				$output = curl_exec($ch);
+				
+				$idata = array_shift(json_decode($output,true));
+				$idata = $idata['results']['industry']['company'];
+				foreach($idata as $stock){
+					$findTest = $this->Stock->find('first', array(
+					'conditions' => array('Stock.symbol' => $stock['symbol'])
+					));
+					if(empty($findTest)){
+						if($api->checkExists($stock['symbol'])){
+							$this->Stock->create();
+							try{
+								$this->Stock->save(array('company'=>$stock['name'],'symbol' =>$stock['symbol']));
+							}catch(Exception $e){
+								echo 'Database error'.PHP_EOL;
+							}
+						echo '********'.$stock['name']. ' added********<br/>'.PHP_EOL;
+						}
+					}else{
+						//echo $stock['name']. 'skipped, already exists'.PHP_EOL;
+					}
+				
+				}
+				curl_close($ch);
+				
+			}
+			
+		
+		
+		//return $stocks;
 	}
-	$properJSON = json_encode($properJSON);
-	$this->set('jsonStocks', $properJSON);
-    }
-   
     public function index()
     {
         if ($this->Session->read('Auth.User')) {
-            $this->prepareStockJSON();
+            
             
             $this->loadModel('User');
             
@@ -33,8 +68,7 @@ class StocklistsController extends AppController
                 $this->set('companySym', $value);
                 
                 $this->Stocklist->create();
-		$api = new Api();
-                if ($api->checkExists($value)) {
+                if ($this->checkExists($value)) {
                     if ($this->Stocklist->save($this->request->data)) {
                         $this->Session->setFlash(__('Your stock has been saved.'));
                         return $this->redirect(array(
@@ -58,66 +92,7 @@ class StocklistsController extends AppController
             ));
         }
     }
-    public function update(){
-		$this->autoRender = false;
-		$id = $this->request->query['id'];
-		$stock = $this->Stocklist->find('first', array('conditions'=>array('Stocklist.id' => $id)));
-		$this->Stocklist->checkUpdate($stock); //Update stock
-		$this->redirect(array(
-                'controller' => 'stocklists',
-                'action' => 'index'
-            ));
-    }
-    public function delete($id)
-    {
-        if ($this->request->is('get')) {
-            throw new MethodNotAllowedException();
-        }
-        if ($this->Stocklist->delete($id)) {
-            $this->Session->setFlash(__('The stock with id: %s has been deleted.', h($id)));
-            return $this->redirect(array(
-                'action' => 'index'
-            ));
-        }
-    }
     
-    public function view()
-    {
-        $stock = $this->request->query['stock'];
-        if ($this->Session->read('Auth.User')) {
-            $this->set('stock', $this->Stocklist->find('all'));
-            $this->set('rss', $this->getRSS($stock));
-        } else {
-            $this->redirect(array(
-                'controller' => 'users',
-                'action' => 'login'
-            ));
-        }
-    }
-    
-    public function quickview()
-    {
-        if ($this->Session->read('Auth.User')) {
-            $this->set('stock', $this->Stocklist->find('all'));
-        } else {
-            $this->redirect(array(
-                'controller' => 'users',
-                'action' => 'login'
-            ));
-        }
-    }
-    
-    
-    
-    function getRSS($symbol)
-    {
-        //Example request http://finance.yahoo.com/rss/headline?s=ticker(s)
-        $request = 'http://finance.yahoo.com/rss/headline?s=' . $symbol;
-        $output = $xml = Xml::build($request);
-        $output = Xml::toArray($output);
-        //debug($output);
-        return $output;
-    }
     
     
 }

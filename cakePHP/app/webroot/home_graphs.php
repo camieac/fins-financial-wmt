@@ -13,7 +13,7 @@
 				<td>
 					<div class="frameWrap" id = "frameWrap1">
 						<img class = "loader" id="loader1" src="img/loader.gif" width="36" height="36" alt="loading gif"/>
-						<iframe id="iframe1" width="520" height="220"src="http://emarkettrader.co.uk/stocklists/quickview?stock=<?php echo $index1 ?>" ></iframe>
+						<iframe id="iframe1" width="520" height="220"src="/stocklists/quickview?stock=<?php echo $index1 ?>" ></iframe>
 					</div>
 					<script>
 						$(document).ready(function () {
@@ -27,7 +27,7 @@
 				<td>
 					<div class="frameWrap" id = "frameWrap2">
 						<img class = "loader" id="loader2" src="img/loader.gif" width="36" height="36" alt="loading gif"/>
-						<iframe id="iframe2" width="520" height="220"src="http://emarkettrader.co.uk/stocklists/quickview?stock=<?php echo $index2 ?>" ></iframe>
+						<iframe id="iframe2" width="520" height="220"src="/stocklists/quickview?stock=<?php echo $index2 ?>" ></iframe>
 					</div>
 					<script>
 						$(document).ready(function () {
@@ -41,7 +41,7 @@
 				<td>
 					<div class="frameWrap" id = "frameWrap3">
 						<img class = "loader" id="loader3" src="img/loader.gif" width="36" height="36" alt="loading gif"/>
-						<iframe id="iframe3" width="520" height="220"src="http://emarkettrader.co.uk/stocklists/quickview?stock=<?php echo $index3 ?>" ></iframe>
+						<iframe id="iframe3" width="520" height="220"src="/stocklists/quickview?stock=<?php echo $index3 ?>" ></iframe>
 					</div>
 					<script>
 						$(document).ready(function () {
@@ -55,7 +55,7 @@
 				<td>
 					<div class="frameWrap" id = "frameWrap4">
 						<img class = "loader" id="loader4" src="img/loader.gif" width="36" height="36" alt="loading gif"/>
-						<iframe id="iframe4" width="520" height="220"src="http://emarkettrader.co.uk/stocklists/quickview?stock=<?php echo $index4 ?>" ></iframe>
+						<iframe id="iframe4" width="520" height="220"src="/stocklists/quickview?stock=<?php echo $index4 ?>" ></iframe>
 					</div>
 					<script>
 						$(document).ready(function () {
