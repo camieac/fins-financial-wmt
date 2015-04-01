@@ -51,7 +51,7 @@ width:100%;
 
 <?php foreach ($purchases as $purchase):
 if(isset($query[$i]['stocklists']['symbol'])){
-$result = $this->Stocks->get(array($query[$i]['stocklists']['symbol'])); 
+$result = $api->get(array($query[$i]['stocklists']['symbol'])); 
 }?>
 
 <?php foreach ($result as $stock): ?>

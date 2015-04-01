@@ -21,10 +21,12 @@ $this->Meeting->user = $user;
 
 if ($this->User->hasAny($conditions))
 {
+echo 'admin';
 $events = $this->Meeting->find('all');
 }
 else
 {
+echo 'fa';
 $events = $this->Meeting->find('all', array('conditions' => array("'$user' = fa")));
 }
 $this->set('events', $events);
@@ -45,6 +47,7 @@ $faNames[] = $this->User->find('first', array(
 //debug($clientNames);
 $this->set('clients', $clientNames);
 $this->set('fas', $faNames);
+debug($faNames);
 //debug($this->Meeting->get());
 $this->set('query', $this->Meeting->get());
 

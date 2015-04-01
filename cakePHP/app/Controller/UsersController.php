@@ -26,6 +26,7 @@ public function logout() {
 }
 
     public function index() {
+	$this->set('isAdmin',$this->Auth->user('role') == 'admin');
 		if ($this->Session->read('Auth.User')) 
 		{
         $this->User->recursive = 0;
@@ -47,16 +48,21 @@ public function logout() {
     }
 
     public function add() {
-        if ($this->request->is('post')) {
-            $this->User->create();
-            if ($this->User->save($this->request->data)) {
-                $this->Session->setFlash(__('The user has been saved'));
-                return $this->redirect(array('action' => 'login'));
-            }
-            $this->Session->setFlash(
-                __('The user could not be saved. Please, try again.')
-            );
-        }
+	if($this->Auth->user('role') == 'admin'){
+		if ($this->request->is('post')) {
+		    $this->User->create();
+		    if ($this->User->save($this->request->data)) {
+		        $this->Session->setFlash(__('The user has been saved'));
+		        return $this->redirect(array('action' => 'login'));
+		    }
+		    $this->Session->setFlash(
+		        __('The user could not be saved. Please, try again.')
+		    );
+		}
+	}else{
+		$this->Session->setFlash(__('You do not have sufficient priveledges to access that location.'));
+		return $this->redirect(array('action' => 'index'));
+	}
     }
 
     function change_password() {
@@ -73,6 +79,7 @@ public function logout() {
 }
 
 function home_settings() {
+
     if (!empty($this->data)) {
         if ($this->User->save($this->data)) {
             $this->Session->setFlash('Home settings have been updated');

@@ -41,7 +41,10 @@ if ($this->Session->read('Auth.User')) {
 		
 <script type="text/javascript"> $(document).ready(function() {
 	$('#clientstocks').DataTable({
-	"bLengthChange": false
+	"bLengthChange": false,
+	"scrollY":        "20em",
+        "scrollCollapse": true,
+        "paging":         false
 	}
 	
 	);
@@ -104,6 +107,9 @@ if ($this->Session->read('Auth.User')) {
 <tr><td>Date of Birth</td><td><?php
     echo $client['Client']['dateOfBirth'];
 ?></td></tr>
+<tr><td>Email</td><td><?php
+    echo $client['Client']['email'];
+?></td></tr>
 <tr><td>National Insurance Number</td><td><?php
     echo $client['Client']['nis'];
 ?></td></tr>
@@ -116,11 +122,9 @@ if ($this->Session->read('Auth.User')) {
 <tr><td>Balance</td><td><?php
     echo "£" . number_format($client['Client']['balance'], 2);
 ?></td></tr>
-<tr><td>Financial Advisor</td><td><?php
-    echo $client['Client']['fa'];
-?></td></tr>
+<?php if ($isAdmin) echo '<tr><td>Financial Advisor</td><td>'.$client['Client']['fa'].'</td></tr>';?>
 <?php
-    if (isset($client['Client']['twitter'])) {
+    if ($twitterExists) {
         echo '<tr><td>Twitter</td><td><a href ="  https://twitter.com/' . $client['Client']['twitter'] . '">' . $client['Client']['twitter'] . '</a></td></tr>';
         
     }
@@ -152,7 +156,7 @@ Last Modified: <?php
 <div class = "dRoundedBox">
 <h3>Transaction History</h3>
 <?php
-    $id = $this->params['pass'];
+   // $id = $this->params['pass'];
 ?>
 
 <table id="clientstocks" class="display">
@@ -171,6 +175,7 @@ Last Modified: <?php
 
 <?php
     $total = 0;
+	$net = $client['Client']['balance'];
     //debug($clientStocks);
     foreach ($clientStocks as $stock):
         $company = $stock['stocklists']['symbol'];
@@ -207,6 +212,9 @@ Last Modified: <?php
         		echo $this->Form->hidden('id', array(
             			'default' => $test
         		));
+			echo $this->Form->hidden('type', array(
+            			'default' => 'sold'
+        		));
         		echo $this->Form->submit('Sell Stock', array(
             			'div' => false,
             			'name' => ('sell'),
@@ -220,25 +228,25 @@ Last Modified: <?php
         			echo $stock['purchases']['created'];
 			?> </td></tr><?php
         $total = $total + $value;
-
+	
     endforeach;
+$net = $net + $total;
 ?>
 </table>
-<font size = "4"><p><b>Total:</b></p></font>
+<font size = "4"><p><b>Total Share value:</b></p></font>
 <p><?php
     echo "£" . number_format($total, 2);
+?></p>
+<font size = "4"><p><b>Net Total:</b></p></font>
+<p><?php
+    echo "£" . number_format($net, 2);
 ?></p>
 </div>
 <div class = "dRoundedBox">
 	<h3>New Transaction</h3>
 
 
-<?php
-    $clientStocks = Set::flatten($listofstocks);
-    for ($j = 0; $j < count($clientStocks) / 2; ++$j) {
-        $stockoptions[$clientStocks[$j . '.stocklists.id']] = $clientStocks[$j . '.stocklists.symbol'];
-    }
-?>
+
 <?php
     echo $this->Form->create('Purchase', array(
         'class' => 'fForm'
@@ -247,6 +255,9 @@ Last Modified: <?php
         'type' => 'select',
         'options' => $stockoptions
     ));
+echo $this->Form->hidden('type', array(
+            'default' => 'bought'
+        		));
     echo $this->Form->input('customer', array(
         'type' => 'select',
         'options' => $id,
@@ -273,17 +284,10 @@ Last Modified: <?php
 </div>
 
 <?php //Optional twitter feed here
-    if (isset($client['Client']['twitter'])) {
+    if ($twitterExists) {
         $href      = 'https://twitter.com/' . $client['Client']['twitter'];
-        $validUser = $this->requestAction(array(
-            'controller' => 'clients',
-            'action' => 'twitterAccountExists',
-            'pass' => array(
-                $client['Client']['twitter']
-            )
-        ));
         
-        if ($validUser) {
+        if ($twitterExists) {
             //echo '<div class="dRoundedBox"><a class="twitter-timeline" href="'.$href.'" data-widget-id="576861420341559296">Tweets by @'.$client['Client']['twitter'].'</a></div>';
             //echo $twitter_timeline;
             $decode = json_decode($twitter_timeline, true); //getting the file content as array
@@ -305,9 +309,9 @@ Last Modified: <?php
 ?>
 <thead>
 <tr>
-<th>@<?php
-            echo $client['Client']['twitter'];
-?></th>
+<?php
+           if($twitterExists) echo '<th>'.$client['Client']['twitter'].'</th>';
+?>
 </tr>
 </thead>
 <tbody>

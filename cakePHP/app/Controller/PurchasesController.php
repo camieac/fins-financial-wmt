@@ -1,11 +1,13 @@
 <?php
-
+App::uses('Api', 'Vendor');
 // File: /app/Controller/PurchasesController.php
 
 class PurchasesController extends AppController {
 public $helpers = array('Html', 'Form');
 
 public function index() {
+$api = new Api();
+$this->set('api',$api);
 if ($this->Session->read('Auth.User')) 
 {
 	

@@ -13,7 +13,7 @@ class ClientsController extends AppController
     
     public function index()
     {
-        
+        $this->set('isAdmin',$this->Auth->user('role') == 'admin');
         if ($this->Session->read('Auth.User')) {
             $user = AuthComponent::user('username');
             
@@ -133,9 +133,21 @@ class ClientsController extends AppController
     
     public function view($id = null)
     {
+	$this->set('isAdmin',$this->Auth->user('role') == 'admin');
+	$this->set('id',$id);
         $api = new Api();
         $this->set('listofstocks', $this->Client->getStockNames());
+        $this->loadModel('Stocklist');
+        $stocks = $this->Stocklist->find('all');
+        $stocksymbols = array_column($stocks,'Stocklist');
+        $stocksymbols = array_column($stocksymbols,'symbol');
         
+        $stockids = array_column($stocks,'Stocklist');
+        $stockids = array_column($stockids,'id');
+        
+        $stockdata = array_combine($stockids,$stocksymbols);
+       
+         $this->set('stockoptions', $stockdata);
         if ($this->Session->read('Auth.User')) {
             if (!$id) {
                 throw new NotFoundException(__('Invalid client'));
@@ -147,6 +159,8 @@ class ClientsController extends AppController
             $this->loadModel('Purchase');
             $this->set('client', $client);
             $this->Client->id = $id;
+	    $twitterExists = $this->Client->twitterAccountExists($this->Client->twitter);
+	    $this->set('twitterExists',$twitterExists);
             $this->set('clientStocks', $this->Client->getStocks());
             if ($this->request->is('post')) {
                 if (isset($this->params['data']['buy'])) {		//Buying stocks
@@ -245,9 +259,9 @@ debug($price);
                             ), array(
                                 'Client.id' => $id
                             ));
-                            $this->Purchase->delete(array(
+                            /*$this->Purchase->delete(array(
                                 'Purchase.id' => $rowid
-                            ));
+                            ));*/
                             return $this->redirect(array(
                                 'action' => 'view',
                                 $id
@@ -316,7 +330,7 @@ debug($price);
     }
     public function edit($id = null)
     {
-        
+        debug($this->request->data);
         if (!$id) {
             throw new NotFoundException(__('Invalid Client'));
         }
@@ -327,18 +341,13 @@ debug($price);
         }
         
         $this->set('FAquery', $this->Client->getFAs());
-        
-        if ($this->request->is(array(
-            'Client',
-            'put'
-        ))) {
+  
+        if ($this->request->is(array('Client','put'))) {
             $this->Client->id = $id;
             if ($this->Client->save($this->request->data)) {
                 $this->Session->setFlash(__('Your Client has been updated.'));
-                
-                $this->uploadImage();
-                
-                
+		/*Upload image if an image has been provided.*/
+		if($this->request->data['Client']['profileImage']['size'] == 0) $this->uploadImage();
                 return $this->redirect(array(
                     'action' => 'index'
                 ));
@@ -385,55 +394,10 @@ debug($price);
     
     
     
-    function getStock0($symbols = array())
-    {
-        $limit  = 200;
-        $chunks = ceil(count($symbols) / $limit);
-        $stocks = array();
-        for ($i = 0; $i < $chunks; $i++) {
-            $offset         = (count($symbols) - ($i * $limit) > $limit) ? $limit : count($symbols) - ($i * $limit);
-            $subset_symbols = array_slice($symbols, $i * $limit, $offset);
-            $request        = 'http://download.finance.yahoo.com/d/quotes.csv?s=';
-            foreach ($subset_symbols as $s)
-                $request .= $s . '+';
-            $request = substr($request, 0, strlen($request) - 1);
-            $request .= '&f=nsc6b2ophgd1';
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, $request);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-            $output = curl_exec($ch);
-            curl_close($ch);
-            $splits = explode("\n", $output);
-            foreach ($splits as $s) {
-                if (strlen($s) > 0) {
-                    $s_data   = explode(',', $s);
-                    $stocks[] = array(
-                        'name' => $s_data[0],
-                        'symbol' => $s_data[1],
-                        'change' => $s_data[2],
-                        'current' => $s_data[3],
-                        'open' => $s_data[4],
-                        'close' => $s_data[5],
-                        'high' => $s_data[6],
-                        'low' => $s_data[7],
-                        'date' => $s_data[8]
-                    );
-                }
-            }
-        }
-        return $stocks;
-    }
     
     
-    function twitterAccountExists($username)
-    {
-        $headers = get_headers("https://twitter.com/" . $username);
-        if (strpos($headers[0], '404') !== false) {
-            return false; //404 found
-        } else {
-            return true;
-        }
-    }
+    
+    
     
     
     

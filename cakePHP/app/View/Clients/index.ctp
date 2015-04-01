@@ -77,7 +77,7 @@ array('action' => 'view', $client['Client']['id'])
 <td><?php echo $client['Client']['nis']; ?></td>
 <td><?php echo $client['Client']['phoneNo']; ?></td>
 <td><?php echo $client['Client']['address']; ?></td>
-<td><?php echo $client['Client']['balance']; ?></td>
+<td><?php echo number_format($client['Client']['balance'], 2); ?></td>
 <td><?php echo $client['Client']['fa']; ?></td>
 <td>
 <?php

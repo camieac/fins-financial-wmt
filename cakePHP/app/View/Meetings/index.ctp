@@ -88,7 +88,10 @@ foreach ($events as $event):
     echo $event['Meeting']['details'];
 ?></td>
 <td><?php echo $clients[$i]['Client']['name']; ?></td>
-<td><?php echo $fas[$i]['User']['username']; ?></td>
+
+<td><?php
+
+echo $fas[$i]['User']['username']; ?></td>
 
 <?php
     $i++;
