@@ -40,5 +40,60 @@ public function index() {
 	}
 }
 
+public function sell(){
+$this->autoRender = false;
+$data = $this->request->data;
+$id = $data['Purchase']['id'];
+$balance = $data['Purchase']['balance'];
+debug($data);
+$this->Purchase->create();
+
+if($this->Purchase->save($data)) echo 'save success';
+else echo 'save fail';
+
+//$this->redirect(array('controller' => 'clients', 'action' => 'view/'.$id));
+}
+
+
+public function buy(){
+$this->autoRender = false;
+$data = $this->request->data;
+$id = $data['Purchase']['id'];
+$balance = $data['Purchase']['balance'];
+$cost = $data['Purchase']['price']*$data['Purchase']['quantity'];
+if($balance >= $cost){			//If we have enough money
+	$this->Purchase->create();
+	if($this->Purchase->save($data)){ echo 'save success';}
+	else{ echo 'save fail';}
+}else{
+	echo 'save not valid';
+}echo 'save fail';
+
+//$this->redirect(array('controller' => 'clients', 'action' => 'view/'.$id));
+}
 } ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
