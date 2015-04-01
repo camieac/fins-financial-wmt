@@ -50,28 +50,24 @@ width:100%;
 </tr>
 </thead>
 
-<?php foreach ($purchases as $purchase):
-if(isset($query[$i]['stocklists']['symbol'])){
-$result = $api->get(array($query[$i]['stocklists']['symbol'])); 
-}?>
 
-<?php foreach ($result as $stock): ?>
 
+<?php for($i = 0; $i < $length; $i++){ ?>
 <tr>
-<td><?php echo $purchase['Purchase']['type'] ?></td>
-<td><?php echo str_replace("\"", "", $stock['name']); ?></td>
-<td><?php if (isset($query[$i]['clients']['name'])){echo str_replace("\"", "", $query[$i]['clients']['name']) ;}else{echo 'Deleted Client';}?></td>
-<td><?php echo $purchase['Purchase']['quantity']; ?></td>
-<?php $i++; ?> <!-- increments array -->
-<td><?php echo $purchase['Purchase']['price']; ?></td>
-<?php $value = ($purchase['Purchase']['quantity'])*($purchase['Purchase']['price']); ?>
+<td><?php echo $purchases[$i]['type'] ?></td>
+<td><?php echo $stocks[$i]['name']; ?></td>
+<td><?php echo $clients[$i]['name'] ?></td>
+<td><?php echo $purchases[$i]['quantity']; ?></td>
+
+<td><?php echo $purchases[$i]['price']; ?></td>
+<?php $value = ($purchases[$i]['quantity'])*($purchases[$i]['price']); ?>
 <td><?php echo "£".number_format($value, 2); ?></td>
-<?php endforeach; ?>
 
-<td><?php echo $purchase['Purchase']['created']; ?></td>
 
-<?php endforeach; ?>
+<td><?php echo $purchases[$i]['created']; ?></td>
 </tr>
+<?php } ?>
+
 </table>
 
 </div>

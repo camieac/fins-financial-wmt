@@ -10,7 +10,7 @@
  * http://www.opensource.org/licenses/mit-license.php
  */
 ?>
-<div class="events form">
+<div class="dRoundedBox">
 <?php echo $this->Form->create('Event');?>
 	<fieldset>
  		<legend><?php __('Edit Event'); ?></legend>
@@ -32,7 +32,7 @@
 	</fieldset>
 <?php echo $this->Form->end(__('Submit', true));?>
 </div>
-<div class="actions">
+<div class="dRoundedBox">
 	<ul>
 		<li><?php echo $this->Html->link(__('View Event', true), array('plugin' => 'full_calendar', 'action' => 'view', $this->Form->value('Event.id'))); ?></li>
 		<li><?php echo $this->Html->link(__('Manage Events', true), array('plugin' => 'full_calendar', 'action' => 'index'));?></li>
