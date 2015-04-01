@@ -81,7 +81,7 @@ public $validate = array(
     
      public function getStocks()
     {
-       return $this->query('SELECT * FROM purchases, stocklists WHERE customer = '. $this->id . ' AND purchases.stock = stocklists.id AND type ="bought";');
+       return $this->query('SELECT * FROM purchases, stocklists WHERE customer = '. $this->id . ' AND purchases.stock = stocklists.id;');
     }
     
     public function getStockNames()

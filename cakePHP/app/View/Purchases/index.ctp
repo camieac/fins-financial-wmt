@@ -40,6 +40,7 @@ width:100%;
 <table id="purchases" class="display" cellspacing="0" width="100%">
 <thead>
 <tr>
+<th>Type</th>
 <th>Stock</th>
 <th>Customer</th>
 <th>Quantity</th>
@@ -57,6 +58,7 @@ $result = $api->get(array($query[$i]['stocklists']['symbol']));
 <?php foreach ($result as $stock): ?>
 
 <tr>
+<td><?php echo $purchase['Purchase']['type'] ?></td>
 <td><?php echo str_replace("\"", "", $stock['name']); ?></td>
 <td><?php if (isset($query[$i]['clients']['name'])){echo str_replace("\"", "", $query[$i]['clients']['name']) ;}else{echo 'Deleted Client';}?></td>
 <td><?php echo $purchase['Purchase']['quantity']; ?></td>

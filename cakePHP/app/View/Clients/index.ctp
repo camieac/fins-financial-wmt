@@ -55,7 +55,7 @@ width:100%;
 <th>Phone Number</th>
 <th>Address</th>
 <th>Balance</th>
-<th>F.A</th>
+<?php if($isAdmin) echo '<th>F.A</th>'?>
 <th>Actions</th>
 <th>Created</th>
 </tr>
@@ -78,7 +78,7 @@ array('action' => 'view', $client['Client']['id'])
 <td><?php echo $client['Client']['phoneNo']; ?></td>
 <td><?php echo $client['Client']['address']; ?></td>
 <td><?php echo number_format($client['Client']['balance'], 2); ?></td>
-<td><?php echo $client['Client']['fa']; ?></td>
+<?php if($isAdmin) echo '<td>'.$client['Client']['fa'].'</td>'; ?>
 <td>
 <?php
 echo $this->Html->link(

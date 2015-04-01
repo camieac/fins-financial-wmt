@@ -162,6 +162,7 @@ Last Modified: <?php
 <table id="clientstocks" class="display">
 <thead>
 <tr>
+<th>Type</th>
 <th>Symbol</th>
 <th>Name</th>
 <th>Quantity</th>
@@ -179,7 +180,10 @@ Last Modified: <?php
     //debug($clientStocks);
     foreach ($clientStocks as $stock):
         $company = $stock['stocklists']['symbol'];
-        ?><td><?php
+        ?>
+<td><?php
+		echo $stock['purchases']['type'];
+	?></td><td><?php
 		echo $stock['stocklists']['symbol'];
 	?></td><td><?php
         	echo str_replace("\"", "", ($stock['stocklists']['name']));
@@ -206,12 +210,13 @@ Last Modified: <?php
 		?><td><?php
         		echo "£" . number_format($value, 2);
 		?></td><td><?php
+if($stock['purchases']['type'] == 'bought'){
         		echo $this->Form->create('Purchase');
         		echo $this->Form->input('quantity');
         		$test = $stock['purchases']['id'];
-        		echo $this->Form->hidden('id', array(
+        		/*echo $this->Form->hidden('id', array(
             			'default' => $test
-        		));
+        		));*/
 			echo $this->Form->hidden('type', array(
             			'default' => 'sold'
         		));
@@ -224,6 +229,29 @@ Last Modified: <?php
            			)
         		));
         		echo $this->Form->end();
+}else{
+echo $this->Form->create('Purchase');
+        		echo $this->Form->input('quantity');
+        		$test = $stock['purchases']['id'];
+        		/*echo $this->Form->hidden('id', array(
+            			'default' => $test
+        		));*/
+			echo $this->Form->hidden('type', array(
+            			'default' => 'bought'
+        		));
+			echo $this->Form->hidden('stock', array(
+            			'default' => $stock['stocklists']['id']
+        		));
+        		echo $this->Form->submit('Buy Stock', array(
+            			'div' => false,
+            			'name' => ('buy'),
+            			'class' => 'button buttonTable',
+            			array(
+                			'rule' => 'notEmpty'
+           			)
+        		));
+        		echo $this->Form->end();
+}
 			?></td><td><?php
         			echo $stock['purchases']['created'];
 			?> </td></tr><?php

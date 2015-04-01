@@ -328,36 +328,29 @@ debug($price);
             }
         }
     }
-    public function edit($id = null)
-    {
-        debug($this->request->data);
-        if (!$id) {
-            throw new NotFoundException(__('Invalid Client'));
-        }
-        $client = $this->Client->findById($id);
-        if (!$client) {
-            throw new NotFoundException(__('Invalid Client'));
-            
-        }
-        
-        $this->set('FAquery', $this->Client->getFAs());
-  
-        if ($this->request->is(array('Client','put'))) {
-            $this->Client->id = $id;
-            if ($this->Client->save($this->request->data)) {
-                $this->Session->setFlash(__('Your Client has been updated.'));
-		/*Upload image if an image has been provided.*/
-		if($this->request->data['Client']['profileImage']['size'] == 0) $this->uploadImage();
-                return $this->redirect(array(
-                    'action' => 'index'
-                ));
-            }
-            $this->Session->setFlash(__('Unable to update your Client.'));
-        }
-        if (!$this->request->data) {
-            $this->request->data = $client;
-        }
-    }
+public function edit($id = null) {
+	
+if (!$id) {
+throw new NotFoundException(__('Invalid Client'));
+}
+$client = $this->Client->findById($id);
+if (!$client) {
+throw new NotFoundException(__('Invalid Client'));
+}
+$this->set('FAquery', $this->Client->getFAs());
+if ($this->request->is(array('Client', 'put'))) {
+$this->Client->id = $id;
+if ($this->Client->save($this->request->data)) {
+$this->Session->setFlash(__('Your Client has been updated.'));
+$this->uploadImage();
+return $this->redirect(array('action' => 'index'));
+}
+$this->Session->setFlash(__('Unable to update your Client.'));
+}
+if (!$this->request->data) {
+$this->request->data = $client;
+}
+}
     
     
     public function delete($id, $name)
@@ -366,7 +359,8 @@ debug($price);
         if ($this->request->is('get')) {
             throw new MethodNotAllowedException();
         }
-        if ($this->Client->delete($id)) {
+	$data = array('id' => $id, 'fa' => 0);
+        if ($this->Client->save($data)) {
             $this->Session->setFlash(__('%s has been deleted.', h($name)));
             return $this->redirect(array(
                 'action' => 'index'

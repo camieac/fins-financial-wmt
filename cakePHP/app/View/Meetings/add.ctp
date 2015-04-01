@@ -57,8 +57,6 @@ echo $this->Form->input('details');
 $namesC = array_column(array_column($customer,'Client'),'name');
 $idsC = array_column(array_column($customer,'Client'),'id');
 $idNamesC = array_combine($idsC,$namesC);
-$fas = array_column(array_column($fa,'User'),'username');
-
 
 echo $this->Form->input('customer', array(
     'type' => 'select',
@@ -81,7 +79,7 @@ if ($user == "admin") {
     echo $this->Form->input('fa', array(
         'type' => 'select',
         'options' => $idNamesF,
-        'default' => $user,
+        'default' => $userID,
         'type' => 'hidden'
     ));
 }

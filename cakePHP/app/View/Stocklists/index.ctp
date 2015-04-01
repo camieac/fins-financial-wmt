@@ -3,7 +3,7 @@
 
 <html>
 	<head>
-		<title>Home</title>
+		<title>Stocklists</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -73,7 +73,7 @@ function custom_source(request, response) {
   </script>
 
 
-<h2>Stocks</h2>
+<h2>Stocklists</h2>
 
 <div class="dRoundedBox">
 <?php

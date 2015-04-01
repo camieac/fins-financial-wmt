@@ -10,6 +10,8 @@ if ($this->Session->read('Auth.User'))
 {
 
 $user = AuthComponent::user('username');
+$this->set('isAdmin',$user == 'admin');
+$userID = AuthComponent::user('id');
 
 $conditions = array(
     "username" => $user,
@@ -21,22 +23,22 @@ $this->Meeting->user = $user;
 
 if ($this->User->hasAny($conditions))
 {
-echo 'admin';
+//echo 'admin';
 $events = $this->Meeting->find('all');
 }
 else
 {
-echo 'fa';
-$events = $this->Meeting->find('all', array('conditions' => array("'$user' = fa")));
+//echo 'fa';
+$events = $this->Meeting->find('all', array('conditions' => array("'$userID' = fa")));
 }
 $this->set('events', $events);
 $clientNames = array();
 $this->loadModel('Client');
+$faNames = array();
 foreach($events as $event){
 //debug($event);
 $cID = $event['Meeting']['customer'];
 $fID = $event['Meeting']['fa'];
-//debug($cID);
 $clientNames[] = $this->Client->find('first', array(
         'conditions' => array('Client.id' => $cID)
     ));
@@ -47,7 +49,7 @@ $faNames[] = $this->User->find('first', array(
 //debug($clientNames);
 $this->set('clients', $clientNames);
 $this->set('fas', $faNames);
-debug($faNames);
+//debug($faNames);
 //debug($this->Meeting->get());
 $this->set('query', $this->Meeting->get());
 
@@ -66,12 +68,14 @@ $this->redirect(array('controller' => 'users', 'action' => 'login'));
 public function add() {
 	
 $user = AuthComponent::user('username');
+$userID = AuthComponent::user('id');
 $this->Meeting->user = $user;
 $this->loadModel('Client');
-$this->set('customer', $this->Client->find('all'));
+$this->set('customer', $this->Client->find('all', array('conditions' => array('Client.fa' => AuthComponent::user('username')))));
 $this->loadModel('User');
 $this->set('fa', $this->User->find('all'));
 $this->set('user', $user);
+$this->set('userID', $userID);
 	
 if ($this->request->is('post')) {
 $this->Meeting->create();
@@ -91,14 +95,15 @@ $meeting = $this->Meeting->findById($id);
 if (!$meeting) {
 throw new NotFoundException(__('Invalid Meeting'));
 }
-
+$userID = AuthComponent::user('id');
 $user = AuthComponent::user('username');
 $this->Meeting->user = $user;
 $this->loadModel('Client');
-$this->set('customer', $this->Client->find('all'));
+$this->set('customer',$this->Client->find('all', array('conditions' => array('Client.fa' => AuthComponent::user('username')))));
 $this->loadModel('User');
 $this->set('fa', $this->User->find('all'));
 $this->set('user', $user);
+$this->set('userID', $userID);
 
 
 if ($this->request->is(array('Meeting', 'put'))) {

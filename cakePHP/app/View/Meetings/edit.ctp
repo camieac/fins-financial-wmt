@@ -20,43 +20,17 @@
 <h1>Edit Meeting</h1>
 
 <div class="dRoundedBox">
-
-
-
-<?php/*
-$customerarray = Set::flatten($Custquery);
-
-for ($i = 0; $i < count($customerarray); ++$i) {
-    $customer[$i + 1] = $customerarray[$i . '.clients.name'];
-}
-
-
-
-$advisorarray = Set::flatten($FAquery);
-In the event that no FAs exist, use the current user as the FA. The current user will be an admin, since no FAs exist
-
-if(empty($advisorarray)){$fa = array($user);}
-else{
-for ($j = 0; $j < count($advisorarray) / 2; ++$j) {
-    $fa[$advisorarray[$j . '.users.username']] = $advisorarray[$j . '.users.name'];
-}
-}
-*/?>
-
 <?php
-
 echo $this->Form->create('Meeting', array(
     'class' => 'fForm'
 ));
-
 echo $this->Form->input('title');
 echo $this->Form->input('details');
 
 $namesC = array_column(array_column($customer,'Client'),'name');
 $idsC = array_column(array_column($customer,'Client'),'id');
 $idNamesC = array_combine($idsC,$namesC);
-$fas = array_column(array_column($fa,'User'),'username');
-$options = array_column($customer,'name');
+
 echo $this->Form->input('customer', array(
     'type' => 'select',
     'options' => $idNamesC
@@ -69,10 +43,7 @@ $idsF = array_column(array_column($fa,'User'),'id');
 $idNamesF = array_combine($idsF,$namesF);
 
 
-
-
-
-if ($user === "admin") {
+if ($user == "admin") {
     echo $this->Form->input('fa', array(
         'type' => 'select',
         'options' => $idNamesF
@@ -80,16 +51,20 @@ if ($user === "admin") {
 } else {
     echo $this->Form->input('fa', array(
         'type' => 'select',
-        'options' => $fas,
-        'default' => $user,
+        'options' => $idNamesF,
+        'default' => $userID,
         'type' => 'hidden'
     ));
 }
 
-
-echo $this->Form->input('id', array(
+echo $this->Form->input('event_type_id', array(
+    'type' => 'select',
+    'default' => 0,
     'type' => 'hidden'
 ));
+
+
+
 echo $this->Form->input('status', array(
     'options' => array(
         'Scheduled' => 'Scheduled',
@@ -99,6 +74,8 @@ echo $this->Form->input('status', array(
         'Completed' => 'Completed'
     )
 ));
+
+
 echo $this->Form->input('start', array(
     'class' => 'datepicker',
     'type' => 'text'
@@ -111,5 +88,4 @@ echo $this->Form->input('all_day', array(
     'checked' => 'checked'
 ));
 echo $this->Form->end('Save Meeting');
-
 ?></div>

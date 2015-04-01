@@ -64,7 +64,7 @@ echo $this->Html->link('View in Calendar', '/full_calendar', array(
 <th>Title</th>
 <th>Details</th>
 <th>Customer</th>
-<th>F.A</th>
+<?php if($isAdmin) echo '<th>F.A</th>';?>
 <th>Start Time</th>
 <th>End Time</th>
 <th>Date</th>
@@ -89,9 +89,9 @@ foreach ($events as $event):
 ?></td>
 <td><?php echo $clients[$i]['Client']['name']; ?></td>
 
-<td><?php
+<?php
 
-echo $fas[$i]['User']['username']; ?></td>
+if ($isAdmin) echo '<td>'.$fas[$i]['User']['username'].'</td>'; ?>
 
 <?php
     $i++;

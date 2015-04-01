@@ -86,6 +86,7 @@ echo $this->Form->input('fa', array(
     'type' => 'hidden',
     'value' => $user
 ));
+echo $this->Form->input('id', array('type' => 'hidden'));
 }
 echo $this->Form->input('twitter');
 echo $this->Form->input('Client.profileImage', array(
