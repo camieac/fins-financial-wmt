@@ -20,6 +20,7 @@ class EventsController extends FullCalendarAppController {
 
         function index() {
 		$this->Event->recursive = 1;
+
 		$this->set('events', $this->paginate());
 	}
 
@@ -80,7 +81,13 @@ class EventsController extends FullCalendarAppController {
 	function feed($id=null) {
 		$this->layout = "ajax";
 		$vars = $this->params['url'];
-		$conditions = array('conditions' => array('UNIX_TIMESTAMP(start) >=' => $vars['start'], 'UNIX_TIMESTAMP(start) <=' => $vars['end']));
+		$role = AuthComponent::user('role');
+		if($role == 'admin'){
+			$conditions = array('conditions' => array('UNIX_TIMESTAMP(start) >=' => $vars['start'], 'UNIX_TIMESTAMP(start) <=' => $vars['end']));
+		}else{
+			$id = AuthComponent::user('id');
+			$conditions = array('conditions' => array('UNIX_TIMESTAMP(start) >=' => $vars['start'], 'UNIX_TIMESTAMP(start) <=' => $vars['end'],'fa' => $id));
+		}
 		$events = $this->Event->find('all', $conditions);
 		foreach($events as $event) {
 			if($event['Event']['all_day'] == 1) {
