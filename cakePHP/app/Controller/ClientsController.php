@@ -45,7 +45,7 @@ class ClientsController extends AppController
     
     
     
-    public function uploadImage()
+    public function uploadImage($id)
     {
         
         // Custom
@@ -77,15 +77,34 @@ class ClientsController extends AppController
                     //do the actual uploading of the file. First arg is the tmp name, second arg is 
                     //where we are putting it
                     $newFilename = sha1($this->request->data['Client']['nis']); //$file['name']; // edit/add here as you like your new filename to be.
-                    //$this->Client->set('imageName', $newFilename . '.' . $ext2);
-                    $id = $this->Model->id;//Client->find('first');
-                    $user = $this->Client->read();
-					$id = $user['Client']['id'];
+
+              
                     $data = array('id' => $id, 'imageName' => $newFilename. '.'.$ext2);
                     //debug($data);
 					// This will update Recipe with id 10
+debug($data);	try{
 					$this->Client->save($data);
-                    //$this->Client->setProfileImageName($newFileName . '.' . $ext2);
+		}catch(Exception $e){
+echo 'FAILED TO SAVE';
+return false;
+}
+			//$user = $this->Client->read();
+                   	//$id = $user['Client']['id'];
+
+                  	// $data = array('id' => $id, 'imageName' => $newFilename. '.'.$ext2);
+			//if($this->Client->save($data)){ echo 'SAVED IMAGENAME TO CLIENT';}
+		   	//else { echo 'FAILED TO SAVE IMAGENAME TO CLIENT';}
+                   // $user = $this->Client->read();
+		    //$id = $user['Client']['id'];
+		    //$user['Client']['imageName'] = $newFilename. '.'.$ext2;
+	            //debug($user);
+		   // if($this->Client->save($user)){ echo 'SAVED IMAGENAME TO CLIENT';}
+		   // else { echo 'FAILED TO SAVE IMAGENAME TO CLIENT';}
+		    //$this->Client->id = $id;
+                    //$data = array('imageName' => $newFilename. '.'.$ext2);
+		    //debug($data);		
+		    //$this->Client->save($data);
+                  
                     
                     
                     $newSaveDirectory = $folderToSaveFiles . $newFilename . '.' . $ext2;
@@ -163,7 +182,10 @@ class ClientsController extends AppController
 	    $this->set('twitterExists',$twitterExists);
             $this->set('clientStocks', $this->Client->getStocks());
             
-                
+            if(isset($this->params['data']['sell'])){
+		echo 'Selling';
+
+		}    
             
             
             
@@ -196,19 +218,23 @@ class ClientsController extends AppController
         $this->set('FAquery', $this->Client->getFAs());
         if ($this->request->is('post')) {
             $this->Client->create();
-            
+            //$date = date('Y-m-d H:i:s');
+		//$this->request->data = array_push($this->request->data,array('created' => $date));
             //$this->Client->set('imageName', 'New title for the article');
+//debug($this->request->data);
             try {
                 $test = $this->Client->save($this->request->data);
+	$this->uploadImage($this->Client->id);
             }
             catch (Exception $e) {
                 $this->Session->setFlash(__('Invalid National Insurance Number'));
+		echo $e->getMessage();
                 // The exact error message is $e->getMessage();
                 return;
             }
             if ($test) {
                 $this->Session->setFlash(__('Your client has been saved.'));
-                $success = $this->uploadImage();
+                
                 //$this->Session->setFlash(__('File upload:'.$success));
                 
                 return $this->redirect(array(
@@ -220,6 +246,7 @@ class ClientsController extends AppController
                 
             }
         }
+	
     }
 public function edit($id = null) {
 	
@@ -233,9 +260,12 @@ throw new NotFoundException(__('Invalid Client'));
 $this->set('FAquery', $this->Client->getFAs());
 if ($this->request->is(array('Client', 'put'))) {
 $this->Client->id = $id;
-if ($this->Client->save($this->request->data)) {
+$success = $this->Client->save($this->request->data);
+$this->uploadImage($id);
+if ($success) {
+
 $this->Session->setFlash(__('Your Client has been updated.'));
-$this->uploadImage();
+
 return $this->redirect(array('action' => 'index'));
 }
 $this->Session->setFlash(__('Unable to update your Client.'));
