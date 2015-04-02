@@ -27,10 +27,7 @@ $result = $api->get(array($company));
 echo $this->Html->script('javascript');
 ?>
 
-<?php
-$result = $api->getHistory(array($company));
-array_shift($result); //Takes away the first array position that contains the names of the elements.
-?>
+
 
 <?php
 $company = $this->params['url']['stock'];
@@ -71,6 +68,7 @@ array_shift($result); //Takes away the first array position that contains the na
         height: 563,
 	thickness: 0,
 	legendPosition: 'newRow',
+	displayZoomButtons: false,
 	colors: ['#f29618', '#00a9e0', '#f60101', '#635042'],
         hAxis: {
           title: 'Date'

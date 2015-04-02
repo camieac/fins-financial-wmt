@@ -51,6 +51,7 @@ array_shift($result); //Takes away the first array position that contains the na
        height: 200,
 	thickness: 0,
 	legendPosition: 'newRow',
+	displayZoomButtons: false,
 	colors: ['#f29618', '#00a9e0', '#f60101', '#635042'],
         hAxis: {
           title: 'Date'
