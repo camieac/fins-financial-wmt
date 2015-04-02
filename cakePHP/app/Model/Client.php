@@ -51,7 +51,6 @@ public $validate = array(
 ),
 'fa' => array(
 'rule' => 'notEmpty'
-
 ),
 'twitter' => array(
             'alphaNumeric' => array(
@@ -72,8 +71,6 @@ public $validate = array(
             )
         )
 );
-
-
      public function getFAs()
     {
        return $this->query('SELECT users.name, users.username FROM users WHERE role = "fa"');
@@ -88,7 +85,6 @@ public $validate = array(
     {
        return $this->query("SELECT stocklists.id, stocklists.symbol FROM stocklists ORDER BY stocklists.id;");
     }
-
     public function getQuery($a)
     {
        return $this->query($a);
@@ -107,6 +103,5 @@ public $validate = array(
             return true;
         }
     }
-
 }
 ?>

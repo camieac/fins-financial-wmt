@@ -89,13 +89,13 @@ echo $this->Form->input('fa', array(
 echo $this->Form->input('id', array('type' => 'hidden'));
 }
 echo $this->Form->input('twitter');
-echo $this->Form->input('Client.profileImage', array(
+/*echo $this->Form->input('Client.profileImage', array(
     'type' => 'file'
 ));
 echo $this->Form->input('imageName', array(
     'type' => 'hidden',
     'value' => ''
-));
+));*/
 echo $this->Form->end(array(
     'label' => 'Save Client',
     'class' => 'button'

@@ -166,8 +166,9 @@ Last Modified: <?php
 <th>Symbol</th>
 <th>Name</th>
 <th>Quantity</th>
-<th>Purchase Value</th>
+<th>Current Value</th>
 <th>Total Value</th>
+<th>Actions</th>
 <th>Created</th>
 </tr>
 </thead>
@@ -194,7 +195,6 @@ Last Modified: <?php
             		echo "£" . number_format($stock['stocklists']['close'], 2);
 		?></td><?php
             		$value = ($stock['purchases']['quantity']) * ($stock['stocklists']['close']);
-
         	}else{
 			?><td><?php
             		if (!$stock['stocklists']['current'] == 0) {
@@ -204,15 +204,58 @@ Last Modified: <?php
             		}
 			?></td><?php
             			$value = ($stock['purchases']['quantity']) * ($stock['stocklists']['current']);
-
 		}
 		?><td><?php
         		echo "£" . number_format($value, 2);
 		?></td><td><?php
+if($stock['purchases']['type'] == 'bought'){
+        		echo $this->Form->create('Purchase');
+        		echo $this->Form->input('quantity');
+        		$test = $stock['purchases']['id'];
+        		echo $this->Form->hidden('id', array(
+            			'default' => $test
+        		));
+			echo $this->Form->hidden('type', array(
+            			'default' => 'sold'
+        		));
+        		echo $this->Form->submit('Sell Stock', array(
+            			'div' => false,
+            			'name' => ('sell'),
+            			'class' => 'button buttonTable',
+            			array(
+                			'rule' => 'notEmpty'
+           			)
+        		));
+        		echo $this->Form->end();
+}/*else{
+echo $this->Form->create('Purchase');
+        		echo $this->Form->input('quantity');
+        		$test = $stock['purchases']['id'];
+
+        		echo $this->Form->input('id', array(
+				'type' => 'hidden',
+            			'default' => $test
+        		));
+			echo $this->Form->hidden('type', array(
+            			'default' => 'bought'
+        		));
+			echo $this->Form->hidden('stock', array(
+            			'default' => $stock['stocklists']['id']
+        		));
+        		echo $this->Form->submit('Buy Stock', array(
+            			'div' => false,
+            			'name' => ('buy'),
+            			'class' => 'button buttonTable',
+            			array(
+                			'rule' => 'notEmpty'
+           			)
+        		));
+        		echo $this->Form->end();
+}*/
+			?></td><td><?php
         			echo $stock['purchases']['created'];
 			?> </td></tr><?php
-        if($stock['purchases']['type'] == 'sold') {$total = $total + $value;}
-	else{ $total = $total - $value;}
+        $total = $total + $value;
 	
     endforeach;
 $net = $net + $total;
@@ -231,71 +274,37 @@ $net = $net + $total;
 	<h3>New Transaction</h3>
 
 
-<div>
+
 <?php
-
-        		echo $this->Form->create('Purchase', array('action' => 'sell'));
-        		echo $this->Form->input('quantity');
-			echo $this->Form->input('type', array(
-            			'default' => 'sold',
-				'type' => 'hidden'
+    echo $this->Form->create('Purchase', array(
+        'class' => 'fForm'
+    ));
+    echo $this->Form->input('stock', array(
+        'type' => 'select',
+        'options' => $stockoptions
+    ));
+echo $this->Form->hidden('type', array(
+            'default' => 'bought'
         		));
-			echo $this->Form->input('stock', array(
-            			'options' => $stockoptions
-        		));
-			echo $this->Form->input('price', array(
-            			'default' => $stock['stocklists']['close'],
-				'type' => 'hidden'
-        		));
-			echo $this->Form->input('customer', array(
-            			'default' => $id,
-				'type' => 'hidden'
-        		));
-			echo $this->Form->input('balance', array(
-            			'default' => $client['Client']['balance'],
-				'type' => 'hidden'
-        		));
-
-        		echo $this->Form->submit('Sell Stock', array(
-            			'div' => false,
-            			'class' => 'button',
-				'style' => 'float:none;',
-            			array(
-                			'rule' => 'notEmpty'
-           			)
-        		));
-        		echo $this->Form->end();?></div>
-<div>
+    echo $this->Form->input('customer', array(
+        'type' => 'select',
+        'options' => $id,
+        'default' => $id,
+        'type' => 'hidden'
+    ));
+    echo $this->Form->input('quantity');
+?>
+<div class='submit'>
 <?php
-
-			echo $this->Form->create('Purchase', array('action' => 'buy'));
-        		echo $this->Form->input('quantity');
-			echo $this->Form->input('type', array(
-            			'default' => 'bought',
-				'type' => 'hidden'
-        		));
-			echo $this->Form->input('stock', array(
-            			'options' => $stockoptions
-        		));
-			echo $this->Form->input('price', array(
-            			'default' => $stock['stocklists']['close'],
-				'type' => 'hidden'
-        		));
-			echo $this->Form->input('customer', array(
-            			'default' => $id,
-				'type' => 'hidden'
-        		));
-        		echo $this->Form->submit('Buy Stock', array(
-            			'div' => false,
-            			'class' => 'button',
-				'style' => 'float:none;',
-            			array(
-                			'rule' => 'notEmpty'
-           			)
-        		));
-        		echo $this->Form->end();?></div>
-
-			</div>
+    echo $this->Form->submit('Buy Stock', array(
+        'div' => false,
+        'name' => 'buy',
+        'class' => 'button',
+        array(
+            'rule' => 'notEmpty'
+        )
+    ));
+?>
 </div>
 <?php
     echo $this->Form->end();
